@@ -26,6 +26,7 @@ outdir="$1"
 echo "go ---- 1 "
 cat $data_file | ./go1 $outdir
 if [ $? -ne 0 ]; then
+    echo "Running \"./go1 $outdir\" failed with error code $?"
     exit 1
 fi
 
@@ -34,5 +35,9 @@ echo "go ---- 2 "
 for dir in $(ls -d $outdir/*); do
     echo working on $dir
     ./go2 $dir
+    if [ $? -ne 0 ]; then
+        echo "Running \"./go2 $dir\" failed with error code $?"
+        exit 2
+    fi
     echo ""
 done
