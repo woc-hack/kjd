@@ -29,7 +29,8 @@ The process of data gathering consists of the following steps:
   9. Overall vulnerability lifespan is the maximum lifespan across projects.
 
 ### 3. Preliminary Findings
-Please describe your preliminary findings here.
+
+For the first vulnerability we examined, we found that it had been copied to several dozen projects. Some projects fixed the vulnerability within a couple of weeks. All projects that fixed the vulnerability did so within two years of publication of the CVE advisory, but many projects have not yet fixed it. One project fixed the vulnerability before publication of the CVE.
 
 ### 4. Challenges
 
@@ -42,8 +43,10 @@ Please describe your preliminary findings here.
 
   1. Include projects which have vulnerabilities but no fixes. Use survival analysis to model.
 
+  2. Our current code only considers a vulnerability fixed if a vulnerable file is replaced with the file found in the vulnerability fixing commit. We plan to modify our code to consider all commits in the original project after the vulnerability fixing commit to also be fixing commits. This will let us measure the vulnerability lifespan in more projects instead of categorizing those projects as having no fixes.
+
   2. Examine causes for different vulnerability durations. We expect that project resources, programming language, and vulnerability type will affect vulnerability duration. While project resources are difficult to measure directly, we can use related metrics, such as popularity as measured by GitHub stars, popularity as measured by how widely the project is imported by other projects, and the number of contributing authors.
 
 ### References
 
-  - [CVEFixes](https://github.com/secureIT-project/CVEfixes)
+  - [CVEFixes Database](https://github.com/secureIT-project/CVEfixes)
