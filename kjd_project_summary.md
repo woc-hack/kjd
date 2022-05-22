@@ -45,7 +45,7 @@ For the first vulnerability we examined, we found that it had been copied to sev
 
   2. Our current code only considers a vulnerability fixed if a vulnerable file is replaced with the file found in the vulnerability fixing commit. We plan to modify our code to consider all commits in the original project after the vulnerability fixing commit to also be fixing commits. This will let us measure the vulnerability lifespan in more projects instead of categorizing those projects as having no fixes.
 
-  2. Examine causes for different vulnerability durations. We expect that project resources, programming language, and vulnerability type will affect vulnerability duration. While project resources are difficult to measure directly, we can use related metrics, such as popularity as measured by GitHub stars, popularity as measured by how widely the project is imported by other projects, and the number of contributing authors.
+  2. Examine causes for different vulnerability durations. We expect that project resources, programming language, and vulnerability type will affect vulnerability duration. While project resources are difficult to measure directly, we can use related metrics, such as popularity as measured by GitHub stars, popularity as measured by how widely the project is imported by other projects, and the number of contributing authors. Another hackathon project worked to identify open source projects with corporate source and may have a data source on project resources that we can use in the future.
 
 ### References
 
