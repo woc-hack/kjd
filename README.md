@@ -11,7 +11,7 @@ The goal of the project is to study vulnerability duration across projects. Sinc
 
 We also want to examine the causes for different vulnerability durations. We expect that project resources, programming language, and vulnerability type will affect vulnerability duration. While project resources are difficult to measure directly, we can use related metrics, such as popularity as measured by GitHub stars, popularity as measured by how widely the project is imported by other projects, and the number of contributing authors.
 
-[Process for data gathering](../blob/master/Process).
+[Process for data gathering](Process.md).
 
 ## Organization
 
