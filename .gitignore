@@ -1,0 +1,37 @@
+# Editor temp files
+*~
+*.sw?
+tags
+
+# TeX temp files
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+
+# R junk left by vim R plugin or RStudio
+.RData
+.Rhistory
+.Rhistory.old
+*.nb.html
+
+# OpenOffice junk
+.~lock.*
+
+# Mac junk
+.DS_Store
+
+# Windows junk
+~$*
+Desktop.ini
+Thumbs.db*
+*Zone.Identifier:$DATA
+
+# Ignore included git repositories
+repos/
