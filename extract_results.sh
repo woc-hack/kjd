@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # output should be: cve, project-identifier (project that copies), fix commit, first commit, fix time, first commit time, vulnerability publish time, file name
-# this script outputs: cve, project-identifier (project that copies), fix commit, first commit, fix time, first commit time
+# this script outputs: cve, project-identifier (project that copies), fix commit, first commit, last commit, fix time, first commit time, last commit time
 
 # input: folder name that contains subfolders with CVE numbers
  
