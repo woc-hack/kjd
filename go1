@@ -1,0 +1,65 @@
+#! /bin/bash
+
+#
+# Read file in the form of c2fbbPch$i
+#
+# Create files with all the good (fixed) blobs and all the old (vulnerable)
+# blobs. 
+#
+# For now, we us b2ob_r to find all blobs all the way to the beginning.
+# Ideally, we would only find blobs until we find the commit that 
+# introduced the vulnerability.
+#
+
+# Check the command line args
+if [[ $# -ne 1 ]]; then
+   echo "usage: go1 <output directory>"  >&2
+   echo "example: ./go1 out"
+   exit 1
+fi
+
+outdir="$1"
+if [ "$outdir" == "out" ]; then
+    rm -rf out
+elif [ -d $outdir ]; then
+   echo Error: directory $outdir already exits >&2
+   exit 1
+fi
+mkdir $outdir
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+
+
+#for line in $(cat test-data); do
+while read line; do
+    commit=`echo $line | cut -d\; -f 1`
+    pathname=`echo $line | cut -d\; -f 2`
+    blob=`echo $line | cut -d\; -f 3`
+    old_blob=`echo $line | cut -d\; -f 4`
+    project=`echo $line | cut -d\; -f 5`
+    time=`echo $line | cut -d\; -f 11`
+    time2=`echo $line | cut -d\; -f 12`
+
+    echo "working on echo $project, $pathname"
+
+    if [ -e $outdir/$project ]; then
+        echo Warning: directory "$project" already exists >&2
+        continue
+    fi
+    mkdir $outdir/$project
+    if [ $? -ne 0 ]; then
+        continue
+    fi
+
+    # create the good_blobs.txt and bad_blobs.txt files
+    # blob is the fixed blob, old_blob is the one before the fix
+    echo $blob > $outdir/$project/good_blobs.txt
+    ./ob2b_r $blob >> $outdir/$project/good_blobs.txt
+    echo $old_blob > $outdir/$project/bad_blobs.txt
+    ./b2ob_r $old_blob >> $outdir/$project/bad_blobs.txt
+
+done < /dev/stdin
+#done < "${2:-/dev/stdin}"
+
+exit 0

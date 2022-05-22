@@ -1,0 +1,71 @@
+#! /bin/bash
+
+#
+# Given a blob, recursively find old blobs in WoC using b2ob mapping
+#
+
+# blob hash for an empty file
+empty_file="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+# add the hash for the empty file to the list so that we skip empty files
+list=" $empty_file"
+
+#
+# Functions
+#
+
+#
+# b2ob (blob to old blob) mapping.
+# input: one or more blobs separated by a newline
+#
+function b2ob {
+    local blobs="$1"
+    old_blobs=`printf "$blobs\n" | ~/lookup/getValues -f b2ob 2> /dev/null | cut -d\; -f2 | sort | uniq`
+    printf "$old_blobs"
+}
+
+#
+# b2ob_r
+# call b2ob recursively back to the root
+#
+function b2ob_r {
+    local blob="$1"
+    list+=" $blob"
+    obs=$(b2ob "$blob")
+    printf "$blob"
+    all_blobs+="$blob"
+    unique_blobs=''
+    for ob in $obs; do
+        # check for duplicates, skip if we have already seen this blob
+        in=`echo $list | grep $ob`
+        if [ "$in" = "" ]; then
+            unique_blobs+="$ob"
+            unique_blobs+="\n"
+        fi
+    done
+    if [ "$unique_blobs" != "" ]; then
+        b2ob_r "$unique_blobs"
+    fi
+}
+
+
+#
+# Main body of script
+#
+
+# Check Command line args
+if [[ $# -lt 1 ]]; then
+    echo "usage: b2ob_r.sh <blob hash> [<blob hash> ...]"
+    exit 1
+fi
+
+# for each blob in the input call b2ob to find old blobs
+for blobhash in "$@"; do
+    obs=$(b2ob "$blobhash")
+    if [ "$obs" = "" ]; then
+        continue
+    fi
+    b2ob_r "$obs\n"
+done
+
+num_blobs=`printf "$all_blobs" | wc -l`
+#echo number of old blobs = $num_blobs >&2

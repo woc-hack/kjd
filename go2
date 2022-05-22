@@ -1,0 +1,60 @@
+#! /bin/bash
+
+#
+# Read files named good_blobs.txt and bad_blobs.txt.
+# The file bad_blobs.txt contains a list of blobs that contain a vulnerability.
+# The file good_blobs.txt contains a list of blobs that are fixed.
+# Find all projects that contain at least one of the good blobs and one of
+# the bad blobs. Find and sort the commit dates so that we can see when
+# a vulnerability was introduced and when it was fixed.
+#
+
+# Check the command line args
+if [[ $# -ne 1 ]]; then
+   echo "usage: go2 <output directory>"  >&2
+   echo "example: ./go2 out"
+   exit 1
+fi
+
+outdir="$1"
+if [ ! -d $top_outdir ]; then
+   echo Error: directory $top_outdir does not exits >&2
+   exit 1
+fi
+
+
+# Make sure good_blobs.txt and bad_blobs.txt exist in the directory
+if [[ ! -f $outdir/good_blobs.txt || ! -f $outdir/bad_blobs.txt ]]; then
+    echo "$outdir (good_blobs.txt or bad_blobs.txt not found)"
+    continue
+fi
+#echo $outdir
+
+# Get all project with good (fixed) blobs (_c file also include commit)
+cat $outdir/good_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P | cut -d\; -f 2 | sort -u > $outdir/good_projs.txt
+cat $outdir/good_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P | sort -u > $outdir/good_projs_c.txt
+
+# Get all project with bad (vulnerable) blobs (_c file also include commit)
+cat $outdir/bad_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P | cut -d\; -f 2 | sort -u > $outdir/bad_projs.txt
+cat $outdir/bad_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P |  sort -u > $outdir/bad_projs_c.txt
+
+# comm.txt is all the projects that contain both vulnerable and fixed 
+# versions of a file
+comm -12 $outdir/good_projs.txt $outdir/bad_projs.txt > $outdir/comm.txt
+
+rm -f $outdir/good_comm.txt $outdir/bad_comm.txt
+for line in $(cat $outdir/comm.txt); do
+    grep $line $outdir/good_projs_c.txt > $outdir/tmpfile
+    for tmp in $(cat $outdir/tmpfile); do
+       time=`echo $tmp | ~/lookup/showCnt commit | cut -d \; -f 7 | awk -F\; '{ printf ("%s;%s\n", $1, strftime("%F:%T", $1)) }'`
+        echo "$time;$tmp" >> $outdir/${line}_good.txt
+    done
+    grep $line $outdir/bad_projs_c.txt > $outdir/tmpfile
+    for tmp in $(cat $outdir/tmpfile); do
+       time=`echo $tmp | ~/lookup/showCnt commit | cut -d \; -f 7 | awk -F\; '{ printf ("%s;%s\n", $1, strftime("%F:%T", $1)) }'`
+        echo "$time;$tmp" >> $outdir/${line}_bad.txt
+    done
+    sort -n $outdir/${line}_good.txt > $outdir/${line}_good_sorted.txt
+    sort -n $outdir/${line}_bad.txt > $outdir/${line}_bad_sorted.txt
+done
+rm -f $outdir/tmpfile
