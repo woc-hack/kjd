@@ -7,14 +7,15 @@
 #
 #------------------------------------------------------------------------
 
-data_file=data/test-data0.1000
+#data_file=data/cvefixes.csv
+data_file=data/short.csv
 
 # Check the command line args
 if [[ $# -ne 1 ]]; then
    echo "usage: go <output directory> "  >&2
    echo "example: ./go out"
    echo ""
-   echo "Uses data/test-data0.1000 as input."
+   echo "Uses $data_file as input."
    exit 1
 fi
 outdir="$1"
