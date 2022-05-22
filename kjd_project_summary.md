@@ -35,7 +35,9 @@ Please describe difficulties you encountered during the project related to World
 
 ### 5. Future Work
 
-We would like to examine the causes for different vulnerability durations. We expect that project resources, programming language, and vulnerability type will affect vulnerability duration. While project resources are difficult to measure directly, we can use related metrics, such as popularity as measured by GitHub stars, popularity as measured by how widely the project is imported by other projects, and the number of contributing authors.
+  1. Include projects which have vulnerabilities but no fixes. Use survival analysis to model.
+
+  2. Examine causes for different vulnerability durations. We expect that project resources, programming language, and vulnerability type will affect vulnerability duration. While project resources are difficult to measure directly, we can use related metrics, such as popularity as measured by GitHub stars, popularity as measured by how widely the project is imported by other projects, and the number of contributing authors.
 
 ### References
 
