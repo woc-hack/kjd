@@ -12,10 +12,7 @@ The process of data gathering constist of the following steps:
 
 ## 1. Get data on vulnerability fixes (cve, commit, file path, author date, vulnerability date)
 
-Data is downloaded from https://github.com/secureIT-project/CVEfixes and read into an sqllite database. The database contains information on vulnerabilities and their fixing commits. Additionally fixing commits are connected to file changes.
-
-Data is queried with the following query: 
-_TODO: add query_
+Data is downloaded from https://github.com/secureIT-project/CVEfixes and read into an SQLlite3 database. The database contains information on vulnerabilities and their fixing commits. Data is extracted into a CSV file `data/cvefixes.csv` by the script `extract-cvefixes-data.py`.
 
 ## 2. Join vulnerability data with WoC blobs: c2fbb (cve, commit, file path, author date, vulnerability date, path name in WoC, fixed blob, vulnerable blob)
 
