@@ -46,3 +46,35 @@ Data is filtered by file path matching all rows where file path from CVEfixes ma
 ## 7. Match result file with vulnerable projects to result file with fixed projects
 
 ## 8. For each project with vulnerable blob and fixed blob calculate time delta
+
+First extract data from result files into a .csv file: 
+
+    ./extract_results.sh out2 > cve_analysis_output.csv
+    
+The data is expected to be in the following folders
+
+ * CVE-xx-yy
+   * project_name1_bad_sorted.txt
+   * project_name1_good_sorted.txt
+   * project_name2_bad_sorted.txt
+   * project_name2_good_sorted.txt
+ * CVE-zz-aa
+   * project_name2_bad_sorted.txt
+   * project_name2_good_sorted.txt
+
+The script extract_results.sh first extracts CVE numbers, then for each CVE number the project names that contain both the fix and the vulnerability. Then the script reads in the first good and the first bad commmit and outputs data on the CVE, project, fix commit, vulnerable commit and commit times. 
+
+Output is in the format: 
+
+    CVE-2010-5331;0Litost0_linux_kernel_2.6_ver_1;c83efad97b90134cb7db6fd76145b6151502d44f;c83efad97b90134cb7db6fd76145b6151502d44f;2016-10-12:23:03:17;2016-10-12:23:03:17
+    CVE-2010-5331;0Litost0_test_1;4ce4402851dece658921ec92ba8b97a7b5843017;4ce4402851dece658921ec92ba8b97a7b5843017;2017-04-24:01:36:41;2017-04-24:01:36:41
+
+Next the result file can be joined with the original vulnerability data file: 
+
+    join -t \; data/cve_analysis_output.csv data/cvefixes.csv > data/cve_analysis_joined.csv
+   
+This join adds data on the original project, file name and on the vulnerability release date. 
+
+Last it is necessary to
+* calculate max (bad commit time, vulnerability release time) which will be the vulnerability introduction time
+* calculate diff between the vulnerability introduction time and the vulnerability fix time 
