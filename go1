@@ -1,6 +1,6 @@
 #! /bin/bash
 #
-# Read file in the form of c2fbbPch$i
+# Read file in the form of cvefixes.csv
 #
 # Create files with all the good (fixed) blobs and all the old (vulnerable)
 # blobs. 
@@ -40,15 +40,11 @@ while read line; do
     pathname=`echo $line | cut -d\; -f 3`
     blob=`echo $line | cut -d\; -f 7`
     old_blob=`echo $line | cut -d\; -f 8`
-    project=`echo $line | cut -d\; -f 2`
+    project=`echo $line | cut -d\; -f 2 | sed -e "s@/@_@g"`
     time=`echo $line | cut -d\; -f 4`
     time2=`echo $line | cut -d\; -f 5`
 
     echo "working on echo $project, $pathname"
-    echo commit = $commit
-    echo blob = $blob
-    echo old_blob = $old_blob
-    echo time = $time
 
     if [ -e $outdir/$project ]; then
         echo Warning: directory "$project" already exists >&2
@@ -58,6 +54,8 @@ while read line; do
     if [ $? -ne 0 ]; then
         continue
     fi
+    # save the pathname
+    echo $pathname > $outdir/$project/pathname
 
     # create the good_blobs.txt and bad_blobs.txt files
     # blob is the fixed blob, old_blob is the one before the fix
@@ -65,6 +63,7 @@ while read line; do
     #./ob2b_r $blob >> $outdir/$project/good_blobs.txt
     echo $old_blob > $outdir/$project/bad_blobs.txt
     ./b2ob_r $old_blob >> $outdir/$project/bad_blobs.txt
+
 
 done < /dev/stdin
 #done < "${2:-/dev/stdin}"
