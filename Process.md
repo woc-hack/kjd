@@ -33,7 +33,9 @@ _TODO: this should run over all 128 c2fbb files_
 
 ## 3. Filter data on matching file path
 
+Data is filtered by file path matching all rows where file path from CVEfixes matches the file path from WoC. This way all rows are filtered out where the the commit was matched to a blob corresponding to some unrelated file change. 
 
+     awk -F\; '$3 == $6' results/join2.csv > results/filtered.csv
 
 ## 4. For each vulnerable blob find all previous blobs
 
