@@ -19,7 +19,7 @@ pp = pprint.PrettyPrinter(indent=4)
 #------------------------------------------------------------------------
 # User settable parameters
 #------------------------------------------------------------------------
-DATA_PATH = Path("repos/CVEfixes/Data")   # Directory containing CVEfixes.db
+DATA_PATH = Path("../repos/CVEfixes/Data")   # Directory containing CVEfixes.db
 
 #------------------------------------------------------------------------
 # Database connection code for CVEfixes SQLite database
@@ -41,7 +41,7 @@ conn = create_connection(DATA_PATH / "CVEfixes.db")
 def filter_files(in_files):
     filtered_files = []
     for file in in_files:
-        if re.match(r'^(readme.*|changelog|changes|history|install.*|makefile|makefile.pl|version)$', file, re.IGNORECASE):
+        if re.match(r'(readme|changelog|install|makefile|makefile.pl)$', file, re.IGNORECASE):
             pass
         elif file.endswith('.html') or file.endswith('.md') or file.endswith('.txt'):
             pass
@@ -94,5 +94,9 @@ for row in cve_df.itertuples():
 for cve in cves:
     data = cves[cve]
     files = data[2].split(",")
-    for file in files:
-        print("{};{};{};{};{}".format(cve, data[0], file, data[1], data[3]))
+    # Print only CVEs with one file
+    if len(files) == 1:
+        print("{};{};{};{};{}".format(cve, data[0], files[0], data[1], data[3]))
+    # FIXME: print all CVEs regardless of how many files
+    # for file in files:
+    #     print("{};{};{};{};{}".format(cve, data[0], file, data[1], data[3]))
