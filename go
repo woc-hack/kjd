@@ -7,15 +7,19 @@
 #
 #------------------------------------------------------------------------
 
-#data_file=data/cvefixes.csv
+#data_file=data/filtered.csv
 data_file=data/short.csv
+
+echo Reading $data_file
 
 # Check the command line args
 if [[ $# -ne 1 ]]; then
    echo "usage: go <output directory> "  >&2
    echo "example: ./go out"
-   echo ""
-   echo "Uses $data_file as input."
+   exit 1
+fi
+if [ ! -f $data_file ]; then
+   echo "file $data_file does not exist"
    exit 1
 fi
 outdir="$1"
