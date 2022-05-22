@@ -18,7 +18,7 @@
 sort data/cvefixes.csv -t \; -k 2 > cvefixes-sorted.csv
 
 for i in {0..127}
-   do join cvefixes-sorted.csv  -1 2 -2 1 -t \; <( zcat /da5_data/basemaps/gz/c2fbbFullU$i.s ) >> results/join$i.csv
+   do join -1 2 -2 1 -t \; cvefixes-sorted.csv <(zcat /da5_data/basemaps/gz/c2fbbFullU$i.s) > results/join$i.csv
    awk -F\; '$3 == $6' results/join$i.csv > results/filtered$i.csv
 done
 
