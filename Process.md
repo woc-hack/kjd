@@ -1,14 +1,15 @@
 # Process
 
-The process of data gathering constist of the following steps: 
-1. Get data on vulnerability fixes (CVE identifier, commit hash, path of file that fixed vulnerability, author commit date, vulnerability publication date).
-2. Join vulnerability data with WoC blobs: c2fbb (CVE identifier, commit hash, path of file that fixed vulnerability, author date, vulnerability publication date, path of file in WoC, fixed blob, previous vulnerable blob)
-3. Filter data on matching file path
-4. For each vulnerable blob find all previous blobs
-5. For each found blob match it to commits in other projects, get earliest date
-6. For each fixing blob match it to commits in other projects, get earliest date
-7. Match result file with vulnerable projects to result file with fixed projects
-8. For each project with vulnerable blob and fixed blob calculate time delta
+The process of data gathering consists of the following steps: 
+
+  1. Get data on vulnerability fixes (CVE identifier, commit hash, path of file that fixed vulnerability, author commit date, vulnerability publication date).
+  2. Join vulnerability data with WoC blobs: c2fbb (CVE identifier, commit hash, path of file that fixed vulnerability, author date, vulnerability publication date, path of file in WoC, fixed blob, previous vulnerable blob).
+  3. Filter data on matching file path.
+  4. For each vulnerable blob find all previous blobs.
+  5. For each found blob match it to commits in other projects, get earliest date.
+  6. For each fixing blob match it to commits in other projects, get earliest date.
+  7. Match result file with vulnerable projects to result file with fixed projects.
+  8. For each project with vulnerable blob and fixed blob calculate time delta.
 
 ## 1. Get data on vulnerability fixes (cve, commit, file path, author date, vulnerability date)
 
