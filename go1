@@ -50,7 +50,7 @@ while read line; do
     project="$cve"
     
 
-    echo "working on echo $project, $filename, $pathname"
+    echo "working on echo $project, $filename"
 
     if [ -e $outdir/$project ]; then
         echo Warning: directory "$project" already exists >&2
