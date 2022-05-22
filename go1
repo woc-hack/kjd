@@ -1,5 +1,4 @@
 #! /bin/bash
-
 #
 # Read file in the form of c2fbbPch$i
 #
@@ -10,11 +9,15 @@
 # Ideally, we would only find blobs until we find the commit that 
 # introduced the vulnerability.
 #
+#------------------------------------------------------------------------
 
 # Check the command line args
 if [[ $# -ne 1 ]]; then
    echo "usage: go1 <output directory>"  >&2
    echo "example: ./go1 out"
+   echo ""
+   echo "Expects input file like data/test-data0.1000 on STDIN."
+   echo "This script is called by go."
    exit 1
 fi
 

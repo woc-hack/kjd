@@ -1,5 +1,4 @@
 #! /bin/bash
-
 #
 # Read files named good_blobs.txt and bad_blobs.txt.
 # The file bad_blobs.txt contains a list of blobs that contain a vulnerability.
@@ -8,11 +7,15 @@
 # the bad blobs. Find and sort the commit dates so that we can see when
 # a vulnerability was introduced and when it was fixed.
 #
+#------------------------------------------------------------------------
 
 # Check the command line args
 if [[ $# -ne 1 ]]; then
    echo "usage: go2 <output directory>"  >&2
-   echo "example: ./go2 out"
+   echo "example: ./go2 out/project_name"
+   echo ""
+   echo "Output directory is per-project directory created by go1."
+   echo "This script is called by go once for each project."
    exit 1
 fi
 
