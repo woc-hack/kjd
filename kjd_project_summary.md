@@ -1,10 +1,11 @@
 # KJD: Vulnerability Lifespan Across Projects
 
-**Kristiina Rahkema**, *Estonia*
-**James Walden**, *Northern Kentucky University, USA*
-**David Reid**, *University of Tennessee, USA*
+**Team**
+  - **Kristiina Rahkema**, *University of Tartu, Estonia*
+  - **James Walden**, *Northern Kentucky University, USA*
+  - **David Reid**, *University of Tennessee, USA*
 
-**Abstract:** Please provide a short summary of your project here.
+**Abstract:** While vulnerabilities may be discovered and fixed in a single project, copies of the vulnerable code may persist in other projects for a considerable amount of time. We use the World of Code to find copies of vulnerable files that exist in multiple projects and measure the lifespan of vulnerabilities in those projects.
 
 **Link:** N/A
 
@@ -31,7 +32,11 @@ The process of data gathering consists of the following steps:
 Please describe your preliminary findings here.
 
 ### 4. Challenges
-Please describe difficulties you encountered during the project related to World of Code. If possible, please also make suggestions on how you think they could be solved.
+
+  1. We don't know when each vulnerability was introduced, so we consider all commits made before the vulnerability fixing commit to be vulnerable.
+  2. Some projects may copy a fixed version of a file, then later revert to an older vulnerable version of a file because the fixed version introduced problems for the project, which means that the time between the introduction of a vulnerable file and a fixed file may be negative. 
+  3. Related to the previous challenge, vulnerabilities and their fixes may be introduced multiple times during the history of a project. A fix could be introduced twice because the situation in #2 happened, followed by a modification of project code that allowed a later introduction of the fixed file without the problems caused by its first introduction to the project.
+  4. We only look at vulnerabilities that are fixed with changes to a single file to make our data collection scripts faster to write and run.
 
 ### 5. Future Work
 
