@@ -42,8 +42,8 @@ cat $outdir/bad_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup
 cat $outdir/bad_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P |  sort -u > $outdir/bad_projs_c.txt
 
 # comm.txt is all the projects that contain both vulnerable and fixed 
-# versions of a file
-comm -12 $outdir/good_projs.txt $outdir/bad_projs.txt > $outdir/comm.txt
+# versions of a file. The sed command changes / to _ to make legal filenames.
+comm -12 $outdir/good_projs.txt $outdir/bad_projs.txt | sed -e "s@/@_@g" > $outdir/comm.txt
 
 rm -f $outdir/good_comm.txt $outdir/bad_comm.txt
 for line in $(cat $outdir/comm.txt); do
