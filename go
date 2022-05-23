@@ -37,8 +37,8 @@ fi
 
 
 echo "go ---- 2 "
-for dir in $(ls -d $outdir/*); do
-    echo working on $dir
+for dir in $(ls -d $outdir/* | grep CVE); do
+    echo "./go2 $dir"
     ./go2 $dir
     if [ $? -ne 0 ]; then
         echo "Running \"./go2 $dir\" failed with error code $?"
@@ -46,3 +46,6 @@ for dir in $(ls -d $outdir/*); do
     fi
     echo ""
 done
+
+echo "extract_results.sh ----- "
+extract_results.sh $outdir
