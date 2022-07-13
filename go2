@@ -12,40 +12,92 @@
 # Check the command line args
 if [[ $# -ne 1 ]]; then
    echo "usage: go2 <output directory>"  >&2
-   echo "example: ./go2 out/project_name"
+   echo "example: ./go2 out/CVE-2007-12345"
    echo ""
    echo "Output directory is per-project directory created by go1."
    echo "This script is called by go once for each project."
    exit 1
 fi
 
-outdir="$1"
-if [ ! -d $top_outdir ]; then
-   echo Error: directory $top_outdir does not exits >&2
+dir="$1"
+outdir="$1/stage2"
+if [ ! -d "$dir" ]; then
+   echo Error: directory $dir does not exits >&2
    exit 1
 fi
+mkdir "$outdir"
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+if [ ! -d $dir/../stage2.fail ]; then
+    mkdir $dir/../stage2.fail
+    if [ $? -ne 0 ]; then
+        exit 1
+    fi
+fi
+
+#
+# Functions
+#
+
+# fail: Handle failures by moving the directory to stage2.fail and
+# writing a message in log.stage2.error.
+function fail {
+    local msg="$1"
+    echo "Error: $msg"
+    echo "$dir: $msg" >> $dir/../logs/log.stage2.error
+    mv $dir $dir/../stage2.fail
+}
+
 
 
 # Make sure good_blobs.txt and bad_blobs.txt exist in the directory
-if [[ ! -f $outdir/good_blobs.txt || ! -f $outdir/bad_blobs.txt ]]; then
-    echo "$outdir (good_blobs.txt or bad_blobs.txt not found)"
-    continue
+stage1_dir="$dir/stage1"
+if [ ! -d "$stage1_dir" ]; then
+    fail "$stage1_dir not found"
+    exit 1
 fi
-#echo $outdir
+if [[ ! -f $stage1_dir/good_blobs.txt || ! -f $stage1_dir/bad_blobs.txt ]]; then
+    fail "$stage1_dir (good_blobs.txt or bad_blobs.txt not found)"
+    exit 1
+fi
+
+# Get the original project where the vulnerablity was fixed
+orig_project=`grep ^project= $stage1_dir/info | cut -d= -f2`
+if [ "$orig_project" == "" ]; then
+    fail "could not find project name in $stage1_dir/info"
+    exit 1
+fi
+echo "Original Project = $orig_project"
+
+# create header line for results.csv file
+# time diff is time from first bad commit to first fixed commit (that is, how
+# long the project was vulnerable). Might want to count from when cve was
+# created instead.
+echo  "time diff, project, first_good_blob_commit, first_good_blob_commit_time, first_bad_blob_commit, first_bad_blob_commit_time" > $dir/results.csv
 
 # Get all project with good (fixed) blobs (_c file also include commit)
-cat $outdir/good_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P | cut -d\; -f 2 | sort -u > $outdir/good_projs.txt
-cat $outdir/good_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P | sort -u > $outdir/good_projs_c.txt
+cat $stage1_dir/good_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P | cut -d\; -f 2 | sort -u > $outdir/good_projs.txt
+cat $stage1_dir/good_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P | sort -u > $outdir/good_projs_c.txt
 
 # Get all project with bad (vulnerable) blobs (_c file also include commit)
-cat $outdir/bad_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P | cut -d\; -f 2 | sort -u > $outdir/bad_projs.txt
-cat $outdir/bad_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P |  sort -u > $outdir/bad_projs_c.txt
+cat $stage1_dir/bad_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P | cut -d\; -f 2 | sort -u > $outdir/bad_projs.txt
+cat $stage1_dir/bad_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P |  sort -u > $outdir/bad_projs_c.txt
 
 # comm.txt is all the projects that contain both vulnerable and fixed 
 # versions of a file. 
-comm -12 $outdir/good_projs.txt $outdir/bad_projs.txt > $outdir/comm.txt
-
+comm -12 $outdir/good_projs.txt $outdir/bad_projs.txt | grep -v "$orig_project" > $outdir/comm.txt
 rm -f $outdir/good_comm.txt $outdir/bad_comm.txt
+
+# If there are no projects that contain both vulnerable and fixed blobs, quit.
+count=`cat $outdir/comm.txt | wc -l`
+if [ "$count" == "0" ]; then
+    fail "There are no clone projects that contain both vulnerable and fixed blobs"
+    exit 0
+fi
+
+# For each project that has contained both vulnerable and fixed blobs, collect
+# information.
 for line in $(cat $outdir/comm.txt); do
     grep $line $outdir/good_projs_c.txt > $outdir/tmpfile
     for tmp in $(cat $outdir/tmpfile); do
@@ -58,6 +110,21 @@ for line in $(cat $outdir/comm.txt); do
         echo "$time;$tmp" >> $outdir/${line}_bad.txt
     done
     sort -n $outdir/${line}_good.txt > $outdir/${line}_good_sorted.txt
+    first_good_blob_commit=`head -n 1 $outdir/${line}_good_sorted.txt | cut -d\; -f3`
+    first_good_blob_commit_time=`head -n 1 $outdir/${line}_good_sorted.txt | cut -d\; -f1`
+    good_time_formatted=`head -n 1 $outdir/${line}_good_sorted.txt | cut -d\; -f2`
     sort -n $outdir/${line}_bad.txt > $outdir/${line}_bad_sorted.txt
+    first_bad_blob_commit=`head -n 1 $outdir/${line}_bad_sorted.txt | cut -d\; -f3`
+    first_bad_blob_commit_time=`head -n 1 $outdir/${line}_bad_sorted.txt | cut -d\; -f1`
+    bad_time_formatted=`head -n 1 $outdir/${line}_bad_sorted.txt | cut -d\; -f2`
+
+    # find the number of days between broken commit and fixed commit
+    diff=$(((first_good_blob_commit_time-first_bad_blob_commit_time)/86400))
+    years=`echo "$diff 365.25" | awk '{printf "%.2f", $1 / $2}' | awk -F'.' '{print $1 " years and " $2 " days"}'`
+
+    echo  $years, $line, $first_good_blob_commit, $good_time_formatted, $first_bad_blob_commit, $bad_time_formatted >> $dir/results.csv
 done
 rm -f $outdir/tmpfile
+
+echo "$dir" >> $dir/../logs/log.stage2.success
+echo Success

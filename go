@@ -8,7 +8,11 @@
 #------------------------------------------------------------------------
 
 #data_file=data/filtered.csv
-data_file=data/short.csv
+data_file=data/short.cvefixes.csv
+if [ ! -f $data_file ]; then
+    echo Error: file not found: $data_file
+    exit 1
+fi
 
 echo Reading $data_file
 
@@ -24,28 +28,53 @@ if [ ! -f $data_file ]; then
 fi
 outdir="$1"
 
+
+for line in $(cat "$data_file"); do
+#while read line; do
+    echo $line
+#done < /dev/stdin
+done
+echo "#####"
+
 #
 # Run the go scripts
 #
 
-echo "go ---- 1 "
+
+echo "go1 ------------------------------------------------- "
 cat $data_file | ./go1 $outdir
 if [ $? -ne 0 ]; then
-    echo "Running \"./go1 $outdir\" failed with error code $?"
+    echo "\"./go1 $outdir\" failed with error code $?"
     exit 1
 fi
 
 
-echo "go ---- 2 "
+
+echo ""
+echo "go2 ------------------------------------------------- "
 for dir in $(ls -d $outdir/* | grep CVE); do
     echo "./go2 $dir"
     ./go2 $dir
-    if [ $? -ne 0 ]; then
-        echo "Running \"./go2 $dir\" failed with error code $?"
-        exit 2
+    err="$?"
+    if [ $err -ne 0 ]; then
+        echo "\"./go2 $dir\" failed with error code $err"
+        echo ""
+        continue
     fi
     echo ""
 done
 
-echo "extract_results.sh ----- "
-extract_results.sh $outdir
+
+echo "go3 ------------------------------------------------- "
+for dir in $(ls -d $outdir/* | grep CVE); do
+    file="$dir/results.csv"
+    echo "./go3 $file"
+    ./go3 $file
+    err="$?"
+    if [ $err -ne 0 ]; then
+        echo "\"./go3 $file\" failed with error code $err"
+        echo ""
+        continue
+    fi
+    echo ""
+done
