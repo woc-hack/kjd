@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# convert csv file to html
+
+# Check the command line args
+if [[ $# -ne 1 ]]; then
+   echo "usage: go3 <filname for csv file> "  >&2
+   echo "example: ./go3 out/CVE-2002-2443/results.csv"
+   exit 1
+fi
+
+infile="$1"
+if [ ! -f "$infile" ]; then
+   echo Error: file $infile does not exits >&2
+   exit 1
+fi
+base=`cat $infile | sed -e "s/\.csv$//"`
+outfile="$base.html"
+
+rm -f $outfile
+echo "<table border=1>" >> $outfile
+echo "<caption>$dir</caption>" >> $outfile
+echo "<tr><th>time diff<th>project<th>first good commit<th>first good commit time<th>$first bad commit<th>first bad commit time<th></tr>" >> $outfile
+for line in $( cat $infile); do
+    echo "<tr>" >> $outfile
+    echo "<td>$line" | sed -e "s/,/\n<td>/g" >> $outfile
+    echo "</tr>" >> $outfile
+done
+printf "\n</table>\n" >> $outfile
+echo "$infile"
+echo "$outfile"
+
