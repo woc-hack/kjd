@@ -11,7 +11,7 @@
 
 # Check the command line args
 if [[ $# -ne 1 ]]; then
-   echo "usage: go2 <output directory>"  >&2
+   echo "usage: go2 <output directory>"
    echo "example: ./go2 out/CVE-2007-12345"
    echo ""
    echo "Output directory is per-project directory created by go1."
@@ -20,61 +20,36 @@ if [[ $# -ne 1 ]]; then
 fi
 
 dir="$1"
+error_log=$dir/error_log
 outdir="$1/stage2"
 if [ ! -d "$dir" ]; then
-   echo Error: directory $dir does not exits >&2
+   echo Error: directory $dir does not exits | tee $error_log
    exit 1
 fi
 mkdir "$outdir"
 if [ $? -ne 0 ]; then
     exit 1
 fi
-if [ ! -d $dir/../stage2.fail ]; then
-    mkdir $dir/../stage2.fail
-    if [ $? -ne 0 ]; then
-        exit 1
-    fi
-fi
-
-#
-# Functions
-#
-
-# fail: Handle failures by moving the directory to stage2.fail and
-# writing a message in log.stage2.error.
-function fail {
-    local msg="$1"
-    echo "Error: $msg"
-    echo "$dir: $msg" >> $dir/../logs/log.stage2.error
-    mv $dir $dir/../stage2.fail
-}
-
 
 
 # Make sure good_blobs.txt and bad_blobs.txt exist in the directory
 stage1_dir="$dir/stage1"
 if [ ! -d "$stage1_dir" ]; then
-    fail "$stage1_dir not found"
+    echo "$stage1_dir not found" | tee $error_log
     exit 1
 fi
 if [[ ! -f $stage1_dir/good_blobs.txt || ! -f $stage1_dir/bad_blobs.txt ]]; then
-    fail "$stage1_dir (good_blobs.txt or bad_blobs.txt not found)"
+    echo "$stage1_dir (good_blobs.txt or bad_blobs.txt not found)" | tee $error_log
     exit 1
 fi
 
 # Get the original project where the vulnerablity was fixed
 orig_project=`grep ^project= $stage1_dir/info | cut -d= -f2`
 if [ "$orig_project" == "" ]; then
-    fail "could not find project name in $stage1_dir/info"
+    echo "could not find project name in $stage1_dir/info" | tee $error_log
     exit 1
 fi
 echo "Original Project = $orig_project"
-
-# create header line for results.csv file
-# time diff is time from first bad commit to first fixed commit (that is, how
-# long the project was vulnerable). Might want to count from when cve was
-# created instead.
-echo  "time diff, project, first_good_blob_commit, first_good_blob_commit_time, first_bad_blob_commit, first_bad_blob_commit_time" > $dir/results.csv
 
 # Get all project with good (fixed) blobs (_c file also include commit)
 cat $stage1_dir/good_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P | cut -d\; -f 2 | sort -u > $outdir/good_projs.txt
@@ -92,13 +67,23 @@ rm -f $outdir/good_comm.txt $outdir/bad_comm.txt
 # If there are no projects that contain both vulnerable and fixed blobs, quit.
 count=`cat $outdir/comm.txt | wc -l`
 if [ "$count" == "0" ]; then
-    fail "There are no clone projects that contain both vulnerable and fixed blobs"
-    exit 0
+    echo "There are no clone projects that contain both vulnerable and fixed blobs" | tee $error_log
+    exit 1
 fi
+
+# create header line for results.csv file
+# time diff is time from first bad commit to first fixed commit (that is, how
+# long the project was vulnerable). Might want to count from when cve was
+# created instead.
+echo  "time_diff, project, first good blob commit, first good blob commit time, first bad blob commit, first bad blob commit time" > $dir/results.csv
 
 # For each project that has contained both vulnerable and fixed blobs, collect
 # information.
 for line in $(cat $outdir/comm.txt); do
+    if [[ "$line" == *"gitorious"* ]]; then
+        # c2P does not seem to return the right format for gitorious
+        continue
+    fi
     grep $line $outdir/good_projs_c.txt > $outdir/tmpfile
     for tmp in $(cat $outdir/tmpfile); do
        time=`echo $tmp | ~/lookup/showCnt commit | cut -d \; -f 7 | awk -F\; '{ printf ("%s;%s\n", $1, strftime("%F:%T", $1)) }'`
@@ -126,5 +111,4 @@ for line in $(cat $outdir/comm.txt); do
 done
 rm -f $outdir/tmpfile
 
-echo "$dir" >> $dir/../logs/log.stage2.success
-echo Success
+echo "Success (go2)"

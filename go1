@@ -1,6 +1,6 @@
 #! /bin/bash
 #
-# Read file in the form of cvefixes.csv:
+# Read line in the form of cvefixes.csv:
 #    CVE, commit hash, path, date, date (date fields are not used right now)
 
 #
@@ -22,199 +22,156 @@ method="rgl"
 # Check the command line args
 if [[ $# -ne 1 ]]; then
    echo "usage: go1 <output directory>"  >&2
-   echo "example: ./go1 out"
+   echo "example: ./go1 out/CVE..."
    echo ""
-   echo "Expects input file like data/test-data0.1000 on STDIN."
+   echo "Expects input file like data/cvefixes.csv on STDIN."
    echo "This script is called by go."
    exit 1
 fi
 
-outdir="$1"
-if [ "$outdir" == "out" ]; then
-    rm -rf out
-elif [ -d $outdir ]; then
-   echo Error: directory $outdir already exits >&2
+# Create the output directory after making sure it does not already exist 
+working_dir="$1"
+if [ -d $working_dir ]; then
+   echo Error: directory $working_dir aleady exists
    exit 1
 fi
+mkdir $working_dir
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+outdir="$working_dir/stage1"
 mkdir $outdir
 if [ $? -ne 0 ]; then
+    exit 1 
+fi
+error_log="$working_dir/error_log"
+
+
+read line
+cve=`echo $line | cut -d\; -f 1`
+commit=`echo $line | cut -d\; -f 2`
+filepath=`echo $line | cut -d\; -f 3`
+filename=`basename $filepath`
+#time=`echo $line | cut -d\; -f 4`
+#time2=`echo $line | cut -d\; -f 5`
+
+project=`echo $commit | ~/lookup/getValues -f c2P | cut -d\; -f 2`
+if [[ "$project" == *$'\n'* ]]; then
+    echo Error: c2P $commit returns more than 1 project | tee $error_log
     exit 1
 fi
-mkdir $outdir/stage1.fail
-if [ $? -ne 0 ]; then
-    exit 1
-fi
-logdir="$outdir/logs"
-mkdir $logdir
-if [ $? -ne 0 ]; then
+if [ "$project" == "" ]; then
+    echo "Error: $cve: unable to find project" | tee $error_log
     exit 1
 fi
 
+echo "working on $cve, $filename, $commit"
 
-#for line in $(cat test-data); do
-while read line; do
-    if [[ "$line" == "#"* ]]; then
-        # skip comments
-        continue
-    fi
+# save the project and file info
+url=`./toUrl $project`
+path_url="$url/blob/HEAD/$filepath"
+echo path_url=$path_url >> $outdir/info
+echo fixing commit=$commit >> $outdir/info
+echo "" >> $outdir/info
+echo project=$project >> $outdir/info
+echo project_url=$url >> $outdir/info
+echo pathname=$filepath >> $outdir/info
+echo cve=$cve >> $outdir/info
 
-    cve=`echo $line | cut -d\; -f 1`
-    commit=`echo $line | cut -d\; -f 2`
-    filepath=`echo $line | cut -d\; -f 3`
-    filename=`basename $filepath`
-    #time=`echo $line | cut -d\; -f 4`
-    #time2=`echo $line | cut -d\; -f 5`
+#
+# create the good_blobs.txt and bad_blobs.txt files.
+# First get the commits, then get the blobs from the commits.
+#
 
-    echo ""
-    echo "----- $cve"
-    date
-
-    project=`echo $commit | ~/lookup/getValues -f c2P | cut -d\; -f 2`
-    if [[ "$project" == *$'\n'* ]]; then
-        echo Error: c2P $commit returns more than 1 project
-        #echo "$project"
-        echo "$cve: c2P $commit returns more than 1 project" >> $logdir/log.stage1.error
-        continue
-    fi
-    if [ "$project" == "" ]; then
-        echo Error in $cve
-        echo "$cve: unable to find project" >> $logdir/log.stage1.error
-        continue
-    fi
-
-    echo "working on $cve, $filename, $commit"
-
-    if [ -e $outdir/$cve ]; then
-        echo Warning: directory "$cve" already exists >&2
-        continue
-    fi
-    mkdir $outdir/$cve
-    if [ $? -ne 0 ]; then
-        continue
-    fi
-    cve_outdir="$outdir/$cve/stage1"
-    mkdir $cve_outdir
-    if [ $? -ne 0 ]; then
-        continue
-    fi
-
-    # save the project and file info
-    url=`./toUrl $project`
-    path_url="$url/blob/HEAD/$filepath"
-    echo path_url=$path_url >> $cve_outdir/info
-    echo fixing commit=$commit >> $cve_outdir/info
-    echo "" >> $cve_outdir/info
-    echo project=$project >> $cve_outdir/info
-    echo project_url=$url >> $cve_outdir/info
-    echo pathname=$filepath >> $cve_outdir/info
-    echo cve=$cve >> $cve_outdir/info
-
-    #
-    # create the good_blobs.txt and bad_blobs.txt files.
-    # First get the commits, then get the blobs from the commits.
-    #
-
-    # get commit hashes for all revisions
-    if [ $method == "b2ob" ]; then
-        blob=`echo $commit | ~/lookup/showCmtTree.perl | grep ";$filepath" | cut -d ";" -f 2` 
-        echo "calling ob2b to find new (fixed) blobs"
-        echo $blob > $cve_outdir/good_blobs.txt
-        ./ob2b_r $blob >> $cve_outdir/good_blobs.txt
-        echo "calling b2ob to find old (potentially vulnerable) blobs"
-        ./b2ob_r $blob >> $cve_outdir/bad_blobs.txt
-        # see if any blobs are in both good_blobs.txt and bad_blobs.txt
-        sort -u $cve_outdir/good_blobs.txt > $cve_outdir/good_blobs.sorted.txt
-        sort -u $cve_outdir/bad_blobs.txt > $cve_outdir/bad_blobs.sorted.txt
-        comm -12 $cve_outdir/good_blobs.sorted.txt $cve_outdir/bad_blobs.sorted.txt > $cve_outdir/comm_blobs.txt
-        wc -l $cve_outdir/comm_blobs.txt
+# get commit hashes for all revisions
+if [ $method == "b2ob" ]; then
+    blob=`echo $commit | ~/lookup/showCmtTree.perl | grep ";$filepath" | cut -d ";" -f 2` 
+    echo "calling ob2b to find new (fixed) blobs"
+    echo $blob > $outdir/good_blobs.txt
+    ./ob2b_r $blob >> $outdir/good_blobs.txt
+    echo "calling b2ob to find old (potentially vulnerable) blobs"
+    ./b2ob_r $blob >> $outdir/bad_blobs.txt
+    # see if any blobs are in both good_blobs.txt and bad_blobs.txt
+    sort -u $outdir/good_blobs.txt > $outdir/good_blobs.sorted.txt
+    sort -u $outdir/bad_blobs.txt > $outdir/bad_blobs.sorted.txt
+    comm -12 $outdir/good_blobs.sorted.txt $outdir/bad_blobs.sorted.txt > $outdir/comm_blobs.txt
+    wc -l $outdir/comm_blobs.txt
 exit
-        continue
-    elif [ $method == "c2cc" ]; then
-        echo "calling c2pc to find parent commits"
-        ./map_r c2pc $commit > $cve_outdir/commits.old
-        echo "calling c2cc to find child commits"
-        ./map_r c2cc $commit > $cve_outdir/commits.new
-        echo $commit > $cve_outdir/c
-    elif [ $method == "rgl" ]; then
-        echo "Calling ./rgl2 to get all commits"
-        proj_mod=`echo $project | sed -e 's@_@/@'`
-        ./rgl2 github $proj_mod $filepath > $cve_outdir/commits
-        err=$?
-        if [ $err -ne 0 ]; then
-            echo "./rgl2 github $proj_mod $filepath" 
-            if [ $err -eq 2 ]; then
-                echo "Error: rgl2 failed: rate limit exceeded"
-                echo "$cve: rgl2 failed: rate limit exceeded" >> $logdir/log.stage1.error
-            else
-                echo "Error: rgl2 failed"
-                echo "$cve: rgl2 failed" >> $logdir/log.stage1.error
-            fi
-            mv $outdir/$cve $outdir/stage1.fail
-            continue
+    continue
+elif [ $method == "c2cc" ]; then
+    echo "calling c2pc to find parent commits"
+    ./map_r c2pc $commit > $outdir/commits.old
+    echo "calling c2cc to find child commits"
+    ./map_r c2cc $commit > $outdir/commits.new
+    echo $commit > $outdir/c
+elif [ $method == "rgl" ]; then
+    echo "Calling ./rgl2 to get all commits"
+    proj_mod=`echo $project | sed -e 's@_@/@'`
+    ./rgl2 github $proj_mod $filepath > $outdir/commits
+    err=$?
+    if [ $err -ne 0 ]; then
+        echo "./rgl2 github $proj_mod $filepath" 
+        if [ $err -eq 2 ]; then
+            echo "Error: rgl2 failed: rate limit exceeded" | tee $error_log
+        else
+            echo "Error: rgl2 failed" | tee $error_log
         fi
-        count=`sort $cve_outdir/commits | uniq -c | grep "$commit" | sed -e 's/^ *//' | cut -d " " -f 1`
-        if [ "$count" == "" ]; then
-            # if the commit is not in this project, move on.
-            echo "Error: commit $commit not in $cve_outdir/commits"
-            echo "$cve: commit $commit not in $cve_outdir/commits" >> $logdir/log.stage1.error
-            mv $outdir/$cve $outdir/stage1.fail
-            continue
-        fi
-        if [ $count -ne 1 ]; then
-            # This should not happen, same commit showing up more than once.
-            echo "Error: count != 1"
-            echo "       count = $count"
-            echo "$cve: count = $count (should be 1)" >> $logdir/log.stage1.error
-            mv $cve_outdir $outdir/stage1.fail
-            continue
-        fi
-        # commits.old are potentially vulnerable, commits.new are after the fix.
-        cat $cve_outdir/commits | sed -n "/$commit/,\$ p" | grep -v "$commit" > $cve_outdir/commits.old
-        tac $cve_outdir/commits | sed -n "/$commit/,\$ p" | tac > $cve_outdir/commits.new
-    else
-        echo "Internal Error: invalid method\n" 
         exit 1
     fi
+    count=`sort $outdir/commits | uniq -c | grep "$commit" | sed -e 's/^ *//' | cut -d " " -f 1`
+    if [ "$count" == "" ]; then
+        # if the commit is not in this project, move on.
+        echo "Error: commit $commit not in $outdir/commits" | tee $error_log
+        exit 1
+    fi
+    if [ $count -ne 1 ]; then
+        # This should not happen, same commit showing up more than once.
+        echo "$cve: count = $count (should be 1)"
+        continue
+    fi
+    # commits.old are potentially vulnerable, commits.new are after the fix.
+    cat $outdir/commits | sed -n "/$commit/,\$ p" | grep -v "$commit" > $outdir/commits.old
+    tac $outdir/commits | sed -n "/$commit/,\$ p" | tac > $outdir/commits.new
+else
+    echo "Internal Error: invalid method"  | tee $error_log
+    exit 1
+fi
 
-    # go through all new commits, find the ones that match filepath,
-    # and extract the blob hash. these are the presumably fixed blobs.
-    # include the initial blob in this list also.
-    echo "filtering `wc -l $cve_outdir/commits.new | cut -d " " -f 1` child commits for file $filepath"
-    cat $cve_outdir/commits.new |
-        while read line ; do
-            if [ "$hostname" = "da5.eecs.utk.edu" ]; then
-                echo $line | ~/lookup/showCmtTree.perl | grep ";$filepath" >> $cve_outdir/commits.new.filtered
-            else
-                echo $line | ssh da5 ~/lookup/showCmtTree.perl | grep ";$filepath" >> $cve_outdir/commits.new.filtered
-            fi
-        done
-    cat $cve_outdir/commits.new.filtered | cut -d ";" -f 2 | uniq > $cve_outdir/good_blobs.txt
-    rm $cve_outdir/commits.new.filtered
+# go through all new commits, find the ones that match filepath,
+# and extract the blob hash. these are the presumably fixed blobs.
+# include the initial blob in this list also.
+echo "filtering `wc -l $outdir/commits.new | cut -d " " -f 1` child commits for file $filepath"
+cat $outdir/commits.new |
+    while read line ; do
+        if [ "$hostname" = "da5.eecs.utk.edu" ]; then
+            echo $line | ~/lookup/showCmtTree.perl | grep ";$filepath" >> $outdir/commits.new.filtered
+        else
+            echo $line | ssh da5 ~/lookup/showCmtTree.perl | grep ";$filepath" >> $outdir/commits.new.filtered
+        fi
+    done
+cat $outdir/commits.new.filtered | cut -d ";" -f 2 | uniq > $outdir/good_blobs.txt
+rm $outdir/commits.new.filtered
 
-    # go through all old commits, find the ones that match filepath,
-    # and extract the blob hash. these are the presumably vulnerable blobs.
-    echo "filtering `wc -l $cve_outdir/commits.old | cut -d " " -f 1` parent commits for file $filepath"
-    rm -f $cve_outdir/commits.old.filtered
-    cat $cve_outdir/commits.old |
-        while read line ; do
-            if [ "$hostname" = "da5.eecs.utk.edu" ]; then
-                echo $line | ~/lookup/showCmtTree.perl | grep ";$filepath" >> $cve_outdir/commits.old.filtered
-            else
-                echo $line | ssh da5 ~/lookup/showCmtTree.perl | grep ";$filepath" >> $cve_outdir/commits.old.filtered
-            fi
-        done
-    cat $cve_outdir/commits.old.filtered | cut -d ";" -f 2 | uniq > $cve_outdir/bad_blobs.txt
-    rm $cve_outdir/commits.old.filtered
+# go through all old commits, find the ones that match filepath,
+# and extract the blob hash. these are the presumably vulnerable blobs.
+echo "filtering `wc -l $outdir/commits.old | cut -d " " -f 1` parent commits for file $filepath"
+rm -f $outdir/commits.old.filtered
+cat $outdir/commits.old |
+    while read line ; do
+        if [ "$hostname" = "da5.eecs.utk.edu" ]; then
+            echo $line | ~/lookup/showCmtTree.perl | grep ";$filepath" >> $outdir/commits.old.filtered
+        else
+            echo $line | ssh da5 ~/lookup/showCmtTree.perl | grep ";$filepath" >> $outdir/commits.old.filtered
+        fi
+    done
+cat $outdir/commits.old.filtered | cut -d ";" -f 2 | uniq > $outdir/bad_blobs.txt
+rm $outdir/commits.old.filtered
 
-    sort -u $cve_outdir/good_blobs.txt > $cve_outdir/good_blobs.sorted.txt
-    sort -u $cve_outdir/bad_blobs.txt > $cve_outdir/bad_blobs.sorted.txt
-    comm -12 $cve_outdir/good_blobs.sorted.txt $cve_outdir/bad_blobs.sorted.txt > $cve_outdir/comm_blobs.txt
-    wc -l $cve_outdir/comm_blobs.txt
-    echo "$cve" >> $logdir/log.stage1.success
+sort -u $outdir/good_blobs.txt > $outdir/good_blobs.sorted.txt
+sort -u $outdir/bad_blobs.txt > $outdir/bad_blobs.sorted.txt
+comm -12 $outdir/good_blobs.sorted.txt $outdir/bad_blobs.sorted.txt > $outdir/comm_blobs.txt
+wc -l $outdir/comm_blobs.txt
 
-    echo Success
+echo "Success (go1)"
  
-done < /dev/stdin
-#done < "${2:-/dev/stdin}"
-
 exit 0

@@ -3,30 +3,34 @@
 # convert csv file to html
 
 # Check the command line args
-if [[ $# -ne 1 ]]; then
-   echo "usage: go3 <filname for csv file> "  >&2
-   echo "example: ./go3 out/CVE-2002-2443/results.csv"
+if [[ $# -ne 2 ]]; then
+   echo "usage: go3 <cve> <filname for csv file> "  >&2
+   echo "example: ./go3 CVE-2002-2443 out/CVE-2002-2443/results.csv"
    exit 1
 fi
 
-infile="$1"
+cve="$1"
+infile="$2"
 if [ ! -f "$infile" ]; then
    echo Error: file $infile does not exits >&2
    exit 1
 fi
-base=`cat $infile | sed -e "s/\.csv$//"`
+base=`echo $infile | sed -e "s/\.csv$//"`
 outfile="$base.html"
 
 rm -f $outfile
 echo "<table border=1>" >> $outfile
-echo "<caption>$dir</caption>" >> $outfile
-echo "<tr><th>time diff<th>project<th>first good commit<th>first good commit time<th>$first bad commit<th>first bad commit time<th></tr>" >> $outfile
-for line in $( cat $infile); do
+echo "<caption>$cve</caption>" >> $outfile
+col="<th>"
+while read line; do
     echo "<tr>" >> $outfile
-    echo "<td>$line" | sed -e "s/,/\n<td>/g" >> $outfile
+    echo "$col $line" | sed -e "s/,/\n$col/g" >> $outfile
     echo "</tr>" >> $outfile
-done
+    col="<td>"
+done < $infile
 printf "\n</table>\n" >> $outfile
 echo "$infile"
 echo "$outfile"
 
+echo "Success (go3)"
+exit 0
