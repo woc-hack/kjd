@@ -97,7 +97,7 @@ for cve in cves:
     files = data[3].split(",")
     # Print only CVEs with one file
     if len(files) == 1:
-        print("{};{};{};{};{}".format(data[0], data[1], files[0], data[2], data[4]))
+        print("{};{};{};{};{};{}".format(cve,data[0], data[1], files[0], data[2], data[4]))
     # FIXME: print all CVEs regardless of how many files
     # for file in files:
     #     print("{};{};{};{};{}".format(cve, data[0], file, data[1], data[3]))
