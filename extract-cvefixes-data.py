@@ -69,9 +69,10 @@ fixes_df = pd.read_sql_query("SELECT cve_id, hash FROM fixes", conn)
 for row in fixes_df.itertuples():
     cves[row.cve_id] = [ row.hash ]
 
-    commit_dates = pd.read_sql_query("SELECT committer_date FROM commits WHERE hash = '{}'".format(row.hash), conn)
-    for daterow in commit_dates.itertuples():
-        cves[row.cve_id].append(daterow.committer_date)
+    commit_info = pd.read_sql_query("SELECT committer_date, repo_url FROM commits WHERE hash = '{}'".format(row.hash), conn)
+    for commitrow in commit_info.itertuples():
+        cves[row.cve_id].append(commitrow.repo_url)
+        cves[row.cve_id].append(commitrow.committer_date)
 
     files = []
     files_df = pd.read_sql_query("SELECT file_change_id,new_path FROM file_change WHERE hash = '{}'".format(row.hash), conn)
@@ -93,10 +94,12 @@ for row in cve_df.itertuples():
 #------------------------------------------------------------------------
 for cve in cves:
     data = cves[cve]
-    files = data[2].split(",")
+    files = data[3].split(",")
     # Print only CVEs with one file
     if len(files) == 1:
-        print("{};{};{};{};{}".format(cve, data[0], files[0], data[1], data[3]))
+        print("{};{};{};{};{}".format(data[0], data[1], files[0], data[2], data[4]))
     # FIXME: print all CVEs regardless of how many files
     # for file in files:
     #     print("{};{};{};{};{}".format(cve, data[0], file, data[1], data[3]))
+
+
