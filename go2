@@ -10,9 +10,9 @@
 #------------------------------------------------------------------------
 
 # Check the command line args
-if [[ $# -ne 1 ]]; then
-   echo "usage: go2 <output directory>"
-   echo "example: ./go2 out/CVE-2007-12345"
+if [[ $# -ne 2 ]]; then
+   echo "usage: go2 <output directory> <time>"
+   echo "example: ./go2 out/CVE-2007-12345" 1242055800
    echo ""
    echo "Output directory is per-project directory created by go1."
    echo "This script is called by go once for each project."
@@ -20,6 +20,7 @@ if [[ $# -ne 1 ]]; then
 fi
 
 dir="$1"
+v_unixtime="$2"
 error_log=$dir/error_log
 outdir="$1/stage2"
 if [ ! -d "$dir" ]; then
@@ -72,10 +73,8 @@ if [ "$count" == "0" ]; then
 fi
 
 # create header line for results.csv file
-# time diff is time from first bad commit to first fixed commit (that is, how
-# long the project was vulnerable). Might want to count from when cve was
-# created instead.
-echo  "time_diff, project, first good blob commit, first good blob commit time, first bad blob commit, first bad blob commit time" > $dir/results.csv
+# time diff is time from cve publication to first fixed commit
+echo  "time_diff, project, first good blob commit, first good blob commit time, cve publication date" > $dir/results.csv
 
 # For each project that has contained both vulnerable and fixed blobs, collect
 # information.
@@ -98,16 +97,18 @@ for line in $(cat $outdir/comm.txt); do
     first_good_blob_commit=`head -n 1 $outdir/${line}_good_sorted.txt | cut -d\; -f3`
     first_good_blob_commit_time=`head -n 1 $outdir/${line}_good_sorted.txt | cut -d\; -f1`
     good_time_formatted=`head -n 1 $outdir/${line}_good_sorted.txt | cut -d\; -f2`
-    sort -n $outdir/${line}_bad.txt > $outdir/${line}_bad_sorted.txt
-    first_bad_blob_commit=`head -n 1 $outdir/${line}_bad_sorted.txt | cut -d\; -f3`
-    first_bad_blob_commit_time=`head -n 1 $outdir/${line}_bad_sorted.txt | cut -d\; -f1`
-    bad_time_formatted=`head -n 1 $outdir/${line}_bad_sorted.txt | cut -d\; -f2`
+    #sort -n $outdir/${line}_bad.txt > $outdir/${line}_bad_sorted.txt
+    #first_bad_blob_commit=`head -n 1 $outdir/${line}_bad_sorted.txt | cut -d\; -f3`
+    #first_bad_blob_commit_time=`head -n 1 $outdir/${line}_bad_sorted.txt | cut -d\; -f1`
+    #bad_time_formatted=`head -n 1 $outdir/${line}_bad_sorted.txt | cut -d\; -f2`
 
-    # find the number of days between broken commit and fixed commit
-    diff=$(((first_good_blob_commit_time-first_bad_blob_commit_time)/86400))
+    # find the number of days between cve publication and fixed commit
+    diff=$(((first_good_blob_commit_time-v_unixtime)/86400))
+    # convert to years and days
     years=`echo "$diff 365.25" | awk '{printf "%.2f", $1 / $2}' | awk -F'.' '{print $1 " years and " $2 " days"}'`
 
-    echo  $years, $line, $first_good_blob_commit, $good_time_formatted, $first_bad_blob_commit, $bad_time_formatted >> $dir/results.csv
+    #echo  $years, $line, $first_good_blob_commit, $good_time_formatted, $first_bad_blob_commit, $bad_time_formatted >> $dir/results.csv
+    echo  $years, $line, $first_good_blob_commit, $good_time_formatted, `date -d @$v_unixtime +%Y-%m-%d_%H:%M:%S` >> $dir/results.csv
 done
 rm -f $outdir/tmpfile
 

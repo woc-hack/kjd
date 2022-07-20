@@ -1,7 +1,7 @@
 #! /bin/bash
 #
-# Read line in the form of cvefixes.csv:
-#    CVE, commit hash, path, date, date (date fields are not used right now)
+# Read line in the form: 
+#    CVE, fixing commit, project name, file path
 
 #
 # Create files with all the good (fixed) blobs and all the old (vulnerable)
@@ -21,7 +21,7 @@ method="rgl"
 
 # Check the command line args
 if [[ $# -ne 1 ]]; then
-   echo "usage: go1 <output directory>"  >&2
+   echo "usage: go1 <output directory>"
    echo "example: ./go1 out/CVE..."
    echo ""
    echo "Expects input file like data/cvefixes.csv on STDIN."
@@ -50,22 +50,13 @@ error_log="$working_dir/error_log"
 read line
 cve=`echo $line | cut -d\; -f 1`
 commit=`echo $line | cut -d\; -f 2`
-filepath=`echo $line | cut -d\; -f 3`
+project=`echo $line | cut -d\; -f 3`
+filepath=`echo $line | cut -d\; -f 4`
 filename=`basename $filepath`
-#time=`echo $line | cut -d\; -f 4`
-#time2=`echo $line | cut -d\; -f 5`
+#time=`echo $line | cut -d\; -f 5`
+#time2=`echo $line | cut -d\; -f 6`
 
-project=`echo $commit | ~/lookup/getValues -f c2P | cut -d\; -f 2`
-if [[ "$project" == *$'\n'* ]]; then
-    echo Error: c2P $commit returns more than 1 project | tee $error_log
-    exit 1
-fi
-if [ "$project" == "" ]; then
-    echo "Error: $cve: unable to find project" | tee $error_log
-    exit 1
-fi
-
-echo "working on $cve, $filename, $commit"
+echo "working on $cve, $project, $filename"
 
 # save the project and file info
 url=`./toUrl $project`
@@ -96,7 +87,6 @@ if [ $method == "b2ob" ]; then
     sort -u $outdir/bad_blobs.txt > $outdir/bad_blobs.sorted.txt
     comm -12 $outdir/good_blobs.sorted.txt $outdir/bad_blobs.sorted.txt > $outdir/comm_blobs.txt
     wc -l $outdir/comm_blobs.txt
-exit
     continue
 elif [ $method == "c2cc" ]; then
     echo "calling c2pc to find parent commits"
@@ -106,6 +96,7 @@ elif [ $method == "c2cc" ]; then
     echo $commit > $outdir/c
 elif [ $method == "rgl" ]; then
     echo "Calling ./rgl2 to get all commits"
+   
     proj_mod=`echo $project | sed -e 's@_@/@'`
     ./rgl2 github $proj_mod $filepath > $outdir/commits
     err=$?

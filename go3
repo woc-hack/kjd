@@ -4,12 +4,12 @@
 
 # Check the command line args
 if [[ $# -ne 2 ]]; then
-   echo "usage: go3 <cve> <filname for csv file> "  >&2
-   echo "example: ./go3 CVE-2002-2443 out/CVE-2002-2443/results.csv"
+   echo "usage: go3 <cve: project and path> <filename for csv file> "  >&2
+   echo "example: ./go3 CVE-2002-2443:https://github.com/foo/fum/src/test.c  out/CVE-2002-2443/results.csv"
    exit 1
 fi
 
-cve="$1"
+caption="$1"
 infile="$2"
 if [ ! -f "$infile" ]; then
    echo Error: file $infile does not exits >&2
@@ -20,7 +20,7 @@ outfile="$base.html"
 
 rm -f $outfile
 echo "<table border=1>" >> $outfile
-echo "<caption>$cve</caption>" >> $outfile
+echo "<caption>$caption</caption>" >> $outfile
 col="<th>"
 while read line; do
     echo "<tr>" >> $outfile
