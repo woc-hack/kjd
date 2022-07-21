@@ -1,0 +1,102 @@
+CVE-2019-17541.stage1: Error: commit 39f226a9c137f547e12afde972eeba7551124493 not in out/out13/CVE-2019-17541/stage1/commits
+CVE-2019-17547.stage1: Error: commit ecf7c6b288e11e7e7f75387c5e9e93e423b98397 not in out/out13/CVE-2019-17547/stage1/commits
+CVE-2019-18625.stage1: Error: commit 9f0294fadca3dcc18c919424242a41e01f3e8318 not in out/out13/CVE-2019-18625/stage1/commits
+CVE-2019-18656.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-18792.stage1: Error: commit fa692df37a796c3330c81988d15ef1a219afc006 not in out/out13/CVE-2019-18792/stage1/commits
+CVE-2019-18811.stage1: Error: commit 45c1380358b12bf2d1db20a5874e9544f56b34ab not in out/out13/CVE-2019-18811/stage1/commits
+CVE-2019-18812.stage1: Error: commit c0a333d842ef67ac04adc72ff79dc1ccc3dca4ed not in out/out13/CVE-2019-18812/stage1/commits
+CVE-2019-18853.stage1: Error: commit ec9c8944af2bfc65c697ca44f93a727a99b405f1 not in out/out13/CVE-2019-18853/stage1/commits
+CVE-2019-18981.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-18982.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-19043.stage1: Error: commit 27d461333459d282ffa4a2bdb6b215a59d493a8f not in out/out13/CVE-2019-19043/stage1/commits
+CVE-2019-19046.stage1: Error: commit 4aa7afb0ee20a97fbf0c5bab3df028d5fb85fdab not in out/out13/CVE-2019-19046/stage1/commits
+CVE-2019-19049.stage1: Error: commit e13de8fe0d6a51341671bbe384826d527afe8d44 not in out/out13/CVE-2019-19049/stage1/commits
+CVE-2019-19052.stage1: Error: commit fb5be6a7b4863ecc44963bb80ca614584b6c7817 not in out/out13/CVE-2019-19052/stage1/commits
+CVE-2019-19055.stage1: Error: commit 1399c59fa92984836db90538cf92397fe7caaa57 not in out/out13/CVE-2019-19055/stage1/commits
+CVE-2019-19058.stage1: Error: commit b4b814fec1a5a849383f7b3886b654a13abbda7d not in out/out13/CVE-2019-19058/stage1/commits
+CVE-2019-19069.stage1: Error: commit fc739a058d99c9297ef6bfd923b809d85855b9a9 not in out/out13/CVE-2019-19069/stage1/commits
+CVE-2019-19077.stage1: Error: commit 4a9d46a9fe14401f21df69cea97c62396d5fb053 not in out/out13/CVE-2019-19077/stage1/commits
+CVE-2019-19246.stage1: Error: commit d3e402928b6eb3327f8f7d59a9edfa622fec557b not in out/out13/CVE-2019-19246/stage1/commits
+CVE-2019-19274.stage1: Error: commit a4d78362397fc3bced6ea80fbc7b5f4827aec55e not in out/out13/CVE-2019-19274/stage1/commits
+CVE-2019-19275.stage1: Error: commit a4d78362397fc3bced6ea80fbc7b5f4827aec55e not in out/out13/CVE-2019-19275/stage1/commits
+CVE-2019-19379.stage1: Error: commit e05dc512a437284f14624da23cca4a829a76aebf not in out/out13/CVE-2019-19379/stage1/commits
+CVE-2019-19479.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-19480.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-19481.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-19602.stage1: Error: commit 59c4bd853abcea95eccc167a7d7fd5f1a5f47b98 not in out/out13/CVE-2019-19602/stage1/commits
+CVE-2019-19882.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-20172.stage1: Error: commit 0fc24fe2564736689859e7edfa177a86dac36bf9 not in out/out13/CVE-2019-20172/stage1/commits
+CVE-2019-20176.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-20375.stage1: Error: commit eefdabb714f26192f585083ef96c8413e459a1d1 not in out/out13/CVE-2019-20375/stage1/commits
+CVE-2019-20376.stage1: Error: commit 993bed4923c88593cc6b1186e0d1b9564994a25a not in out/out13/CVE-2019-20376/stage1/commits
+CVE-2019-20381.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-20387.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-20422.stage1: Error: commit 7b09c2d052db4b4ad0b27b97918b46a7746966fa not in out/out13/CVE-2019-20422/stage1/commits
+CVE-2019-20628.stage1: Error: commit 1ab4860609f2e7a35634930571e7d0531297e090 not in out/out13/CVE-2019-20628/stage1/commits
+CVE-2019-20629.stage1: Error: commit 2320eb73afba753b39b7147be91f7be7afc0eeb7 not in out/out13/CVE-2019-20629/stage1/commits
+CVE-2019-20630.stage1: Error: commit 1ab4860609f2e7a35634930571e7d0531297e090 not in out/out13/CVE-2019-20630/stage1/commits
+CVE-2019-20786.stage1: Error: commit fd73a5df2ff0e1fb6ae6a51e2777d7a16cc4f4e0 not in out/out13/CVE-2019-20786/stage1/commits
+CVE-2019-20788.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-20791.stage1: Error: commit c3a3a0c424322009fec3ab735fb20ce8f6e19e70 not in out/out13/CVE-2019-20791/stage1/commits
+CVE-2019-20792.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-20805.stage1: Error: commit 8be9da8280dfa69d5df4417d4d81bda1cab78010 not in out/out13/CVE-2019-20805/stage1/commits
+CVE-2019-20839.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-20840.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-20909.stage1: Error: commit d7913b893bfa98fab27f05825dc4cab2d3a20c83 not in out/out13/CVE-2019-20909/stage1/commits
+CVE-2019-20915.stage1: Error: commit 95cc9300430d35feb05b06a9badf678419463dbe not in out/out13/CVE-2019-20915/stage1/commits
+CVE-2019-20917.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-3554.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-3877.stage1: Error: commit 62041428a32de402e0be6ba45fe12df6a83bedb8 not in out/out13/CVE-2019-3877/stage1/commits
+CVE-2019-5884.stage1: Error: commit f133163f2d754584de65d718b2fde96191557316 not in out/out13/CVE-2019-5884/stage1/commits
+CVE-2019-6009.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-6257.stage1: Error: commit 2f522db8f037a66ce9040ee0b216aa4a0359286c not in out/out13/CVE-2019-6257/stage1/commits
+CVE-2019-6486.stage1: Error: commit 42b42f71cf8f5956c09e66230293dfb5db652360 not in out/out13/CVE-2019-6486/stage1/commits
+CVE-2019-6974.stage1: Error: commit cfa39381173d5f969daf43582c95ad679189cbc9 not in out/out13/CVE-2019-6974/stage1/commits
+CVE-2019-6976.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-7175.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-7324.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-7395.stage1: Error: commit 8a43abefb38c5e29138e1c9c515b313363541c06 not in out/out13/CVE-2019-7395/stage1/commits
+CVE-2019-7396.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-7397.stage1: Error: commit 306c1f0fa5754ca78efd16ab752f0e981d4f6b82 not in out/out13/CVE-2019-7397/stage1/commits
+CVE-2019-8293.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-8906.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-9003.stage1: Error: commit 77f8269606bf95fcb232ee86f6da80886f1dfae8 not in out/out13/CVE-2019-9003/stage1/commits
+CVE-2019-9213.stage1: Error: commit 0a1d52994d440e21def1c2174932410b4f2a98a1 not in out/out13/CVE-2019-9213/stage1/commits
+CVE-2019-9482.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-9578.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-9734.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-9841.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2019-9960.stage1: Error: commit 1ed10d3c423187712b8f6a8cb2bc9d5cc3b2deb8 not in out/out13/CVE-2019-9960/stage1/commits
+CVE-2020-10194.stage1: Error: commit 1df440e0efa624d1772a05fb6d397d9beb4bda1e not in out/out13/CVE-2020-10194/stage1/commits
+CVE-2020-10235.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-10246.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-10378.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-10595.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-10931.stage1: Error: commit 02c6a2b62ddcb6fa4569a591d3461a156a636305 not in out/out13/CVE-2020-10931/stage1/commits
+CVE-2020-10966.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-11000.stage1: Error: commit 5e257e0db4f2a08cf05f00756e5961ee873e481b not in out/out13/CVE-2020-11000/stage1/commits
+CVE-2020-11004.stage1: Error: commit ea5d6f114b151ed11ec0ad7cb47bd729e77a874a not in out/out13/CVE-2020-11004/stage1/commits
+CVE-2020-11016.stage1: Error: commit b9a2ac43a4f99d764b827108f6a99dc4a9faa013 not in out/out13/CVE-2020-11016/stage1/commits
+CVE-2020-11042.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-11044.stage1: Error: commit 67c2aa52b2ae0341d469071d1bc8aab91f8d2ed8 not in out/out13/CVE-2020-11044/stage1/commits
+CVE-2020-11045.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-11046.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-11048.stage1: Error: commit 9301bfe730c66180263248b74353daa99f5a969b not in out/out13/CVE-2020-11048/stage1/commits
+CVE-2020-11054.stage1: Error: commit 1b7946ed14b386a24db050f2d6dba81ba6518755 not in out/out13/CVE-2020-11054/stage1/commits
+CVE-2020-11058.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-11071.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-11072.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-11076.stage1: Error: commit f24d5521295a2152c286abb0a45a1e1e2bd275bd not in out/out13/CVE-2020-11076/stage1/commits
+CVE-2020-11087.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-11088.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-11093.stage1: Error: commit 55056f22c83b7c3520488b615e1577e0f895d75a not in out/out13/CVE-2020-11093/stage1/commits
+CVE-2020-11096.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-11097.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-11098.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-11099.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-11455.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-11457.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2020-11529.stage1: Error: commit 2eae104c7a4bf32bc26cb8073d5c40464bfda3f7 not in out/out13/CVE-2020-11529/stage1/commits
+CVE-2020-11558.stage1: Error: commit 6063b1a011c3f80cee25daade18154e15e4c058c not in out/out13/CVE-2020-11558/stage1/commits
+CVE-2020-11565.stage1: Error: commit aa9f7d5172fac9bf1f09e678c35e287a40a7b7dd not in out/out13/CVE-2020-11565/stage1/commits
+CVE-2020-11669.stage1: Error: commit 53a712bae5dd919521a58d7bad773b949358add0 not in out/out13/CVE-2020-11669/stage1/commits

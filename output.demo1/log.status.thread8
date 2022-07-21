@@ -2414,3 +2414,299 @@ Success (go1)
 Stage 2
 ./go2 out/out8/CVE-2017-18360 1548926940
 Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2017-18360 out/out8/CVE-2017-18360/results.csv
+out/out8/CVE-2017-18360/results.csv
+out/out8/CVE-2017-18360/results.html
+Success (go3)
+
+
+------------ CVE-2017-18367 (150 of 173)
+Stage 1
+working on CVE-2017-18367, seccomp_libseccomp-golang, seccomp_internal.go
+Calling ./rgl2 to get all commits
+Error: commit 06e7a29f36a34b8cf419aeb87b979ee508e58f9e not in out/out8/CVE-2017-18367/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18367"
+
+------------ CVE-2017-18379 (151 of 173)
+Stage 1
+working on CVE-2017-18379, torvalds_linux, fc.c
+Calling ./rgl2 to get all commits
+Error: commit 0c319d3a144d4b8f1ea2047fd614d2149b68f889 not in out/out8/CVE-2017-18379/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18379"
+
+------------ CVE-2017-18509 (152 of 173)
+Stage 1
+working on CVE-2017-18509, torvalds_linux, ip6mr.c
+Calling ./rgl2 to get all commits
+Error: commit 99253eb750fda6a644d5188fb26c43bad8d5a745 not in out/out8/CVE-2017-18509/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18509"
+
+------------ CVE-2017-18594 (153 of 173)
+Stage 1
+working on CVE-2017-18594, nmap_nmap, nse_libssh2.cc
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file nse_libssh2.cc
+filtering 5 parent commits for file nse_libssh2.cc
+0 out/out8/CVE-2017-18594/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18594 1567037700
+Original Project = nmap_nmap
+./go2: line 89: out/out8/CVE-2017-18594/stage2/gitlab.com_kalilinux_packages/nmap_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18594/stage2/gitlab.com_kalilinux_packages/nmap_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18594/stage2/gitlab.com_kalilinux_packages/nmap_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18594/stage2/gitlab.com_kalilinux_packages/nmap_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18594/stage2/gitlab.com_kalilinux_packages/nmap_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18594/stage2/gitlab.com_kalilinux_packages/nmap_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-18594/stage2/gitlab.com_kalilinux_packages/nmap_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18594/stage2/gitlab.com_kalilinux_packages/nmap_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18594/stage2/gitlab.com_kalilinux_packages/nmap_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18594/stage2/gitlab.com_kalilinux_packages/nmap_good_sorted.txt’ for reading: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18594/stage2/salsa.debian.org_pkg-security-team/nmap_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18594/stage2/salsa.debian.org_pkg-security-team/nmap_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18594/stage2/salsa.debian.org_pkg-security-team/nmap_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18594/stage2/salsa.debian.org_pkg-security-team/nmap_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-18594/stage2/salsa.debian.org_pkg-security-team/nmap_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18594/stage2/salsa.debian.org_pkg-security-team/nmap_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18594/stage2/salsa.debian.org_pkg-security-team/nmap_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18594/stage2/salsa.debian.org_pkg-security-team/nmap_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-18594 out/out8/CVE-2017-18594/results.csv
+out/out8/CVE-2017-18594/results.csv
+out/out8/CVE-2017-18594/results.html
+Success (go3)
+
+
+------------ CVE-2017-18635 (154 of 173)
+Stage 1
+working on CVE-2017-18635, novnc_noVNC, ui.js
+Calling ./rgl2 to get all commits
+Error: commit 6048299a138e078aed210f163111698c8c526a13 not in out/out8/CVE-2017-18635/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18635"
+
+------------ CVE-2017-18922 (155 of 173)
+Stage 1
+working on CVE-2017-18922, LibVNC_libvncserver, websockets.c
+Calling ./rgl2 to get all commits
+filtering 21 child commits for file libvncserver/websockets.c
+no 59ee5054b15718cee1029e13d3257dbe23b67c38 in 89
+no bde898f3c205fc34502a874de94a365bb1b27be2 in 61
+no cc6e2835e0b0dd9f1c3bec465421907ef8a33b77 in 76
+filtering 9 parent commits for file libvncserver/websockets.c
+0 out/out8/CVE-2017-18922/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18922 1593515700
+Original Project = LibVNC_libvncserver
+Success (go2)
+Stage 3
+./go3 CVE-2017-18922 out/out8/CVE-2017-18922/results.csv
+out/out8/CVE-2017-18922/results.csv
+out/out8/CVE-2017-18922/results.html
+Success (go3)
+
+
+------------ CVE-2017-20005 (156 of 173)
+Stage 1
+working on CVE-2017-20005, nginx_nginx, ngx_times.c
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file src/core/ngx_times.c
+filtering 26 parent commits for file src/core/ngx_times.c
+0 out/out8/CVE-2017-20005/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-20005 1623017700
+Original Project = nginx_nginx
+Success (go2)
+Stage 3
+./go3 CVE-2017-20005 out/out8/CVE-2017-20005/results.csv
+out/out8/CVE-2017-20005/results.csv
+out/out8/CVE-2017-20005/results.html
+Success (go3)
+
+
+------------ CVE-2017-2106 (157 of 173)
+Stage 1
+working on CVE-2017-2106, webmin_webmin, miniserv.pl
+Calling ./rgl2 to get all commits
+Error: commit 475cc4fbdf51c865b291d252d81a58bad05de0c7 not in out/out8/CVE-2017-2106/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-2106"
+
+------------ CVE-2017-2583 (158 of 173)
+Stage 1
+working on CVE-2017-2583, torvalds_linux, emulate.c
+Calling ./rgl2 to get all commits
+Error: commit 33ab91103b3415e12457e3104f0e4517ce12d0f3 not in out/out8/CVE-2017-2583/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-2583"
+
+------------ CVE-2017-2584 (159 of 173)
+Stage 1
+working on CVE-2017-2584, torvalds_linux, emulate.c
+Calling ./rgl2 to get all commits
+Error: commit 129a72a0d3c8e139a04512325384fe5ac119e74d not in out/out8/CVE-2017-2584/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-2584"
+
+------------ CVE-2017-2616 (160 of 173)
+Stage 1
+working on CVE-2017-2616, karelzak_util-linux, su-common.c
+Calling ./rgl2 to get all commits
+Error: commit dffab154d29a288aa171ff50263ecc8f2e14a891 not in out/out8/CVE-2017-2616/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-2616"
+
+------------ CVE-2017-2669 (161 of 173)
+Stage 1
+working on CVE-2017-2669, dovecot_core, db-dict.c
+Calling ./rgl2 to get all commits
+filtering 12 child commits for file src/auth/db-dict.c
+no bffe9747048363c781a910e8eb0b93afefe3be9f in 63
+filtering 18 parent commits for file src/auth/db-dict.c
+1 out/out8/CVE-2017-2669/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-2669 1529587740
+Original Project = dovecot_core
+Success (go2)
+Stage 3
+./go3 CVE-2017-2669 out/out8/CVE-2017-2669/results.csv
+out/out8/CVE-2017-2669/results.csv
+out/out8/CVE-2017-2669/results.html
+Success (go3)
+
+
+------------ CVE-2017-2671 (162 of 173)
+Stage 1
+working on CVE-2017-2671, torvalds_linux, ping.c
+Calling ./rgl2 to get all commits
+Error: commit 43a6684519ab0a6c52024b5e25322476cabad893 not in out/out8/CVE-2017-2671/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-2671"
+
+------------ CVE-2017-2920 (163 of 173)
+Stage 1
+working on CVE-2017-2920, libofx_libofx, ofx_preproc.cpp
+Calling ./rgl2 to get all commits
+filtering 21 child commits for file lib/ofx_preproc.cpp
+no 8d226eecd0af086df9f682c80dfe70cd754b20d8 in 13
+no c75f1d18eaa4c6376b47272cff28c388c510291c in 71
+no ef48375c4f9d0483c6992c292f2062c116154fcc in 111
+no 46888affe907c1e5f91b68566c01cedb25948dfe in 70
+filtering 9 parent commits for file lib/ofx_preproc.cpp
+0 out/out8/CVE-2017-2920/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-2920 1507231740
+Original Project = libofx_libofx
+Success (go2)
+Stage 3
+./go3 CVE-2017-2920 out/out8/CVE-2017-2920/results.csv
+out/out8/CVE-2017-2920/results.csv
+out/out8/CVE-2017-2920/results.html
+Success (go3)
+
+
+------------ CVE-2017-5188 (164 of 173)
+Stage 1
+working on CVE-2017-5188, openSUSE_open-build-service, BSHTTP.pm
+Calling ./rgl2 to get all commits
+filtering 15 child commits for file src/backend/BSHTTP.pm
+filtering 15 parent commits for file src/backend/BSHTTP.pm
+0 out/out8/CVE-2017-5188/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-5188 1519936140
+Original Project = openSUSE_open-build-service
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-5188" failed
+
+------------ CVE-2017-5209 (165 of 173)
+Stage 1
+working on CVE-2017-5209, libimobiledevice_libplist, base64.c
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file src/base64.c
+filtering 11 parent commits for file src/base64.c
+0 out/out8/CVE-2017-5209/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-5209 1484153940
+Original Project = libimobiledevice_libplist
+Success (go2)
+Stage 3
+./go3 CVE-2017-5209 out/out8/CVE-2017-5209/results.csv
+out/out8/CVE-2017-5209/results.csv
+out/out8/CVE-2017-5209/results.html
+Success (go3)
+
+
+------------ CVE-2017-5225 (166 of 173)
+Stage 1
+working on CVE-2017-5225, vadz_libtiff, tiffcp.c
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file tools/tiffcp.c
+filtering 29 parent commits for file tools/tiffcp.c
+0 out/out8/CVE-2017-5225/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-5225 1484222340
+Original Project = vadz_libtiff
+Success (go2)
+Stage 3
+./go3 CVE-2017-5225 out/out8/CVE-2017-5225/results.csv
+out/out8/CVE-2017-5225/results.csv
+out/out8/CVE-2017-5225/results.html
+Success (go3)
+
+
+------------ CVE-2017-5226 (167 of 173)
+Stage 1
+working on CVE-2017-5226, projectatomic_bubblewrap, bubblewrap.c
+Calling ./rgl2 to get all commits
+Error: commit d7fc532c42f0e9bf427923bab85433282b3e5117 not in out/out8/CVE-2017-5226/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-5226"
+
+------------ CVE-2017-5340 (168 of 173)
+Stage 1
+working on CVE-2017-5340, php_php-src, zend_hash.c
+Calling ./rgl2 to get all commits
+Error: commit 4cc0286f2f3780abc6084bcdae5dce595daa3c12 not in out/out8/CVE-2017-5340/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-5340"
+
+------------ CVE-2017-5480 (169 of 173)
+Stage 1
+working on CVE-2017-5480, b2evolution_b2evolution, files.ctrl.php
+Calling ./rgl2 to get all commits
+Error: commit 26841d9c81f27ad23b2f6e4bd5eaec7f2f58dfe0 not in out/out8/CVE-2017-5480/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-5480"
+
+------------ CVE-2017-5506 (170 of 173)
+Stage 1
+working on CVE-2017-5506, ImageMagick_ImageMagick, profile.c
+Calling ./rgl2 to get all commits
+Error: commit 9a069e0f2e027ec5138f998023cf9cb62c04889f not in out/out8/CVE-2017-5506/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-5506"
+
+------------ CVE-2017-5507 (171 of 173)
+Stage 1
+working on CVE-2017-5507, ImageMagick_ImageMagick, mpc.c
+Calling ./rgl2 to get all commits
+Error: commit 66e283e0a9c141b19fe6c4c39f4a41c0d3188ba8 not in out/out8/CVE-2017-5507/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-5507"
+
+------------ CVE-2017-5509 (172 of 173)
+Stage 1
+working on CVE-2017-5509, ImageMagick_ImageMagick, psd.c
+Calling ./rgl2 to get all commits
+Error: commit d4ec73f866a7c42a2e7f301fcd696e5cb7a7d3ab not in out/out8/CVE-2017-5509/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-5509"
+
+------------ CVE-2017-5510 (173 of 173)
+Stage 1
+working on CVE-2017-5510, ImageMagick_ImageMagick, psd.c
+Calling ./rgl2 to get all commits
+Error: commit 91cc3f36f2ccbd485a0456bab9aebe63b635da88 not in out/out8/CVE-2017-5510/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-5510"
+============
+116 failed (see out/out8/log.error)
+57 succeeded (see out/out8/CVE-*)
+

@@ -2048,3 +2048,937 @@ Original Project = torvalds_linux
 head: cannot open ‘out/out9/CVE-2017-8072/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
 head: cannot open ‘out/out9/CVE-2017-8072/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
 head: cannot open ‘out/out9/CVE-2017-8072/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-8072 out/out9/CVE-2017-8072/results.csv
+out/out9/CVE-2017-8072/results.csv
+out/out9/CVE-2017-8072/results.html
+Success (go3)
+
+
+------------ CVE-2017-8073 (106 of 173)
+Stage 1
+working on CVE-2017-8073, weechat_weechat, irc-ctcp.c
+Calling ./rgl2 to get all commits
+filtering 17 child commits for file src/plugins/irc/irc-ctcp.c
+no 2c4bad81200ac101ba6ee41f6593aaa9da7d1ed3 in 44
+no c44b79dce7f2f2dec9e802b001dcf0acdfa049d0 in 68
+no b66298d369cc72b593368d70abb0a994009eb44e in 54
+no f4a1baaed3921bc88b699a81a8c9a75acb5ac09d in 116
+filtering 13 parent commits for file src/plugins/irc/irc-ctcp.c
+0 out/out9/CVE-2017-8073/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-8073 1492963140
+Original Project = weechat_weechat
+Success (go2)
+Stage 3
+./go3 CVE-2017-8073 out/out9/CVE-2017-8073/results.csv
+out/out9/CVE-2017-8073/results.csv
+out/out9/CVE-2017-8073/results.html
+Success (go3)
+
+
+------------ CVE-2017-8085 (107 of 173)
+Stage 1
+working on CVE-2017-8085, exponentcms_exponent-cms, elfinder.php
+Calling ./rgl2 to get all commits
+filtering 16 child commits for file framework/modules/file/connector/elfinder.php
+filtering 14 parent commits for file framework/modules/file/connector/elfinder.php
+0 out/out9/CVE-2017-8085/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-8085 1493045940
+Original Project = exponentcms_exponent-cms
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-8085" failed
+
+------------ CVE-2017-8284 (108 of 173)
+Stage 1
+working on CVE-2017-8284, qemu_qemu, translate.c
+Calling ./rgl2 to get all commits
+Error: commit 30663fd26c0307e414622c7a8607fbc04f92ec14 not in out/out9/CVE-2017-8284/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-8284"
+
+------------ CVE-2017-8288 (109 of 173)
+Stage 1
+working on CVE-2017-8288, GNOME_gnome-shell, extensionSystem.js
+Calling ./rgl2 to get all commits
+Error: commit ff425d1db7082e2755d2a405af53861552acf2a1 not in out/out9/CVE-2017-8288/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-8288"
+
+------------ CVE-2017-8297 (110 of 173)
+Stage 1
+working on CVE-2017-8297, jcampbell1_simple-file-manager, index.php
+Calling ./rgl2 to get all commits
+filtering 23 child commits for file index.php
+filtering 7 parent commits for file index.php
+0 out/out9/CVE-2017-8297/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-8297 1493308740
+Original Project = jcampbell1_simple-file-manager
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-8297" failed
+
+------------ CVE-2017-8325 (111 of 173)
+Stage 1
+working on CVE-2017-8325, jsummers_imageworsener, imagew-internals.h
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file src/imagew-internals.h
+no b5ae5fef8ed0e1ffb17d56df7b755f6db6ea6682 in 53
+filtering 25 parent commits for file src/imagew-internals.h
+0 out/out9/CVE-2017-8325/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-8325 1493499540
+Original Project = jsummers_imageworsener
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-8325" failed
+
+------------ CVE-2017-8327 (112 of 173)
+Stage 1
+working on CVE-2017-8327, jsummers_imageworsener, imagew-internals.h
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file src/imagew-internals.h
+no b5ae5fef8ed0e1ffb17d56df7b755f6db6ea6682 in 53
+filtering 25 parent commits for file src/imagew-internals.h
+0 out/out9/CVE-2017-8327/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-8327 1493499540
+Original Project = jsummers_imageworsener
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-8327" failed
+
+------------ CVE-2017-8342 (113 of 173)
+Stage 1
+working on CVE-2017-8342, Kozea_Radicale, auth.py
+Calling ./rgl2 to get all commits
+filtering 24 child commits for file radicale/auth.py
+filtering 6 parent commits for file radicale/auth.py
+0 out/out9/CVE-2017-8342/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-8342 1493567940
+Original Project = Kozea_Radicale
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-8342" failed
+
+------------ CVE-2017-8358 (114 of 173)
+Stage 1
+working on CVE-2017-8358, LibreOffice_core, jpegc.cxx
+Calling ./rgl2 to get all commits
+Error: commit 6e6e54f944a5ebb49e9110bdeff844d00a96c56c not in out/out9/CVE-2017-8358/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-8358"
+
+------------ CVE-2017-8797 (115 of 173)
+Stage 1
+working on CVE-2017-8797, torvalds_linux, nfs4proc.c
+Calling ./rgl2 to get all commits
+Error: commit b550a32e60a4941994b437a8d662432a486235a5 not in out/out9/CVE-2017-8797/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-8797"
+
+------------ CVE-2017-8807 (116 of 173)
+Stage 1
+working on CVE-2017-8807, varnishcache_varnish-cache, cache_fetch.c
+Calling ./rgl2 to get all commits
+Error: commit 176f8a075a963ffbfa56f1c460c15f6a1a6af5a7 not in out/out9/CVE-2017-8807/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-8807"
+
+------------ CVE-2017-8825 (117 of 173)
+Stage 1
+working on CVE-2017-8825, dinhviethoa_libetpan, mailimf.c
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file src/low-level/imf/mailimf.c
+no 79eefd5bb7e588a2480da6b8ceee02d0ed8e68c7 in 121
+no 9bf1dc95d147ae72dc0d4440d5f19cd9ed2a580c in 27
+no a2a063830b3352ed6fa839cbd0775e8c0af680b6 in 34
+filtering 9 parent commits for file src/low-level/imf/mailimf.c
+0 out/out9/CVE-2017-8825/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-8825 1494260940
+Original Project = dinhviethoa_libetpan
+Success (go2)
+Stage 3
+./go3 CVE-2017-8825 out/out9/CVE-2017-8825/results.csv
+out/out9/CVE-2017-8825/results.csv
+out/out9/CVE-2017-8825/results.html
+Success (go3)
+
+
+------------ CVE-2017-8831 (118 of 173)
+Stage 1
+working on CVE-2017-8831, stoth68000_media-tree, saa7164-bus.c
+Calling ./rgl2 to get all commits
+Error: commit 354dd3924a2e43806774953de536257548b5002c not in out/out9/CVE-2017-8831/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-8831"
+
+------------ CVE-2017-8890 (119 of 173)
+Stage 1
+working on CVE-2017-8890, torvalds_linux, inet_connection_sock.c
+Calling ./rgl2 to get all commits
+Error: commit 657831ffc38e30092a2d5f03d385d710eb88b09a not in out/out9/CVE-2017-8890/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-8890"
+
+------------ CVE-2017-8920 (120 of 173)
+Stage 1
+working on CVE-2017-8920, dgl_cgiirc, irc.cgi
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file irc.cgi
+filtering 26 parent commits for file irc.cgi
+0 out/out9/CVE-2017-8920/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-8920 1496766540
+Original Project = dgl_cgiirc
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-8920" failed
+
+------------ CVE-2017-8924 (121 of 173)
+Stage 1
+working on CVE-2017-8924, torvalds_linux, io_ti.c
+Calling ./rgl2 to get all commits
+filtering 29 child commits for file drivers/usb/serial/io_ti.c
+no 908e698f2149c3d6a67d9ae15c75545a3f392559 in 16
+filtering 1 parent commits for file drivers/usb/serial/io_ti.c
+0 out/out9/CVE-2017-8924/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-8924 1494624540
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2017-8924 out/out9/CVE-2017-8924/results.csv
+out/out9/CVE-2017-8924/results.csv
+out/out9/CVE-2017-8924/results.html
+Success (go3)
+
+
+------------ CVE-2017-8925 (122 of 173)
+Stage 1
+working on CVE-2017-8925, torvalds_linux, omninet.c
+Calling ./rgl2 to get all commits
+filtering 12 child commits for file drivers/usb/serial/omninet.c
+filtering 18 parent commits for file drivers/usb/serial/omninet.c
+0 out/out9/CVE-2017-8925/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-8925 1494624540
+Original Project = torvalds_linux
+./go2: line 89: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out9/CVE-2017-8925/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-8925 out/out9/CVE-2017-8925/results.csv
+out/out9/CVE-2017-8925/results.csv
+out/out9/CVE-2017-8925/results.html
+Success (go3)
+
+
+------------ CVE-2017-9051 (123 of 173)
+Stage 1
+working on CVE-2017-9051, libav_libav, nsvdec.c
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file libavformat/nsvdec.c
+filtering 29 parent commits for file libavformat/nsvdec.c
+0 out/out9/CVE-2017-9051/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9051 1495088940
+Original Project = libav_libav
+Success (go2)
+Stage 3
+./go3 CVE-2017-9051 out/out9/CVE-2017-9051/results.csv
+out/out9/CVE-2017-9051/results.csv
+out/out9/CVE-2017-9051/results.html
+Success (go3)
+
+
+------------ CVE-2017-9075 (124 of 173)
+Stage 1
+working on CVE-2017-9075, torvalds_linux, ipv6.c
+Calling ./rgl2 to get all commits
+Error: commit fdcee2cbb8438702ea1b328fb6e0ac5e9a40c7f8 not in out/out9/CVE-2017-9075/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9075"
+
+------------ CVE-2017-9098 (125 of 173)
+Stage 1
+working on CVE-2017-9098, ImageMagick_ImageMagick, rle.c
+Calling ./rgl2 to get all commits
+Error: commit 1c358ffe0049f768dd49a8a889c1cbf99ac9849b not in out/out9/CVE-2017-9098/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9098"
+
+------------ CVE-2017-9141 (126 of 173)
+Stage 1
+working on CVE-2017-9141, ImageMagick_ImageMagick, dds.c
+Calling ./rgl2 to get all commits
+Error: commit 0c5b1e430a83ef793a7334bbbee408cf3c628699 not in out/out9/CVE-2017-9141/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9141"
+
+------------ CVE-2017-9142 (127 of 173)
+Stage 1
+working on CVE-2017-9142, ImageMagick_ImageMagick, png.c
+Calling ./rgl2 to get all commits
+Error: commit f0232a2a45dfd003c1faf6079497895df3ab0ee1 not in out/out9/CVE-2017-9142/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9142"
+
+------------ CVE-2017-9143 (128 of 173)
+Stage 1
+working on CVE-2017-9143, ImageMagick_ImageMagick, art.c
+Calling ./rgl2 to get all commits
+filtering 21 child commits for file coders/art.c
+no b2eaec135972c582335f7ad034100ad88b6552b3 in 50
+no 7ba113a0d26b6d2b008ce0fcf428050a84e5a0ac in 123
+no 3ddbe16bbe136160f4bbff3804a8423816974e57 in 61
+filtering 9 parent commits for file coders/art.c
+0 out/out9/CVE-2017-9143/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9143 1495463340
+Original Project = ImageMagick_ImageMagick
+Success (go2)
+Stage 3
+./go3 CVE-2017-9143 out/out9/CVE-2017-9143/results.csv
+out/out9/CVE-2017-9143/results.csv
+out/out9/CVE-2017-9143/results.html
+Success (go3)
+
+
+------------ CVE-2017-9144 (129 of 173)
+Stage 1
+working on CVE-2017-9144, ImageMagick_ImageMagick, rle.c
+Calling ./rgl2 to get all commits
+Error: commit f6240ee77847787f6d7618b669d3a2040a2d6d40 not in out/out9/CVE-2017-9144/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9144"
+
+------------ CVE-2017-9150 (130 of 173)
+Stage 1
+working on CVE-2017-9150, torvalds_linux, verifier.c
+Calling ./rgl2 to get all commits
+Error: commit 0d0e57697f162da4aa218b5feafe614fb666db07 not in out/out9/CVE-2017-9150/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9150"
+
+------------ CVE-2017-9201 (131 of 173)
+Stage 1
+working on CVE-2017-9201, jsummers_imageworsener, imagew-api.c
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file src/imagew-api.c
+filtering 29 parent commits for file src/imagew-api.c
+0 out/out9/CVE-2017-9201/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9201 1495513740
+Original Project = jsummers_imageworsener
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-9201" failed
+
+------------ CVE-2017-9202 (132 of 173)
+Stage 1
+working on CVE-2017-9202, jsummers_imageworsener, imagew-api.c
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file src/imagew-api.c
+filtering 29 parent commits for file src/imagew-api.c
+0 out/out9/CVE-2017-9202/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9202 1495513740
+Original Project = jsummers_imageworsener
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-9202" failed
+
+------------ CVE-2017-9204 (133 of 173)
+Stage 1
+working on CVE-2017-9204, jsummers_imageworsener, imagew-jpeg.c
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file src/imagew-jpeg.c
+filtering 24 parent commits for file src/imagew-jpeg.c
+0 out/out9/CVE-2017-9204/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9204 1495513740
+Original Project = jsummers_imageworsener
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-9204" failed
+
+------------ CVE-2017-9205 (134 of 173)
+Stage 1
+working on CVE-2017-9205, jsummers_imageworsener, imagew-jpeg.c
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file src/imagew-jpeg.c
+filtering 24 parent commits for file src/imagew-jpeg.c
+0 out/out9/CVE-2017-9205/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9205 1495513740
+Original Project = jsummers_imageworsener
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-9205" failed
+
+------------ CVE-2017-9206 (135 of 173)
+Stage 1
+working on CVE-2017-9206, jsummers_imageworsener, imagew-jpeg.c
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file src/imagew-jpeg.c
+filtering 24 parent commits for file src/imagew-jpeg.c
+0 out/out9/CVE-2017-9206/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9206 1495513740
+Original Project = jsummers_imageworsener
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-9206" failed
+
+------------ CVE-2017-9207 (136 of 173)
+Stage 1
+working on CVE-2017-9207, jsummers_imageworsener, imagew-jpeg.c
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file src/imagew-jpeg.c
+filtering 24 parent commits for file src/imagew-jpeg.c
+0 out/out9/CVE-2017-9207/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9207 1495513740
+Original Project = jsummers_imageworsener
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-9207" failed
+
+------------ CVE-2017-9211 (137 of 173)
+Stage 1
+working on CVE-2017-9211, torvalds_linux, skcipher.c
+Calling ./rgl2 to get all commits
+Error: commit 9933e113c2e87a9f46a40fde8dafbf801dca1ab9 not in out/out9/CVE-2017-9211/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9211"
+
+------------ CVE-2017-9217 (138 of 173)
+Stage 1
+working on CVE-2017-9217, systemd_systemd, resolved-dns-packet.c
+Calling ./rgl2 to get all commits
+Error: commit a924f43f30f9c4acaf70618dd2a055f8b0f166be not in out/out9/CVE-2017-9217/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9217"
+
+------------ CVE-2017-9224 (139 of 173)
+Stage 1
+working on CVE-2017-9224, kkos_oniguruma, regexec.c
+Calling ./rgl2 to get all commits
+Error: commit 690313a061f7a4fa614ec5cc8368b4f2284e059b not in out/out9/CVE-2017-9224/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9224"
+
+------------ CVE-2017-9226 (140 of 173)
+Stage 1
+working on CVE-2017-9226, kkos_oniguruma, regparse.c
+Calling ./rgl2 to get all commits
+Error: commit b4bf968ad52afe14e60a2dc8a95d3555c543353a not in out/out9/CVE-2017-9226/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9226"
+
+------------ CVE-2017-9227 (141 of 173)
+Stage 1
+working on CVE-2017-9227, kkos_oniguruma, regexec.c
+Calling ./rgl2 to get all commits
+Error: commit 9690d3ab1f9bcd2db8cbe1fe3ee4a5da606b8814 not in out/out9/CVE-2017-9227/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9227"
+
+------------ CVE-2017-9228 (142 of 173)
+Stage 1
+working on CVE-2017-9228, kkos_oniguruma, regparse.c
+Calling ./rgl2 to get all commits
+Error: commit 3b63d12038c8d8fc278e81c942fa9bec7c704c8b not in out/out9/CVE-2017-9228/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9228"
+
+------------ CVE-2017-9229 (143 of 173)
+Stage 1
+working on CVE-2017-9229, kkos_oniguruma, regexec.c
+Calling ./rgl2 to get all commits
+Error: commit b690371bbf97794b4a1d3f295d4fb9a8b05d402d not in out/out9/CVE-2017-9229/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9229"
+
+------------ CVE-2017-9242 (144 of 173)
+Stage 1
+working on CVE-2017-9242, torvalds_linux, ip6_output.c
+Calling ./rgl2 to get all commits
+Error: commit 232cd35d0804cc241eb887bb8d4d9b3b9881c64a not in out/out9/CVE-2017-9242/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9242"
+
+------------ CVE-2017-9305 (145 of 173)
+Stage 1
+working on CVE-2017-9305, tikiorg_tiki, PreventXss.php
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file lib/core/TikiFilter/PreventXss.php
+filtering 19 parent commits for file lib/core/TikiFilter/PreventXss.php
+0 out/out9/CVE-2017-9305/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9305 1496204940
+Original Project = tikiorg_tiki
+Success (go2)
+Stage 3
+./go3 CVE-2017-9305 out/out9/CVE-2017-9305/results.csv
+out/out9/CVE-2017-9305/results.csv
+out/out9/CVE-2017-9305/results.html
+Success (go3)
+
+
+------------ CVE-2017-9313 (146 of 173)
+Stage 1
+working on CVE-2017-9313, webmin_webmin, view_man.cgi
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file man/view_man.cgi
+filtering 7 parent commits for file man/view_man.cgi
+0 out/out9/CVE-2017-9313/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9313 1499135340
+Original Project = webmin_webmin
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-9313" failed
+
+------------ CVE-2017-9364 (147 of 173)
+Stage 1
+working on CVE-2017-9364, bigtreecms_BigTree-CMS, storage.php
+Calling ./rgl2 to get all commits
+filtering 20 child commits for file core/inc/bigtree/apis/storage.php
+filtering 10 parent commits for file core/inc/bigtree/apis/storage.php
+0 out/out9/CVE-2017-9364/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9364 1496381340
+Original Project = bigtreecms_BigTree-CMS
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-9364" failed
+
+------------ CVE-2017-9378 (148 of 173)
+Stage 1
+working on CVE-2017-9378, bigtreecms_BigTree-CMS, admin.php
+Calling ./rgl2 to get all commits
+Error: commit f7899701d7be91b7dc546b65e44a27b668eb3b76 not in out/out9/CVE-2017-9378/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9378"
+
+------------ CVE-2017-9432 (149 of 173)
+Stage 1
+working on CVE-2017-9432, fosnola_libstaroffice, StarWriterStruct.cxx
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file src/lib/StarWriterStruct.cxx
+filtering 6 parent commits for file src/lib/StarWriterStruct.cxx
+0 out/out9/CVE-2017-9432/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9432 1496633340
+Original Project = fosnola_libstaroffice
+./go2: line 89: out/out9/CVE-2017-9432/stage2/salsa.debian.org_libreoffice-team_document-liberation/libstaroffice_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-9432/stage2/salsa.debian.org_libreoffice-team_document-liberation/libstaroffice_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-9432/stage2/salsa.debian.org_libreoffice-team_document-liberation/libstaroffice_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-9432/stage2/salsa.debian.org_libreoffice-team_document-liberation/libstaroffice_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-9432/stage2/salsa.debian.org_libreoffice-team_document-liberation/libstaroffice_good.txt: No such file or directory
+./go2: line 89: out/out9/CVE-2017-9432/stage2/salsa.debian.org_libreoffice-team_document-liberation/libstaroffice_good.txt: No such file or directory
+./go2: line 94: out/out9/CVE-2017-9432/stage2/salsa.debian.org_libreoffice-team_document-liberation/libstaroffice_bad.txt: No such file or directory
+./go2: line 96: out/out9/CVE-2017-9432/stage2/salsa.debian.org_libreoffice-team_document-liberation/libstaroffice_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out9/CVE-2017-9432/stage2/salsa.debian.org_libreoffice-team_document-liberation/libstaroffice_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out9/CVE-2017-9432/stage2/salsa.debian.org_libreoffice-team_document-liberation/libstaroffice_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out9/CVE-2017-9432/stage2/salsa.debian.org_libreoffice-team_document-liberation/libstaroffice_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-9432 out/out9/CVE-2017-9432/results.csv
+out/out9/CVE-2017-9432/results.csv
+out/out9/CVE-2017-9432/results.html
+Success (go3)
+
+
+------------ CVE-2017-9454 (150 of 173)
+Stage 1
+working on CVE-2017-9454, resiprocate_resiprocate, ares_parse_a_reply.c
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file rutil/dns/ares/ares_parse_a_reply.c
+filtering 1 parent commits for file rutil/dns/ares/ares_parse_a_reply.c
+0 out/out9/CVE-2017-9454/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9454 1503066540
+Original Project = resiprocate_resiprocate
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-9454" failed
+
+------------ CVE-2017-9499 (151 of 173)
+Stage 1
+working on CVE-2017-9499, ImageMagick_ImageMagick, mpc.c
+Calling ./rgl2 to get all commits
+Error: commit 7fd419441bc7103398e313558171d342c6315f44 not in out/out9/CVE-2017-9499/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9499"
+
+------------ CVE-2017-9527 (152 of 173)
+Stage 1
+working on CVE-2017-9527, mruby_mruby, gc.c
+Calling ./rgl2 to get all commits
+Error: commit 5c114c91d4ff31859fcd84cf8bf349b737b90d99 not in out/out9/CVE-2017-9527/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9527"
+
+------------ CVE-2017-9605 (153 of 173)
+Stage 1
+working on CVE-2017-9605, torvalds_linux, vmwgfx_surface.c
+Calling ./rgl2 to get all commits
+Error: commit 07678eca2cf9c9a18584e546c2b2a0d0c9a3150c not in out/out9/CVE-2017-9605/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9605"
+
+------------ CVE-2017-9608 (154 of 173)
+Stage 1
+working on CVE-2017-9608, FFmpeg_FFmpeg, dnxhd_parser.c
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file libavcodec/dnxhd_parser.c
+no tree 3742ec61dec5b7a3e03e6e4dc05e73409f071fb3 for commit 17c8533745305bdf9c26c87dcbc43453ed6f0804
+no tree b17bad9ccbb480e3baef973a8e70fb5536feec2f for commit 17c8533745305bdf9c26c87dcbc43453ed6f0804
+no tree 25c853d16ae744e686438f1cb20a8e5994a4ef01 for commit 17c8533745305bdf9c26c87dcbc43453ed6f0804
+no tree a58ed98eaaed98dbaf3c6d0710422f535820e016 for commit 17c8533745305bdf9c26c87dcbc43453ed6f0804
+no tree 8d9da0b09548d916784fcc6844468a6a72add95f for commit 17c8533745305bdf9c26c87dcbc43453ed6f0804
+filtering 18 parent commits for file libavcodec/dnxhd_parser.c
+0 out/out9/CVE-2017-9608/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9608 1514402940
+Original Project = FFmpeg_FFmpeg
+Success (go2)
+Stage 3
+./go3 CVE-2017-9608 out/out9/CVE-2017-9608/results.csv
+out/out9/CVE-2017-9608/results.csv
+out/out9/CVE-2017-9608/results.html
+Success (go3)
+
+
+------------ CVE-2017-9732 (155 of 173)
+Stage 1
+working on CVE-2017-9732, elric1_knc, gssstdio.c
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file bin/gssstdio.c
+filtering 22 parent commits for file bin/gssstdio.c
+0 out/out9/CVE-2017-9732/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9732 1545348540
+Original Project = elric1_knc
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2017-9732" failed
+
+------------ CVE-2017-9990 (156 of 173)
+Stage 1
+working on CVE-2017-9990, FFmpeg_FFmpeg, xpmdec.c
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file libavcodec/xpmdec.c
+no 4243da4ff42e306b3622b181e12f5cd127d21414 in 66
+no ce7dbd0481f990e249c2a05f179228489d3062cf in 78
+no 20f972701806be20a77f808db332d9489343bb78 in 32
+filtering 11 parent commits for file libavcodec/xpmdec.c
+0 out/out9/CVE-2017-9990/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9990 1498631340
+Original Project = FFmpeg_FFmpeg
+Success (go2)
+Stage 3
+./go3 CVE-2017-9990 out/out9/CVE-2017-9990/results.csv
+out/out9/CVE-2017-9990/results.csv
+out/out9/CVE-2017-9990/results.html
+Success (go3)
+
+
+------------ CVE-2017-9991 (157 of 173)
+Stage 1
+working on CVE-2017-9991, FFmpeg_FFmpeg, xwddec.c
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file libavcodec/xwddec.c
+no 4243da4ff42e306b3622b181e12f5cd127d21414 in 66
+no ce7dbd0481f990e249c2a05f179228489d3062cf in 78
+no 20f972701806be20a77f808db332d9489343bb78 in 32
+filtering 23 parent commits for file libavcodec/xwddec.c
+0 out/out9/CVE-2017-9991/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9991 1498631340
+Original Project = FFmpeg_FFmpeg
+Success (go2)
+Stage 3
+./go3 CVE-2017-9991 out/out9/CVE-2017-9991/results.csv
+out/out9/CVE-2017-9991/results.csv
+out/out9/CVE-2017-9991/results.html
+Success (go3)
+
+
+------------ CVE-2017-9992 (158 of 173)
+Stage 1
+working on CVE-2017-9992, FFmpeg_FFmpeg, dfa.c
+Calling ./rgl2 to get all commits
+filtering 18 child commits for file libavcodec/dfa.c
+no 21b23ceab3cfcc2aa0a833bbff11cf38b2177800 in 33
+no 4243da4ff42e306b3622b181e12f5cd127d21414 in 66
+no ce7dbd0481f990e249c2a05f179228489d3062cf in 78
+no 5021b2ba0653cc97165f40b2cf247cbf5122aae0 in 80
+no 20f972701806be20a77f808db332d9489343bb78 in 32
+no a688f3c13ce55c2ba51dbbb344564649f1bb52fe in 38
+no 18bc612f2fd33b6ac943bf1a0fdaa55b1f4c9d25 in 24
+filtering 12 parent commits for file libavcodec/dfa.c
+0 out/out9/CVE-2017-9992/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9992 1498631340
+Original Project = FFmpeg_FFmpeg
+Success (go2)
+Stage 3
+./go3 CVE-2017-9992 out/out9/CVE-2017-9992/results.csv
+out/out9/CVE-2017-9992/results.csv
+out/out9/CVE-2017-9992/results.html
+Success (go3)
+
+
+------------ CVE-2017-9993 (159 of 173)
+Stage 1
+working on CVE-2017-9993, FFmpeg_FFmpeg, hls.c
+Calling ./rgl2 to get all commits
+Error: commit 189ff4219644532bdfa7bab28dfedaee4d6d4021 not in out/out9/CVE-2017-9993/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2017-9993"
+
+------------ CVE-2017-9995 (160 of 173)
+Stage 1
+working on CVE-2017-9995, FFmpeg_FFmpeg, scpr.c
+Calling ./rgl2 to get all commits
+filtering 28 child commits for file libavcodec/scpr.c
+no 21b23ceab3cfcc2aa0a833bbff11cf38b2177800 in 33
+no 4243da4ff42e306b3622b181e12f5cd127d21414 in 66
+no ce7dbd0481f990e249c2a05f179228489d3062cf in 78
+no 20f972701806be20a77f808db332d9489343bb78 in 32
+no a688f3c13ce55c2ba51dbbb344564649f1bb52fe in 38
+filtering 2 parent commits for file libavcodec/scpr.c
+0 out/out9/CVE-2017-9995/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9995 1498631340
+Original Project = FFmpeg_FFmpeg
+Success (go2)
+Stage 3
+./go3 CVE-2017-9995 out/out9/CVE-2017-9995/results.csv
+out/out9/CVE-2017-9995/results.csv
+out/out9/CVE-2017-9995/results.html
+Success (go3)
+
+
+------------ CVE-2017-9996 (161 of 173)
+Stage 1
+working on CVE-2017-9996, FFmpeg_FFmpeg, cdxl.c
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file libavcodec/cdxl.c
+no 21b23ceab3cfcc2aa0a833bbff11cf38b2177800 in 33
+no 4243da4ff42e306b3622b181e12f5cd127d21414 in 66
+no ce7dbd0481f990e249c2a05f179228489d3062cf in 78
+no 20f972701806be20a77f808db332d9489343bb78 in 32
+no a688f3c13ce55c2ba51dbbb344564649f1bb52fe in 38
+filtering 20 parent commits for file libavcodec/cdxl.c
+0 out/out9/CVE-2017-9996/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2017-9996 1498631340
+Original Project = FFmpeg_FFmpeg
+Success (go2)
+Stage 3
+./go3 CVE-2017-9996 out/out9/CVE-2017-9996/results.csv
+out/out9/CVE-2017-9996/results.csv
+out/out9/CVE-2017-9996/results.html
+Success (go3)
+
+
+------------ CVE-2018-0500 (162 of 173)
+Stage 1
+working on CVE-2018-0500, curl_curl, smtp.c
+Calling ./rgl2 to get all commits
+Error: commit ba1dbd78e5f1ed67c1b8d37ac89d90e5e330b628 not in out/out9/CVE-2018-0500/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2018-0500"
+
+------------ CVE-2018-1000050 (163 of 173)
+Stage 1
+working on CVE-2018-1000050, nothings_stb, stb_vorbis.c
+Calling ./rgl2 to get all commits
+Error: commit 244d83bc3d859293f55812d48b3db168e581f6ab not in out/out9/CVE-2018-1000050/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2018-1000050"
+
+------------ CVE-2018-1000070 (164 of 173)
+Stage 1
+working on CVE-2018-1000070, Bitmessage_PyBitmessage, __init__.py
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file src/messagetypes/__init__.py
+no 61d9db9e7255d3eb45fc13e5e88780aa51991237 in 97
+no 3052a3c2c24917ee120a8fd954ce6bbe9a5b8b25 in 48
+no ec52d2dae6fa2a332c0466d8d10618118807495d in 108
+filtering 6 parent commits for file src/messagetypes/__init__.py
+0 out/out9/CVE-2018-1000070/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2018-1000070 1520954940
+Original Project = Bitmessage_PyBitmessage
+Success (go2)
+Stage 3
+./go3 CVE-2018-1000070 out/out9/CVE-2018-1000070/results.csv
+out/out9/CVE-2018-1000070/results.csv
+out/out9/CVE-2018-1000070/results.html
+Success (go3)
+
+
+------------ CVE-2018-1000073 (165 of 173)
+Stage 1
+working on CVE-2018-1000073, rubygems_rubygems, package.rb
+Calling ./rgl2 to get all commits
+Error: commit 1b931fc03b819b9a0214be3eaca844ef534175e2 not in out/out9/CVE-2018-1000073/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2018-1000073"
+
+------------ CVE-2018-1000078 (166 of 173)
+Stage 1
+working on CVE-2018-1000078, rubygems_rubygems, server.rb
+Calling ./rgl2 to get all commits
+filtering 18 child commits for file lib/rubygems/server.rb
+no f91203160966f5c95a40c5f03f6866a37d5f21da in 121
+filtering 12 parent commits for file lib/rubygems/server.rb
+0 out/out9/CVE-2018-1000078/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2018-1000078 1520954940
+Original Project = rubygems_rubygems
+Success (go2)
+Stage 3
+./go3 CVE-2018-1000078 out/out9/CVE-2018-1000078/results.csv
+out/out9/CVE-2018-1000078/results.csv
+out/out9/CVE-2018-1000078/results.html
+Success (go3)
+
+
+------------ CVE-2018-1000085 (167 of 173)
+Stage 1
+working on CVE-2018-1000085, Cisco-Talos_clamav-devel, xar.c
+Calling ./rgl2 to get all commits
+filtering 24 child commits for file libclamav/xar.c
+no 140c88aa4e8c6d17ba771772b93cb94e088e9e4c in 20
+filtering 6 parent commits for file libclamav/xar.c
+0 out/out9/CVE-2018-1000085/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2018-1000085 1520954940
+Original Project = Cisco-Talos_clamav-devel
+Success (go2)
+Stage 3
+./go3 CVE-2018-1000085 out/out9/CVE-2018-1000085/results.csv
+out/out9/CVE-2018-1000085/results.csv
+out/out9/CVE-2018-1000085/results.html
+Success (go3)
+
+
+------------ CVE-2018-1000118 (168 of 173)
+Stage 1
+working on CVE-2018-1000118, electron_electron, command_line_args.cc
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file atom/app/command_line_args.cc
+filtering 2 parent commits for file atom/app/command_line_args.cc
+0 out/out9/CVE-2018-1000118/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2018-1000118 1520432940
+Original Project = electron_electron
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out9/CVE-2018-1000118" failed
+
+------------ CVE-2018-1000127 (169 of 173)
+Stage 1
+working on CVE-2018-1000127, memcached_memcached, memcached.c
+Calling ./rgl2 to get all commits
+Error: commit a8c4a82787b8b6c256d61bd5c42fb7f92d1bae00 not in out/out9/CVE-2018-1000127/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2018-1000127"
+
+------------ CVE-2018-1000165 (170 of 173)
+Stage 1
+working on CVE-2018-1000165, lightSAML_lightSAML, AbstractSignatureReader.php
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file src/LightSaml/Model/XmlDSig/AbstractSignatureReader.php
+no ca62ee1c49661f01874af6e682497c0a04bac1d3 in 74
+filtering 6 parent commits for file src/LightSaml/Model/XmlDSig/AbstractSignatureReader.php
+0 out/out9/CVE-2018-1000165/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2018-1000165 1524079740
+Original Project = lightSAML_lightSAML
+Success (go2)
+Stage 3
+./go3 CVE-2018-1000165 out/out9/CVE-2018-1000165/results.csv
+out/out9/CVE-2018-1000165/results.csv
+out/out9/CVE-2018-1000165/results.html
+Success (go3)
+
+
+------------ CVE-2018-1000180 (171 of 173)
+Stage 1
+working on CVE-2018-1000180, bcgit_bc-java, RSAKeyPairGenerator.java
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file core/src/main/java/org/bouncycastle/crypto/generators/RSAKeyPairGenerator.java
+no acf6c2ce6e1d3d1b505fffbfc7a29861864b8397 in 44
+filtering 10 parent commits for file core/src/main/java/org/bouncycastle/crypto/generators/RSAKeyPairGenerator.java
+0 out/out9/CVE-2018-1000180/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2018-1000180 1528205340
+Original Project = bcgit_bc-java
+Success (go2)
+Stage 3
+./go3 CVE-2018-1000180 out/out9/CVE-2018-1000180/results.csv
+out/out9/CVE-2018-1000180/results.csv
+out/out9/CVE-2018-1000180/results.html
+Success (go3)
+
+
+------------ CVE-2018-1000201 (172 of 173)
+Stage 1
+working on CVE-2018-1000201, ffi_ffi, library.rb
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file lib/ffi/library.rb
+filtering 22 parent commits for file lib/ffi/library.rb
+0 out/out9/CVE-2018-1000201/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out9/CVE-2018-1000201 1529692140
+Original Project = ffi_ffi
+Success (go2)
+Stage 3
+./go3 CVE-2018-1000201 out/out9/CVE-2018-1000201/results.csv
+out/out9/CVE-2018-1000201/results.csv
+out/out9/CVE-2018-1000201/results.html
+Success (go3)
+
+
+------------ CVE-2018-1000204 (173 of 173)
+Stage 1
+working on CVE-2018-1000204, torvalds_linux, sg.c
+Calling ./rgl2 to get all commits
+Error: commit a45b599ad808c3c982fdcdc12b0b8611c2f92824 not in out/out9/CVE-2018-1000204/stage1/commits
+Failure (go1): "./go1 out/out9/CVE-2018-1000204"
+============
+102 failed (see out/out9/log.error)
+71 succeeded (see out/out9/CVE-*)
+
