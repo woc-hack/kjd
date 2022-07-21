@@ -1,0 +1,1763 @@
+
+------------ CVE-1999-0731 (1 of 173)
+Stage 1
+working on CVE-1999-0731, KDE_kde1-kdebase, saver.cpp
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file kscreensaver/saver.cpp
+filtering 15 parent commits for file kscreensaver/saver.cpp
+0 out/out1/CVE-1999-0731/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-1999-0731 930110400
+Original Project = KDE_kde1-kdebase
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out1/CVE-1999-0731" failed
+
+------------ CVE-2002-2443 (2 of 173)
+Stage 1
+working on CVE-2002-2443, krb5_krb5, schpw.c
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file src/kadmin/server/schpw.c
+filtering 20 parent commits for file src/kadmin/server/schpw.c
+0 out/out1/CVE-2002-2443/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2002-2443 1369837740
+Original Project = krb5_krb5
+Success (go2)
+Stage 3
+./go3 CVE-2002-2443 out/out1/CVE-2002-2443/results.csv
+out/out1/CVE-2002-2443/results.csv
+out/out1/CVE-2002-2443/results.html
+Success (go3)
+
+
+------------ CVE-2006-5331 (3 of 173)
+Stage 1
+working on CVE-2006-5331, torvalds_linux, traps.c
+Calling ./rgl2 to get all commits
+Error: commit 6c4841c2b6c32a134f9f36e5e08857138cc12b10 not in out/out1/CVE-2006-5331/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2006-5331"
+
+------------ CVE-2007-6761 (4 of 173)
+Stage 1
+working on CVE-2007-6761, torvalds_linux, videobuf-vmalloc.c
+Calling ./rgl2 to get all commits
+Error: commit 0b29669c065f60501e7289e1950fa2a618962358 not in out/out1/CVE-2007-6761/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2007-6761"
+
+------------ CVE-2007-6762 (5 of 173)
+Stage 1
+working on CVE-2007-6762, torvalds_linux, netlabel_cipso_v4.c
+Calling ./rgl2 to get all commits
+Error: commit 2a2f11c227bdf292b3a2900ad04139d301b56ac4 not in out/out1/CVE-2007-6762/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2007-6762"
+
+------------ CVE-2008-7050 (6 of 173)
+Stage 1
+working on CVE-2008-7050, Illydth_wowraidmanager, auth_phpbb3.php
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file auth/auth_phpbb3.php
+filtering 11 parent commits for file auth/auth_phpbb3.php
+0 out/out1/CVE-2008-7050/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2008-7050 1251109800
+Original Project = Illydth_wowraidmanager
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out1/CVE-2008-7050" failed
+
+------------ CVE-2008-7316 (7 of 173)
+Stage 1
+working on CVE-2008-7316, torvalds_linux, filemap.c
+Calling ./rgl2 to get all commits
+Error: commit 124d3b7041f9a0ca7c43a6293e1cae4576c32fd5 not in out/out1/CVE-2008-7316/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2008-7316"
+
+------------ CVE-2009-1194 (8 of 173)
+Stage 1
+working on CVE-2009-1194, bratsche_pango, glyphstring.c
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file pango/glyphstring.c
+filtering 29 parent commits for file pango/glyphstring.c
+0 out/out1/CVE-2009-1194/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2009-1194 1242055800
+Original Project = bratsche_pango
+Success (go2)
+Stage 3
+./go3 CVE-2009-1194 out/out1/CVE-2009-1194/results.csv
+out/out1/CVE-2009-1194/results.csv
+out/out1/CVE-2009-1194/results.html
+Success (go3)
+
+
+------------ CVE-2010-1630 (9 of 173)
+Stage 1
+working on CVE-2010-1630, phpbb_phpbb3, posting.php
+Calling ./rgl2 to get all commits
+Error: commit 4ea3402f9363c9259881bc8ea6ce7fc6cb212657 not in out/out1/CVE-2010-1630/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2010-1630"
+
+------------ CVE-2010-2809 (10 of 173)
+Stage 1
+working on CVE-2010-2809, Dieterbe_uzbl, config
+Calling ./rgl2 to get all commits
+Error: commit 9cc39cb5c9396be013b5dc2ba7e4b3eaa647e975 not in out/out1/CVE-2010-2809/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2010-2809"
+
+------------ CVE-2010-3260 (11 of 173)
+Stage 1
+working on CVE-2010-3260, orbeon_orbeon-forms, XercesSAXParserFactoryImpl.java
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file src/java/org/orbeon/oxf/xml/xerces/XercesSAXParserFactoryImpl.java
+filtering 3 parent commits for file src/java/org/orbeon/oxf/xml/xerces/XercesSAXParserFactoryImpl.java
+0 out/out1/CVE-2010-3260/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2010-3260 1303865700
+Original Project = orbeon_orbeon-forms
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out1/CVE-2010-3260" failed
+
+------------ CVE-2010-4250 (12 of 173)
+Stage 1
+working on CVE-2010-4250, torvalds_linux, inotify_user.c
+Calling ./rgl2 to get all commits
+Error: commit a2ae4cc9a16e211c8a128ba10d22a85431f093ab not in out/out1/CVE-2010-4250/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2010-4250"
+
+------------ CVE-2010-4648 (13 of 173)
+Stage 1
+working on CVE-2010-4648, torvalds_linux, wext.c
+Calling ./rgl2 to get all commits
+filtering 9 child commits for file drivers/net/wireless/orinoco/wext.c
+filtering 21 parent commits for file drivers/net/wireless/orinoco/wext.c
+0 out/out1/CVE-2010-4648/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2010-4648 1340322900
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2010-4648 out/out1/CVE-2010-4648/results.csv
+out/out1/CVE-2010-4648/results.csv
+out/out1/CVE-2010-4648/results.html
+Success (go3)
+
+
+------------ CVE-2010-4650 (14 of 173)
+Stage 1
+working on CVE-2010-4650, torvalds_linux, file.c
+Calling ./rgl2 to get all commits
+Error: commit 7572777eef78ebdee1ecb7c258c0ef94d35bad16 not in out/out1/CVE-2010-4650/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2010-4650"
+
+------------ CVE-2010-4802 (15 of 173)
+Stage 1
+working on CVE-2010-4802, kraih_mojo, Commands.pm
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file lib/Mojo/Commands.pm
+filtering 19 parent commits for file lib/Mojo/Commands.pm
+0 out/out1/CVE-2010-4802/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2010-4802 1304384100
+Original Project = kraih_mojo
+Success (go2)
+Stage 3
+./go3 CVE-2010-4802 out/out1/CVE-2010-4802/results.csv
+out/out1/CVE-2010-4802/results.csv
+out/out1/CVE-2010-4802/results.html
+Success (go3)
+
+
+------------ CVE-2010-5312 (16 of 173)
+Stage 1
+working on CVE-2010-5312, jquery_jquery-ui, jquery.ui.dialog.js
+Calling ./rgl2 to get all commits
+Error: commit 7e9060c109b928769a664dbcc2c17bd21231b6f3 not in out/out1/CVE-2010-5312/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2010-5312"
+
+------------ CVE-2010-5313 (17 of 173)
+Stage 1
+working on CVE-2010-5313, torvalds_linux, x86.c
+Calling ./rgl2 to get all commits
+Error: commit fc3a9157d3148ab91039c75423da8ef97be3e105 not in out/out1/CVE-2010-5313/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2010-5313"
+
+------------ CVE-2010-5328 (18 of 173)
+Stage 1
+working on CVE-2010-5328, torvalds_linux, fork.c
+Calling ./rgl2 to get all commits
+Error: commit f106eee10038c2ee5b6056aaf3f6d5229be6dcdd not in out/out1/CVE-2010-5328/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2010-5328"
+
+------------ CVE-2010-5329 (19 of 173)
+Stage 1
+working on CVE-2010-5329, torvalds_linux, v4l2-ioctl.c
+Calling ./rgl2 to get all commits
+Error: commit fc0a80798576f80ca10b3f6c9c7097f12fd1d64e not in out/out1/CVE-2010-5329/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2010-5329"
+
+------------ CVE-2010-5332 (20 of 173)
+Stage 1
+working on CVE-2010-5332, torvalds_linux, port.c
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file drivers/net/mlx4/port.c
+filtering 6 parent commits for file drivers/net/mlx4/port.c
+0 out/out1/CVE-2010-5332/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2010-5332 1564265700
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2010-5332 out/out1/CVE-2010-5332/results.csv
+out/out1/CVE-2010-5332/results.csv
+out/out1/CVE-2010-5332/results.html
+Success (go3)
+
+
+------------ CVE-2011-0006 (21 of 173)
+Stage 1
+working on CVE-2011-0006, torvalds_linux, ima_policy.c
+Calling ./rgl2 to get all commits
+Error: commit 867c20265459d30a01b021a9c1e81fb4c5832aa9 not in out/out1/CVE-2011-0006/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-0006"
+
+------------ CVE-2011-0469 (22 of 173)
+Stage 1
+working on CVE-2011-0469, openSUSE_open-build-service, bs_srcserver
+Calling ./rgl2 to get all commits
+Error: commit 23c8d21c75242999e29379e6ca8418a14c8725c6 not in out/out1/CVE-2011-0469/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-0469"
+
+------------ CVE-2011-0530 (23 of 173)
+Stage 1
+working on CVE-2011-0530, yoe_nbd, nbd-server.c
+Calling ./rgl2 to get all commits
+Error: commit 3ef52043861ab16352d49af89e048ba6339d6df8 not in out/out1/CVE-2011-0530/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-0530"
+
+------------ CVE-2011-0716 (24 of 173)
+Stage 1
+working on CVE-2011-0716, torvalds_linux, br_multicast.c
+Calling ./rgl2 to get all commits
+Error: commit 6b0d6a9b4296fa16a28d10d416db7a770fc03287 not in out/out1/CVE-2011-0716/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-0716"
+
+------------ CVE-2011-0992 (25 of 173)
+Stage 1
+working on CVE-2011-0992, mono_mono, threads.c
+Calling ./rgl2 to get all commits
+Error: commit 722f9890f09aadfc37ae479e7d946d5fc5ef7b91 not in out/out1/CVE-2011-0992/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-0992"
+
+------------ CVE-2011-1008 (26 of 173)
+Stage 1
+working on CVE-2011-1008, bestpractical_rt, Scrips_Overlay.pm
+Calling ./rgl2 to get all commits
+filtering 9 child commits for file lib/RT/Scrips_Overlay.pm
+filtering 21 parent commits for file lib/RT/Scrips_Overlay.pm
+0 out/out1/CVE-2011-1008/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2011-1008 1298908800
+Original Project = bestpractical_rt
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out1/CVE-2011-1008" failed
+
+------------ CVE-2011-1078 (27 of 173)
+Stage 1
+working on CVE-2011-1078, torvalds_linux, sco.c
+Calling ./rgl2 to get all commits
+Error: commit c4c896e1471aec3b004a693c689f60be3b17ac86 not in out/out1/CVE-2011-1078/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-1078"
+
+------------ CVE-2011-1079 (28 of 173)
+Stage 1
+working on CVE-2011-1079, torvalds_linux, sock.c
+Calling ./rgl2 to get all commits
+filtering 18 child commits for file net/bluetooth/bnep/sock.c
+no b6459415b384cb829f0b2a4268f211c789f6cf0b in 54
+filtering 12 parent commits for file net/bluetooth/bnep/sock.c
+0 out/out1/CVE-2011-1079/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2011-1079 1340322900
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2011-1079 out/out1/CVE-2011-1079/results.csv
+out/out1/CVE-2011-1079/results.csv
+out/out1/CVE-2011-1079/results.html
+Success (go3)
+
+
+------------ CVE-2011-1080 (29 of 173)
+Stage 1
+working on CVE-2011-1080, torvalds_linux, ebtables.c
+Calling ./rgl2 to get all commits
+Error: commit d846f71195d57b0bbb143382647c2c6638b04c5a not in out/out1/CVE-2011-1080/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-1080"
+
+------------ CVE-2011-1160 (30 of 173)
+Stage 1
+working on CVE-2011-1160, torvalds_linux, tpm.c
+Calling ./rgl2 to get all commits
+Error: commit 1309d7afbed112f0e8e90be9af975550caa0076b not in out/out1/CVE-2011-1160/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-1160"
+
+------------ CVE-2011-1180 (31 of 173)
+Stage 1
+working on CVE-2011-1180, torvalds_linux, iriap.c
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file net/irda/iriap.c
+filtering 19 parent commits for file net/irda/iriap.c
+0 out/out1/CVE-2011-1180/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2011-1180 1370696700
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2011-1180 out/out1/CVE-2011-1180/results.csv
+out/out1/CVE-2011-1180/results.csv
+out/out1/CVE-2011-1180/results.html
+Success (go3)
+
+
+------------ CVE-2011-1182 (32 of 173)
+Stage 1
+working on CVE-2011-1182, torvalds_linux, signal.c
+Calling ./rgl2 to get all commits
+Error: commit da48524eb20662618854bb3df2db01fc65f3070c not in out/out1/CVE-2011-1182/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-1182"
+
+------------ CVE-2011-1477 (33 of 173)
+Stage 1
+working on CVE-2011-1477, torvalds_linux, opl3.c
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file sound/oss/opl3.c
+filtering 7 parent commits for file sound/oss/opl3.c
+0 out/out1/CVE-2011-1477/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2011-1477 1340322900
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2011-1477 out/out1/CVE-2011-1477/results.csv
+out/out1/CVE-2011-1477/results.csv
+out/out1/CVE-2011-1477/results.html
+Success (go3)
+
+
+------------ CVE-2011-1493 (34 of 173)
+Stage 1
+working on CVE-2011-1493, torvalds_linux, rose_subr.c
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file net/rose/rose_subr.c
+filtering 7 parent commits for file net/rose/rose_subr.c
+0 out/out1/CVE-2011-1493/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2011-1493 1340322900
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2011-1493 out/out1/CVE-2011-1493/results.csv
+out/out1/CVE-2011-1493/results.csv
+out/out1/CVE-2011-1493/results.html
+Success (go3)
+
+
+------------ CVE-2011-1575 (35 of 173)
+Stage 1
+working on CVE-2011-1575, jedisct1_pure-ftpd, ftp_parser.c
+Calling ./rgl2 to get all commits
+filtering 26 child commits for file src/ftp_parser.c
+no 2a62cd79122d013eb86318ef68b2118742f5a23a in 42
+no 044c968546913f6073e39f13d4895cff64bf6f14 in 4
+filtering 4 parent commits for file src/ftp_parser.c
+0 out/out1/CVE-2011-1575/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2011-1575 1306191300
+Original Project = jedisct1_pure-ftpd
+Success (go2)
+Stage 3
+./go3 CVE-2011-1575 out/out1/CVE-2011-1575/results.csv
+out/out1/CVE-2011-1575/results.csv
+out/out1/CVE-2011-1575/results.html
+Success (go3)
+
+
+------------ CVE-2011-1588 (36 of 173)
+Stage 1
+working on CVE-2011-1588, xfce-mirror_thunar, thunar-transfer-job.c
+Calling ./rgl2 to get all commits
+Error: commit 03dd312e157d4fa8a11d5fa402706ae5b05806fa not in out/out1/CVE-2011-1588/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-1588"
+
+------------ CVE-2011-1759 (37 of 173)
+Stage 1
+working on CVE-2011-1759, torvalds_linux, sys_oabi-compat.c
+Calling ./rgl2 to get all commits
+filtering 23 child commits for file arch/arm/kernel/sys_oabi-compat.c
+filtering 7 parent commits for file arch/arm/kernel/sys_oabi-compat.c
+0 out/out1/CVE-2011-1759/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2011-1759 1339583040
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2011-1759 out/out1/CVE-2011-1759/results.csv
+out/out1/CVE-2011-1759/results.csv
+out/out1/CVE-2011-1759/results.html
+Success (go3)
+
+
+------------ CVE-2011-1767 (38 of 173)
+Stage 1
+working on CVE-2011-1767, torvalds_linux, ip_gre.c
+Calling ./rgl2 to get all commits
+Error: commit c2892f02712e9516d72841d5c019ed6916329794 not in out/out1/CVE-2011-1767/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-1767"
+
+------------ CVE-2011-1833 (39 of 173)
+Stage 1
+working on CVE-2011-1833, torvalds_linux, main.c
+Calling ./rgl2 to get all commits
+Error: commit 764355487ea220fdc2faf128d577d7f679b91f97 not in out/out1/CVE-2011-1833/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-1833"
+
+------------ CVE-2011-1927 (40 of 173)
+Stage 1
+working on CVE-2011-1927, torvalds_linux, ip_fragment.c
+Calling ./rgl2 to get all commits
+Error: commit 64f3b9e203bd06855072e295557dca1485a2ecba not in out/out1/CVE-2011-1927/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-1927"
+
+------------ CVE-2011-1937 (41 of 173)
+Stage 1
+working on CVE-2011-1937, webmin_webmin, user-lib.pl
+Calling ./rgl2 to get all commits
+filtering 24 child commits for file useradmin/user-lib.pl
+no 3e6142f098ccb0f4df8b0476a050c4319681e7cd in 62
+no fd223e7933206b55ff7bff0854159026d3b969b8 in 125
+no f431aaafde0964c557f59e7ae1960ebb16e666c6 in 116
+no 3aa792f73de3a7279f476e26d512f2ec8f713a78 in 58
+no dae7f8a397d31902c6a50421cbe4297e993ce4ac in 90
+no 547fc9caf6f84e9d3e7f82cf28c1303af1603569 in 84
+filtering 6 parent commits for file useradmin/user-lib.pl
+0 out/out1/CVE-2011-1937/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2011-1937 1306875300
+Original Project = webmin_webmin
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out1/CVE-2011-1937" failed
+
+------------ CVE-2011-2161 (42 of 173)
+Stage 1
+working on CVE-2011-2161, FFmpeg_FFmpeg, ape.c
+Calling ./rgl2 to get all commits
+Error: commit 8312e3fc9041027a33c8bc667bb99740fdf41dd5 not in out/out1/CVE-2011-2161/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2161"
+
+------------ CVE-2011-2182 (43 of 173)
+Stage 1
+working on CVE-2011-2182, torvalds_linux, ldm.c
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file fs/partitions/ldm.c
+filtering 16 parent commits for file fs/partitions/ldm.c
+0 out/out1/CVE-2011-2182/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2011-2182 1339583040
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2011-2182 out/out1/CVE-2011-2182/results.csv
+out/out1/CVE-2011-2182/results.csv
+out/out1/CVE-2011-2182/results.html
+Success (go3)
+
+
+------------ CVE-2011-2183 (44 of 173)
+Stage 1
+working on CVE-2011-2183, torvalds_linux, ksm.c
+Calling ./rgl2 to get all commits
+Error: commit 2b472611a32a72f4a118c069c2d62a1a3f087afd not in out/out1/CVE-2011-2183/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2183"
+
+------------ CVE-2011-2208 (45 of 173)
+Stage 1
+working on CVE-2011-2208, torvalds_linux, osf_sys.c
+Calling ./rgl2 to get all commits
+Error: commit 21c5977a836e399fc710ff2c5367845ed5c2527f not in out/out1/CVE-2011-2208/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2208"
+
+------------ CVE-2011-2209 (46 of 173)
+Stage 1
+working on CVE-2011-2209, torvalds_linux, osf_sys.c
+Calling ./rgl2 to get all commits
+Error: commit 21c5977a836e399fc710ff2c5367845ed5c2527f not in out/out1/CVE-2011-2209/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2209"
+
+------------ CVE-2011-2210 (47 of 173)
+Stage 1
+working on CVE-2011-2210, torvalds_linux, osf_sys.c
+Calling ./rgl2 to get all commits
+Error: commit 21c5977a836e399fc710ff2c5367845ed5c2527f not in out/out1/CVE-2011-2210/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2210"
+
+------------ CVE-2011-2211 (48 of 173)
+Stage 1
+working on CVE-2011-2211, torvalds_linux, osf_sys.c
+Calling ./rgl2 to get all commits
+Error: commit 21c5977a836e399fc710ff2c5367845ed5c2527f not in out/out1/CVE-2011-2211/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2211"
+
+------------ CVE-2011-2482 (49 of 173)
+Stage 1
+working on CVE-2011-2482, torvalds_linux, socket.c
+Calling ./rgl2 to get all commits
+Error: commit ea2bc483ff5caada7c4aa0d5fbf87d3a6590273d not in out/out1/CVE-2011-2482/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2482"
+
+------------ CVE-2011-2493 (50 of 173)
+Stage 1
+working on CVE-2011-2493, torvalds_linux, super.c
+Calling ./rgl2 to get all commits
+Error: commit 0449641130f5652b344ef6fa39fa019d7e94660a not in out/out1/CVE-2011-2493/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2493"
+
+------------ CVE-2011-2494 (51 of 173)
+Stage 1
+working on CVE-2011-2494, torvalds_linux, taskstats.c
+Calling ./rgl2 to get all commits
+Error: commit 1a51410abe7d0ee4b1d112780f46df87d3621043 not in out/out1/CVE-2011-2494/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2494"
+
+------------ CVE-2011-2495 (52 of 173)
+Stage 1
+working on CVE-2011-2495, torvalds_linux, base.c
+Calling ./rgl2 to get all commits
+Error: commit 1d1221f375c94ef961ba8574ac4f85c8870ddd51 not in out/out1/CVE-2011-2495/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2495"
+
+------------ CVE-2011-2496 (53 of 173)
+Stage 1
+working on CVE-2011-2496, torvalds_linux, mremap.c
+Calling ./rgl2 to get all commits
+Error: commit 982134ba62618c2d69fbbbd166d0a11ee3b7e3d8 not in out/out1/CVE-2011-2496/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2496"
+
+------------ CVE-2011-2517 (54 of 173)
+Stage 1
+working on CVE-2011-2517, torvalds_linux, nl80211.c
+Calling ./rgl2 to get all commits
+Error: commit 208c72f4fe44fe09577e7975ba0e7fa0278f3d03 not in out/out1/CVE-2011-2517/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2517"
+
+------------ CVE-2011-2518 (55 of 173)
+Stage 1
+working on CVE-2011-2518, torvalds_linux, mount.c
+Calling ./rgl2 to get all commits
+filtering 15 child commits for file security/tomoyo/mount.c
+filtering 12 parent commits for file security/tomoyo/mount.c
+0 out/out1/CVE-2011-2518/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2011-2518 1337903700
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2011-2518 out/out1/CVE-2011-2518/results.csv
+out/out1/CVE-2011-2518/results.csv
+out/out1/CVE-2011-2518/results.html
+Success (go3)
+
+
+------------ CVE-2011-2521 (56 of 173)
+Stage 1
+working on CVE-2011-2521, torvalds_linux, perf_event.c
+Calling ./rgl2 to get all commits
+Error: commit fc66c5210ec2539e800e87d7b3a985323c7be96e not in out/out1/CVE-2011-2521/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2521"
+
+------------ CVE-2011-2707 (57 of 173)
+Stage 1
+working on CVE-2011-2707, torvalds_linux, ptrace.c
+Calling ./rgl2 to get all commits
+Error: commit 0d0138ebe24b94065580bd2601f8bb7eb6152f56 not in out/out1/CVE-2011-2707/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2707"
+
+------------ CVE-2011-2765 (58 of 173)
+Stage 1
+working on CVE-2011-2765, irmen_Pyro3, daemonizer.py
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file Pyro/ext/daemonizer.py
+filtering 4 parent commits for file Pyro/ext/daemonizer.py
+0 out/out1/CVE-2011-2765/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2011-2765 1534771740
+Original Project = irmen_Pyro3
+Success (go2)
+Stage 3
+./go3 CVE-2011-2765 out/out1/CVE-2011-2765/results.csv
+out/out1/CVE-2011-2765/results.csv
+out/out1/CVE-2011-2765/results.html
+Success (go3)
+
+
+------------ CVE-2011-2905 (59 of 173)
+Stage 1
+working on CVE-2011-2905, torvalds_linux, config.c
+Calling ./rgl2 to get all commits
+Error: commit aba8d056078e47350d85b06a9cabd5afcc4b72ea not in out/out1/CVE-2011-2905/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2905"
+
+------------ CVE-2011-2906 (60 of 173)
+Stage 1
+working on CVE-2011-2906, torvalds_linux, pmcraid.c
+Calling ./rgl2 to get all commits
+Error: commit b5b515445f4f5a905c5dd27e6e682868ccd6c09d not in out/out1/CVE-2011-2906/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2906"
+
+------------ CVE-2011-2909 (61 of 173)
+Stage 1
+working on CVE-2011-2909, torvalds_linux, comedi_fops.c
+Calling ./rgl2 to get all commits
+Error: commit 819cbb120eaec7e014e5abd029260db1ca8c5735 not in out/out1/CVE-2011-2909/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-2909"
+
+------------ CVE-2011-3178 (62 of 173)
+Stage 1
+working on CVE-2011-3178, openSUSE_open-build-service, project_controller.rb
+Calling ./rgl2 to get all commits
+Error: commit cbfe2ed36dd77c0843702935dea7f914bb599201 not in out/out1/CVE-2011-3178/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-3178"
+
+------------ CVE-2011-3180 (63 of 173)
+Stage 1
+working on CVE-2011-3180, openSUSE_kiwi, KIWIRoot.pm
+Calling ./rgl2 to get all commits
+Error: commit f0f74b3f6ac6d47f7919aa9db380c0ad41ffe55f not in out/out1/CVE-2011-3180/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-3180"
+
+------------ CVE-2011-3191 (64 of 173)
+Stage 1
+working on CVE-2011-3191, torvalds_linux, cifssmb.c
+Calling ./rgl2 to get all commits
+Error: commit 9438fabb73eb48055b58b89fc51e0bc4db22fabd not in out/out1/CVE-2011-3191/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-3191"
+
+------------ CVE-2011-3346 (65 of 173)
+Stage 1
+working on CVE-2011-3346, bonzini_qemu, scsi-disk.c
+Calling ./rgl2 to get all commits
+Error: commit 103b40f51e4012b3b0ad20f615562a1806d7f49a not in out/out1/CVE-2011-3346/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-3346"
+
+------------ CVE-2011-3353 (66 of 173)
+Stage 1
+working on CVE-2011-3353, torvalds_linux, dev.c
+Calling ./rgl2 to get all commits
+Error: commit c2183d1e9b3f313dd8ba2b1b0197c8d9fb86a7ae not in out/out1/CVE-2011-3353/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-3353"
+
+------------ CVE-2011-3363 (67 of 173)
+Stage 1
+working on CVE-2011-3363, torvalds_linux, connect.c
+Calling ./rgl2 to get all commits
+Error: commit 70945643722ffeac779d2529a348f99567fa5c33 not in out/out1/CVE-2011-3363/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-3363"
+
+------------ CVE-2011-3371 (68 of 173)
+Stage 1
+working on CVE-2011-3371, punbb_punbb, functions.php
+Calling ./rgl2 to get all commits
+Error: commit dd50a50a2760f10bd2d09814e30af4b36052ca6d not in out/out1/CVE-2011-3371/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-3371"
+
+------------ CVE-2011-3592 (69 of 173)
+Stage 1
+working on CVE-2011-3592, phpmyadmin_phpmyadmin, sql.js
+Calling ./rgl2 to get all commits
+Error: commit 2f28ce9c800274190418da0945ce3647d36e1db6 not in out/out1/CVE-2011-3592/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-3592"
+
+------------ CVE-2011-3602 (70 of 173)
+Stage 1
+working on CVE-2011-3602, reubenhwk_radvd, device-linux.c
+Calling ./rgl2 to get all commits
+Error: commit 92e22ca23e52066da2258df8c76a2dca8a428bcc not in out/out1/CVE-2011-3602/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-3602"
+
+------------ CVE-2011-3619 (71 of 173)
+Stage 1
+working on CVE-2011-3619, torvalds_linux, lsm.c
+Calling ./rgl2 to get all commits
+Error: commit a5b2c5b2ad5853591a6cac6134cd0f599a720865 not in out/out1/CVE-2011-3619/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-3619"
+
+------------ CVE-2011-3637 (72 of 173)
+Stage 1
+working on CVE-2011-3637, torvalds_linux, task_mmu.c
+Calling ./rgl2 to get all commits
+Error: commit 76597cd31470fa130784c78fadb4dab2e624a723 not in out/out1/CVE-2011-3637/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-3637"
+
+------------ CVE-2011-3638 (73 of 173)
+Stage 1
+working on CVE-2011-3638, torvalds_linux, extents.c
+Calling ./rgl2 to get all commits
+Error: commit 667eff35a1f56fa74ce98a0c7c29a40adc1ba4e3 not in out/out1/CVE-2011-3638/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-3638"
+
+------------ CVE-2011-4080 (74 of 173)
+Stage 1
+working on CVE-2011-4080, torvalds_linux, sysctl.c
+Calling ./rgl2 to get all commits
+Error: commit bfdc0b497faa82a0ba2f9dddcf109231dd519fcc not in out/out1/CVE-2011-4080/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-4080"
+
+------------ CVE-2011-4081 (75 of 173)
+Stage 1
+working on CVE-2011-4081, torvalds_linux, ghash-generic.c
+Calling ./rgl2 to get all commits
+filtering 13 child commits for file crypto/ghash-generic.c
+filtering 1 parent commits for file crypto/ghash-generic.c
+0 out/out1/CVE-2011-4081/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2011-4081 1337903700
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2011-4081 out/out1/CVE-2011-4081/results.csv
+out/out1/CVE-2011-4081/results.csv
+out/out1/CVE-2011-4081/results.html
+Success (go3)
+
+
+------------ CVE-2011-4086 (76 of 173)
+Stage 1
+working on CVE-2011-4086, torvalds_linux, transaction.c
+Calling ./rgl2 to get all commits
+Error: commit 15291164b22a357cb211b618adfef4fa82fc0de3 not in out/out1/CVE-2011-4086/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-4086"
+
+------------ CVE-2011-4087 (77 of 173)
+Stage 1
+working on CVE-2011-4087, torvalds_linux, br_netfilter.c
+Calling ./rgl2 to get all commits
+Error: commit f8e9881c2aef1e982e5abc25c046820cd0b7cf64 not in out/out1/CVE-2011-4087/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-4087"
+
+------------ CVE-2011-4104 (78 of 173)
+Stage 1
+working on CVE-2011-4104, toastdriven_django-tastypie, serializers.py
+Calling ./rgl2 to get all commits
+Error: commit e8af315211b07c8f48f32a063233cc3f76dd5bc2 not in out/out1/CVE-2011-4104/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-4104"
+
+------------ CVE-2011-4326 (79 of 173)
+Stage 1
+working on CVE-2011-4326, torvalds_linux, udp.c
+Calling ./rgl2 to get all commits
+Error: commit a9cf73ea7ff78f52662c8658d93c226effbbedde not in out/out1/CVE-2011-4326/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-4326"
+
+------------ CVE-2011-4348 (80 of 173)
+Stage 1
+working on CVE-2011-4348, torvalds_linux, input.c
+Calling ./rgl2 to get all commits
+Error: commit ae53b5bd77719fed58086c5be60ce4f22bffe1c6 not in out/out1/CVE-2011-4348/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-4348"
+
+------------ CVE-2011-4594 (81 of 173)
+Stage 1
+working on CVE-2011-4594, torvalds_linux, socket.c
+Calling ./rgl2 to get all commits
+Error: commit bc909d9ddbf7778371e36a651d6e4194b1cc7d4c not in out/out1/CVE-2011-4594/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-4594"
+
+------------ CVE-2011-4604 (82 of 173)
+Stage 1
+working on CVE-2011-4604, torvalds_linux, icmp_socket.c
+Calling ./rgl2 to get all commits
+Error: commit b5a1eeef04cc7859f34dec9b72ea1b28e4aba07c not in out/out1/CVE-2011-4604/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-4604"
+
+------------ CVE-2011-4715 (83 of 173)
+Stage 1
+working on CVE-2011-4715, liblime_LibLime-Koha, Output.pm
+Calling ./rgl2 to get all commits
+Error: commit 8ea6f7bc37d05a9ec25b5afbea011cf9de5f1e49 not in out/out1/CVE-2011-4715/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-4715"
+
+------------ CVE-2011-4913 (84 of 173)
+Stage 1
+working on CVE-2011-4913, torvalds_linux, rose_subr.c
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file net/rose/rose_subr.c
+filtering 7 parent commits for file net/rose/rose_subr.c
+0 out/out1/CVE-2011-4913/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2011-4913 1340322900
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2011-4913 out/out1/CVE-2011-4913/results.csv
+out/out1/CVE-2011-4913/results.csv
+out/out1/CVE-2011-4913/results.html
+Success (go3)
+
+
+------------ CVE-2011-4966 (85 of 173)
+Stage 1
+working on CVE-2011-4966, alandekok_freeradius-server, rlm_unix.c
+Calling ./rgl2 to get all commits
+Error: commit 1b1ec5ce75e224bd1755650c18ccdaa6dc53e605 not in out/out1/CVE-2011-4966/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-4966"
+
+------------ CVE-2011-5018 (86 of 173)
+Stage 1
+working on CVE-2011-5018, koala-framework_koala-framework, Abstract.php
+Calling ./rgl2 to get all commits
+Error: commit 59f81ea6bd8ef96c04a706a3ca453cd656284faa not in out/out1/CVE-2011-5018/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-5018"
+
+------------ CVE-2011-5098 (87 of 173)
+Stage 1
+working on CVE-2011-5098, opscode_chef, clients.rb
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file chef-server-api/app/controllers/clients.rb
+filtering 14 parent commits for file chef-server-api/app/controllers/clients.rb
+0 out/out1/CVE-2011-5098/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2011-5098 1344421560
+Original Project = opscode_chef
+Success (go2)
+Stage 3
+./go3 CVE-2011-5098 out/out1/CVE-2011-5098/results.csv
+out/out1/CVE-2011-5098/results.csv
+out/out1/CVE-2011-5098/results.html
+Success (go3)
+
+
+------------ CVE-2011-5321 (88 of 173)
+Stage 1
+working on CVE-2011-5321, torvalds_linux, tty_io.c
+Calling ./rgl2 to get all commits
+Error: commit c290f8358acaeffd8e0c551ddcc24d1206143376 not in out/out1/CVE-2011-5321/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-5321"
+
+------------ CVE-2011-5327 (89 of 173)
+Stage 1
+working on CVE-2011-5327, torvalds_linux, tcm_loop.c
+Calling ./rgl2 to get all commits
+Error: commit 12f09ccb4612734a53e47ed5302e0479c10a50f8 not in out/out1/CVE-2011-5327/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2011-5327"
+
+------------ CVE-2012-0033 (90 of 173)
+Stage 1
+working on CVE-2012-0033, znc_znc, bouncedcc.cpp
+Calling ./rgl2 to get all commits
+Error: commit 11508aa72efab4fad0dbd8292b9614d9371b20a9 not in out/out1/CVE-2012-0033/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-0033"
+
+------------ CVE-2012-0038 (91 of 173)
+Stage 1
+working on CVE-2012-0038, torvalds_linux, xfs_acl.c
+Calling ./rgl2 to get all commits
+Error: commit 093019cf1b18dd31b2c3b77acce4e000e2cbc9ce not in out/out1/CVE-2012-0038/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-0038"
+
+------------ CVE-2012-0207 (92 of 173)
+Stage 1
+working on CVE-2012-0207, torvalds_linux, igmp.c
+Calling ./rgl2 to get all commits
+Error: commit a8c1f65c79cbbb2f7da782d4c9d15639a9b94b27 not in out/out1/CVE-2012-0207/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-0207"
+
+------------ CVE-2012-0807 (93 of 173)
+Stage 1
+working on CVE-2012-0807, stefanesser_suhosin, header.c
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file header.c
+filtering 5 parent commits for file header.c
+0 out/out1/CVE-2012-0807/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-0807 1327625700
+Original Project = stefanesser_suhosin
+Success (go2)
+Stage 3
+./go3 CVE-2012-0807 out/out1/CVE-2012-0807/results.csv
+out/out1/CVE-2012-0807/results.csv
+out/out1/CVE-2012-0807/results.html
+Success (go3)
+
+
+------------ CVE-2012-0957 (94 of 173)
+Stage 1
+working on CVE-2012-0957, torvalds_linux, sys.c
+Calling ./rgl2 to get all commits
+Error: commit 2702b1526c7278c4d65d78de209a465d4de2885e not in out/out1/CVE-2012-0957/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-0957"
+
+------------ CVE-2012-1013 (95 of 173)
+Stage 1
+working on CVE-2012-1013, krb5_krb5, svr_principal.c
+Calling ./rgl2 to get all commits
+Error: commit c5be6209311d4a8f10fda37d0d3f876c1b33b77b not in out/out1/CVE-2012-1013/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-1013"
+
+------------ CVE-2012-1107 (96 of 173)
+Stage 1
+working on CVE-2012-1107, taglib_taglib, apeproperties.cpp
+Calling ./rgl2 to get all commits
+filtering 12 child commits for file taglib/ape/apeproperties.cpp
+filtering 4 parent commits for file taglib/ape/apeproperties.cpp
+0 out/out1/CVE-2012-1107/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-1107 1346957700
+Original Project = taglib_taglib
+Success (go2)
+Stage 3
+./go3 CVE-2012-1107 out/out1/CVE-2012-1107/results.csv
+out/out1/CVE-2012-1107/results.csv
+out/out1/CVE-2012-1107/results.html
+Success (go3)
+
+
+------------ CVE-2012-1108 (97 of 173)
+Stage 1
+working on CVE-2012-1108, taglib_taglib, xiphcomment.cpp
+Calling ./rgl2 to get all commits
+Error: commit b3646a07348ffa276ea41a9dae03ddc63ea6c532 not in out/out1/CVE-2012-1108/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-1108"
+
+------------ CVE-2012-1118 (98 of 173)
+Stage 1
+working on CVE-2012-1118, mantisbt_mantisbt, access_api.php
+Calling ./rgl2 to get all commits
+Error: commit eb803ed02105fc919cf5f789e939f2b824162927 not in out/out1/CVE-2012-1118/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-1118"
+
+------------ CVE-2012-1119 (99 of 173)
+Stage 1
+working on CVE-2012-1119, mantisbt_mantisbt, bug_api.php
+Calling ./rgl2 to get all commits
+Error: commit dea7e315f3fc96dfa995e56e8810845fc07a47aa not in out/out1/CVE-2012-1119/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-1119"
+
+------------ CVE-2012-1122 (100 of 173)
+Stage 1
+working on CVE-2012-1122, mantisbt_mantisbt, bug_actiongroup.php
+Calling ./rgl2 to get all commits
+Error: commit 0da3f7ace233208eb3c8d628cc2fd6e56d83839f not in out/out1/CVE-2012-1122/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-1122"
+
+------------ CVE-2012-1123 (101 of 173)
+Stage 1
+working on CVE-2012-1123, mantisbt_mantisbt, mc_api.php
+Calling ./rgl2 to get all commits
+Error: commit f5106be52cf6aa72c521f388e4abb5f0de1f1d7f not in out/out1/CVE-2012-1123/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-1123"
+
+------------ CVE-2012-1146 (102 of 173)
+Stage 1
+working on CVE-2012-1146, torvalds_linux, memcontrol.c
+Calling ./rgl2 to get all commits
+Error: commit 371528caec553785c37f73fa3926ea0de84f986f not in out/out1/CVE-2012-1146/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-1146"
+
+------------ CVE-2012-1188 (103 of 173)
+Stage 1
+working on CVE-2012-1188, forkcms_forkcms, index.php
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file backend/modules/error/actions/index.php
+filtering 6 parent commits for file backend/modules/error/actions/index.php
+0 out/out1/CVE-2012-1188/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-1188 1348620900
+Original Project = forkcms_forkcms
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out1/CVE-2012-1188" failed
+
+------------ CVE-2012-1190 (104 of 173)
+Stage 1
+working on CVE-2012-1190, phpmyadmin_phpmyadmin, replication.js
+Calling ./rgl2 to get all commits
+Error: commit 86073d532aed656550cb731aa5b4288b126ae7a6 not in out/out1/CVE-2012-1190/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-1190"
+
+------------ CVE-2012-1207 (105 of 173)
+Stage 1
+working on CVE-2012-1207, forkcms_forkcms, javascript.php
+Calling ./rgl2 to get all commits
+filtering 9 child commits for file frontend/core/engine/javascript.php
+filtering 4 parent commits for file frontend/core/engine/javascript.php
+0 out/out1/CVE-2012-1207/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-1207 1330091700
+Original Project = forkcms_forkcms
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out1/CVE-2012-1207" failed
+
+------------ CVE-2012-1208 (106 of 173)
+Stage 1
+working on CVE-2012-1208, forkcms_forkcms, base.php
+Calling ./rgl2 to get all commits
+Error: commit d65c083adc91c88d21bd9a0df4c2688df634c6ff not in out/out1/CVE-2012-1208/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-1208"
+
+------------ CVE-2012-1209 (107 of 173)
+Stage 1
+working on CVE-2012-1209, forkcms_forkcms, base.php
+Calling ./rgl2 to get all commits
+Error: commit c8ec9c58a6b3c46cdd924532c1de99bcda6072ed not in out/out1/CVE-2012-1209/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-1209"
+
+------------ CVE-2012-1571 (108 of 173)
+Stage 1
+working on CVE-2012-1571, glensc_file, cdf.c
+Calling ./rgl2 to get all commits
+Error: commit 1859fdb4e67c49c463c4e0078054335cd46ba295 not in out/out1/CVE-2012-1571/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-1571"
+
+------------ CVE-2012-1583 (109 of 173)
+Stage 1
+working on CVE-2012-1583, torvalds_linux, xfrm6_tunnel.c
+Calling ./rgl2 to get all commits
+Error: commit d0772b70faaf8e9f2013b6c4273d94d5eac8047a not in out/out1/CVE-2012-1583/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-1583"
+
+------------ CVE-2012-1584 (110 of 173)
+Stage 1
+working on CVE-2012-1584, taglib_taglib, tbytevector.cpp
+Calling ./rgl2 to get all commits
+Error: commit dcdf4fd954e3213c355746fa15b7480461972308 not in out/out1/CVE-2012-1584/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-1584"
+
+------------ CVE-2012-1597 (111 of 173)
+Stage 1
+working on CVE-2012-1597, ezsystems_ezjscore, ezjscajaxcontent.php
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file classes/ezjscajaxcontent.php
+filtering 28 parent commits for file classes/ezjscajaxcontent.php
+0 out/out1/CVE-2012-1597/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-1597 1345164900
+Original Project = ezsystems_ezjscore
+Success (go2)
+Stage 3
+./go3 CVE-2012-1597 out/out1/CVE-2012-1597/results.csv
+out/out1/CVE-2012-1597/results.csv
+out/out1/CVE-2012-1597/results.html
+Success (go3)
+
+
+------------ CVE-2012-1902 (112 of 173)
+Stage 1
+working on CVE-2012-1902, phpmyadmin_phpmyadmin, show_config_errors.php
+Calling ./rgl2 to get all commits
+filtering 29 child commits for file show_config_errors.php
+no 1e542cd621bda5c29e8cebc2f99c2747a6cd96bb in 30
+no 0fbed5e6bd89807e66d7a350b3ca30e4bb768036 in 15
+filtering 1 parent commits for file show_config_errors.php
+0 out/out1/CVE-2012-1902/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-1902 1333742100
+Original Project = phpmyadmin_phpmyadmin
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out1/CVE-2012-1902" failed
+
+------------ CVE-2012-1909 (113 of 173)
+Stage 1
+working on CVE-2012-1909, sipa_bitcoin, main.cpp
+Calling ./rgl2 to get all commits
+Error: commit a206b0ea12eb4606b93323268fc81a4f1f952531 not in out/out1/CVE-2012-1909/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-1909"
+
+------------ CVE-2012-2100 (114 of 173)
+Stage 1
+working on CVE-2012-2100, torvalds_linux, super.c
+Calling ./rgl2 to get all commits
+Error: commit d50f2ab6f050311dbf7b8f5501b25f0bf64a439b not in out/out1/CVE-2012-2100/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-2100"
+
+------------ CVE-2012-2119 (115 of 173)
+Stage 1
+working on CVE-2012-2119, torvalds_linux, macvtap.c
+Calling ./rgl2 to get all commits
+Error: commit b92946e2919134ebe2a4083e4302236295ea2a73 not in out/out1/CVE-2012-2119/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-2119"
+
+------------ CVE-2012-2123 (116 of 173)
+Stage 1
+working on CVE-2012-2123, torvalds_linux, commoncap.c
+Calling ./rgl2 to get all commits
+Error: commit d52fc5dde171f030170a6cb78034d166b13c9445 not in out/out1/CVE-2012-2123/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-2123"
+
+------------ CVE-2012-2127 (117 of 173)
+Stage 1
+working on CVE-2012-2127, torvalds_linux, root.c
+Calling ./rgl2 to get all commits
+Error: commit 905ad269c55fc62bee3da29f7b1d1efeba8aa1e1 not in out/out1/CVE-2012-2127/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-2127"
+
+------------ CVE-2012-2129 (118 of 173)
+Stage 1
+working on CVE-2012-2129, splitbrain_dokuwiki, html.php
+Calling ./rgl2 to get all commits
+Error: commit ff71173477e54774b5571015d49d944f51cb8a26 not in out/out1/CVE-2012-2129/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-2129"
+
+------------ CVE-2012-2136 (119 of 173)
+Stage 1
+working on CVE-2012-2136, torvalds_linux, sock.c
+Calling ./rgl2 to get all commits
+Error: commit cc9b17ad29ecaa20bfe426a8d4dbfb94b13ff1cc not in out/out1/CVE-2012-2136/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-2136"
+
+------------ CVE-2012-2375 (120 of 173)
+Stage 1
+working on CVE-2012-2375, torvalds_linux, nfs4proc.c
+Calling ./rgl2 to get all commits
+Error: commit 20e0fa98b751facf9a1101edaefbc19c82616a68 not in out/out1/CVE-2012-2375/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-2375"
+
+------------ CVE-2012-2383 (121 of 173)
+Stage 1
+working on CVE-2012-2383, torvalds_linux, i915_gem_execbuffer.c
+Calling ./rgl2 to get all commits
+Error: commit ed8cd3b2cd61004cab85380c52b1817aca1ca49b not in out/out1/CVE-2012-2383/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-2383"
+
+------------ CVE-2012-2384 (122 of 173)
+Stage 1
+working on CVE-2012-2384, torvalds_linux, i915_gem_execbuffer.c
+Calling ./rgl2 to get all commits
+Error: commit 44afb3a04391a74309d16180d1e4f8386fdfa745 not in out/out1/CVE-2012-2384/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-2384"
+
+------------ CVE-2012-2390 (123 of 173)
+Stage 1
+working on CVE-2012-2390, torvalds_linux, hugetlb.c
+Calling ./rgl2 to get all commits
+Error: commit c50ac050811d6485616a193eb0f37bfbd191cc89 not in out/out1/CVE-2012-2390/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-2390"
+
+------------ CVE-2012-2417 (124 of 173)
+Stage 1
+working on CVE-2012-2417, Legrandin_pycrypto, ElGamal.py
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file lib/Crypto/PublicKey/ElGamal.py
+filtering 5 parent commits for file lib/Crypto/PublicKey/ElGamal.py
+0 out/out1/CVE-2012-2417/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-2417 1339904460
+Original Project = Legrandin_pycrypto
+./go2: line 89: out/out1/CVE-2012-2417/stage2/salsa.debian.org_python-team/modules/python-crypto_good.txt: No such file or directory
+./go2: line 89: out/out1/CVE-2012-2417/stage2/salsa.debian.org_python-team/modules/python-crypto_good.txt: No such file or directory
+./go2: line 89: out/out1/CVE-2012-2417/stage2/salsa.debian.org_python-team/modules/python-crypto_good.txt: No such file or directory
+./go2: line 94: out/out1/CVE-2012-2417/stage2/salsa.debian.org_python-team/modules/python-crypto_bad.txt: No such file or directory
+./go2: line 94: out/out1/CVE-2012-2417/stage2/salsa.debian.org_python-team/modules/python-crypto_bad.txt: No such file or directory
+./go2: line 94: out/out1/CVE-2012-2417/stage2/salsa.debian.org_python-team/modules/python-crypto_bad.txt: No such file or directory
+./go2: line 96: out/out1/CVE-2012-2417/stage2/salsa.debian.org_python-team/modules/python-crypto_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out1/CVE-2012-2417/stage2/salsa.debian.org_python-team/modules/python-crypto_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out1/CVE-2012-2417/stage2/salsa.debian.org_python-team/modules/python-crypto_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out1/CVE-2012-2417/stage2/salsa.debian.org_python-team/modules/python-crypto_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2012-2417 out/out1/CVE-2012-2417/results.csv
+out/out1/CVE-2012-2417/results.csv
+out/out1/CVE-2012-2417/results.html
+Success (go3)
+
+
+------------ CVE-2012-2669 (125 of 173)
+Stage 1
+working on CVE-2012-2669, torvalds_linux, hv_kvp_daemon.c
+Calling ./rgl2 to get all commits
+Error: commit bcc2c9c3fff859e0eb019fe6fec26f9b8eba795c not in out/out1/CVE-2012-2669/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-2669"
+
+------------ CVE-2012-2674 (126 of 173)
+Stage 1
+working on CVE-2012-2674, android_platform_bionic, malloc_debug_leak.c
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file libc/bionic/malloc_debug_leak.c
+filtering 5 parent commits for file libc/bionic/malloc_debug_leak.c
+0 out/out1/CVE-2012-2674/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-2674 1343246100
+Original Project = android_platform_bionic
+Success (go2)
+Stage 3
+./go3 CVE-2012-2674 out/out1/CVE-2012-2674/results.csv
+out/out1/CVE-2012-2674/results.csv
+out/out1/CVE-2012-2674/results.html
+Success (go3)
+
+
+------------ CVE-2012-2675 (127 of 173)
+Stage 1
+working on CVE-2012-2675, ned14_nedmalloc, nedmalloc.c
+Calling ./rgl2 to get all commits
+filtering 15 child commits for file nedmalloc.c
+filtering 15 parent commits for file nedmalloc.c
+0 out/out1/CVE-2012-2675/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-2675 1343246100
+Original Project = ned14_nedmalloc
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out1/CVE-2012-2675" failed
+
+------------ CVE-2012-2744 (128 of 173)
+Stage 1
+working on CVE-2012-2744, torvalds_linux, nf_conntrack_reasm.c
+Calling ./rgl2 to get all commits
+Error: commit 9e2dcf72023d1447f09c47d77c99b0c49659e5ce not in out/out1/CVE-2012-2744/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-2744"
+
+------------ CVE-2012-2745 (129 of 173)
+Stage 1
+working on CVE-2012-2745, torvalds_linux, cred.c
+Calling ./rgl2 to get all commits
+Error: commit 79549c6dfda0603dba9a70a53467ce62d9335c33 not in out/out1/CVE-2012-2745/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-2745"
+
+------------ CVE-2012-2983 (130 of 173)
+Stage 1
+working on CVE-2012-2983, webmin_webmin, edit_html.cgi
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file file/edit_html.cgi
+filtering 7 parent commits for file file/edit_html.cgi
+0 out/out1/CVE-2012-2983/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-2983 1347389700
+Original Project = webmin_webmin
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out1/CVE-2012-2983" failed
+
+------------ CVE-2012-3364 (131 of 173)
+Stage 1
+working on CVE-2012-3364, torvalds_linux, ntf.c
+Calling ./rgl2 to get all commits
+filtering 30 child commits for file net/nfc/nci/ntf.c
+filtering 0 parent commits for file net/nfc/nci/ntf.c
+cat: out/out1/CVE-2012-3364/stage1/commits.old.filtered: No such file or directory
+rm: cannot remove ‘out/out1/CVE-2012-3364/stage1/commits.old.filtered’: No such file or directory
+0 out/out1/CVE-2012-3364/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-3364 1358898900
+Original Project = torvalds_linux
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out1/CVE-2012-3364" failed
+
+------------ CVE-2012-3366 (132 of 173)
+Stage 1
+working on CVE-2012-3366, Bcfg2_bcfg2, Trigger.py
+Calling ./rgl2 to get all commits
+Error: commit a524967e8d5c4c22e49cd619aed20c87a316c0be not in out/out1/CVE-2012-3366/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-3366"
+
+------------ CVE-2012-3371 (133 of 173)
+Stage 1
+working on CVE-2012-3371, openstack_nova, affinity_filter.py
+Calling ./rgl2 to get all commits
+Error: commit 034762e8060dcf0a11cb039b9d426b0d0bb1801d not in out/out1/CVE-2012-3371/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-3371"
+
+------------ CVE-2012-3375 (134 of 173)
+Stage 1
+working on CVE-2012-3375, torvalds_linux, eventpoll.c
+Calling ./rgl2 to get all commits
+Error: commit 13d518074a952d33d47c428419693f63389547e9 not in out/out1/CVE-2012-3375/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-3375"
+
+------------ CVE-2012-3382 (135 of 173)
+Stage 1
+working on CVE-2012-3382, mono_mono, HttpForbiddenHandler.cs
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file mcs/class/System.Web/System.Web/HttpForbiddenHandler.cs
+filtering 3 parent commits for file mcs/class/System.Web/System.Web/HttpForbiddenHandler.cs
+0 out/out1/CVE-2012-3382/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-3382 1342130100
+Original Project = mono_mono
+Success (go2)
+Stage 3
+./go3 CVE-2012-3382 out/out1/CVE-2012-3382/results.csv
+out/out1/CVE-2012-3382/results.csv
+out/out1/CVE-2012-3382/results.html
+Success (go3)
+
+
+------------ CVE-2012-3400 (136 of 173)
+Stage 1
+working on CVE-2012-3400, torvalds_linux, super.c
+Calling ./rgl2 to get all commits
+Error: commit adee11b2085bee90bd8f4f52123ffb07882d6256 not in out/out1/CVE-2012-3400/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-3400"
+
+------------ CVE-2012-3430 (137 of 173)
+Stage 1
+working on CVE-2012-3430, torvalds_linux, recv.c
+Calling ./rgl2 to get all commits
+Error: commit 06b6a1cf6e776426766298d055bb3991957d90a7 not in out/out1/CVE-2012-3430/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-3430"
+
+------------ CVE-2012-3458 (138 of 173)
+Stage 1
+working on CVE-2012-3458, bbangert_beaker, pycrypto.py
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file beaker/crypto/pycrypto.py
+filtering 6 parent commits for file beaker/crypto/pycrypto.py
+0 out/out1/CVE-2012-3458/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-3458 1347731700
+Original Project = bbangert_beaker
+./go2: line 89: out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_good.txt: No such file or directory
+./go2: line 89: out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_good.txt: No such file or directory
+./go2: line 89: out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_good.txt: No such file or directory
+./go2: line 89: out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_good.txt: No such file or directory
+./go2: line 94: out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_bad.txt: No such file or directory
+./go2: line 94: out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_bad.txt: No such file or directory
+./go2: line 94: out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_bad.txt: No such file or directory
+./go2: line 94: out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_bad.txt: No such file or directory
+./go2: line 94: out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_bad.txt: No such file or directory
+./go2: line 94: out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_bad.txt: No such file or directory
+./go2: line 94: out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_bad.txt: No such file or directory
+./go2: line 94: out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_bad.txt: No such file or directory
+./go2: line 94: out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_bad.txt: No such file or directory
+./go2: line 94: out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_bad.txt: No such file or directory
+./go2: line 96: out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out1/CVE-2012-3458/stage2/salsa.debian.org_python-team/modules/beaker_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2012-3458 out/out1/CVE-2012-3458/results.csv
+out/out1/CVE-2012-3458/results.csv
+out/out1/CVE-2012-3458/results.html
+Success (go3)
+
+
+------------ CVE-2012-3501 (139 of 173)
+Stage 1
+working on CVE-2012-3501, darold_squidclamav, squidclamav.c
+Calling ./rgl2 to get all commits
+Error: commit 80f74451f628264d1d9a1f1c0bbcebc932ba5e00 not in out/out1/CVE-2012-3501/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-3501"
+
+------------ CVE-2012-3508 (140 of 173)
+Stage 1
+working on CVE-2012-3508, roundcube_roundcubemail, washtml.php
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file program/lib/washtml.php
+filtering 25 parent commits for file program/lib/washtml.php
+0 out/out1/CVE-2012-3508/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-3508 1345890540
+Original Project = roundcube_roundcubemail
+Success (go2)
+Stage 3
+./go3 CVE-2012-3508 out/out1/CVE-2012-3508/results.csv
+out/out1/CVE-2012-3508/results.csv
+out/out1/CVE-2012-3508/results.html
+Success (go3)
+
+
+------------ CVE-2012-3510 (141 of 173)
+Stage 1
+working on CVE-2012-3510, torvalds_linux, tsacct.c
+Calling ./rgl2 to get all commits
+Error: commit f0ec1aaf54caddd21c259aea8b2ecfbde4ee4fb9 not in out/out1/CVE-2012-3510/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-3510"
+
+------------ CVE-2012-3511 (142 of 173)
+Stage 1
+working on CVE-2012-3511, torvalds_linux, madvise.c
+Calling ./rgl2 to get all commits
+Error: commit 9ab4233dd08036fe34a89c7dc6f47a8bf2eb29eb not in out/out1/CVE-2012-3511/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-3511"
+
+------------ CVE-2012-3525 (143 of 173)
+Stage 1
+working on CVE-2012-3525, Jabberd2_jabberd2, out.c
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file s2s/out.c
+filtering 19 parent commits for file s2s/out.c
+0 out/out1/CVE-2012-3525/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-3525 1345913700
+Original Project = Jabberd2_jabberd2
+Success (go2)
+Stage 3
+./go3 CVE-2012-3525 out/out1/CVE-2012-3525/results.csv
+out/out1/CVE-2012-3525/results.csv
+out/out1/CVE-2012-3525/results.html
+Success (go3)
+
+
+------------ CVE-2012-3542 (144 of 173)
+Stage 1
+working on CVE-2012-3542, openstack_keystone, core.py
+Calling ./rgl2 to get all commits
+Error: commit c13d0ba606f7b2bdc609a7f388334e5efec3f3aa not in out/out1/CVE-2012-3542/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-3542"
+
+------------ CVE-2012-3866 (145 of 173)
+Stage 1
+working on CVE-2012-3866, puppetlabs_puppet, defaults.rb
+Calling ./rgl2 to get all commits
+Error: commit fd44bf5e6d0d360f6a493d663b653c121fa83c3f not in out/out1/CVE-2012-3866/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-3866"
+
+------------ CVE-2012-4219 (146 of 173)
+Stage 1
+working on CVE-2012-4219, phpmyadmin_phpmyadmin, show_config_errors.php
+Calling ./rgl2 to get all commits
+Error: commit 0f0c2f1e2b3ece41cc1bb99a9931c8fcc7c917bc not in out/out1/CVE-2012-4219/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-4219"
+
+------------ CVE-2012-4394 (147 of 173)
+Stage 1
+working on CVE-2012-4394, owncloud_core, filelist.js
+Calling ./rgl2 to get all commits
+Error: commit d203fa2c50f4b2791e68e2b8ab9a0f8b94f9c9f8 not in out/out1/CVE-2012-4394/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-4394"
+
+------------ CVE-2012-4395 (148 of 173)
+Stage 1
+working on CVE-2012-4395, owncloud_core, index.php
+Calling ./rgl2 to get all commits
+Error: commit 0074062b5329c3d43679909fddce2d70608a4475 not in out/out1/CVE-2012-4395/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-4395"
+
+------------ CVE-2012-4396 (149 of 173)
+Stage 1
+working on CVE-2012-4396, owncloud_core, settings.php
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file apps/user_openid/settings.php
+filtering 10 parent commits for file apps/user_openid/settings.php
+0 out/out1/CVE-2012-4396/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-4396 1346889300
+Original Project = owncloud_core
+Success (go2)
+Stage 3
+./go3 CVE-2012-4396 out/out1/CVE-2012-4396/results.csv
+out/out1/CVE-2012-4396/results.csv
+out/out1/CVE-2012-4396/results.html
+Success (go3)
+
+
+------------ CVE-2012-4397 (150 of 173)
+Stage 1
+working on CVE-2012-4397, owncloud_core, vcard.php
+Calling ./rgl2 to get all commits
+Error: commit 54a371700554ed21a5cb7db03126b6c95ae4cbd3 not in out/out1/CVE-2012-4397/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-4397"
+
+------------ CVE-2012-4444 (151 of 173)
+Stage 1
+working on CVE-2012-4444, torvalds_linux, reassembly.c
+Calling ./rgl2 to get all commits
+Error: commit 70789d7052239992824628db8133de08dc78e593 not in out/out1/CVE-2012-4444/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-4444"
+
+------------ CVE-2012-4467 (152 of 173)
+Stage 1
+working on CVE-2012-4467, torvalds_linux, socket.c
+Calling ./rgl2 to get all commits
+Error: commit ed6fe9d614fc1bca95eb8c0ccd0e92db00ef9d5d not in out/out1/CVE-2012-4467/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-4467"
+
+------------ CVE-2012-4508 (153 of 173)
+Stage 1
+working on CVE-2012-4508, torvalds_linux, extents.c
+Calling ./rgl2 to get all commits
+Error: commit dee1f973ca341c266229faa5a1a5bb268bed3531 not in out/out1/CVE-2012-4508/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-4508"
+
+------------ CVE-2012-4565 (154 of 173)
+Stage 1
+working on CVE-2012-4565, torvalds_linux, tcp_illinois.c
+Calling ./rgl2 to get all commits
+filtering 17 child commits for file net/ipv4/tcp_illinois.c
+no 40570375356c874b1578e05c1dcc3ff7c1322dbe in 64
+filtering 11 parent commits for file net/ipv4/tcp_illinois.c
+0 out/out1/CVE-2012-4565/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-4565 1356090420
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2012-4565 out/out1/CVE-2012-4565/results.csv
+out/out1/CVE-2012-4565/results.csv
+out/out1/CVE-2012-4565/results.html
+Success (go3)
+
+
+------------ CVE-2012-4752 (155 of 173)
+Stage 1
+working on CVE-2012-4752, owncloud_core, appconfig.php
+Calling ./rgl2 to get all commits
+filtering 21 child commits for file core/ajax/appconfig.php
+filtering 2 parent commits for file core/ajax/appconfig.php
+0 out/out1/CVE-2012-4752/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-4752 1346889300
+Original Project = owncloud_core
+Success (go2)
+Stage 3
+./go3 CVE-2012-4752 out/out1/CVE-2012-4752/results.csv
+out/out1/CVE-2012-4752/results.csv
+out/out1/CVE-2012-4752/results.html
+Success (go3)
+
+
+------------ CVE-2012-5517 (156 of 173)
+Stage 1
+working on CVE-2012-5517, torvalds_linux, memory_hotplug.c
+Calling ./rgl2 to get all commits
+Error: commit 08dff7b7d629807dbb1f398c68dd9cd58dd657a1 not in out/out1/CVE-2012-5517/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-5517"
+
+------------ CVE-2012-5532 (157 of 173)
+Stage 1
+working on CVE-2012-5532, torvalds_linux, hv_kvp_daemon.c
+Calling ./rgl2 to get all commits
+Error: commit 95a69adab9acfc3981c504737a2b6578e4d846ef not in out/out1/CVE-2012-5532/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-5532"
+
+------------ CVE-2012-5571 (158 of 173)
+Stage 1
+working on CVE-2012-5571, openstack_keystone, core.py
+Calling ./rgl2 to get all commits
+filtering 25 child commits for file keystone/contrib/ec2/core.py
+filtering 5 parent commits for file keystone/contrib/ec2/core.py
+0 out/out1/CVE-2012-5571/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-5571 1355795700
+Original Project = openstack_keystone
+Success (go2)
+Stage 3
+./go3 CVE-2012-5571 out/out1/CVE-2012-5571/results.csv
+out/out1/CVE-2012-5571/results.csv
+out/out1/CVE-2012-5571/results.html
+Success (go3)
+
+
+------------ CVE-2012-5622 (159 of 173)
+Stage 1
+working on CVE-2012-5622, openshift_origin-server, application_controller.rb
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file openshift-console/app/controllers/application_controller.rb
+filtering 1 parent commits for file openshift-console/app/controllers/application_controller.rb
+0 out/out1/CVE-2012-5622/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-5622 1355795700
+Original Project = openshift_origin-server
+Success (go2)
+Stage 3
+./go3 CVE-2012-5622 out/out1/CVE-2012-5622/results.csv
+out/out1/CVE-2012-5622/results.csv
+out/out1/CVE-2012-5622/results.html
+Success (go3)
+
+
+------------ CVE-2012-5625 (160 of 173)
+Stage 1
+working on CVE-2012-5625, openstack_nova, utils.py
+Calling ./rgl2 to get all commits
+Error: commit 9d2ea970422591f8cdc394001be9a2deca499a5f not in out/out1/CVE-2012-5625/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-5625"
+
+------------ CVE-2012-5642 (161 of 173)
+Stage 1
+working on CVE-2012-5642, fail2ban_fail2ban, action.py
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file server/action.py
+filtering 18 parent commits for file server/action.py
+0 out/out1/CVE-2012-5642/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-5642 1356954600
+Original Project = fail2ban_fail2ban
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out1/CVE-2012-5642" failed
+
+------------ CVE-2012-5646 (162 of 173)
+Stage 1
+working on CVE-2012-5646, openshift_origin-server, restorer.php
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file node-util/www/html/restorer.php
+filtering 2 parent commits for file node-util/www/html/restorer.php
+0 out/out1/CVE-2012-5646/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-5646 1361742900
+Original Project = openshift_origin-server
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out1/CVE-2012-5646" failed
+
+------------ CVE-2012-5647 (163 of 173)
+Stage 1
+working on CVE-2012-5647, openshift_origin-server, restorer.php
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file node-util/www/html/restorer.php
+filtering 2 parent commits for file node-util/www/html/restorer.php
+0 out/out1/CVE-2012-5647/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-5647 1361742900
+Original Project = openshift_origin-server
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out1/CVE-2012-5647" failed
+
+------------ CVE-2012-6084 (164 of 173)
+Stage 1
+working on CVE-2012-6084, atheme_charybdis, m_capab.c
+Calling ./rgl2 to get all commits
+filtering 9 child commits for file modules/m_capab.c
+filtering 11 parent commits for file modules/m_capab.c
+0 out/out1/CVE-2012-6084/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-6084 1357055700
+Original Project = atheme_charybdis
+Success (go2)
+Stage 3
+./go3 CVE-2012-6084 out/out1/CVE-2012-6084/results.csv
+out/out1/CVE-2012-6084/results.csv
+out/out1/CVE-2012-6084/results.html
+Success (go3)
+
+
+------------ CVE-2012-6112 (165 of 173)
+Stage 1
+working on CVE-2012-6112, tinymce_tinymce_spellchecker_php, GoogleSpell.php
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file classes/GoogleSpell.php
+filtering 1 parent commits for file classes/GoogleSpell.php
+0 out/out1/CVE-2012-6112/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-6112 1359327300
+Original Project = tinymce_tinymce_spellchecker_php
+Success (go2)
+Stage 3
+./go3 CVE-2012-6112 out/out1/CVE-2012-6112/results.csv
+out/out1/CVE-2012-6112/results.csv
+out/out1/CVE-2012-6112/results.html
+Success (go3)
+
+
+------------ CVE-2012-6116 (166 of 173)
+Stage 1
+working on CVE-2012-6116, jsomara_katello, config.pp
+Calling ./rgl2 to get all commits
+Error: commit 65f1e42b7bda0f3410931c50598540d944d8bf0d not in out/out1/CVE-2012-6116/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-6116"
+
+------------ CVE-2012-6537 (167 of 173)
+Stage 1
+working on CVE-2012-6537, torvalds_linux, xfrm_user.c
+Calling ./rgl2 to get all commits
+Error: commit 1f86840f897717f86d523a13e99a447e6a5d2fa5 not in out/out1/CVE-2012-6537/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-6537"
+
+------------ CVE-2012-6538 (168 of 173)
+Stage 1
+working on CVE-2012-6538, torvalds_linux, xfrm_user.c
+Calling ./rgl2 to get all commits
+Error: commit 4c87308bdea31a7b4828a51f6156e6f721a1fcc9 not in out/out1/CVE-2012-6538/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-6538"
+
+------------ CVE-2012-6539 (169 of 173)
+Stage 1
+working on CVE-2012-6539, torvalds_linux, socket.c
+Calling ./rgl2 to get all commits
+Error: commit 43da5f2e0d0c69ded3d51907d9552310a6b545e8 not in out/out1/CVE-2012-6539/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-6539"
+
+------------ CVE-2012-6540 (170 of 173)
+Stage 1
+working on CVE-2012-6540, torvalds_linux, ip_vs_ctl.c
+Calling ./rgl2 to get all commits
+Error: commit 2d8a041b7bfe1097af21441cb77d6af95f4f4680 not in out/out1/CVE-2012-6540/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-6540"
+
+------------ CVE-2012-6541 (171 of 173)
+Stage 1
+working on CVE-2012-6541, torvalds_linux, ccid3.c
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file net/dccp/ccids/ccid3.c
+filtering 22 parent commits for file net/dccp/ccids/ccid3.c
+0 out/out1/CVE-2012-6541/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out1/CVE-2012-6541 1363380900
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2012-6541 out/out1/CVE-2012-6541/results.csv
+out/out1/CVE-2012-6541/results.csv
+out/out1/CVE-2012-6541/results.html
+Success (go3)
+
+
+------------ CVE-2012-6542 (172 of 173)
+Stage 1
+working on CVE-2012-6542, torvalds_linux, af_llc.c
+Calling ./rgl2 to get all commits
+Error: commit 3592aaeb80290bda0f2cf0b5456c97bfc638b192 not in out/out1/CVE-2012-6542/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-6542"
+
+------------ CVE-2012-6543 (173 of 173)
+Stage 1
+working on CVE-2012-6543, torvalds_linux, l2tp_ip6.c
+Calling ./rgl2 to get all commits
+Error: commit 04d4fbca1017c11381e7d82acea21dd741e748bc not in out/out1/CVE-2012-6543/stage1/commits
+Failure (go1): "./go1 out/out1/CVE-2012-6543"
+============
+139 failed (see out/out1/log.error)
+34 succeeded (see out/out1/CVE-*)
+

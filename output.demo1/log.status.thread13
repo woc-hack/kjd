@@ -1,0 +1,1700 @@
+
+------------ CVE-2019-17541 (1 of 173)
+Stage 1
+working on CVE-2019-17541, ImageMagick_ImageMagick, jpeg.c
+Calling ./rgl2 to get all commits
+Error: commit 39f226a9c137f547e12afde972eeba7551124493 not in out/out13/CVE-2019-17541/stage1/commits
+Failure (go1): "./go1 out/out13/CVE-2019-17541"
+
+------------ CVE-2019-17542 (2 of 173)
+Stage 1
+working on CVE-2019-17542, FFmpeg_FFmpeg, vqavideo.c
+Calling ./rgl2 to get all commits
+filtering 15 child commits for file libavcodec/vqavideo.c
+no 21b23ceab3cfcc2aa0a833bbff11cf38b2177800 in 33
+no 4243da4ff42e306b3622b181e12f5cd127d21414 in 66
+no ce7dbd0481f990e249c2a05f179228489d3062cf in 78
+no 5aabb2596f409e5871d11e99acdda214f11b400f in 90
+no 20f972701806be20a77f808db332d9489343bb78 in 32
+no a688f3c13ce55c2ba51dbbb344564649f1bb52fe in 38
+no d8ea7a67ba62f5d4520e75e56b9954d80e7ff223 in 88
+no 2877ddddda04d5c04beaf4482acfa3151c343313 in 40
+no 5593f5cf242a99495b6047e5c226bfe4b934342e in 85
+filtering 15 parent commits for file libavcodec/vqavideo.c
+0 out/out13/CVE-2019-17542/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-17542 1571019300
+Original Project = FFmpeg_FFmpeg
+Success (go2)
+Stage 3
+./go3 CVE-2019-17542 out/out13/CVE-2019-17542/results.csv
+out/out13/CVE-2019-17542/results.csv
+out/out13/CVE-2019-17542/results.html
+Success (go3)
+
+
+------------ CVE-2019-17545 (3 of 173)
+Stage 1
+working on CVE-2019-17545, OSGeo_gdal, ogr_expat.cpp
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file gdal/ogr/ogr_expat.cpp
+no 9e9f8b294418e5f2670dacd5cacb5d6cdeabb797 in 30
+filtering 17 parent commits for file gdal/ogr/ogr_expat.cpp
+0 out/out13/CVE-2019-17545/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-17545 1571019300
+Original Project = OSGeo_gdal
+Success (go2)
+Stage 3
+./go3 CVE-2019-17545 out/out13/CVE-2019-17545/results.csv
+out/out13/CVE-2019-17545/results.csv
+out/out13/CVE-2019-17545/results.html
+Success (go3)
+
+
+------------ CVE-2019-17546 (4 of 173)
+Stage 1
+working on CVE-2019-17546, OSGeo_gdal, tif_getimage.c
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file gdal/frmts/gtiff/libtiff/tif_getimage.c
+no 9e9f8b294418e5f2670dacd5cacb5d6cdeabb797 in 30
+filtering 25 parent commits for file gdal/frmts/gtiff/libtiff/tif_getimage.c
+0 out/out13/CVE-2019-17546/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-17546 1571019300
+Original Project = OSGeo_gdal
+Success (go2)
+Stage 3
+./go3 CVE-2019-17546 out/out13/CVE-2019-17546/results.csv
+out/out13/CVE-2019-17546/results.csv
+out/out13/CVE-2019-17546/results.html
+Success (go3)
+
+
+------------ CVE-2019-17547 (5 of 173)
+Stage 1
+working on CVE-2019-17547, ImageMagick_ImageMagick, draw.c
+Calling ./rgl2 to get all commits
+Error: commit ecf7c6b288e11e7e7f75387c5e9e93e423b98397 not in out/out13/CVE-2019-17547/stage1/commits
+Failure (go1): "./go1 out/out13/CVE-2019-17547"
+
+------------ CVE-2019-18224 (6 of 173)
+Stage 1
+working on CVE-2019-18224, libidn_libidn2, lookup.c
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file lib/lookup.c
+filtering 16 parent commits for file lib/lookup.c
+0 out/out13/CVE-2019-18224/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-18224 1571678100
+Original Project = libidn_libidn2
+Success (go2)
+Stage 3
+./go3 CVE-2019-18224 out/out13/CVE-2019-18224/results.csv
+out/out13/CVE-2019-18224/results.csv
+out/out13/CVE-2019-18224/results.html
+Success (go3)
+
+
+------------ CVE-2019-18397 (7 of 173)
+Stage 1
+working on CVE-2019-18397, fribidi_fribidi, fribidi-bidi.c
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file lib/fribidi-bidi.c
+no tree 3d39be29a8cdf2cea1166443ddcbc3225f2d270f for commit a2dd9351a0f21153ccdeb291c9679024c453699f
+filtering 23 parent commits for file lib/fribidi-bidi.c
+0 out/out13/CVE-2019-18397/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-18397 1573654500
+Original Project = fribidi_fribidi
+Success (go2)
+Stage 3
+./go3 CVE-2019-18397 out/out13/CVE-2019-18397/results.csv
+out/out13/CVE-2019-18397/results.csv
+out/out13/CVE-2019-18397/results.html
+Success (go3)
+
+
+------------ CVE-2019-18408 (8 of 173)
+Stage 1
+working on CVE-2019-18408, libarchive_libarchive, archive_read_support_format_rar.c
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file libarchive/archive_read_support_format_rar.c
+no db714553712debbc447383f735e022031dc13127 in 91
+no 1271f775dc917798ad7d03c3b3bd66bacad03603 in 18
+no 52efa50c69653029687bfc545703b7340b7a51e2 in 82
+filtering 19 parent commits for file libarchive/archive_read_support_format_rar.c
+0 out/out13/CVE-2019-18408/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-18408 1571926500
+Original Project = libarchive_libarchive
+Success (go2)
+Stage 3
+./go3 CVE-2019-18408 out/out13/CVE-2019-18408/results.csv
+out/out13/CVE-2019-18408/results.csv
+out/out13/CVE-2019-18408/results.html
+Success (go3)
+
+
+------------ CVE-2019-18609 (9 of 173)
+Stage 1
+working on CVE-2019-18609, alanxz_rabbitmq-c, amqp_connection.c
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file librabbitmq/amqp_connection.c
+no 7f1a431be527b3ca660b743f7333e147b3166ec5 in 127
+no c8c117097934c9d2ecab30ce70efba98f0e267f8 in 72
+filtering 26 parent commits for file librabbitmq/amqp_connection.c
+0 out/out13/CVE-2019-18609/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-18609 1575238500
+Original Project = alanxz_rabbitmq-c
+Success (go2)
+Stage 3
+./go3 CVE-2019-18609 out/out13/CVE-2019-18609/results.csv
+out/out13/CVE-2019-18609/results.csv
+out/out13/CVE-2019-18609/results.html
+Success (go3)
+
+
+------------ CVE-2019-18625 (10 of 173)
+Stage 1
+working on CVE-2019-18625, OISF_suricata, stream-tcp.c
+Calling ./rgl2 to get all commits
+Error: commit 9f0294fadca3dcc18c919424242a41e01f3e8318 not in out/out13/CVE-2019-18625/stage1/commits
+Failure (go1): "./go1 out/out13/CVE-2019-18625"
+
+------------ CVE-2019-18656 (11 of 173)
+Stage 1
+working on CVE-2019-18656, pimcore_pimcore, translations.js
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file bundles/AdminBundle/Resources/public/js/pimcore/settings/translations.js
+no 371b952e022633b2e40af3b89f242b7f1745b305 in 55
+no fae02c51b774249191894ac2fc700454f070d2db in 122
+filtering 10 parent commits for file bundles/AdminBundle/Resources/public/js/pimcore/settings/translations.js
+0 out/out13/CVE-2019-18656/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-18656 1572542100
+Original Project = pimcore_pimcore
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out13/CVE-2019-18656" failed
+
+------------ CVE-2019-18671 (12 of 173)
+Stage 1
+working on CVE-2019-18671, keepkey_keepkey-firmware, messages.c
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file lib/board/messages.c
+no b1ad5c5d67cea82c6a15ba5446700549b9211102 in 49
+no 06b089b9070582993afa83d875c9cb70fe17a415 in 6
+filtering 11 parent commits for file lib/board/messages.c
+0 out/out13/CVE-2019-18671/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-18671 1575656100
+Original Project = keepkey_keepkey-firmware
+Success (go2)
+Stage 3
+./go3 CVE-2019-18671 out/out13/CVE-2019-18671/results.csv
+out/out13/CVE-2019-18671/results.csv
+out/out13/CVE-2019-18671/results.html
+Success (go3)
+
+
+------------ CVE-2019-18672 (13 of 173)
+Stage 1
+working on CVE-2019-18672, keepkey_keepkey-firmware, recovery_cipher.c
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file lib/firmware/recovery_cipher.c
+filtering 16 parent commits for file lib/firmware/recovery_cipher.c
+0 out/out13/CVE-2019-18672/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-18672 1575656100
+Original Project = keepkey_keepkey-firmware
+Success (go2)
+Stage 3
+./go3 CVE-2019-18672 out/out13/CVE-2019-18672/results.csv
+out/out13/CVE-2019-18672/results.csv
+out/out13/CVE-2019-18672/results.html
+Success (go3)
+
+
+------------ CVE-2019-18792 (14 of 173)
+Stage 1
+working on CVE-2019-18792, OISF_suricata, stream-tcp.c
+Calling ./rgl2 to get all commits
+Error: commit fa692df37a796c3330c81988d15ef1a219afc006 not in out/out13/CVE-2019-18792/stage1/commits
+Failure (go1): "./go1 out/out13/CVE-2019-18792"
+
+------------ CVE-2019-18808 (15 of 173)
+Stage 1
+working on CVE-2019-18808, torvalds_linux, ccp-ops.c
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file drivers/crypto/ccp/ccp-ops.c
+filtering 22 parent commits for file drivers/crypto/ccp/ccp-ops.c
+0 out/out13/CVE-2019-18808/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-18808 1573143300
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2019-18808 out/out13/CVE-2019-18808/results.csv
+out/out13/CVE-2019-18808/results.csv
+out/out13/CVE-2019-18808/results.html
+Success (go3)
+
+
+------------ CVE-2019-18809 (16 of 173)
+Stage 1
+working on CVE-2019-18809, torvalds_linux, af9005.c
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file drivers/media/usb/dvb-usb/af9005.c
+no 41c7eb3348fda1cdb31f1729690d83c3ca64d8fc in 65
+filtering 10 parent commits for file drivers/media/usb/dvb-usb/af9005.c
+0 out/out13/CVE-2019-18809/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-18809 1573143300
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-18809/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-18809 out/out13/CVE-2019-18809/results.csv
+out/out13/CVE-2019-18809/results.csv
+out/out13/CVE-2019-18809/results.html
+Success (go3)
+
+
+------------ CVE-2019-18811 (17 of 173)
+Stage 1
+working on CVE-2019-18811, torvalds_linux, ipc.c
+Calling ./rgl2 to get all commits
+Error: commit 45c1380358b12bf2d1db20a5874e9544f56b34ab not in out/out13/CVE-2019-18811/stage1/commits
+Failure (go1): "./go1 out/out13/CVE-2019-18811"
+
+------------ CVE-2019-18812 (18 of 173)
+Stage 1
+working on CVE-2019-18812, torvalds_linux, debug.c
+Calling ./rgl2 to get all commits
+Error: commit c0a333d842ef67ac04adc72ff79dc1ccc3dca4ed not in out/out13/CVE-2019-18812/stage1/commits
+Failure (go1): "./go1 out/out13/CVE-2019-18812"
+
+------------ CVE-2019-18841 (19 of 173)
+Stage 1
+working on CVE-2019-18841, ankane_chartkick, chartkick.js
+Calling ./rgl2 to get all commits
+filtering 13 child commits for file vendor/assets/javascripts/chartkick.js
+no 4ad0c0bce42a5b0ea0c011d8d51dc8f5949d1ef8 in 74
+no d5233ad4132959dce63945f4cf64294fd8c51685 in 85
+filtering 17 parent commits for file vendor/assets/javascripts/chartkick.js
+0 out/out13/CVE-2019-18841/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-18841 1573434900
+Original Project = ankane_chartkick
+Success (go2)
+Stage 3
+./go3 CVE-2019-18841 out/out13/CVE-2019-18841/results.csv
+out/out13/CVE-2019-18841/results.csv
+out/out13/CVE-2019-18841/results.html
+Success (go3)
+
+
+------------ CVE-2019-18853 (20 of 173)
+Stage 1
+working on CVE-2019-18853, ImageMagick_ImageMagick, svg.c
+Calling ./rgl2 to get all commits
+Error: commit ec9c8944af2bfc65c697ca44f93a727a99b405f1 not in out/out13/CVE-2019-18853/stage1/commits
+Failure (go1): "./go1 out/out13/CVE-2019-18853"
+
+------------ CVE-2019-18981 (21 of 173)
+Stage 1
+working on CVE-2019-18981, pimcore_pimcore, NotificationService.php
+Calling ./rgl2 to get all commits
+filtering 21 child commits for file models/Notification/Service/NotificationService.php
+no 73656b2550d759480d61c34e0c14aeb74bd5d5b4 in 115
+no 6dcd2a1ee3af8fd43c3fc0d844e316417b08d59b in 109
+filtering 4 parent commits for file models/Notification/Service/NotificationService.php
+0 out/out13/CVE-2019-18981/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-18981 1573794900
+Original Project = pimcore_pimcore
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out13/CVE-2019-18981" failed
+
+------------ CVE-2019-18982 (22 of 173)
+Stage 1
+working on CVE-2019-18982, pimcore_pimcore, EmailController.php
+Calling ./rgl2 to get all commits
+filtering 24 child commits for file bundles/AdminBundle/Controller/Admin/EmailController.php
+no 43025f2a6826a590005f70d702f26c5d4fbcce54 in 67
+no d5fd15b5a2fae2dba61c4f6bd9423429855834d3 in 85
+no 6dcd2a1ee3af8fd43c3fc0d844e316417b08d59b in 109
+filtering 6 parent commits for file bundles/AdminBundle/Controller/Admin/EmailController.php
+0 out/out13/CVE-2019-18982/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-18982 1573794900
+Original Project = pimcore_pimcore
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out13/CVE-2019-18982" failed
+
+------------ CVE-2019-19043 (23 of 173)
+Stage 1
+working on CVE-2019-19043, torvalds_linux, i40e_main.c
+Calling ./rgl2 to get all commits
+Error: commit 27d461333459d282ffa4a2bdb6b215a59d493a8f not in out/out13/CVE-2019-19043/stage1/commits
+Failure (go1): "./go1 out/out13/CVE-2019-19043"
+
+------------ CVE-2019-19044 (24 of 173)
+Stage 1
+working on CVE-2019-19044, torvalds_linux, v3d_gem.c
+Calling ./rgl2 to get all commits
+filtering 22 child commits for file drivers/gpu/drm/v3d/v3d_gem.c
+no 73511edf8b196e6f1ccda0fdf294ff57aa2dc9db in 115
+no c8d4c18bfbc4ab467188dbe45cc8155759f49d9e in 72
+no e57c1a3bd5e8e0c7181f65ae55581f0236a8f284 in 101
+filtering 8 parent commits for file drivers/gpu/drm/v3d/v3d_gem.c
+0 out/out13/CVE-2019-19044/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19044 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19044/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19044/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19044/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19044/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19044/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19044/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19044/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19044/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19044/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19044/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19044 out/out13/CVE-2019-19044/results.csv
+out/out13/CVE-2019-19044/results.csv
+out/out13/CVE-2019-19044/results.html
+Success (go3)
+
+
+------------ CVE-2019-19045 (25 of 173)
+Stage 1
+working on CVE-2019-19045, torvalds_linux, conn.c
+Calling ./rgl2 to get all commits
+filtering 13 child commits for file drivers/net/ethernet/mellanox/mlx5/core/fpga/conn.c
+filtering 13 parent commits for file drivers/net/ethernet/mellanox/mlx5/core/fpga/conn.c
+0 out/out13/CVE-2019-19045/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19045 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19045/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19045 out/out13/CVE-2019-19045/results.csv
+out/out13/CVE-2019-19045/results.csv
+out/out13/CVE-2019-19045/results.html
+Success (go3)
+
+
+------------ CVE-2019-19046 (26 of 173)
+Stage 1
+working on CVE-2019-19046, torvalds_linux, ipmi_msghandler.c
+Calling ./rgl2 to get all commits
+Error: commit 4aa7afb0ee20a97fbf0c5bab3df028d5fb85fdab not in out/out13/CVE-2019-19046/stage1/commits
+Failure (go1): "./go1 out/out13/CVE-2019-19046"
+
+------------ CVE-2019-19047 (27 of 173)
+Stage 1
+working on CVE-2019-19047, torvalds_linux, health.c
+Calling ./rgl2 to get all commits
+filtering 24 child commits for file drivers/net/ethernet/mellanox/mlx5/core/health.c
+no 71ab580705c1c49a3e939997d19d1e439cecdb80 in 113
+no fc993be36f9ea7fc286d84d8471a1a20e871aad4 in 124
+no 502e82b91361955c66c8453b5b7a905b0b5bd5a1 in 80
+no 924cc4633f048b4fb4af3d1f9a51d10867625339 in 18
+filtering 6 parent commits for file drivers/net/ethernet/mellanox/mlx5/core/health.c
+0 out/out13/CVE-2019-19047/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19047 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19047/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19047/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19047/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19047/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19047/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19047/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19047/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19047/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19047/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19047/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19047 out/out13/CVE-2019-19047/results.csv
+out/out13/CVE-2019-19047/results.csv
+out/out13/CVE-2019-19047/results.html
+Success (go3)
+
+
+------------ CVE-2019-19048 (28 of 173)
+Stage 1
+working on CVE-2019-19048, torvalds_linux, vboxguest_utils.c
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file drivers/virt/vboxguest/vboxguest_utils.c
+filtering 5 parent commits for file drivers/virt/vboxguest/vboxguest_utils.c
+0 out/out13/CVE-2019-19048/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19048 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19048/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19048 out/out13/CVE-2019-19048/results.csv
+out/out13/CVE-2019-19048/results.csv
+out/out13/CVE-2019-19048/results.html
+Success (go3)
+
+
+------------ CVE-2019-19049 (29 of 173)
+Stage 1
+working on CVE-2019-19049, torvalds_linux, unittest.c
+Calling ./rgl2 to get all commits
+Error: commit e13de8fe0d6a51341671bbe384826d527afe8d44 not in out/out13/CVE-2019-19049/stage1/commits
+Failure (go1): "./go1 out/out13/CVE-2019-19049"
+
+------------ CVE-2019-19050 (30 of 173)
+Stage 1
+working on CVE-2019-19050, torvalds_linux, crypto_user_stat.c
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file crypto/crypto_user_stat.c
+filtering 13 parent commits for file crypto/crypto_user_stat.c
+0 out/out13/CVE-2019-19050/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19050 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19050/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19050/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19050/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19050/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19050/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19050/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19050/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19050/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19050/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19050/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19050 out/out13/CVE-2019-19050/results.csv
+out/out13/CVE-2019-19050/results.csv
+out/out13/CVE-2019-19050/results.html
+Success (go3)
+
+
+------------ CVE-2019-19051 (31 of 173)
+Stage 1
+working on CVE-2019-19051, torvalds_linux, op-rfkill.c
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file drivers/net/wimax/i2400m/op-rfkill.c
+filtering 7 parent commits for file drivers/net/wimax/i2400m/op-rfkill.c
+0 out/out13/CVE-2019-19051/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19051 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19051/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19051/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19051/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19051/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19051/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19051/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19051/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19051/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19051/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19051/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19051/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19051/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19051/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19051/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19051 out/out13/CVE-2019-19051/results.csv
+out/out13/CVE-2019-19051/results.csv
+out/out13/CVE-2019-19051/results.html
+Success (go3)
+
+
+------------ CVE-2019-19052 (32 of 173)
+Stage 1
+working on CVE-2019-19052, torvalds_linux, gs_usb.c
+Calling ./rgl2 to get all commits
+Error: commit fb5be6a7b4863ecc44963bb80ca614584b6c7817 not in out/out13/CVE-2019-19052/stage1/commits
+Failure (go1): "./go1 out/out13/CVE-2019-19052"
+
+------------ CVE-2019-19053 (33 of 173)
+Stage 1
+working on CVE-2019-19053, torvalds_linux, rpmsg_char.c
+Calling ./rgl2 to get all commits
+filtering 18 child commits for file drivers/rpmsg/rpmsg_char.c
+no bc69d10665690492421d926b1cd9a7a36bffd691 in 60
+no bea9b79c2d10fecf7bfa26e212ecefe61d232e39 in 62
+no cc9da7de4a7c188fbcc4536a460cb73193a68b46 in 76
+no 617d32938d1be0d67bad73a914635bf787c319c1 in 97
+no 608edd96049b142de7944413cd7c24cb3f203d37 in 96
+no 69265bc12b6567c6aa9550a198b791e876fbfd2c in 105
+no cbf58250b33e26d7e8e84919ee71eb1129f91f12 in 75
+no 7a534ae89e34e9b51acb5a63dd0f88308178b46a in 122
+no b7fb2dad571d1e21173c06cef0bced77b323990a in 55
+no tree 07153ba4d8b6d9957fba6806d96242d831752534 for commit c572724406e3926502eccc930447f0affb604503
+filtering 11 parent commits for file drivers/rpmsg/rpmsg_char.c
+0 out/out13/CVE-2019-19053/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19053 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19053/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19053 out/out13/CVE-2019-19053/results.csv
+out/out13/CVE-2019-19053/results.csv
+out/out13/CVE-2019-19053/results.html
+Success (go3)
+
+
+------------ CVE-2019-19054 (34 of 173)
+Stage 1
+working on CVE-2019-19054, torvalds_linux, cx23888-ir.c
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file drivers/media/pci/cx23885/cx23888-ir.c
+filtering 15 parent commits for file drivers/media/pci/cx23885/cx23888-ir.c
+0 out/out13/CVE-2019-19054/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19054 1574057700
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2019-19054 out/out13/CVE-2019-19054/results.csv
+out/out13/CVE-2019-19054/results.csv
+out/out13/CVE-2019-19054/results.html
+Success (go3)
+
+
+------------ CVE-2019-19055 (35 of 173)
+Stage 1
+working on CVE-2019-19055, torvalds_linux, nl80211.c
+Calling ./rgl2 to get all commits
+Error: commit 1399c59fa92984836db90538cf92397fe7caaa57 not in out/out13/CVE-2019-19055/stage1/commits
+Failure (go1): "./go1 out/out13/CVE-2019-19055"
+
+------------ CVE-2019-19056 (36 of 173)
+Stage 1
+working on CVE-2019-19056, torvalds_linux, pcie.c
+Calling ./rgl2 to get all commits
+filtering 15 child commits for file drivers/net/wireless/marvell/mwifiex/pcie.c
+no tree 99f29aace3c23ea10b69219364f8c17af51660e7 for commit 84d94e16efa268e4f2887d858cd67ee37b870f25
+filtering 15 parent commits for file drivers/net/wireless/marvell/mwifiex/pcie.c
+0 out/out13/CVE-2019-19056/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19056 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19056/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19056 out/out13/CVE-2019-19056/results.csv
+out/out13/CVE-2019-19056/results.csv
+out/out13/CVE-2019-19056/results.html
+Success (go3)
+
+
+------------ CVE-2019-19057 (37 of 173)
+Stage 1
+working on CVE-2019-19057, torvalds_linux, pcie.c
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file drivers/net/wireless/marvell/mwifiex/pcie.c
+no tree 99f29aace3c23ea10b69219364f8c17af51660e7 for commit 84d94e16efa268e4f2887d858cd67ee37b870f25
+filtering 16 parent commits for file drivers/net/wireless/marvell/mwifiex/pcie.c
+0 out/out13/CVE-2019-19057/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19057 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19057/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19057 out/out13/CVE-2019-19057/results.csv
+out/out13/CVE-2019-19057/results.csv
+out/out13/CVE-2019-19057/results.html
+Success (go3)
+
+
+------------ CVE-2019-19058 (38 of 173)
+Stage 1
+working on CVE-2019-19058, torvalds_linux, dbg.c
+Calling ./rgl2 to get all commits
+Error: commit b4b814fec1a5a849383f7b3886b654a13abbda7d not in out/out13/CVE-2019-19058/stage1/commits
+Failure (go1): "./go1 out/out13/CVE-2019-19058"
+
+------------ CVE-2019-19059 (39 of 173)
+Stage 1
+working on CVE-2019-19059, torvalds_linux, ctxt-info-gen3.c
+Calling ./rgl2 to get all commits
+filtering 26 child commits for file drivers/net/wireless/intel/iwlwifi/pcie/ctxt-info-gen3.c
+no 1c4db7613f35b248ff05b8bfb3a4580a3d11d75c in 28
+filtering 4 parent commits for file drivers/net/wireless/intel/iwlwifi/pcie/ctxt-info-gen3.c
+0 out/out13/CVE-2019-19059/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19059 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19059/stage2/git.kernel.org_pub_scm/linux/kernel/git/iwlwifi/backport-iwlwifi_good_sorted.txt’ for reading: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19059/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19059/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19059/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19059/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19059/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19059/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19059 out/out13/CVE-2019-19059/results.csv
+out/out13/CVE-2019-19059/results.csv
+out/out13/CVE-2019-19059/results.html
+Success (go3)
+
+
+------------ CVE-2019-19060 (40 of 173)
+Stage 1
+working on CVE-2019-19060, torvalds_linux, adis_buffer.c
+Calling ./rgl2 to get all commits
+filtering 15 child commits for file drivers/iio/imu/adis_buffer.c
+no 6c9304d6af122f9afea41885ad82ed627e9442a8 in 108
+no c39010ea6ba13bdf0003bd353e1d4c663aaac0a8 in 67
+filtering 8 parent commits for file drivers/iio/imu/adis_buffer.c
+0 out/out13/CVE-2019-19060/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19060 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19060/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19060 out/out13/CVE-2019-19060/results.csv
+out/out13/CVE-2019-19060/results.csv
+out/out13/CVE-2019-19060/results.html
+Success (go3)
+
+
+------------ CVE-2019-19061 (41 of 173)
+Stage 1
+working on CVE-2019-19061, torvalds_linux, adis_buffer.c
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file drivers/iio/imu/adis_buffer.c
+no 6c9304d6af122f9afea41885ad82ed627e9442a8 in 108
+no c39010ea6ba13bdf0003bd353e1d4c663aaac0a8 in 67
+filtering 9 parent commits for file drivers/iio/imu/adis_buffer.c
+0 out/out13/CVE-2019-19061/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19061 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19061/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19061 out/out13/CVE-2019-19061/results.csv
+out/out13/CVE-2019-19061/results.csv
+out/out13/CVE-2019-19061/results.html
+Success (go3)
+
+
+------------ CVE-2019-19062 (42 of 173)
+Stage 1
+working on CVE-2019-19062, torvalds_linux, crypto_user_base.c
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file crypto/crypto_user_base.c
+filtering 11 parent commits for file crypto/crypto_user_base.c
+0 out/out13/CVE-2019-19062/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19062 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19062/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19062/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19062/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19062/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19062/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19062/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19062/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19062/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19062/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19062/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19062 out/out13/CVE-2019-19062/results.csv
+out/out13/CVE-2019-19062/results.csv
+out/out13/CVE-2019-19062/results.html
+Success (go3)
+
+
+------------ CVE-2019-19063 (43 of 173)
+Stage 1
+working on CVE-2019-19063, torvalds_linux, usb.c
+Calling ./rgl2 to get all commits
+filtering 13 child commits for file drivers/net/wireless/realtek/rtlwifi/usb.c
+no ad732da434a2936128769216eddaece3b1af4588 in 45
+filtering 17 parent commits for file drivers/net/wireless/realtek/rtlwifi/usb.c
+0 out/out13/CVE-2019-19063/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19063 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19063/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19063 out/out13/CVE-2019-19063/results.csv
+out/out13/CVE-2019-19063/results.csv
+out/out13/CVE-2019-19063/results.html
+Success (go3)
+
+
+------------ CVE-2019-19064 (44 of 173)
+Stage 1
+working on CVE-2019-19064, torvalds_linux, spi-fsl-lpspi.c
+Calling ./rgl2 to get all commits
+filtering 20 child commits for file drivers/spi/spi-fsl-lpspi.c
+no c6547c2ed0e1487c91983faccad841611ab6a783 in 70
+no tree 7f634e0047912f6bc2317520288cf6e787aedd97 for commit f02bff30114f385d53ae3e45141db602923bca5d
+filtering 10 parent commits for file drivers/spi/spi-fsl-lpspi.c
+0 out/out13/CVE-2019-19064/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19064 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19064/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19064/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19064/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19064/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19064/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19064/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19064/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19064/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19064/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19064/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19064 out/out13/CVE-2019-19064/results.csv
+out/out13/CVE-2019-19064/results.csv
+out/out13/CVE-2019-19064/results.html
+Success (go3)
+
+
+------------ CVE-2019-19065 (45 of 173)
+Stage 1
+working on CVE-2019-19065, torvalds_linux, sdma.c
+Calling ./rgl2 to get all commits
+filtering 17 child commits for file drivers/infiniband/hw/hfi1/sdma.c
+no 05c03dfd09c069c4ffd783b47b2da5dcc9421f2c in 5
+no b6d57e24ce6cc3df8a8845e1b193e88a65d501b1 in 54
+filtering 13 parent commits for file drivers/infiniband/hw/hfi1/sdma.c
+0 out/out13/CVE-2019-19065/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19065 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19065/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19065 out/out13/CVE-2019-19065/results.csv
+out/out13/CVE-2019-19065/results.csv
+out/out13/CVE-2019-19065/results.html
+Success (go3)
+
+
+------------ CVE-2019-19066 (46 of 173)
+Stage 1
+working on CVE-2019-19066, torvalds_linux, bfad_attr.c
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file drivers/scsi/bfa/bfad_attr.c
+no 2245ea91fd3a04cafbe2f54911432a8657528c3b in 34
+no 69e623791eb3ff3457c71ef734fdc82f6f3cc3c1 in 105
+filtering 25 parent commits for file drivers/scsi/bfa/bfad_attr.c
+0 out/out13/CVE-2019-19066/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19066 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19066/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19066 out/out13/CVE-2019-19066/results.csv
+out/out13/CVE-2019-19066/results.csv
+out/out13/CVE-2019-19066/results.html
+Success (go3)
+
+
+------------ CVE-2019-19067 (47 of 173)
+Stage 1
+working on CVE-2019-19067, torvalds_linux, amdgpu_acp.c
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file drivers/gpu/drm/amd/amdgpu/amdgpu_acp.c
+filtering 24 parent commits for file drivers/gpu/drm/amd/amdgpu/amdgpu_acp.c
+0 out/out13/CVE-2019-19067/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19067 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19067/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19067 out/out13/CVE-2019-19067/results.csv
+out/out13/CVE-2019-19067/results.csv
+out/out13/CVE-2019-19067/results.html
+Success (go3)
+
+
+------------ CVE-2019-19068 (48 of 173)
+Stage 1
+working on CVE-2019-19068, torvalds_linux, rtl8xxxu_core.c
+Calling ./rgl2 to get all commits
+filtering 25 child commits for file drivers/net/wireless/realtek/rtl8xxxu/rtl8xxxu_core.c
+no 046d2e7c50e3087a32a85fd384c21f896dbccf83 in 4
+no bd917b3d28c9815e2c55b9ff16680fdc2ba28d68 in 61
+no 21338c5bdeb969bfb2d78bd06a71a40b9a82a51e in 33
+no b250200e2ee4579932ba38c610cb90bef642011b in 50
+filtering 5 parent commits for file drivers/net/wireless/realtek/rtl8xxxu/rtl8xxxu_core.c
+0 out/out13/CVE-2019-19068/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19068 1574057700
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2019-19068 out/out13/CVE-2019-19068/results.csv
+out/out13/CVE-2019-19068/results.csv
+out/out13/CVE-2019-19068/results.html
+Success (go3)
+
+
+------------ CVE-2019-19069 (49 of 173)
+Stage 1
+working on CVE-2019-19069, torvalds_linux, fastrpc.c
+Calling ./rgl2 to get all commits
+Error: commit fc739a058d99c9297ef6bfd923b809d85855b9a9 not in out/out13/CVE-2019-19069/stage1/commits
+Failure (go1): "./go1 out/out13/CVE-2019-19069"
+
+------------ CVE-2019-19070 (50 of 173)
+Stage 1
+working on CVE-2019-19070, torvalds_linux, spi-gpio.c
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file drivers/spi/spi-gpio.c
+no 1847e3046c528bd85bd51e2860f4139bd9052d6c in 24
+filtering 25 parent commits for file drivers/spi/spi-gpio.c
+0 out/out13/CVE-2019-19070/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19070 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19070/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19070 out/out13/CVE-2019-19070/results.csv
+out/out13/CVE-2019-19070/results.csv
+out/out13/CVE-2019-19070/results.html
+Success (go3)
+
+
+------------ CVE-2019-19071 (51 of 173)
+Stage 1
+working on CVE-2019-19071, torvalds_linux, rsi_91x_mgmt.c
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file drivers/net/wireless/rsi/rsi_91x_mgmt.c
+no 046d2e7c50e3087a32a85fd384c21f896dbccf83 in 4
+filtering 22 parent commits for file drivers/net/wireless/rsi/rsi_91x_mgmt.c
+0 out/out13/CVE-2019-19071/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19071 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19071/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19071 out/out13/CVE-2019-19071/results.csv
+out/out13/CVE-2019-19071/results.csv
+out/out13/CVE-2019-19071/results.html
+Success (go3)
+
+
+------------ CVE-2019-19072 (52 of 173)
+Stage 1
+working on CVE-2019-19072, torvalds_linux, trace_events_filter.c
+Calling ./rgl2 to get all commits
+filtering 13 child commits for file kernel/trace/trace_events_filter.c
+no 0a54f556b035e5217e21724d82dd98ce695bd6d6 in 10
+no f37c3bbc635994eda203a6da4ba0f9d05165a8d6 in 115
+no 77360f9bbc7e5e2ab7a2c8b4c0244fbbfcfc6f62 in 119
+no 05770dd0ad110854c7157d95700d7c89979cdb3e in 5
+filtering 17 parent commits for file kernel/trace/trace_events_filter.c
+0 out/out13/CVE-2019-19072/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19072 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19072/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19072 out/out13/CVE-2019-19072/results.csv
+out/out13/CVE-2019-19072/results.csv
+out/out13/CVE-2019-19072/results.html
+Success (go3)
+
+
+------------ CVE-2019-19073 (53 of 173)
+Stage 1
+working on CVE-2019-19073, torvalds_linux, htc_hst.c
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file drivers/net/wireless/ath/ath9k/htc_hst.c
+no d1e0df1c57bd30871dd1c855742a7c346dbca853 in 81
+filtering 25 parent commits for file drivers/net/wireless/ath/ath9k/htc_hst.c
+1 out/out13/CVE-2019-19073/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19073 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19073/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19073/stage2/gitlab.com_tvivy_android/device/rpi3-kernel_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19073/stage2/gitlab.com_tvivy_android/device/rpi3-kernel_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19073/stage2/gitlab.com_tvivy_android/device/rpi3-kernel_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19073/stage2/gitlab.com_tvivy_android/device/rpi3-kernel_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19073/stage2/gitlab.com_tvivy_android/device/rpi3-kernel_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19073/stage2/gitlab.com_tvivy_android/device/rpi3-kernel_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19073 out/out13/CVE-2019-19073/results.csv
+out/out13/CVE-2019-19073/results.csv
+out/out13/CVE-2019-19073/results.html
+Success (go3)
+
+
+------------ CVE-2019-19074 (54 of 173)
+Stage 1
+working on CVE-2019-19074, torvalds_linux, wmi.c
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file drivers/net/wireless/ath/ath9k/wmi.c
+no 8b3046abc99eefe11438090bcc4ec3a3994b55d0 in 11
+filtering 24 parent commits for file drivers/net/wireless/ath/ath9k/wmi.c
+1 out/out13/CVE-2019-19074/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19074 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19074/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19074 out/out13/CVE-2019-19074/results.csv
+out/out13/CVE-2019-19074/results.csv
+out/out13/CVE-2019-19074/results.html
+Success (go3)
+
+
+------------ CVE-2019-19075 (55 of 173)
+Stage 1
+working on CVE-2019-19075, torvalds_linux, ca8210.c
+Calling ./rgl2 to get all commits
+filtering 17 child commits for file drivers/net/ieee802154/ca8210.c
+no c5f50500a0270ee1618373baa85a0bac9a0dc4bf in 69
+no 510ce586320dafc4eebfcb4472a0f972e6c35ada in 81
+no ab191c1cff9cd77ca14ac888795029422669b4e1 in 43
+no ad9c6ee642a61adae93dfa35582b5af16dc5173a in 45
+no b8e508f42138b42b44f65679d02aad3c200aff68 in 56
+no 731cddce6dd110fb2cdee34eddb48599e7251517 in 115
+no cfa1e01ecf516511bfc0fa87f96aa19bc6ee401f in 79
+no a0386bba70934d42f586eaf68b21d5eeaffa7bd0 in 32
+no bdc120a2bcd834e571ce4115aaddf71ab34495de in 61
+no 621b24b09eb61c63f262da0c9c5f0e93348897e5 in 98
+filtering 13 parent commits for file drivers/net/ieee802154/ca8210.c
+0 out/out13/CVE-2019-19075/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19075 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19075/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19075 out/out13/CVE-2019-19075/results.csv
+out/out13/CVE-2019-19075/results.csv
+out/out13/CVE-2019-19075/results.html
+Success (go3)
+
+
+------------ CVE-2019-19076 (56 of 173)
+Stage 1
+working on CVE-2019-19076, torvalds_linux, cls.c
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file drivers/net/ethernet/netronome/nfp/abm/cls.c
+filtering 4 parent commits for file drivers/net/ethernet/netronome/nfp/abm/cls.c
+1 out/out13/CVE-2019-19076/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19076 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19076/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19076/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19076/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19076/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19076/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19076/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19076/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19076/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19076/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19076/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19076 out/out13/CVE-2019-19076/results.csv
+out/out13/CVE-2019-19076/results.csv
+out/out13/CVE-2019-19076/results.html
+Success (go3)
+
+
+------------ CVE-2019-19077 (57 of 173)
+Stage 1
+working on CVE-2019-19077, torvalds_linux, ib_verbs.c
+Calling ./rgl2 to get all commits
+Error: commit 4a9d46a9fe14401f21df69cea97c62396d5fb053 not in out/out13/CVE-2019-19077/stage1/commits
+Failure (go1): "./go1 out/out13/CVE-2019-19077"
+
+------------ CVE-2019-19078 (58 of 173)
+Stage 1
+working on CVE-2019-19078, torvalds_linux, usb.c
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file drivers/net/wireless/ath/ath10k/usb.c
+no 52bcfd1b239b0a62d863b92abcc1a04528a41946 in 82
+no d930e2560ebee73411cfa5d5b0de4e82254c33e9 in 89
+no 2c977be2cc5cd4743d2f223360e685d91f0cdffc in 44
+filtering 7 parent commits for file drivers/net/wireless/ath/ath10k/usb.c
+0 out/out13/CVE-2019-19078/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19078 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19078/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19078/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19078/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19078/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19078/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19078/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19078/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19078/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19078/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19078/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19078/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19078/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19078/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19078 out/out13/CVE-2019-19078/results.csv
+out/out13/CVE-2019-19078/results.csv
+out/out13/CVE-2019-19078/results.html
+Success (go3)
+
+
+------------ CVE-2019-19079 (59 of 173)
+Stage 1
+working on CVE-2019-19079, torvalds_linux, tun.c
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file net/qrtr/tun.c
+filtering 1 parent commits for file net/qrtr/tun.c
+0 out/out13/CVE-2019-19079/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19079 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19079/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19079/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19079/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19079/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-19079 out/out13/CVE-2019-19079/results.csv
+out/out13/CVE-2019-19079/results.csv
+out/out13/CVE-2019-19079/results.html
+Success (go3)
+
+
+------------ CVE-2019-19080 (60 of 173)
+Stage 1
+working on CVE-2019-19080, torvalds_linux, main.c
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file drivers/net/ethernet/netronome/nfp/flower/main.c
+no 8a38f2cc968aebe40cfa287b53b1b52ef7acd4dc in 10
+filtering 20 parent commits for file drivers/net/ethernet/netronome/nfp/flower/main.c
+0 out/out13/CVE-2019-19080/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out13/CVE-2019-19080 1574057700
+Original Project = torvalds_linux
+./go2: line 89: out/out13/CVE-2019-19080/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19080/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out13/CVE-2019-19080/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19080/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19080/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19080/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19080/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19080/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out13/CVE-2019-19080/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out13/CVE-2019-19080/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19080/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19080/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out13/CVE-2019-19080/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory

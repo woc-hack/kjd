@@ -1,0 +1,2416 @@
+
+------------ CVE-2017-14056 (1 of 173)
+Stage 1
+working on CVE-2017-14056, FFmpeg_FFmpeg, rl2.c
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file libavformat/rl2.c
+no a085cfa65414ff4346d8367cfb54d50d4925396f in 32
+no fcf5aad1a5304c90b055ad39109e58c612f359b9 in 124
+filtering 20 parent commits for file libavformat/rl2.c
+0 out/out8/CVE-2017-14056/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-14056 1504193340
+Original Project = FFmpeg_FFmpeg
+Success (go2)
+Stage 3
+./go3 CVE-2017-14056 out/out8/CVE-2017-14056/results.csv
+out/out8/CVE-2017-14056/results.csv
+out/out8/CVE-2017-14056/results.html
+Success (go3)
+
+
+------------ CVE-2017-14057 (2 of 173)
+Stage 1
+working on CVE-2017-14057, FFmpeg_FFmpeg, asfdec_f.c
+Calling ./rgl2 to get all commits
+filtering 25 child commits for file libavformat/asfdec_f.c
+no ffc877215056e8f0feb1ff23ba7dc4c19277b94b in 127
+no 35ec5c819b0f472536eb48e8f3871eb5ca222da6 in 53
+no f77ac5131cd1c623aa54ec432cba0d922e9aa470 in 119
+filtering 5 parent commits for file libavformat/asfdec_f.c
+0 out/out8/CVE-2017-14057/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-14057 1504193340
+Original Project = FFmpeg_FFmpeg
+Success (go2)
+Stage 3
+./go3 CVE-2017-14057 out/out8/CVE-2017-14057/results.csv
+out/out8/CVE-2017-14057/results.csv
+out/out8/CVE-2017-14057/results.html
+Success (go3)
+
+
+------------ CVE-2017-14059 (3 of 173)
+Stage 1
+working on CVE-2017-14059, FFmpeg_FFmpeg, cinedec.c
+Calling ./rgl2 to get all commits
+filtering 9 child commits for file libavformat/cinedec.c
+no 884a108121d027ee4aa7d5a70247565cf0105afa in 8
+no e22ec484aab7a75d5cefb654885c18c3a7b8e948 in 98
+filtering 13 parent commits for file libavformat/cinedec.c
+0 out/out8/CVE-2017-14059/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-14059 1504193340
+Original Project = FFmpeg_FFmpeg
+Success (go2)
+Stage 3
+./go3 CVE-2017-14059 out/out8/CVE-2017-14059/results.csv
+out/out8/CVE-2017-14059/results.csv
+out/out8/CVE-2017-14059/results.html
+Success (go3)
+
+
+------------ CVE-2017-14106 (4 of 173)
+Stage 1
+working on CVE-2017-14106, torvalds_linux, tcp.c
+Calling ./rgl2 to get all commits
+Error: commit 499350a5a6e7512d9ed369ed63a4244b6536f4f8 not in out/out8/CVE-2017-14106/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14106"
+
+------------ CVE-2017-14107 (5 of 173)
+Stage 1
+working on CVE-2017-14107, nih-at_libzip, zip_open.c
+Calling ./rgl2 to get all commits
+filtering 22 child commits for file lib/zip_open.c
+no 401ef3dd977066bc8f9b9ae53ce60934501b47d0 in 64
+no 4457e9197d4cc2cd7179e550b68842b91defebb2 in 68
+no e47da96eb229f617de57b98004fc3490b83f4d47 in 100
+filtering 8 parent commits for file lib/zip_open.c
+0 out/out8/CVE-2017-14107/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-14107 1504286940
+Original Project = nih-at_libzip
+Success (go2)
+Stage 3
+./go3 CVE-2017-14107 out/out8/CVE-2017-14107/results.csv
+out/out8/CVE-2017-14107/results.csv
+out/out8/CVE-2017-14107/results.html
+Success (go3)
+
+
+------------ CVE-2017-14140 (6 of 173)
+Stage 1
+working on CVE-2017-14140, torvalds_linux, migrate.c
+Calling ./rgl2 to get all commits
+Error: commit 197e7e521384a23b9e585178f3f11c9fa08274b9 not in out/out8/CVE-2017-14140/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14140"
+
+------------ CVE-2017-14152 (7 of 173)
+Stage 1
+working on CVE-2017-14152, uclouvain_openjpeg, j2k.c
+Calling ./rgl2 to get all commits
+Error: commit 4241ae6fbbf1de9658764a80944dc8108f2b4154 not in out/out8/CVE-2017-14152/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14152"
+
+------------ CVE-2017-14164 (8 of 173)
+Stage 1
+working on CVE-2017-14164, uclouvain_openjpeg, j2k.c
+Calling ./rgl2 to get all commits
+Error: commit dcac91b8c72f743bda7dbfa9032356bc8110098a not in out/out8/CVE-2017-14164/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14164"
+
+------------ CVE-2017-14166 (9 of 173)
+Stage 1
+working on CVE-2017-14166, libarchive_libarchive, archive_read_support_format_xar.c
+Calling ./rgl2 to get all commits
+filtering 9 child commits for file libarchive/archive_read_support_format_xar.c
+filtering 21 parent commits for file libarchive/archive_read_support_format_xar.c
+0 out/out8/CVE-2017-14166/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-14166 1504722540
+Original Project = libarchive_libarchive
+Success (go2)
+Stage 3
+./go3 CVE-2017-14166 out/out8/CVE-2017-14166/results.csv
+out/out8/CVE-2017-14166/results.csv
+out/out8/CVE-2017-14166/results.html
+Success (go3)
+
+
+------------ CVE-2017-14169 (10 of 173)
+Stage 1
+working on CVE-2017-14169, FFmpeg_FFmpeg, mxfdec.c
+Calling ./rgl2 to get all commits
+Error: commit 9d00fb9d70ee8c0cc7002b89318c5be00f1bbdad not in out/out8/CVE-2017-14169/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14169"
+
+------------ CVE-2017-14170 (11 of 173)
+Stage 1
+working on CVE-2017-14170, FFmpeg_FFmpeg, mxfdec.c
+Calling ./rgl2 to get all commits
+Error: commit 900f39692ca0337a98a7cf047e4e2611071810c2 not in out/out8/CVE-2017-14170/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14170"
+
+------------ CVE-2017-14171 (12 of 173)
+Stage 1
+working on CVE-2017-14171, FFmpeg_FFmpeg, nsvdec.c
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file libavformat/nsvdec.c
+no a1f1f56ef072e84f1708adffe5185edb58ac2a89 in 33
+filtering 19 parent commits for file libavformat/nsvdec.c
+0 out/out8/CVE-2017-14171/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-14171 1504765740
+Original Project = FFmpeg_FFmpeg
+Success (go2)
+Stage 3
+./go3 CVE-2017-14171 out/out8/CVE-2017-14171/results.csv
+out/out8/CVE-2017-14171/results.csv
+out/out8/CVE-2017-14171/results.html
+Success (go3)
+
+
+------------ CVE-2017-14172 (13 of 173)
+Stage 1
+working on CVE-2017-14172, ImageMagick_ImageMagick, ps.c
+Calling ./rgl2 to get all commits
+Error: commit bdbbb13f1fe9b7e2465502c500561720f7456aac not in out/out8/CVE-2017-14172/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14172"
+
+------------ CVE-2017-14173 (14 of 173)
+Stage 1
+working on CVE-2017-14173, ImageMagick_ImageMagick, txt.c
+Calling ./rgl2 to get all commits
+Error: commit 50f54462076648ac2e36c3f58f4dadd4babbf1c9 not in out/out8/CVE-2017-14173/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14173"
+
+------------ CVE-2017-14174 (15 of 173)
+Stage 1
+working on CVE-2017-14174, ImageMagick_ImageMagick, psd.c
+Calling ./rgl2 to get all commits
+Error: commit 04a567494786d5bb50894fc8bb8fea0cf496bea8 not in out/out8/CVE-2017-14174/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14174"
+
+------------ CVE-2017-14175 (16 of 173)
+Stage 1
+working on CVE-2017-14175, ImageMagick_ImageMagick, xbm.c
+Calling ./rgl2 to get all commits
+filtering 21 child commits for file coders/xbm.c
+no b2eaec135972c582335f7ad034100ad88b6552b3 in 50
+no 7ba113a0d26b6d2b008ce0fcf428050a84e5a0ac in 123
+no 3ddbe16bbe136160f4bbff3804a8423816974e57 in 61
+filtering 9 parent commits for file coders/xbm.c
+0 out/out8/CVE-2017-14175/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-14175 1504765740
+Original Project = ImageMagick_ImageMagick
+Success (go2)
+Stage 3
+./go3 CVE-2017-14175 out/out8/CVE-2017-14175/results.csv
+out/out8/CVE-2017-14175/results.csv
+out/out8/CVE-2017-14175/results.html
+Success (go3)
+
+
+------------ CVE-2017-14222 (17 of 173)
+Stage 1
+working on CVE-2017-14222, FFmpeg_FFmpeg, mov.c
+Calling ./rgl2 to get all commits
+Error: commit 9cb4eb772839c5e1de2855d126bf74ff16d13382 not in out/out8/CVE-2017-14222/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14222"
+
+------------ CVE-2017-14223 (18 of 173)
+Stage 1
+working on CVE-2017-14223, FFmpeg_FFmpeg, asfdec_f.c
+Calling ./rgl2 to get all commits
+filtering 24 child commits for file libavformat/asfdec_f.c
+no ffc877215056e8f0feb1ff23ba7dc4c19277b94b in 127
+no 35ec5c819b0f472536eb48e8f3871eb5ca222da6 in 53
+no f77ac5131cd1c623aa54ec432cba0d922e9aa470 in 119
+filtering 6 parent commits for file libavformat/asfdec_f.c
+0 out/out8/CVE-2017-14223/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-14223 1504920540
+Original Project = FFmpeg_FFmpeg
+Success (go2)
+Stage 3
+./go3 CVE-2017-14223 out/out8/CVE-2017-14223/results.csv
+out/out8/CVE-2017-14223/results.csv
+out/out8/CVE-2017-14223/results.html
+Success (go3)
+
+
+------------ CVE-2017-14225 (19 of 173)
+Stage 1
+working on CVE-2017-14225, FFmpeg_FFmpeg, ffprobe.c
+Calling ./rgl2 to get all commits
+Error: commit 837cb4325b712ff1aab531bf41668933f61d75d2 not in out/out8/CVE-2017-14225/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14225"
+
+------------ CVE-2017-14313 (20 of 173)
+Stage 1
+working on CVE-2017-14313, michaelryanmcneill_shibboleth, shibboleth.php
+Calling ./rgl2 to get all commits
+Error: commit 1d65ad6786282d23ba1865f56e2fd19188e7c26a not in out/out8/CVE-2017-14313/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14313"
+
+------------ CVE-2017-14337 (21 of 173)
+Stage 1
+working on CVE-2017-14337, MISP_MISP, CertificateAuthenticate.php
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file app/Plugin/CertAuth/Controller/Component/Auth/CertificateAuthenticate.php
+no 93821c0de6a7dd32262ce62212773f43136ca66e in 19
+filtering 18 parent commits for file app/Plugin/CertAuth/Controller/Component/Auth/CertificateAuthenticate.php
+0 out/out8/CVE-2017-14337/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-14337 1505233740
+Original Project = MISP_MISP
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-14337" failed
+
+------------ CVE-2017-14340 (22 of 173)
+Stage 1
+working on CVE-2017-14340, torvalds_linux, xfs_linux.h
+Calling ./rgl2 to get all commits
+filtering 25 child commits for file fs/xfs/xfs_linux.h
+no 919edbadebe17a67193533f531c2920c03e40fa4 in 17
+no a793d79ea3e041081cd7cbd8ee43d0b5e4914a2b in 39
+filtering 5 parent commits for file fs/xfs/xfs_linux.h
+0 out/out8/CVE-2017-14340/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-14340 1505474940
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2017-14340 out/out8/CVE-2017-14340/results.csv
+out/out8/CVE-2017-14340/results.csv
+out/out8/CVE-2017-14340/results.html
+Success (go3)
+
+
+------------ CVE-2017-14341 (23 of 173)
+Stage 1
+working on CVE-2017-14341, ImageMagick_ImageMagick, wpg.c
+Calling ./rgl2 to get all commits
+Error: commit 7d63315a64267c565d1f34b9cb523a14616fed24 not in out/out8/CVE-2017-14341/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14341"
+
+------------ CVE-2017-14497 (24 of 173)
+Stage 1
+working on CVE-2017-14497, torvalds_linux, af_packet.c
+Calling ./rgl2 to get all commits
+Error: commit edbd58be15a957f6a760c4a514cd475217eb97fd not in out/out8/CVE-2017-14497/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14497"
+
+------------ CVE-2017-14498 (25 of 173)
+Stage 1
+working on CVE-2017-14498, silverstripe_silverstripe-framework, File.php
+Calling ./rgl2 to get all commits
+Error: commit 25b77a2ff8deabe8e8894002b9a5647eaec27b0a not in out/out8/CVE-2017-14498/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14498"
+
+------------ CVE-2017-14502 (26 of 173)
+Stage 1
+working on CVE-2017-14502, libarchive_libarchive, archive_read_support_format_rar.c
+Calling ./rgl2 to get all commits
+filtering 15 child commits for file libarchive/archive_read_support_format_rar.c
+no db714553712debbc447383f735e022031dc13127 in 91
+no 1271f775dc917798ad7d03c3b3bd66bacad03603 in 18
+no 52efa50c69653029687bfc545703b7340b7a51e2 in 82
+filtering 15 parent commits for file libarchive/archive_read_support_format_rar.c
+0 out/out8/CVE-2017-14502/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-14502 1505672940
+Original Project = libarchive_libarchive
+Success (go2)
+Stage 3
+./go3 CVE-2017-14502 out/out8/CVE-2017-14502/results.csv
+out/out8/CVE-2017-14502/results.csv
+out/out8/CVE-2017-14502/results.html
+Success (go3)
+
+
+------------ CVE-2017-14638 (27 of 173)
+Stage 1
+working on CVE-2017-14638, axiomatic-systems_Bento4, Ap4AtomFactory.cpp
+Calling ./rgl2 to get all commits
+Error: commit be7185faf7f52674028977dcf501c6039ff03aa5 not in out/out8/CVE-2017-14638/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14638"
+
+------------ CVE-2017-14639 (28 of 173)
+Stage 1
+working on CVE-2017-14639, axiomatic-systems_Bento4, Ap4SampleEntry.cpp
+Calling ./rgl2 to get all commits
+Error: commit 03d1222ab9c2ce779cdf01bdb96cdd69cbdcfeda not in out/out8/CVE-2017-14639/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14639"
+
+------------ CVE-2017-14640 (29 of 173)
+Stage 1
+working on CVE-2017-14640, axiomatic-systems_Bento4, Ap4AtomSampleTable.cpp
+Calling ./rgl2 to get all commits
+Error: commit 2f267f89f957088197f4b1fc254632d1645b415d not in out/out8/CVE-2017-14640/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14640"
+
+------------ CVE-2017-14641 (30 of 173)
+Stage 1
+working on CVE-2017-14641, axiomatic-systems_Bento4, Ap4MetaData.cpp
+Calling ./rgl2 to get all commits
+Error: commit 41cad602709436628f07b4c4f64e9ff7a611f687 not in out/out8/CVE-2017-14641/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14641"
+
+------------ CVE-2017-14642 (31 of 173)
+Stage 1
+working on CVE-2017-14642, axiomatic-systems_Bento4, Ap4HdlrAtom.cpp
+Calling ./rgl2 to get all commits
+Error: commit 22192de5367fa0cee985917f092be4060b7c00b0 not in out/out8/CVE-2017-14642/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14642"
+
+------------ CVE-2017-14650 (32 of 173)
+Stage 1
+working on CVE-2017-14650, horde_horde, Im.php
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file framework/Image/lib/Horde/Image/Im.php
+filtering 28 parent commits for file framework/Image/lib/Horde/Image/Im.php
+0 out/out8/CVE-2017-14650/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-14650 1506014940
+Original Project = horde_horde
+Success (go2)
+Stage 3
+./go3 CVE-2017-14650 out/out8/CVE-2017-14650/results.csv
+out/out8/CVE-2017-14650/results.csv
+out/out8/CVE-2017-14650/results.html
+Success (go3)
+
+
+------------ CVE-2017-14767 (33 of 173)
+Stage 1
+working on CVE-2017-14767, FFmpeg_FFmpeg, rtpdec_h264.c
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file libavformat/rtpdec_h264.c
+filtering 28 parent commits for file libavformat/rtpdec_h264.c
+0 out/out8/CVE-2017-14767/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-14767 1506500940
+Original Project = FFmpeg_FFmpeg
+Success (go2)
+Stage 3
+./go3 CVE-2017-14767 out/out8/CVE-2017-14767/results.csv
+out/out8/CVE-2017-14767/results.csv
+out/out8/CVE-2017-14767/results.html
+Success (go3)
+
+
+------------ CVE-2017-14954 (34 of 173)
+Stage 1
+working on CVE-2017-14954, torvalds_linux, exit.c
+Calling ./rgl2 to get all commits
+Error: commit 6c85501f2fabcfc4fc6ed976543d252c4eaf4be9 not in out/out8/CVE-2017-14954/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14954"
+
+------------ CVE-2017-14981 (35 of 173)
+Stage 1
+working on CVE-2017-14981, atutor_ATutor, edit_feed.php
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file mods/_standard/rss_feeds/edit_feed.php
+filtering 3 parent commits for file mods/_standard/rss_feeds/edit_feed.php
+0 out/out8/CVE-2017-14981/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-14981 1506994140
+Original Project = atutor_ATutor
+Success (go2)
+Stage 3
+./go3 CVE-2017-14981 out/out8/CVE-2017-14981/results.csv
+out/out8/CVE-2017-14981/results.csv
+out/out8/CVE-2017-14981/results.html
+Success (go3)
+
+
+------------ CVE-2017-14991 (36 of 173)
+Stage 1
+working on CVE-2017-14991, torvalds_linux, sg.c
+Calling ./rgl2 to get all commits
+Error: commit 3e0097499839e0fe3af380410eababe5a47c4cf9 not in out/out8/CVE-2017-14991/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-14991"
+
+------------ CVE-2017-15032 (37 of 173)
+Stage 1
+working on CVE-2017-15032, ImageMagick_ImageMagick, ycbcr.c
+Calling ./rgl2 to get all commits
+filtering 24 child commits for file coders/ycbcr.c
+no 7f0123790b85438962b60c362d0bfe2557ce1c2c in 127
+no b2eaec135972c582335f7ad034100ad88b6552b3 in 50
+no 7ba113a0d26b6d2b008ce0fcf428050a84e5a0ac in 123
+no 3ddbe16bbe136160f4bbff3804a8423816974e57 in 61
+filtering 6 parent commits for file coders/ycbcr.c
+0 out/out8/CVE-2017-15032/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15032 1507188540
+Original Project = ImageMagick_ImageMagick
+Success (go2)
+Stage 3
+./go3 CVE-2017-15032 out/out8/CVE-2017-15032/results.csv
+out/out8/CVE-2017-15032/results.csv
+out/out8/CVE-2017-15032/results.html
+Success (go3)
+
+
+------------ CVE-2017-15033 (38 of 173)
+Stage 1
+working on CVE-2017-15033, ImageMagick_ImageMagick, yuv.c
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file coders/yuv.c
+no b2eaec135972c582335f7ad034100ad88b6552b3 in 50
+no 7ba113a0d26b6d2b008ce0fcf428050a84e5a0ac in 123
+no 3ddbe16bbe136160f4bbff3804a8423816974e57 in 61
+no 4bd86b05421e998c95491e2bf9d1f987c2f517eb in 75
+filtering 16 parent commits for file coders/yuv.c
+0 out/out8/CVE-2017-15033/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15033 1507188540
+Original Project = ImageMagick_ImageMagick
+Success (go2)
+Stage 3
+./go3 CVE-2017-15033 out/out8/CVE-2017-15033/results.csv
+out/out8/CVE-2017-15033/results.csv
+out/out8/CVE-2017-15033/results.html
+Success (go3)
+
+
+------------ CVE-2017-15088 (39 of 173)
+Stage 1
+working on CVE-2017-15088, krb5_krb5, pkinit_crypto_openssl.c
+Calling ./rgl2 to get all commits
+filtering 23 child commits for file src/plugins/preauth/pkinit/pkinit_crypto_openssl.c
+no 7280d55ea3a1ffe5aa1bee82075e62177d79e1fe in 114
+no 1417c64807e8f618c0c8b230246668a50425ec0c in 20
+no cbfe46ce20f3e9265baa9c648390148c739ab830 in 75
+filtering 7 parent commits for file src/plugins/preauth/pkinit/pkinit_crypto_openssl.c
+0 out/out8/CVE-2017-15088/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15088 1511458140
+Original Project = krb5_krb5
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-15088" failed
+
+------------ CVE-2017-15102 (40 of 173)
+Stage 1
+working on CVE-2017-15102, torvalds_linux, legousbtower.c
+Calling ./rgl2 to get all commits
+Error: commit 2fae9e5a7babada041e2e161699ade2447a01989 not in out/out8/CVE-2017-15102/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15102"
+
+------------ CVE-2017-15111 (41 of 173)
+Stage 1
+working on CVE-2017-15111, jdennis_keycloak-httpd-client-install, keycloak_cli.py
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file keycloak_httpd_client/keycloak_cli.py
+filtering 10 parent commits for file keycloak_httpd_client/keycloak_cli.py
+0 out/out8/CVE-2017-15111/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15111 1516408140
+Original Project = jdennis_keycloak-httpd-client-install
+Success (go2)
+Stage 3
+./go3 CVE-2017-15111 out/out8/CVE-2017-15111/results.csv
+out/out8/CVE-2017-15111/results.csv
+out/out8/CVE-2017-15111/results.html
+Success (go3)
+
+
+------------ CVE-2017-15115 (42 of 173)
+Stage 1
+working on CVE-2017-15115, torvalds_linux, socket.c
+Calling ./rgl2 to get all commits
+Error: commit df80cd9b28b9ebaa284a41df611dbf3a2d05ca74 not in out/out8/CVE-2017-15115/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15115"
+
+------------ CVE-2017-15126 (43 of 173)
+Stage 1
+working on CVE-2017-15126, torvalds_linux, userfaultfd.c
+Calling ./rgl2 to get all commits
+Error: commit 384632e67e0829deb8015ee6ad916b180049d252 not in out/out8/CVE-2017-15126/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15126"
+
+------------ CVE-2017-15127 (44 of 173)
+Stage 1
+working on CVE-2017-15127, torvalds_linux, hugetlb.c
+Calling ./rgl2 to get all commits
+Error: commit 5af10dfd0afc559bb4b0f7e3e8227a1578333995 not in out/out8/CVE-2017-15127/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15127"
+
+------------ CVE-2017-15128 (45 of 173)
+Stage 1
+working on CVE-2017-15128, torvalds_linux, hugetlb.c
+Calling ./rgl2 to get all commits
+Error: commit 1e3921471354244f70fe268586ff94a97a6dd4df not in out/out8/CVE-2017-15128/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15128"
+
+------------ CVE-2017-15129 (46 of 173)
+Stage 1
+working on CVE-2017-15129, torvalds_linux, net_namespace.c
+Calling ./rgl2 to get all commits
+Error: commit 21b5944350052d2583e82dd59b19a9ba94a007f0 not in out/out8/CVE-2017-15129/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15129"
+
+------------ CVE-2017-15132 (47 of 173)
+Stage 1
+working on CVE-2017-15132, dovecot_core, auth-client-request.c
+Calling ./rgl2 to get all commits
+filtering 21 child commits for file src/lib-auth/auth-client-request.c
+no 2f2916e4047dc25303193553ed73237ba04fc7fc in 47
+no 4d482e629a0fbfbb23edfb95a4464e4922a3c665 in 77
+filtering 9 parent commits for file src/lib-auth/auth-client-request.c
+0 out/out8/CVE-2017-15132/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15132 1516912140
+Original Project = dovecot_core
+Success (go2)
+Stage 3
+./go3 CVE-2017-15132 out/out8/CVE-2017-15132/results.csv
+out/out8/CVE-2017-15132/results.csv
+out/out8/CVE-2017-15132/results.html
+Success (go3)
+
+
+------------ CVE-2017-15194 (48 of 173)
+Stage 1
+working on CVE-2017-15194, Cacti_cacti, global_session.php
+Calling ./rgl2 to get all commits
+Error: commit 93f661d8adcfa6618b11522cdab30e97bada33fd not in out/out8/CVE-2017-15194/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15194"
+
+------------ CVE-2017-15205 (49 of 173)
+Stage 1
+working on CVE-2017-15205, kanboard_kanboard, BaseController.php
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file app/Controller/BaseController.php
+no a40da29a0e26fac52d6a58341df78fe61ab93e7e in 36
+filtering 7 parent commits for file app/Controller/BaseController.php
+0 out/out8/CVE-2017-15205/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15205 1507685520
+Original Project = kanboard_kanboard
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-15205" failed
+
+------------ CVE-2017-15209 (50 of 173)
+Stage 1
+working on CVE-2017-15209, kanboard_kanboard, BaseController.php
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file app/Controller/BaseController.php
+no a40da29a0e26fac52d6a58341df78fe61ab93e7e in 36
+filtering 7 parent commits for file app/Controller/BaseController.php
+0 out/out8/CVE-2017-15209/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15209 1507685520
+Original Project = kanboard_kanboard
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-15209" failed
+
+------------ CVE-2017-15210 (51 of 173)
+Stage 1
+working on CVE-2017-15210, kanboard_kanboard, BaseController.php
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file app/Controller/BaseController.php
+no a40da29a0e26fac52d6a58341df78fe61ab93e7e in 36
+filtering 7 parent commits for file app/Controller/BaseController.php
+0 out/out8/CVE-2017-15210/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15210 1507685520
+Original Project = kanboard_kanboard
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-15210" failed
+
+------------ CVE-2017-15213 (52 of 173)
+Stage 1
+working on CVE-2017-15213, Flyspray_flyspray, common.editallusers.tpl
+Calling ./rgl2 to get all commits
+filtering 18 child commits for file themes/CleanFS/templates/common.editallusers.tpl
+filtering 10 parent commits for file themes/CleanFS/templates/common.editallusers.tpl
+0 out/out8/CVE-2017-15213/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15213 1507685520
+Original Project = Flyspray_flyspray
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-15213" failed
+
+------------ CVE-2017-15214 (53 of 173)
+Stage 1
+working on CVE-2017-15214, Flyspray_flyspray, syntax.php
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file plugins/dokuwiki/lib/plugins/changelinks/syntax.php
+filtering 2 parent commits for file plugins/dokuwiki/lib/plugins/changelinks/syntax.php
+0 out/out8/CVE-2017-15214/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15214 1507685520
+Original Project = Flyspray_flyspray
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-15214" failed
+
+------------ CVE-2017-15274 (54 of 173)
+Stage 1
+working on CVE-2017-15274, torvalds_linux, keyctl.c
+Calling ./rgl2 to get all commits
+Error: commit 5649645d725c73df4302428ee4e02c869248b4c5 not in out/out8/CVE-2017-15274/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15274"
+
+------------ CVE-2017-15277 (55 of 173)
+Stage 1
+working on CVE-2017-15277, ImageMagick_ImageMagick, gif.c
+Calling ./rgl2 to get all commits
+Error: commit 9fd10cf630832b36a588c1545d8736539b2f1fb5 not in out/out8/CVE-2017-15277/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15277"
+
+------------ CVE-2017-15280 (56 of 173)
+Stage 1
+working on CVE-2017-15280, umbraco_Umbraco-CMS, importDocumenttype.aspx.cs
+Calling ./rgl2 to get all commits
+Error: commit 5dde2efe0d2b3a47d17439e03acabb7ea2befb64 not in out/out8/CVE-2017-15280/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15280"
+
+------------ CVE-2017-15284 (57 of 173)
+Stage 1
+working on CVE-2017-15284, octobercms_library, Definitions.php
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file src/Filesystem/Definitions.php
+no ca84e6e77d13bb4f0cd2461808bbadd5a76ad577 in 74
+filtering 11 parent commits for file src/Filesystem/Definitions.php
+0 out/out8/CVE-2017-15284/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15284 1507796940
+Original Project = octobercms_library
+Success (go2)
+Stage 3
+./go3 CVE-2017-15284 out/out8/CVE-2017-15284/results.csv
+out/out8/CVE-2017-15284/results.csv
+out/out8/CVE-2017-15284/results.html
+Success (go3)
+
+
+------------ CVE-2017-15306 (58 of 173)
+Stage 1
+working on CVE-2017-15306, torvalds_linux, powerpc.c
+Calling ./rgl2 to get all commits
+Error: commit ac64115a66c18c01745bbd3c47a36b124e5fd8c0 not in out/out8/CVE-2017-15306/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15306"
+
+------------ CVE-2017-15365 (59 of 173)
+Stage 1
+working on CVE-2017-15365, MariaDB_server, event_data_objects.cc
+Calling ./rgl2 to get all commits
+Error: commit 0b5a5258abbeaf8a0c3a18c7e753699787fdf46e not in out/out8/CVE-2017-15365/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15365"
+
+------------ CVE-2017-15367 (60 of 173)
+Stage 1
+working on CVE-2017-15367, bacula-web_bacula-web, client-report.php
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file client-report.php
+filtering 26 parent commits for file client-report.php
+0 out/out8/CVE-2017-15367/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15367 1520454540
+Original Project = bacula-web_bacula-web
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-15367" failed
+
+------------ CVE-2017-15377 (61 of 173)
+Stage 1
+working on CVE-2017-15377, OISF_suricata, detect-engine-content-inspection.c
+Calling ./rgl2 to get all commits
+filtering 21 child commits for file src/detect-engine-content-inspection.c
+no cfb60d0fce0357b167e025b193d1c896a1c53519 in 79
+no b8524e70d97f52222cba5992e2354bf783abef5d in 56
+no c5cf2967b3bc7fc074052279fe35d29fae283f43 in 69
+no 27e9a871d0f7feeafb8fff266b2bb4d97abd39f3 in 39
+filtering 9 parent commits for file src/detect-engine-content-inspection.c
+0 out/out8/CVE-2017-15377/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15377 1508747340
+Original Project = OISF_suricata
+Success (go2)
+Stage 3
+./go3 CVE-2017-15377 out/out8/CVE-2017-15377/results.csv
+out/out8/CVE-2017-15377/results.csv
+out/out8/CVE-2017-15377/results.html
+Success (go3)
+
+
+------------ CVE-2017-15385 (62 of 173)
+Stage 1
+working on CVE-2017-15385, radare_radare2, elf.c
+Calling ./rgl2 to get all commits
+Error: commit 21a6f570ba33fa9f52f1bba87f07acc4e8c178f4 not in out/out8/CVE-2017-15385/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15385"
+
+------------ CVE-2017-15538 (63 of 173)
+Stage 1
+working on CVE-2017-15538, ILIAS-eLearning_ILIAS, class.ilMediaItem.php
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file Services/MediaObjects/classes/class.ilMediaItem.php
+filtering 20 parent commits for file Services/MediaObjects/classes/class.ilMediaItem.php
+0 out/out8/CVE-2017-15538/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15538 1508272140
+Original Project = ILIAS-eLearning_ILIAS
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-15538" failed
+
+------------ CVE-2017-15568 (64 of 173)
+Stage 1
+working on CVE-2017-15568, redmine_redmine, application_helper.rb
+Calling ./rgl2 to get all commits
+Error: commit 94f7cfbf990028348b9262578acbc53a94fce448 not in out/out8/CVE-2017-15568/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15568"
+
+------------ CVE-2017-15569 (65 of 173)
+Stage 1
+working on CVE-2017-15569, redmine_redmine, queries_helper.rb
+Calling ./rgl2 to get all commits
+Error: commit 56c8ee0440d8555aa7822d947ba9091c8a791508 not in out/out8/CVE-2017-15569/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15569"
+
+------------ CVE-2017-15570 (66 of 173)
+Stage 1
+working on CVE-2017-15570, redmine_redmine, _list.html.erb
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file app/views/timelog/_list.html.erb
+no 1245708ba77b66ae4ab88434757ca4d9c965ae53 in 18
+filtering 22 parent commits for file app/views/timelog/_list.html.erb
+0 out/out8/CVE-2017-15570/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15570 1508293740
+Original Project = redmine_redmine
+Success (go2)
+Stage 3
+./go3 CVE-2017-15570 out/out8/CVE-2017-15570/results.csv
+out/out8/CVE-2017-15570/results.csv
+out/out8/CVE-2017-15570/results.html
+Success (go3)
+
+
+------------ CVE-2017-15571 (67 of 173)
+Stage 1
+working on CVE-2017-15571, redmine_redmine, _list.html.erb
+Calling ./rgl2 to get all commits
+filtering 9 child commits for file app/views/issues/_list.html.erb
+no 1245708ba77b66ae4ab88434757ca4d9c965ae53 in 18
+filtering 21 parent commits for file app/views/issues/_list.html.erb
+0 out/out8/CVE-2017-15571/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15571 1508293740
+Original Project = redmine_redmine
+Success (go2)
+Stage 3
+./go3 CVE-2017-15571 out/out8/CVE-2017-15571/results.csv
+out/out8/CVE-2017-15571/results.csv
+out/out8/CVE-2017-15571/results.html
+Success (go3)
+
+
+------------ CVE-2017-15644 (68 of 173)
+Stage 1
+working on CVE-2017-15644, webmin_webmin, web-lib-funcs.pl
+Calling ./rgl2 to get all commits
+Error: commit 0c58892732ee7610a7abba5507614366d382c9c9 not in out/out8/CVE-2017-15644/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15644"
+
+------------ CVE-2017-15645 (69 of 173)
+Stage 1
+working on CVE-2017-15645, webmin_webmin, web-lib-funcs.pl
+Calling ./rgl2 to get all commits
+Error: commit 0c58892732ee7610a7abba5507614366d382c9c9 not in out/out8/CVE-2017-15645/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15645"
+
+------------ CVE-2017-15646 (70 of 173)
+Stage 1
+working on CVE-2017-15646, webmin_webmin, web-lib-funcs.pl
+Calling ./rgl2 to get all commits
+Error: commit 0c58892732ee7610a7abba5507614366d382c9c9 not in out/out8/CVE-2017-15646/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15646"
+
+------------ CVE-2017-15649 (71 of 173)
+Stage 1
+working on CVE-2017-15649, torvalds_linux, af_packet.c
+Calling ./rgl2 to get all commits
+Error: commit 008ba2a13f2d04c947adc536d19debb8fe66f110 not in out/out8/CVE-2017-15649/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15649"
+
+------------ CVE-2017-15727 (72 of 173)
+Stage 1
+working on CVE-2017-15727, thorsten_phpMyFAQ, attachment.php
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file phpmyfaq/admin/attachment.php
+filtering 24 parent commits for file phpmyfaq/admin/attachment.php
+0 out/out8/CVE-2017-15727/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15727 1508696940
+Original Project = thorsten_phpMyFAQ
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-15727" failed
+
+------------ CVE-2017-15730 (73 of 173)
+Stage 1
+working on CVE-2017-15730, thorsten_phpMyFAQ, stat.ratings.php
+Calling ./rgl2 to get all commits
+filtering 22 child commits for file phpmyfaq/admin/stat.ratings.php
+no 836fb0ddcbc939c11d9596b67edfb10434fb796e in 3
+no 6edf4b1dc9c8b6725f29ad2e0ac8b915b8cb85c7 in 110
+no 1950be72f670da4105ee1828df70ea5037268e38 in 25
+no 3e4378a25b6c8166494c511450b69cadeb726aba in 62
+no 80a63a378a186fb7297b63ae624b4725e111f9ec in 0
+filtering 8 parent commits for file phpmyfaq/admin/stat.ratings.php
+0 out/out8/CVE-2017-15730/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15730 1508696940
+Original Project = thorsten_phpMyFAQ
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-15730" failed
+
+------------ CVE-2017-15731 (74 of 173)
+Stage 1
+working on CVE-2017-15731, thorsten_phpMyFAQ, stat.adminlog.php
+Calling ./rgl2 to get all commits
+filtering 27 child commits for file phpmyfaq/admin/stat.adminlog.php
+no 5cee13d00512423b4eb45b8c8287f68cacceda96 in 92
+no 836fb0ddcbc939c11d9596b67edfb10434fb796e in 3
+no 6edf4b1dc9c8b6725f29ad2e0ac8b915b8cb85c7 in 110
+no 1950be72f670da4105ee1828df70ea5037268e38 in 25
+no 3e4378a25b6c8166494c511450b69cadeb726aba in 62
+no 80a63a378a186fb7297b63ae624b4725e111f9ec in 0
+filtering 3 parent commits for file phpmyfaq/admin/stat.adminlog.php
+0 out/out8/CVE-2017-15731/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15731 1508696940
+Original Project = thorsten_phpMyFAQ
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-15731" failed
+
+------------ CVE-2017-15732 (75 of 173)
+Stage 1
+working on CVE-2017-15732, thorsten_phpMyFAQ, news.php
+Calling ./rgl2 to get all commits
+Error: commit ec8b3cc37d05b6625e24916b8f7253f830015b5f not in out/out8/CVE-2017-15732/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15732"
+
+------------ CVE-2017-15734 (76 of 173)
+Stage 1
+working on CVE-2017-15734, thorsten_phpMyFAQ, stat.main.php
+Calling ./rgl2 to get all commits
+filtering 28 child commits for file phpmyfaq/admin/stat.main.php
+no 5cee13d00512423b4eb45b8c8287f68cacceda96 in 92
+no 836fb0ddcbc939c11d9596b67edfb10434fb796e in 3
+no 6edf4b1dc9c8b6725f29ad2e0ac8b915b8cb85c7 in 110
+no 1950be72f670da4105ee1828df70ea5037268e38 in 25
+no b40359bf3649348bcae28e02785065ecbb3ebe10 in 52
+no 3e4378a25b6c8166494c511450b69cadeb726aba in 62
+no 80a63a378a186fb7297b63ae624b4725e111f9ec in 0
+filtering 2 parent commits for file phpmyfaq/admin/stat.main.php
+0 out/out8/CVE-2017-15734/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15734 1508696940
+Original Project = thorsten_phpMyFAQ
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-15734" failed
+
+------------ CVE-2017-15868 (77 of 173)
+Stage 1
+working on CVE-2017-15868, torvalds_linux, core.c
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file net/bluetooth/bnep/core.c
+no d33d0dc9275d29be68ae1bacf430e30dc112d769 in 83
+no ca3574bd653aba234a4b31955f2778947403be16 in 74
+filtering 16 parent commits for file net/bluetooth/bnep/core.c
+0 out/out8/CVE-2017-15868/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15868 1512516540
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-15868/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-15868 out/out8/CVE-2017-15868/results.csv
+out/out8/CVE-2017-15868/results.csv
+out/out8/CVE-2017-15868/results.html
+Success (go3)
+
+
+------------ CVE-2017-15906 (78 of 173)
+Stage 1
+working on CVE-2017-15906, openbsd_src, sftp-server.c
+Calling ./rgl2 to get all commits
+filtering 30 child commits for file usr.bin/ssh/sftp-server.c
+no 2ac6810fc6db0156c6957b3b5bae045e00fe9437 in 42
+no 0adc2286104965a3d2b6928a0f3886e4b04a5dec in 10
+no dd6df15e4c25f09ed2b1eec1500cfff0cb7391b6 in 93
+no e8fcb13b95ce5dd3112ddb24dd55c4a8ec1ba488 in 104
+no aea6f496f4613a816d9d1874242609cd1b59a693 in 46
+no 069f99b164484ecad00293263734a095ef0602e7 in 6
+no 8db1b0e22020a6e94fb0bb80c194bdc6d50da921 in 13
+no 96921f4986cebab89014f4b188cc00426e2e11d8 in 22
+no 6b59e04be3f8daf66eec899f9f67b1441e454831 in 107
+no 8e34a0090d3ab75db4d5feff77956695247bda4f in 14
+no 4fbd0eeb937907800634df9460948aa39388929d in 79
+filtering 0 parent commits for file usr.bin/ssh/sftp-server.c
+cat: out/out8/CVE-2017-15906/stage1/commits.old.filtered: No such file or directory
+rm: cannot remove ‘out/out8/CVE-2017-15906/stage1/commits.old.filtered’: No such file or directory
+0 out/out8/CVE-2017-15906/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15906 1508988540
+Original Project = openbsd_src
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-15906" failed
+
+------------ CVE-2017-15924 (79 of 173)
+Stage 1
+working on CVE-2017-15924, shadowsocks_shadowsocks-libev, manager.c
+Calling ./rgl2 to get all commits
+filtering 30 child commits for file src/manager.c
+filtering 0 parent commits for file src/manager.c
+cat: out/out8/CVE-2017-15924/stage1/commits.old.filtered: No such file or directory
+rm: cannot remove ‘out/out8/CVE-2017-15924/stage1/commits.old.filtered’: No such file or directory
+0 out/out8/CVE-2017-15924/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-15924 1509121740
+Original Project = shadowsocks_shadowsocks-libev
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-15924" failed
+
+------------ CVE-2017-15931 (80 of 173)
+Stage 1
+working on CVE-2017-15931, radare_radare2, elf.c
+Calling ./rgl2 to get all commits
+Error: commit c6d0076c924891ad9948a62d89d0bcdaf965f0cd not in out/out8/CVE-2017-15931/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15931"
+
+------------ CVE-2017-15932 (81 of 173)
+Stage 1
+working on CVE-2017-15932, radare_radare2, elf.c
+Calling ./rgl2 to get all commits
+Error: commit 44ded3ff35b8264f54b5a900cab32ec489d9e5b9 not in out/out8/CVE-2017-15932/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-15932"
+
+------------ CVE-2017-16003 (82 of 173)
+Stage 1
+working on CVE-2017-16003, felixrieseberg_windows-build-tools, constants.js
+Calling ./rgl2 to get all commits
+filtering 17 child commits for file src/constants.js
+filtering 8 parent commits for file src/constants.js
+0 out/out8/CVE-2017-16003/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-16003 1527625740
+Original Project = felixrieseberg_windows-build-tools
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-16003" failed
+
+------------ CVE-2017-16355 (83 of 173)
+Stage 1
+working on CVE-2017-16355, phusion_passenger, Spawner.h
+Calling ./rgl2 to get all commits
+filtering 12 child commits for file src/agent/Core/SpawningKit/Spawner.h
+no be2dee2651e26dbf483d80939a0ddf3a94e5421d in 62
+filtering 18 parent commits for file src/agent/Core/SpawningKit/Spawner.h
+0 out/out8/CVE-2017-16355/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-16355 1513290540
+Original Project = phusion_passenger
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-16355" failed
+
+------------ CVE-2017-16357 (84 of 173)
+Stage 1
+working on CVE-2017-16357, radare_radare2, elf.c
+Calling ./rgl2 to get all commits
+Error: commit 0b973e28166636e0ff1fad80baa0385c9c09c53a not in out/out8/CVE-2017-16357/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-16357"
+
+------------ CVE-2017-16358 (85 of 173)
+Stage 1
+working on CVE-2017-16358, radare_radare2, bin.c
+Calling ./rgl2 to get all commits
+Error: commit d31c4d3cbdbe01ea3ded16a584de94149ecd31d9 not in out/out8/CVE-2017-16358/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-16358"
+
+------------ CVE-2017-16359 (86 of 173)
+Stage 1
+working on CVE-2017-16359, radare_radare2, elf.c
+Calling ./rgl2 to get all commits
+Error: commit 62e39f34b2705131a2d08aff0c2e542c6a52cf0e not in out/out8/CVE-2017-16359/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-16359"
+
+------------ CVE-2017-16525 (87 of 173)
+Stage 1
+working on CVE-2017-16525, torvalds_linux, console.c
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file drivers/usb/serial/console.c
+filtering 25 parent commits for file drivers/usb/serial/console.c
+0 out/out8/CVE-2017-16525/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-16525 1509758940
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16525/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-16525 out/out8/CVE-2017-16525/results.csv
+out/out8/CVE-2017-16525/results.csv
+out/out8/CVE-2017-16525/results.html
+Success (go3)
+
+
+------------ CVE-2017-16526 (88 of 173)
+Stage 1
+working on CVE-2017-16526, torvalds_linux, uwbd.c
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file drivers/uwb/uwbd.c
+filtering 10 parent commits for file drivers/uwb/uwbd.c
+0 out/out8/CVE-2017-16526/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-16526 1509758940
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16526/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-16526 out/out8/CVE-2017-16526/results.csv
+out/out8/CVE-2017-16526/results.csv
+out/out8/CVE-2017-16526/results.html
+Success (go3)
+
+
+------------ CVE-2017-16528 (89 of 173)
+Stage 1
+working on CVE-2017-16528, torvalds_linux, seq_device.c
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file sound/core/seq_device.c
+filtering 1 parent commits for file sound/core/seq_device.c
+0 out/out8/CVE-2017-16528/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-16528 1509758940
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-16528/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16528/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16528/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16528/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16528/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16528/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16528/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16528/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16528/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-16528/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16528/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16528/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16528/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-16528 out/out8/CVE-2017-16528/results.csv
+out/out8/CVE-2017-16528/results.csv
+out/out8/CVE-2017-16528/results.html
+Success (go3)
+
+
+------------ CVE-2017-16529 (90 of 173)
+Stage 1
+working on CVE-2017-16529, torvalds_linux, card.c
+Calling ./rgl2 to get all commits
+Error: commit bfc81a8bc18e3c4ba0cbaa7666ff76be2f998991 not in out/out8/CVE-2017-16529/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-16529"
+
+------------ CVE-2017-16532 (91 of 173)
+Stage 1
+working on CVE-2017-16532, torvalds_linux, usbtest.c
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file drivers/usb/misc/usbtest.c
+filtering 16 parent commits for file drivers/usb/misc/usbtest.c
+0 out/out8/CVE-2017-16532/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-16532 1509758940
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16532/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-16532 out/out8/CVE-2017-16532/results.csv
+out/out8/CVE-2017-16532/results.csv
+out/out8/CVE-2017-16532/results.html
+Success (go3)
+
+
+------------ CVE-2017-16533 (92 of 173)
+Stage 1
+working on CVE-2017-16533, torvalds_linux, hid-core.c
+Calling ./rgl2 to get all commits
+filtering 20 child commits for file drivers/hid/usbhid/hid-core.c
+no b45cde330ba7b52e4c9ea9b36b4a58d32b387441 in 52
+no 9e3562080950b6e3fe38a5e34ddd5b1c618f2019 in 30
+filtering 10 parent commits for file drivers/hid/usbhid/hid-core.c
+0 out/out8/CVE-2017-16533/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-16533 1509758940
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16533/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-16533 out/out8/CVE-2017-16533/results.csv
+out/out8/CVE-2017-16533/results.csv
+out/out8/CVE-2017-16533/results.html
+Success (go3)
+
+
+------------ CVE-2017-16534 (93 of 173)
+Stage 1
+working on CVE-2017-16534, torvalds_linux, message.c
+Calling ./rgl2 to get all commits
+Error: commit 2e1c42391ff2556387b3cb6308b24f6f65619feb not in out/out8/CVE-2017-16534/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-16534"
+
+------------ CVE-2017-16535 (94 of 173)
+Stage 1
+working on CVE-2017-16535, torvalds_linux, config.c
+Calling ./rgl2 to get all commits
+filtering 26 child commits for file drivers/usb/core/config.c
+no ca5737396927afd4d57b133fd2874bbcf3421cdb in 74
+no 1a3910c80966e4a76b25ce812f6bea0ef1b1d530 in 26
+filtering 4 parent commits for file drivers/usb/core/config.c
+0 out/out8/CVE-2017-16535/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-16535 1509758940
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16535/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-16535 out/out8/CVE-2017-16535/results.csv
+out/out8/CVE-2017-16535/results.csv
+out/out8/CVE-2017-16535/results.html
+Success (go3)
+
+
+------------ CVE-2017-16546 (95 of 173)
+Stage 1
+working on CVE-2017-16546, ImageMagick_ImageMagick, wpg.c
+Calling ./rgl2 to get all commits
+Error: commit 2130bf6f89ded32ef0c88a11694f107c52566c53 not in out/out8/CVE-2017-16546/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-16546"
+
+------------ CVE-2017-16643 (96 of 173)
+Stage 1
+working on CVE-2017-16643, torvalds_linux, gtco.c
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file drivers/input/tablet/gtco.c
+filtering 23 parent commits for file drivers/input/tablet/gtco.c
+0 out/out8/CVE-2017-16643/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-16643 1510097340
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16643/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-16643 out/out8/CVE-2017-16643/results.csv
+out/out8/CVE-2017-16643/results.csv
+out/out8/CVE-2017-16643/results.html
+Success (go3)
+
+
+------------ CVE-2017-16645 (97 of 173)
+Stage 1
+working on CVE-2017-16645, torvalds_linux, ims-pcu.c
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file drivers/input/misc/ims-pcu.c
+filtering 11 parent commits for file drivers/input/misc/ims-pcu.c
+0 out/out8/CVE-2017-16645/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-16645 1510097340
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16645/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-16645 out/out8/CVE-2017-16645/results.csv
+out/out8/CVE-2017-16645/results.csv
+out/out8/CVE-2017-16645/results.html
+Success (go3)
+
+
+------------ CVE-2017-16803 (98 of 173)
+Stage 1
+working on CVE-2017-16803, libav_libav, smacker.c
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file libavcodec/smacker.c
+filtering 28 parent commits for file libavcodec/smacker.c
+0 out/out8/CVE-2017-16803/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-16803 1510594140
+Original Project = libav_libav
+Success (go2)
+Stage 3
+./go3 CVE-2017-16803 out/out8/CVE-2017-16803/results.csv
+out/out8/CVE-2017-16803/results.csv
+out/out8/CVE-2017-16803/results.html
+Success (go3)
+
+
+------------ CVE-2017-16820 (99 of 173)
+Stage 1
+working on CVE-2017-16820, collectd_collectd, snmp.c
+Calling ./rgl2 to get all commits
+Error: commit d16c24542b2f96a194d43a73c2e5778822b9cb47 not in out/out8/CVE-2017-16820/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-16820"
+
+------------ CVE-2017-16876 (100 of 173)
+Stage 1
+working on CVE-2017-16876, lepture_mistune, mistune.py
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file mistune.py
+filtering 16 parent commits for file mistune.py
+0 out/out8/CVE-2017-16876/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-16876 1514561340
+Original Project = lepture_mistune
+./go2: line 89: out/out8/CVE-2017-16876/stage2/salsa.debian.org_python-team_modules/mistune_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16876/stage2/salsa.debian.org_python-team_modules/mistune_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16876/stage2/salsa.debian.org_python-team_modules/mistune_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16876/stage2/salsa.debian.org_python-team_modules/mistune_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16876/stage2/salsa.debian.org_python-team_modules/mistune_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16876/stage2/salsa.debian.org_python-team_modules/mistune_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16876/stage2/salsa.debian.org_python-team_modules/mistune_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16876/stage2/salsa.debian.org_python-team_modules/mistune_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16876/stage2/salsa.debian.org_python-team_modules/mistune_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16876/stage2/salsa.debian.org_python-team_modules/mistune_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16876/stage2/salsa.debian.org_python-team_modules/mistune_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-16876/stage2/salsa.debian.org_python-team_modules/mistune_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16876/stage2/salsa.debian.org_python-team_modules/mistune_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16876/stage2/salsa.debian.org_python-team_modules/mistune_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16876/stage2/salsa.debian.org_python-team_modules/mistune_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-16876 out/out8/CVE-2017-16876/results.csv
+out/out8/CVE-2017-16876/results.csv
+out/out8/CVE-2017-16876/results.html
+Success (go3)
+
+
+------------ CVE-2017-16880 (101 of 173)
+Stage 1
+working on CVE-2017-16880, filp_whoops, TemplateHelper.php
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file src/Whoops/Util/TemplateHelper.php
+filtering 28 parent commits for file src/Whoops/Util/TemplateHelper.php
+0 out/out8/CVE-2017-16880/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-16880 1510954140
+Original Project = filp_whoops
+Success (go2)
+Stage 3
+./go3 CVE-2017-16880 out/out8/CVE-2017-16880/results.csv
+out/out8/CVE-2017-16880/results.csv
+out/out8/CVE-2017-16880/results.html
+Success (go3)
+
+
+------------ CVE-2017-16907 (102 of 173)
+Stage 1
+working on CVE-2017-16907, horde_base, Sidebar.php
+Calling ./rgl2 to get all commits
+Error: commit fb2113bbcd04bd4a28c46aad0889fb0a3979a230 not in out/out8/CVE-2017-16907/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-16907"
+
+------------ CVE-2017-16939 (103 of 173)
+Stage 1
+working on CVE-2017-16939, torvalds_linux, xfrm_user.c
+Calling ./rgl2 to get all commits
+Error: commit 1137b5e2529a8f5ca8ee709288ecba3e68044df2 not in out/out8/CVE-2017-16939/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-16939"
+
+------------ CVE-2017-16946 (104 of 173)
+Stage 1
+working on CVE-2017-16946, MISP_MISP, UsersController.php
+Calling ./rgl2 to get all commits
+Error: commit 7d5890b2fc63285f010d5845913894dd71cf232c not in out/out8/CVE-2017-16946/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-16946"
+
+------------ CVE-2017-16994 (105 of 173)
+Stage 1
+working on CVE-2017-16994, torvalds_linux, pagewalk.c
+Calling ./rgl2 to get all commits
+filtering 17 child commits for file mm/pagewalk.c
+filtering 13 parent commits for file mm/pagewalk.c
+0 out/out8/CVE-2017-16994/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-16994 1511810940
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-16994/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-16994 out/out8/CVE-2017-16994/results.csv
+out/out8/CVE-2017-16994/results.csv
+out/out8/CVE-2017-16994/results.html
+Success (go3)
+
+
+------------ CVE-2017-16995 (106 of 173)
+Stage 1
+working on CVE-2017-16995, torvalds_linux, verifier.c
+Calling ./rgl2 to get all commits
+Error: commit 95a762e2c8c942780948091f8f2a4f32fce1ac6f not in out/out8/CVE-2017-16995/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-16995"
+
+------------ CVE-2017-16996 (107 of 173)
+Stage 1
+working on CVE-2017-16996, torvalds_linux, verifier.c
+Calling ./rgl2 to get all commits
+Error: commit 0c17d1d2c61936401f4702e1846e2c19b200f958 not in out/out8/CVE-2017-16996/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-16996"
+
+------------ CVE-2017-17052 (108 of 173)
+Stage 1
+working on CVE-2017-17052, torvalds_linux, fork.c
+Calling ./rgl2 to get all commits
+Error: commit 2b7e8665b4ff51c034c55df3cff76518d1a9ee3a not in out/out8/CVE-2017-17052/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-17052"
+
+------------ CVE-2017-17053 (109 of 173)
+Stage 1
+working on CVE-2017-17053, torvalds_linux, mmu_context.h
+Calling ./rgl2 to get all commits
+Error: commit ccd5b3235180eef3cfec337df1c8554ab151b5cc not in out/out8/CVE-2017-17053/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-17053"
+
+------------ CVE-2017-17081 (110 of 173)
+Stage 1
+working on CVE-2017-17081, FFmpeg_FFmpeg, mpegvideodsp.c
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file libavcodec/x86/mpegvideodsp.c
+filtering 4 parent commits for file libavcodec/x86/mpegvideodsp.c
+0 out/out8/CVE-2017-17081/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-17081 1512077340
+Original Project = FFmpeg_FFmpeg
+Success (go2)
+Stage 3
+./go3 CVE-2017-17081 out/out8/CVE-2017-17081/results.csv
+out/out8/CVE-2017-17081/results.csv
+out/out8/CVE-2017-17081/results.html
+Success (go3)
+
+
+------------ CVE-2017-17089 (111 of 173)
+Stage 1
+working on CVE-2017-17089, webmin_webmin, run.cgi
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file custom/run.cgi
+filtering 10 parent commits for file custom/run.cgi
+0 out/out8/CVE-2017-17089/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-17089 1514654940
+Original Project = webmin_webmin
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-17089" failed
+
+------------ CVE-2017-17439 (112 of 173)
+Stage 1
+working on CVE-2017-17439, heimdal_heimdal, kerberos5.c
+Calling ./rgl2 to get all commits
+Error: commit 1a6a6e462dc2ac6111f9e02c6852ddec4849b887 not in out/out8/CVE-2017-17439/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-17439"
+
+------------ CVE-2017-17476 (113 of 173)
+Stage 1
+working on CVE-2017-17476, OTRS_otrs, Template.pm
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file Kernel/Output/HTML/Layout/Template.pm
+filtering 11 parent commits for file Kernel/Output/HTML/Layout/Template.pm
+0 out/out8/CVE-2017-17476/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-17476 1513790940
+Original Project = OTRS_otrs
+Success (go2)
+Stage 3
+./go3 CVE-2017-17476 out/out8/CVE-2017-17476/results.csv
+out/out8/CVE-2017-17476/results.csv
+out/out8/CVE-2017-17476/results.html
+Success (go3)
+
+
+------------ CVE-2017-17499 (114 of 173)
+Stage 1
+working on CVE-2017-17499, ImageMagick_ImageMagick, Image.cpp
+Calling ./rgl2 to get all commits
+Error: commit 8c35502217c1879cb8257c617007282eee3fe1cc not in out/out8/CVE-2017-17499/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-17499"
+
+------------ CVE-2017-17712 (115 of 173)
+Stage 1
+working on CVE-2017-17712, torvalds_linux, raw.c
+Calling ./rgl2 to get all commits
+Error: commit 8f659a03a0ba9289b9aeb9b4470e6fb263d6f483 not in out/out8/CVE-2017-17712/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-17712"
+
+------------ CVE-2017-17807 (116 of 173)
+Stage 1
+working on CVE-2017-17807, torvalds_linux, request_key.c
+Calling ./rgl2 to get all commits
+filtering 29 child commits for file security/keys/request_key.c
+filtering 1 parent commits for file security/keys/request_key.c
+0 out/out8/CVE-2017-17807/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-17807 1513812540
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2017-17807 out/out8/CVE-2017-17807/results.csv
+out/out8/CVE-2017-17807/results.csv
+out/out8/CVE-2017-17807/results.html
+Success (go3)
+
+
+------------ CVE-2017-17852 (117 of 173)
+Stage 1
+working on CVE-2017-17852, torvalds_linux, verifier.c
+Calling ./rgl2 to get all commits
+Error: commit 468f6eafa6c44cb2c5d8aad35e12f06c240a812a not in out/out8/CVE-2017-17852/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-17852"
+
+------------ CVE-2017-17853 (118 of 173)
+Stage 1
+working on CVE-2017-17853, torvalds_linux, verifier.c
+Calling ./rgl2 to get all commits
+Error: commit 4374f256ce8182019353c0c639bb8d0695b4c941 not in out/out8/CVE-2017-17853/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-17853"
+
+------------ CVE-2017-17855 (119 of 173)
+Stage 1
+working on CVE-2017-17855, torvalds_linux, verifier.c
+Calling ./rgl2 to get all commits
+Error: commit 179d1c5602997fef5a940c6ddcf31212cbfebd14 not in out/out8/CVE-2017-17855/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-17855"
+
+------------ CVE-2017-17856 (120 of 173)
+Stage 1
+working on CVE-2017-17856, torvalds_linux, verifier.c
+Calling ./rgl2 to get all commits
+Error: commit a5ec6ae161d72f01411169a938fa5f8baea16e8f not in out/out8/CVE-2017-17856/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-17856"
+
+------------ CVE-2017-17857 (121 of 173)
+Stage 1
+working on CVE-2017-17857, torvalds_linux, verifier.c
+Calling ./rgl2 to get all commits
+Error: commit ea25f914dc164c8d56b36147ecc86bc65f83c469 not in out/out8/CVE-2017-17857/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-17857"
+
+------------ CVE-2017-18017 (122 of 173)
+Stage 1
+working on CVE-2017-18017, torvalds_linux, xt_TCPMSS.c
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file net/netfilter/xt_TCPMSS.c
+filtering 23 parent commits for file net/netfilter/xt_TCPMSS.c
+0 out/out8/CVE-2017-18017/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18017 1514960940
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18017/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-18017 out/out8/CVE-2017-18017/results.csv
+out/out8/CVE-2017-18017/results.csv
+out/out8/CVE-2017-18017/results.html
+Success (go3)
+
+
+------------ CVE-2017-18026 (123 of 173)
+Stage 1
+working on CVE-2017-18026, redmine_redmine, mercurial_adapter.rb
+Calling ./rgl2 to get all commits
+filtering 26 child commits for file lib/redmine/scm/adapters/mercurial_adapter.rb
+no 3686b77eb60d4f4028977d5c4b1a7c039ee9b0bb in 54
+filtering 4 parent commits for file lib/redmine/scm/adapters/mercurial_adapter.rb
+0 out/out8/CVE-2017-18026/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18026 1515576540
+Original Project = redmine_redmine
+Success (go2)
+Stage 3
+./go3 CVE-2017-18026 out/out8/CVE-2017-18026/results.csv
+out/out8/CVE-2017-18026/results.csv
+out/out8/CVE-2017-18026/results.html
+Success (go3)
+
+
+------------ CVE-2017-18075 (124 of 173)
+Stage 1
+working on CVE-2017-18075, torvalds_linux, pcrypt.c
+Calling ./rgl2 to get all commits
+filtering 21 child commits for file crypto/pcrypt.c
+filtering 9 parent commits for file crypto/pcrypt.c
+0 out/out8/CVE-2017-18075/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18075 1516789740
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18075/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-18075 out/out8/CVE-2017-18075/results.csv
+out/out8/CVE-2017-18075/results.csv
+out/out8/CVE-2017-18075/results.html
+Success (go3)
+
+
+------------ CVE-2017-18079 (125 of 173)
+Stage 1
+working on CVE-2017-18079, torvalds_linux, i8042.c
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file drivers/input/serio/i8042.c
+no 9222ba68c3f4065f6364b99cc641b6b019ef2d42 in 18
+filtering 16 parent commits for file drivers/input/serio/i8042.c
+0 out/out8/CVE-2017-18079/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18079 1517203740
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18079/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-18079 out/out8/CVE-2017-18079/results.csv
+out/out8/CVE-2017-18079/results.csv
+out/out8/CVE-2017-18079/results.html
+Success (go3)
+
+
+------------ CVE-2017-18120 (126 of 173)
+Stage 1
+working on CVE-2017-18120, kohler_gifsicle, gifread.c
+Calling ./rgl2 to get all commits
+filtering 9 child commits for file src/gifread.c
+filtering 21 parent commits for file src/gifread.c
+0 out/out8/CVE-2017-18120/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18120 1517563740
+Original Project = kohler_gifsicle
+Success (go2)
+Stage 3
+./go3 CVE-2017-18120 out/out8/CVE-2017-18120/results.csv
+out/out8/CVE-2017-18120/results.csv
+out/out8/CVE-2017-18120/results.html
+Success (go3)
+
+
+------------ CVE-2017-18123 (127 of 173)
+Stage 1
+working on CVE-2017-18123, splitbrain_dokuwiki, ajax.php
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file lib/exe/ajax.php
+filtering 24 parent commits for file lib/exe/ajax.php
+0 out/out8/CVE-2017-18123/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18123 1517671740
+Original Project = splitbrain_dokuwiki
+Success (go2)
+Stage 3
+./go3 CVE-2017-18123 out/out8/CVE-2017-18123/results.csv
+out/out8/CVE-2017-18123/results.csv
+out/out8/CVE-2017-18123/results.html
+Success (go3)
+
+
+------------ CVE-2017-18174 (128 of 173)
+Stage 1
+working on CVE-2017-18174, torvalds_linux, pinctrl-amd.c
+Calling ./rgl2 to get all commits
+Error: commit 251e22abde21833b3d29577e4d8c7aaccd650eee not in out/out8/CVE-2017-18174/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18174"
+
+------------ CVE-2017-18184 (129 of 173)
+Stage 1
+working on CVE-2017-18184, qpdf_qpdf, QPDF_encryption.cc
+Calling ./rgl2 to get all commits
+Error: commit dea704f0ab7f625e1e7b3f9a1110b45b63157317 not in out/out8/CVE-2017-18184/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18184"
+
+------------ CVE-2017-18187 (130 of 173)
+Stage 1
+working on CVE-2017-18187, ARMmbed_mbedtls, ssl_srv.c
+Calling ./rgl2 to get all commits
+Error: commit 83c9f495ffe70c7dd280b41fdfd4881485a3bc28 not in out/out8/CVE-2017-18187/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18187"
+
+------------ CVE-2017-18190 (131 of 173)
+Stage 1
+working on CVE-2017-18190, apple_cups, client.c
+Calling ./rgl2 to get all commits
+filtering 23 child commits for file scheduler/client.c
+filtering 7 parent commits for file scheduler/client.c
+0 out/out8/CVE-2017-18190/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18190 1518802140
+Original Project = apple_cups
+Success (go2)
+Stage 3
+./go3 CVE-2017-18190 out/out8/CVE-2017-18190/results.csv
+out/out8/CVE-2017-18190/results.csv
+out/out8/CVE-2017-18190/results.html
+Success (go3)
+
+
+------------ CVE-2017-18193 (132 of 173)
+Stage 1
+working on CVE-2017-18193, torvalds_linux, extent_cache.c
+Calling ./rgl2 to get all commits
+filtering 13 child commits for file fs/f2fs/extent_cache.c
+filtering 17 parent commits for file fs/f2fs/extent_cache.c
+0 out/out8/CVE-2017-18193/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18193 1519313340
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18193/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-18193 out/out8/CVE-2017-18193/results.csv
+out/out8/CVE-2017-18193/results.csv
+out/out8/CVE-2017-18193/results.html
+Success (go3)
+
+
+------------ CVE-2017-18202 (133 of 173)
+Stage 1
+working on CVE-2017-18202, torvalds_linux, oom_kill.c
+Calling ./rgl2 to get all commits
+Error: commit 687cb0884a714ff484d038e9190edc874edcf146 not in out/out8/CVE-2017-18202/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18202"
+
+------------ CVE-2017-18203 (134 of 173)
+Stage 1
+working on CVE-2017-18203, torvalds_linux, dm.c
+Calling ./rgl2 to get all commits
+Error: commit b9a41d21dceadf8104812626ef85dc56ee8a60ed not in out/out8/CVE-2017-18203/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18203"
+
+------------ CVE-2017-18204 (135 of 173)
+Stage 1
+working on CVE-2017-18204, torvalds_linux, file.c
+Calling ./rgl2 to get all commits
+Error: commit 28f5a8a7c033cbf3e32277f4cc9c6afd74f05300 not in out/out8/CVE-2017-18204/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18204"
+
+------------ CVE-2017-18208 (136 of 173)
+Stage 1
+working on CVE-2017-18208, torvalds_linux, madvise.c
+Calling ./rgl2 to get all commits
+Error: commit 6ea8d958a2c95a1d514015d4e29ba21a8c0a1a91 not in out/out8/CVE-2017-18208/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18208"
+
+------------ CVE-2017-18216 (137 of 173)
+Stage 1
+working on CVE-2017-18216, torvalds_linux, nodemanager.c
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file fs/ocfs2/cluster/nodemanager.c
+no 137cebf9432eae024d0334953ed92a2a78619b52 in 19
+filtering 22 parent commits for file fs/ocfs2/cluster/nodemanager.c
+0 out/out8/CVE-2017-18216/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18216 1520274540
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18216/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-18216 out/out8/CVE-2017-18216/results.csv
+out/out8/CVE-2017-18216/results.csv
+out/out8/CVE-2017-18216/results.html
+Success (go3)
+
+
+------------ CVE-2017-18221 (138 of 173)
+Stage 1
+working on CVE-2017-18221, torvalds_linux, mlock.c
+Calling ./rgl2 to get all commits
+Error: commit 70feee0e1ef331b22cc51f383d532a0d043fbdcc not in out/out8/CVE-2017-18221/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18221"
+
+------------ CVE-2017-18224 (139 of 173)
+Stage 1
+working on CVE-2017-18224, torvalds_linux, aops.c
+Calling ./rgl2 to get all commits
+filtering 29 child commits for file fs/ocfs2/aops.c
+no 68189fef88c7d02eb92e038be3d6428ebd0d2945 in 104
+no eca66389744df54ee98f02a232774e47be75f16a in 108
+no bb9263fc14353e7576330d97ae79f11cc47b087b in 59
+no 2c69e2057962b6bd76d72446453862eb59325b49 in 44
+no 9d6b0cd7579844761ed68926eb3073bab1dca87b in 29
+no 6b1f86f8e9c7f9de7ca1cb987b2cf25e99b1ae3a in 107
+no 137cebf9432eae024d0334953ed92a2a78619b52 in 19
+no e621900ad28b748e058b81d6078a5d5eb37b3973 in 102
+no 7ba13abbd31ee9265e88d7dc029c0f786e665192 in 123
+no e07bf00c40c6cce051ca7f95a6050d2a195b4f98 in 96
+filtering 1 parent commits for file fs/ocfs2/aops.c
+0 out/out8/CVE-2017-18224/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18224 1520825340
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18224/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-18224 out/out8/CVE-2017-18224/results.csv
+out/out8/CVE-2017-18224/results.csv
+out/out8/CVE-2017-18224/results.html
+Success (go3)
+
+
+------------ CVE-2017-18239 (140 of 173)
+Stage 1
+working on CVE-2017-18239, jasongoodwin_authentikat-jwt, JsonWebToken.scala
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file src/main/scala/authentikat/jwt/JsonWebToken.scala
+filtering 16 parent commits for file src/main/scala/authentikat/jwt/JsonWebToken.scala
+0 out/out8/CVE-2017-18239/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18239 1521343740
+Original Project = jasongoodwin_authentikat-jwt
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out8/CVE-2017-18239" failed
+
+------------ CVE-2017-18241 (141 of 173)
+Stage 1
+working on CVE-2017-18241, torvalds_linux, segment.c
+Calling ./rgl2 to get all commits
+Error: commit d4fdf8ba0e5808ba9ad6b44337783bd9935e0982 not in out/out8/CVE-2017-18241/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18241"
+
+------------ CVE-2017-18248 (142 of 173)
+Stage 1
+working on CVE-2017-18248, apple_cups, ipp.c
+Calling ./rgl2 to get all commits
+filtering 25 child commits for file scheduler/ipp.c
+filtering 5 parent commits for file scheduler/ipp.c
+0 out/out8/CVE-2017-18248/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18248 1522085340
+Original Project = apple_cups
+Success (go2)
+Stage 3
+./go3 CVE-2017-18248 out/out8/CVE-2017-18248/results.csv
+out/out8/CVE-2017-18248/results.csv
+out/out8/CVE-2017-18248/results.html
+Success (go3)
+
+
+------------ CVE-2017-18249 (143 of 173)
+Stage 1
+working on CVE-2017-18249, torvalds_linux, node.c
+Calling ./rgl2 to get all commits
+Error: commit 30a61ddf8117c26ac5b295e1233eaa9629a94ca3 not in out/out8/CVE-2017-18249/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18249"
+
+------------ CVE-2017-18255 (144 of 173)
+Stage 1
+working on CVE-2017-18255, torvalds_linux, core.c
+Calling ./rgl2 to get all commits
+Error: commit 1572e45a924f254d9570093abde46430c3172e3d not in out/out8/CVE-2017-18255/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18255"
+
+------------ CVE-2017-18257 (145 of 173)
+Stage 1
+working on CVE-2017-18257, torvalds_linux, data.c
+Calling ./rgl2 to get all commits
+Error: commit b86e33075ed1909d8002745b56ecf73b833db143 not in out/out8/CVE-2017-18257/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18257"
+
+------------ CVE-2017-18261 (146 of 173)
+Stage 1
+working on CVE-2017-18261, torvalds_linux, arch_timer.h
+Calling ./rgl2 to get all commits
+filtering 23 child commits for file arch/arm64/include/asm/arch_timer.h
+filtering 7 parent commits for file arch/arm64/include/asm/arch_timer.h
+0 out/out8/CVE-2017-18261/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18261 1524126540
+Original Project = torvalds_linux
+./go2: line 89: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out8/CVE-2017-18261/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2017-18261 out/out8/CVE-2017-18261/results.csv
+out/out8/CVE-2017-18261/results.csv
+out/out8/CVE-2017-18261/results.html
+Success (go3)
+
+
+------------ CVE-2017-18344 (147 of 173)
+Stage 1
+working on CVE-2017-18344, torvalds_linux, posix-timers.c
+Calling ./rgl2 to get all commits
+Error: commit cef31d9af908243421258f1df35a4a644604efbe not in out/out8/CVE-2017-18344/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18344"
+
+------------ CVE-2017-18358 (148 of 173)
+Stage 1
+working on CVE-2017-18358, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 700b20e2ae918550bfbf283f433f07622480978b not in out/out8/CVE-2017-18358/stage1/commits
+Failure (go1): "./go1 out/out8/CVE-2017-18358"
+
+------------ CVE-2017-18360 (149 of 173)
+Stage 1
+working on CVE-2017-18360, torvalds_linux, io_ti.c
+Calling ./rgl2 to get all commits
+filtering 23 child commits for file drivers/usb/serial/io_ti.c
+no 908e698f2149c3d6a67d9ae15c75545a3f392559 in 16
+filtering 7 parent commits for file drivers/usb/serial/io_ti.c
+0 out/out8/CVE-2017-18360/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out8/CVE-2017-18360 1548926940
+Original Project = torvalds_linux

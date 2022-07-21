@@ -1,0 +1,139 @@
+CVE-1999-0731.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2006-5331.stage1: Error: commit 6c4841c2b6c32a134f9f36e5e08857138cc12b10 not in out/out1/CVE-2006-5331/stage1/commits
+CVE-2007-6761.stage1: Error: commit 0b29669c065f60501e7289e1950fa2a618962358 not in out/out1/CVE-2007-6761/stage1/commits
+CVE-2007-6762.stage1: Error: commit 2a2f11c227bdf292b3a2900ad04139d301b56ac4 not in out/out1/CVE-2007-6762/stage1/commits
+CVE-2008-7050.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2008-7316.stage1: Error: commit 124d3b7041f9a0ca7c43a6293e1cae4576c32fd5 not in out/out1/CVE-2008-7316/stage1/commits
+CVE-2010-1630.stage1: Error: commit 4ea3402f9363c9259881bc8ea6ce7fc6cb212657 not in out/out1/CVE-2010-1630/stage1/commits
+CVE-2010-2809.stage1: Error: commit 9cc39cb5c9396be013b5dc2ba7e4b3eaa647e975 not in out/out1/CVE-2010-2809/stage1/commits
+CVE-2010-3260.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2010-4250.stage1: Error: commit a2ae4cc9a16e211c8a128ba10d22a85431f093ab not in out/out1/CVE-2010-4250/stage1/commits
+CVE-2010-4650.stage1: Error: commit 7572777eef78ebdee1ecb7c258c0ef94d35bad16 not in out/out1/CVE-2010-4650/stage1/commits
+CVE-2010-5312.stage1: Error: commit 7e9060c109b928769a664dbcc2c17bd21231b6f3 not in out/out1/CVE-2010-5312/stage1/commits
+CVE-2010-5313.stage1: Error: commit fc3a9157d3148ab91039c75423da8ef97be3e105 not in out/out1/CVE-2010-5313/stage1/commits
+CVE-2010-5328.stage1: Error: commit f106eee10038c2ee5b6056aaf3f6d5229be6dcdd not in out/out1/CVE-2010-5328/stage1/commits
+CVE-2010-5329.stage1: Error: commit fc0a80798576f80ca10b3f6c9c7097f12fd1d64e not in out/out1/CVE-2010-5329/stage1/commits
+CVE-2011-0006.stage1: Error: commit 867c20265459d30a01b021a9c1e81fb4c5832aa9 not in out/out1/CVE-2011-0006/stage1/commits
+CVE-2011-0469.stage1: Error: commit 23c8d21c75242999e29379e6ca8418a14c8725c6 not in out/out1/CVE-2011-0469/stage1/commits
+CVE-2011-0530.stage1: Error: commit 3ef52043861ab16352d49af89e048ba6339d6df8 not in out/out1/CVE-2011-0530/stage1/commits
+CVE-2011-0716.stage1: Error: commit 6b0d6a9b4296fa16a28d10d416db7a770fc03287 not in out/out1/CVE-2011-0716/stage1/commits
+CVE-2011-0992.stage1: Error: commit 722f9890f09aadfc37ae479e7d946d5fc5ef7b91 not in out/out1/CVE-2011-0992/stage1/commits
+CVE-2011-1008.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2011-1078.stage1: Error: commit c4c896e1471aec3b004a693c689f60be3b17ac86 not in out/out1/CVE-2011-1078/stage1/commits
+CVE-2011-1080.stage1: Error: commit d846f71195d57b0bbb143382647c2c6638b04c5a not in out/out1/CVE-2011-1080/stage1/commits
+CVE-2011-1160.stage1: Error: commit 1309d7afbed112f0e8e90be9af975550caa0076b not in out/out1/CVE-2011-1160/stage1/commits
+CVE-2011-1182.stage1: Error: commit da48524eb20662618854bb3df2db01fc65f3070c not in out/out1/CVE-2011-1182/stage1/commits
+CVE-2011-1588.stage1: Error: commit 03dd312e157d4fa8a11d5fa402706ae5b05806fa not in out/out1/CVE-2011-1588/stage1/commits
+CVE-2011-1767.stage1: Error: commit c2892f02712e9516d72841d5c019ed6916329794 not in out/out1/CVE-2011-1767/stage1/commits
+CVE-2011-1833.stage1: Error: commit 764355487ea220fdc2faf128d577d7f679b91f97 not in out/out1/CVE-2011-1833/stage1/commits
+CVE-2011-1927.stage1: Error: commit 64f3b9e203bd06855072e295557dca1485a2ecba not in out/out1/CVE-2011-1927/stage1/commits
+CVE-2011-1937.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2011-2161.stage1: Error: commit 8312e3fc9041027a33c8bc667bb99740fdf41dd5 not in out/out1/CVE-2011-2161/stage1/commits
+CVE-2011-2183.stage1: Error: commit 2b472611a32a72f4a118c069c2d62a1a3f087afd not in out/out1/CVE-2011-2183/stage1/commits
+CVE-2011-2208.stage1: Error: commit 21c5977a836e399fc710ff2c5367845ed5c2527f not in out/out1/CVE-2011-2208/stage1/commits
+CVE-2011-2209.stage1: Error: commit 21c5977a836e399fc710ff2c5367845ed5c2527f not in out/out1/CVE-2011-2209/stage1/commits
+CVE-2011-2210.stage1: Error: commit 21c5977a836e399fc710ff2c5367845ed5c2527f not in out/out1/CVE-2011-2210/stage1/commits
+CVE-2011-2211.stage1: Error: commit 21c5977a836e399fc710ff2c5367845ed5c2527f not in out/out1/CVE-2011-2211/stage1/commits
+CVE-2011-2482.stage1: Error: commit ea2bc483ff5caada7c4aa0d5fbf87d3a6590273d not in out/out1/CVE-2011-2482/stage1/commits
+CVE-2011-2493.stage1: Error: commit 0449641130f5652b344ef6fa39fa019d7e94660a not in out/out1/CVE-2011-2493/stage1/commits
+CVE-2011-2494.stage1: Error: commit 1a51410abe7d0ee4b1d112780f46df87d3621043 not in out/out1/CVE-2011-2494/stage1/commits
+CVE-2011-2495.stage1: Error: commit 1d1221f375c94ef961ba8574ac4f85c8870ddd51 not in out/out1/CVE-2011-2495/stage1/commits
+CVE-2011-2496.stage1: Error: commit 982134ba62618c2d69fbbbd166d0a11ee3b7e3d8 not in out/out1/CVE-2011-2496/stage1/commits
+CVE-2011-2517.stage1: Error: commit 208c72f4fe44fe09577e7975ba0e7fa0278f3d03 not in out/out1/CVE-2011-2517/stage1/commits
+CVE-2011-2521.stage1: Error: commit fc66c5210ec2539e800e87d7b3a985323c7be96e not in out/out1/CVE-2011-2521/stage1/commits
+CVE-2011-2707.stage1: Error: commit 0d0138ebe24b94065580bd2601f8bb7eb6152f56 not in out/out1/CVE-2011-2707/stage1/commits
+CVE-2011-2905.stage1: Error: commit aba8d056078e47350d85b06a9cabd5afcc4b72ea not in out/out1/CVE-2011-2905/stage1/commits
+CVE-2011-2906.stage1: Error: commit b5b515445f4f5a905c5dd27e6e682868ccd6c09d not in out/out1/CVE-2011-2906/stage1/commits
+CVE-2011-2909.stage1: Error: commit 819cbb120eaec7e014e5abd029260db1ca8c5735 not in out/out1/CVE-2011-2909/stage1/commits
+CVE-2011-3178.stage1: Error: commit cbfe2ed36dd77c0843702935dea7f914bb599201 not in out/out1/CVE-2011-3178/stage1/commits
+CVE-2011-3180.stage1: Error: commit f0f74b3f6ac6d47f7919aa9db380c0ad41ffe55f not in out/out1/CVE-2011-3180/stage1/commits
+CVE-2011-3191.stage1: Error: commit 9438fabb73eb48055b58b89fc51e0bc4db22fabd not in out/out1/CVE-2011-3191/stage1/commits
+CVE-2011-3346.stage1: Error: commit 103b40f51e4012b3b0ad20f615562a1806d7f49a not in out/out1/CVE-2011-3346/stage1/commits
+CVE-2011-3353.stage1: Error: commit c2183d1e9b3f313dd8ba2b1b0197c8d9fb86a7ae not in out/out1/CVE-2011-3353/stage1/commits
+CVE-2011-3363.stage1: Error: commit 70945643722ffeac779d2529a348f99567fa5c33 not in out/out1/CVE-2011-3363/stage1/commits
+CVE-2011-3371.stage1: Error: commit dd50a50a2760f10bd2d09814e30af4b36052ca6d not in out/out1/CVE-2011-3371/stage1/commits
+CVE-2011-3592.stage1: Error: commit 2f28ce9c800274190418da0945ce3647d36e1db6 not in out/out1/CVE-2011-3592/stage1/commits
+CVE-2011-3602.stage1: Error: commit 92e22ca23e52066da2258df8c76a2dca8a428bcc not in out/out1/CVE-2011-3602/stage1/commits
+CVE-2011-3619.stage1: Error: commit a5b2c5b2ad5853591a6cac6134cd0f599a720865 not in out/out1/CVE-2011-3619/stage1/commits
+CVE-2011-3637.stage1: Error: commit 76597cd31470fa130784c78fadb4dab2e624a723 not in out/out1/CVE-2011-3637/stage1/commits
+CVE-2011-3638.stage1: Error: commit 667eff35a1f56fa74ce98a0c7c29a40adc1ba4e3 not in out/out1/CVE-2011-3638/stage1/commits
+CVE-2011-4080.stage1: Error: commit bfdc0b497faa82a0ba2f9dddcf109231dd519fcc not in out/out1/CVE-2011-4080/stage1/commits
+CVE-2011-4086.stage1: Error: commit 15291164b22a357cb211b618adfef4fa82fc0de3 not in out/out1/CVE-2011-4086/stage1/commits
+CVE-2011-4087.stage1: Error: commit f8e9881c2aef1e982e5abc25c046820cd0b7cf64 not in out/out1/CVE-2011-4087/stage1/commits
+CVE-2011-4104.stage1: Error: commit e8af315211b07c8f48f32a063233cc3f76dd5bc2 not in out/out1/CVE-2011-4104/stage1/commits
+CVE-2011-4326.stage1: Error: commit a9cf73ea7ff78f52662c8658d93c226effbbedde not in out/out1/CVE-2011-4326/stage1/commits
+CVE-2011-4348.stage1: Error: commit ae53b5bd77719fed58086c5be60ce4f22bffe1c6 not in out/out1/CVE-2011-4348/stage1/commits
+CVE-2011-4594.stage1: Error: commit bc909d9ddbf7778371e36a651d6e4194b1cc7d4c not in out/out1/CVE-2011-4594/stage1/commits
+CVE-2011-4604.stage1: Error: commit b5a1eeef04cc7859f34dec9b72ea1b28e4aba07c not in out/out1/CVE-2011-4604/stage1/commits
+CVE-2011-4715.stage1: Error: commit 8ea6f7bc37d05a9ec25b5afbea011cf9de5f1e49 not in out/out1/CVE-2011-4715/stage1/commits
+CVE-2011-4966.stage1: Error: commit 1b1ec5ce75e224bd1755650c18ccdaa6dc53e605 not in out/out1/CVE-2011-4966/stage1/commits
+CVE-2011-5018.stage1: Error: commit 59f81ea6bd8ef96c04a706a3ca453cd656284faa not in out/out1/CVE-2011-5018/stage1/commits
+CVE-2011-5321.stage1: Error: commit c290f8358acaeffd8e0c551ddcc24d1206143376 not in out/out1/CVE-2011-5321/stage1/commits
+CVE-2011-5327.stage1: Error: commit 12f09ccb4612734a53e47ed5302e0479c10a50f8 not in out/out1/CVE-2011-5327/stage1/commits
+CVE-2012-0033.stage1: Error: commit 11508aa72efab4fad0dbd8292b9614d9371b20a9 not in out/out1/CVE-2012-0033/stage1/commits
+CVE-2012-0038.stage1: Error: commit 093019cf1b18dd31b2c3b77acce4e000e2cbc9ce not in out/out1/CVE-2012-0038/stage1/commits
+CVE-2012-0207.stage1: Error: commit a8c1f65c79cbbb2f7da782d4c9d15639a9b94b27 not in out/out1/CVE-2012-0207/stage1/commits
+CVE-2012-0957.stage1: Error: commit 2702b1526c7278c4d65d78de209a465d4de2885e not in out/out1/CVE-2012-0957/stage1/commits
+CVE-2012-1013.stage1: Error: commit c5be6209311d4a8f10fda37d0d3f876c1b33b77b not in out/out1/CVE-2012-1013/stage1/commits
+CVE-2012-1108.stage1: Error: commit b3646a07348ffa276ea41a9dae03ddc63ea6c532 not in out/out1/CVE-2012-1108/stage1/commits
+CVE-2012-1118.stage1: Error: commit eb803ed02105fc919cf5f789e939f2b824162927 not in out/out1/CVE-2012-1118/stage1/commits
+CVE-2012-1119.stage1: Error: commit dea7e315f3fc96dfa995e56e8810845fc07a47aa not in out/out1/CVE-2012-1119/stage1/commits
+CVE-2012-1122.stage1: Error: commit 0da3f7ace233208eb3c8d628cc2fd6e56d83839f not in out/out1/CVE-2012-1122/stage1/commits
+CVE-2012-1123.stage1: Error: commit f5106be52cf6aa72c521f388e4abb5f0de1f1d7f not in out/out1/CVE-2012-1123/stage1/commits
+CVE-2012-1146.stage1: Error: commit 371528caec553785c37f73fa3926ea0de84f986f not in out/out1/CVE-2012-1146/stage1/commits
+CVE-2012-1188.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2012-1190.stage1: Error: commit 86073d532aed656550cb731aa5b4288b126ae7a6 not in out/out1/CVE-2012-1190/stage1/commits
+CVE-2012-1207.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2012-1208.stage1: Error: commit d65c083adc91c88d21bd9a0df4c2688df634c6ff not in out/out1/CVE-2012-1208/stage1/commits
+CVE-2012-1209.stage1: Error: commit c8ec9c58a6b3c46cdd924532c1de99bcda6072ed not in out/out1/CVE-2012-1209/stage1/commits
+CVE-2012-1571.stage1: Error: commit 1859fdb4e67c49c463c4e0078054335cd46ba295 not in out/out1/CVE-2012-1571/stage1/commits
+CVE-2012-1583.stage1: Error: commit d0772b70faaf8e9f2013b6c4273d94d5eac8047a not in out/out1/CVE-2012-1583/stage1/commits
+CVE-2012-1584.stage1: Error: commit dcdf4fd954e3213c355746fa15b7480461972308 not in out/out1/CVE-2012-1584/stage1/commits
+CVE-2012-1902.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2012-1909.stage1: Error: commit a206b0ea12eb4606b93323268fc81a4f1f952531 not in out/out1/CVE-2012-1909/stage1/commits
+CVE-2012-2100.stage1: Error: commit d50f2ab6f050311dbf7b8f5501b25f0bf64a439b not in out/out1/CVE-2012-2100/stage1/commits
+CVE-2012-2119.stage1: Error: commit b92946e2919134ebe2a4083e4302236295ea2a73 not in out/out1/CVE-2012-2119/stage1/commits
+CVE-2012-2123.stage1: Error: commit d52fc5dde171f030170a6cb78034d166b13c9445 not in out/out1/CVE-2012-2123/stage1/commits
+CVE-2012-2127.stage1: Error: commit 905ad269c55fc62bee3da29f7b1d1efeba8aa1e1 not in out/out1/CVE-2012-2127/stage1/commits
+CVE-2012-2129.stage1: Error: commit ff71173477e54774b5571015d49d944f51cb8a26 not in out/out1/CVE-2012-2129/stage1/commits
+CVE-2012-2136.stage1: Error: commit cc9b17ad29ecaa20bfe426a8d4dbfb94b13ff1cc not in out/out1/CVE-2012-2136/stage1/commits
+CVE-2012-2375.stage1: Error: commit 20e0fa98b751facf9a1101edaefbc19c82616a68 not in out/out1/CVE-2012-2375/stage1/commits
+CVE-2012-2383.stage1: Error: commit ed8cd3b2cd61004cab85380c52b1817aca1ca49b not in out/out1/CVE-2012-2383/stage1/commits
+CVE-2012-2384.stage1: Error: commit 44afb3a04391a74309d16180d1e4f8386fdfa745 not in out/out1/CVE-2012-2384/stage1/commits
+CVE-2012-2390.stage1: Error: commit c50ac050811d6485616a193eb0f37bfbd191cc89 not in out/out1/CVE-2012-2390/stage1/commits
+CVE-2012-2669.stage1: Error: commit bcc2c9c3fff859e0eb019fe6fec26f9b8eba795c not in out/out1/CVE-2012-2669/stage1/commits
+CVE-2012-2675.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2012-2744.stage1: Error: commit 9e2dcf72023d1447f09c47d77c99b0c49659e5ce not in out/out1/CVE-2012-2744/stage1/commits
+CVE-2012-2745.stage1: Error: commit 79549c6dfda0603dba9a70a53467ce62d9335c33 not in out/out1/CVE-2012-2745/stage1/commits
+CVE-2012-2983.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2012-3364.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2012-3366.stage1: Error: commit a524967e8d5c4c22e49cd619aed20c87a316c0be not in out/out1/CVE-2012-3366/stage1/commits
+CVE-2012-3371.stage1: Error: commit 034762e8060dcf0a11cb039b9d426b0d0bb1801d not in out/out1/CVE-2012-3371/stage1/commits
+CVE-2012-3375.stage1: Error: commit 13d518074a952d33d47c428419693f63389547e9 not in out/out1/CVE-2012-3375/stage1/commits
+CVE-2012-3400.stage1: Error: commit adee11b2085bee90bd8f4f52123ffb07882d6256 not in out/out1/CVE-2012-3400/stage1/commits
+CVE-2012-3430.stage1: Error: commit 06b6a1cf6e776426766298d055bb3991957d90a7 not in out/out1/CVE-2012-3430/stage1/commits
+CVE-2012-3501.stage1: Error: commit 80f74451f628264d1d9a1f1c0bbcebc932ba5e00 not in out/out1/CVE-2012-3501/stage1/commits
+CVE-2012-3510.stage1: Error: commit f0ec1aaf54caddd21c259aea8b2ecfbde4ee4fb9 not in out/out1/CVE-2012-3510/stage1/commits
+CVE-2012-3511.stage1: Error: commit 9ab4233dd08036fe34a89c7dc6f47a8bf2eb29eb not in out/out1/CVE-2012-3511/stage1/commits
+CVE-2012-3542.stage1: Error: commit c13d0ba606f7b2bdc609a7f388334e5efec3f3aa not in out/out1/CVE-2012-3542/stage1/commits
+CVE-2012-3866.stage1: Error: commit fd44bf5e6d0d360f6a493d663b653c121fa83c3f not in out/out1/CVE-2012-3866/stage1/commits
+CVE-2012-4219.stage1: Error: commit 0f0c2f1e2b3ece41cc1bb99a9931c8fcc7c917bc not in out/out1/CVE-2012-4219/stage1/commits
+CVE-2012-4394.stage1: Error: commit d203fa2c50f4b2791e68e2b8ab9a0f8b94f9c9f8 not in out/out1/CVE-2012-4394/stage1/commits
+CVE-2012-4395.stage1: Error: commit 0074062b5329c3d43679909fddce2d70608a4475 not in out/out1/CVE-2012-4395/stage1/commits
+CVE-2012-4397.stage1: Error: commit 54a371700554ed21a5cb7db03126b6c95ae4cbd3 not in out/out1/CVE-2012-4397/stage1/commits
+CVE-2012-4444.stage1: Error: commit 70789d7052239992824628db8133de08dc78e593 not in out/out1/CVE-2012-4444/stage1/commits
+CVE-2012-4467.stage1: Error: commit ed6fe9d614fc1bca95eb8c0ccd0e92db00ef9d5d not in out/out1/CVE-2012-4467/stage1/commits
+CVE-2012-4508.stage1: Error: commit dee1f973ca341c266229faa5a1a5bb268bed3531 not in out/out1/CVE-2012-4508/stage1/commits
+CVE-2012-5517.stage1: Error: commit 08dff7b7d629807dbb1f398c68dd9cd58dd657a1 not in out/out1/CVE-2012-5517/stage1/commits
+CVE-2012-5532.stage1: Error: commit 95a69adab9acfc3981c504737a2b6578e4d846ef not in out/out1/CVE-2012-5532/stage1/commits
+CVE-2012-5625.stage1: Error: commit 9d2ea970422591f8cdc394001be9a2deca499a5f not in out/out1/CVE-2012-5625/stage1/commits
+CVE-2012-5642.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2012-5646.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2012-5647.stage2: There are no clone projects that contain both vulnerable and fixed blobs
+CVE-2012-6116.stage1: Error: commit 65f1e42b7bda0f3410931c50598540d944d8bf0d not in out/out1/CVE-2012-6116/stage1/commits
+CVE-2012-6537.stage1: Error: commit 1f86840f897717f86d523a13e99a447e6a5d2fa5 not in out/out1/CVE-2012-6537/stage1/commits
+CVE-2012-6538.stage1: Error: commit 4c87308bdea31a7b4828a51f6156e6f721a1fcc9 not in out/out1/CVE-2012-6538/stage1/commits
+CVE-2012-6539.stage1: Error: commit 43da5f2e0d0c69ded3d51907d9552310a6b545e8 not in out/out1/CVE-2012-6539/stage1/commits
+CVE-2012-6540.stage1: Error: commit 2d8a041b7bfe1097af21441cb77d6af95f4f4680 not in out/out1/CVE-2012-6540/stage1/commits
+CVE-2012-6542.stage1: Error: commit 3592aaeb80290bda0f2cf0b5456c97bfc638b192 not in out/out1/CVE-2012-6542/stage1/commits
+CVE-2012-6543.stage1: Error: commit 04d4fbca1017c11381e7d82acea21dd741e748bc not in out/out1/CVE-2012-6543/stage1/commits

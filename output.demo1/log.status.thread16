@@ -1,0 +1,2765 @@
+
+------------ CVE-2021-27886 (1 of 168)
+Stage 1
+working on CVE-2021-27886, rakibtg_docker-web-gui, terminal.js
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file backend/utilities/terminal.js
+filtering 1 parent commits for file backend/utilities/terminal.js
+0 out/out16/CVE-2021-27886/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-27886 1614644100
+Original Project = rakibtg_docker-web-gui
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-27886" failed
+
+------------ CVE-2021-27904 (2 of 168)
+Stage 1
+working on CVE-2021-27904, MISP_MISP, SharingGroupServer.php
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file app/Model/SharingGroupServer.php
+filtering 13 parent commits for file app/Model/SharingGroupServer.php
+0 out/out16/CVE-2021-27904/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-27904 1614669300
+Original Project = MISP_MISP
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-27904" failed
+
+------------ CVE-2021-28041 (3 of 168)
+Stage 1
+working on CVE-2021-28041, openssh_openssh-portable, ssh-agent.c
+Calling ./rgl2 to get all commits
+filtering 13 child commits for file ssh-agent.c
+no 247082b5013f0d4fcae8f97453f2a2f01bcda811 in 36
+no 39d17e189f8e72c34c722579d8d4e701fa5132da in 57
+no 72bcd7993dadaf967bb3d8564ee31cbf38132b5d in 114
+no a23698c3082ffe661abed14b020eac9b0c25eb9f in 34
+no cb885178f36b83d0f14cfe9f345d2068103feed0 in 75
+no 715c892f0a5295b391ae92c26ef4d6a86ea96e8e in 113
+no a6d7677c4abcfba268053e5867f2acabe3aa371b in 38
+no baaff0ff4357cc5a079621ba6e2d7e247b765061 in 58
+no 39f00dcf44915f20684160f0a88d3ef8a3278351 in 57
+no 4c1e3ce85e183a9d0c955c88589fed18e4d6a058 in 76
+filtering 17 parent commits for file ssh-agent.c
+0 out/out16/CVE-2021-28041/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-28041 1614978900
+Original Project = openssh_openssh-portable
+Success (go2)
+Stage 3
+./go3 CVE-2021-28041 out/out16/CVE-2021-28041/results.csv
+out/out16/CVE-2021-28041/results.csv
+out/out16/CVE-2021-28041/results.html
+Success (go3)
+
+
+------------ CVE-2021-28379 (4 of 168)
+Stage 1
+working on CVE-2021-28379, myvesta_vesta, UploadHandler.php
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file web/upload/UploadHandler.php
+filtering 14 parent commits for file web/upload/UploadHandler.php
+0 out/out16/CVE-2021-28379/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-28379 1615788900
+Original Project = myvesta_vesta
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-28379" failed
+
+------------ CVE-2021-28662 (5 of 168)
+Stage 1
+working on CVE-2021-28662, squid-cache_squid, RegisteredHeaders.cc
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file src/http/RegisteredHeaders.cc
+no bf95c10aa95bf8e56d9d8d1545cb5a3aafab0d2c in 63
+filtering 19 parent commits for file src/http/RegisteredHeaders.cc
+0 out/out16/CVE-2021-28662/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-28662 1622117700
+Original Project = squid-cache_squid
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-28662" failed
+
+------------ CVE-2021-28832 (6 of 168)
+Stage 1
+working on CVE-2021-28832, VSCodeVim_Vim, package.json
+Calling ./rgl2 to get all commits
+Error: commit 939df0e7fd55a9840dbd4fb3c907315e2a5ef446 not in out/out16/CVE-2021-28832/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-28832"
+
+------------ CVE-2021-28848 (7 of 168)
+Stage 1
+working on CVE-2021-28848, mintty_mintty, termout.c
+Calling ./rgl2 to get all commits
+Error: commit bd52109993440b6996760aaccb66e68e782762b9 not in out/out16/CVE-2021-28848/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-28848"
+
+------------ CVE-2021-28855 (8 of 168)
+Stage 1
+working on CVE-2021-28855, jsummers_deark, pict.c
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file modules/pict.c
+no 22239d3b990df4d65448476342e66a6d6706faf1 in 34
+filtering 27 parent commits for file modules/pict.c
+0 out/out16/CVE-2021-28855/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-28855 1618420500
+Original Project = jsummers_deark
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-28855" failed
+
+------------ CVE-2021-28856 (9 of 168)
+Stage 1
+working on CVE-2021-28856, jsummers_deark, fmtutil.c
+Calling ./rgl2 to get all commits
+Error: commit 62acb7753b0e3c0d3ab3c15057b0a65222313334 not in out/out16/CVE-2021-28856/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-28856"
+
+------------ CVE-2021-28874 (10 of 168)
+Stage 1
+working on CVE-2021-28874, SerenityOS_serenity, Decoder.cpp
+Calling ./rgl2 to get all commits
+filtering 21 child commits for file Userland/Libraries/LibTextCodec/Decoder.cpp
+no 3f3f45580ab7266258e97cb3cecf1e24716d61c5 in 63
+no 086969277e74d8ba065bf8145d3aeb0dec0bfee5 in 8
+no b006a60366c513528d0f7fe818be2558150e9b11 in 48
+no 6a95df25264b4f5e616608dd02826b61e25e1112 in 106
+no 9c2a7c0e03fcfcf32c89b7e51f921c88afbe41cf in 28
+no 0e0f98a45e32f39d7f703269a8cabff1010843ca in 14
+no 835a344337ae8de897e6c4be9e82b834b340060b in 3
+no 94965ba28d9592d7c68f6e438bbc1e244533fc3c in 20
+no 6003b6f4d3f7c7d88202ee28a474e5f953d6b0c6 in 96
+no 6f5102f435b151d9e58eaccf7b9047a329207a9a in 111
+no 8b1108e4858f797c9216dc8ae4a3918ad50c73b4 in 11
+no d7ffa5142498095644055f11aba99bad351221d5 in 87
+filtering 5 parent commits for file Userland/Libraries/LibTextCodec/Decoder.cpp
+0 out/out16/CVE-2021-28874/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-28874 1617714900
+Original Project = SerenityOS_serenity
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-28874" failed
+
+------------ CVE-2021-28957 (11 of 168)
+Stage 1
+working on CVE-2021-28957, lxml_lxml, __init__.py
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file src/lxml/__init__.py
+no d65e63229e8958bc08344a85cd3f09ceeef933c3 in 86
+no 853c9e9cbf1c82d1ad3c096362372a048108905e in 5
+no e82c9153c4a7d505480b94c60b9a84d79d948efb in 104
+no 393443595416bafc14e345331969274e85726e7a in 57
+no 5c4f6a23d5758ec66cfe22b082a40c2e08df4658 in 92
+filtering 14 parent commits for file src/lxml/__init__.py
+0 out/out16/CVE-2021-28957/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-28957 1616303700
+Original Project = lxml_lxml
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-28957" failed
+
+------------ CVE-2021-28967 (12 of 168)
+Stage 1
+working on CVE-2021-28967, Gimly_vscode-matlab, package.json
+Calling ./rgl2 to get all commits
+Error: commit fc5dc53397677464099e80629e785a25718bf5ec not in out/out16/CVE-2021-28967/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-28967"
+
+------------ CVE-2021-29136 (13 of 168)
+Stage 1
+working on CVE-2021-29136, opencontainers_umoci, tar_extract.go
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file oci/layer/tar_extract.go
+no aab35e4efa1b16b27d6151b2f4421d8d446b7ffb in 42
+filtering 28 parent commits for file oci/layer/tar_extract.go
+0 out/out16/CVE-2021-29136/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29136 1617725700
+Original Project = opencontainers_umoci
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29136" failed
+
+------------ CVE-2021-29261 (14 of 168)
+Stage 1
+working on CVE-2021-29261, sveltejs_language-tools, package.json
+Calling ./rgl2 to get all commits
+filtering 22 child commits for file packages/svelte-vscode/package.json
+no 35bbfc5e4681696168a813760b5cf07a0bc78173 in 53
+no caf179a48f2adc2ec999765670361c4466e9d207 in 74
+no bc93baf83a4be036443729aed9a94e0d58e3e750 in 60
+no 5a6eba15918a556e2bcb04638c313ac9dd03212c in 90
+no 98ca4021bedcc927a344dab72f89aa5dcb82b9e8 in 24
+no b87ea2e41c3b7b3fd83be006da588c8992db5a38 in 56
+no 05024a657784be7a5b57665f4cb39f8b649718a1 in 5
+no cad755f7eef616547392fda75299b7605d10b998 in 74
+no c57a1ab9fc2da9ee731b9b1141c7cab5f2d5f18b in 69
+no cde40da02a3934ff90b78aa44d42a616fb2f18d1 in 77
+no 0419d4631741a6605cf760d024fec384f93f1d57 in 4
+no a572c7c482433dd7e1f5f26781a9b0fc416d0345 in 37
+filtering 8 parent commits for file packages/svelte-vscode/package.json
+1 out/out16/CVE-2021-29261/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29261 1617606900
+Original Project = sveltejs_language-tools
+Success (go2)
+Stage 3
+./go3 CVE-2021-29261 out/out16/CVE-2021-29261/results.csv
+out/out16/CVE-2021-29261/results.csv
+out/out16/CVE-2021-29261/results.html
+Success (go3)
+
+
+------------ CVE-2021-29279 (15 of 168)
+Stage 1
+working on CVE-2021-29279, gpac_gpac, reframe_flac.c
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file src/filters/reframe_flac.c
+no 5edeb71186641f2b099dc6f86c1e1e9718873c72 in 94
+no 20677375dc7b726e8eccba488be40a14f273a20b in 32
+no 958e9bcf82f6d42299893a98606bb1abc7e2af8d in 21
+no 84fc58921b6c4ce219f9eeecbc6c4c79649307e4 in 4
+filtering 12 parent commits for file src/filters/reframe_flac.c
+0 out/out16/CVE-2021-29279/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29279 1618863300
+Original Project = gpac_gpac
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29279" failed
+
+------------ CVE-2021-29435 (16 of 168)
+Stage 1
+working on CVE-2021-29435, TrestleAdmin_trestle-auth, authentication.rb
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file lib/trestle/auth/controller/authentication.rb
+filtering 5 parent commits for file lib/trestle/auth/controller/authentication.rb
+0 out/out16/CVE-2021-29435/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29435 1618344900
+Original Project = TrestleAdmin_trestle-auth
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29435" failed
+
+------------ CVE-2021-29463 (17 of 168)
+Stage 1
+working on CVE-2021-29463, Exiv2_exiv2, webpimage.cpp
+Calling ./rgl2 to get all commits
+Error: commit 783b3a6ff15ed6f82a8f8e6c8a6f3b84a9b04d4b not in out/out16/CVE-2021-29463/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-29463"
+
+------------ CVE-2021-29464 (18 of 168)
+Stage 1
+working on CVE-2021-29464, Exiv2_exiv2, jp2image.cpp
+Calling ./rgl2 to get all commits
+Error: commit f9308839198aca5e68a65194f151a1de92398f54 not in out/out16/CVE-2021-29464/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-29464"
+
+------------ CVE-2021-29469 (19 of 168)
+Stage 1
+working on CVE-2021-29469, NodeRedis_node-redis, utils.js
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file lib/utils.js
+filtering 24 parent commits for file lib/utils.js
+0 out/out16/CVE-2021-29469/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29469 1619201700
+Original Project = NodeRedis_node-redis
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29469" failed
+
+------------ CVE-2021-29475 (20 of 168)
+Stage 1
+working on CVE-2021-29475, hedgedoc_hedgedoc, index.js
+Calling ./rgl2 to get all commits
+Error: commit c1789474020a6d668d616464cb2da5e90e123f65 not in out/out16/CVE-2021-29475/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-29475"
+
+------------ CVE-2021-29483 (21 of 168)
+Stage 1
+working on CVE-2021-29483, miraheze_ManageWiki, ApiQueryWikiConfig.php
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file includes/api/ApiQueryWikiConfig.php
+no 4635bbf2a8f364b6fa96139bfcb4f678fe64dae4 in 70
+filtering 9 parent commits for file includes/api/ApiQueryWikiConfig.php
+0 out/out16/CVE-2021-29483/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29483 1619648100
+Original Project = miraheze_ManageWiki
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29483" failed
+
+------------ CVE-2021-29501 (22 of 168)
+Stage 1
+working on CVE-2021-29501, Dav-Git_Dav-Cogs, ticketer.py
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file ticketer/ticketer.py
+filtering 16 parent commits for file ticketer/ticketer.py
+0 out/out16/CVE-2021-29501/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29501 1620666900
+Original Project = Dav-Git_Dav-Cogs
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29501" failed
+
+------------ CVE-2021-29505 (23 of 168)
+Stage 1
+working on CVE-2021-29505, x-stream_xstream, website.xml
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file xstream-distribution/src/content/website.xml
+filtering 27 parent commits for file xstream-distribution/src/content/website.xml
+0 out/out16/CVE-2021-29505/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29505 1622236500
+Original Project = x-stream_xstream
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29505" failed
+
+------------ CVE-2021-29506 (24 of 168)
+Stage 1
+working on CVE-2021-29506, graphhopper_graphhopper, NavigateResource.java
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file navigation/src/main/java/com/graphhopper/navigation/NavigateResource.java
+no e1e873b46f3f9f83ebabde19bc71c9cd333a07e8 in 97
+filtering 2 parent commits for file navigation/src/main/java/com/graphhopper/navigation/NavigateResource.java
+0 out/out16/CVE-2021-29506/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29506 1620933300
+Original Project = graphhopper_graphhopper
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29506" failed
+
+------------ CVE-2021-29511 (25 of 168)
+Stage 1
+working on CVE-2021-29511, rust-blockchain_evm, memory.rs
+Calling ./rgl2 to get all commits
+filtering 16 child commits for file core/src/memory.rs
+filtering 14 parent commits for file core/src/memory.rs
+0 out/out16/CVE-2021-29511/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29511 1620843300
+Original Project = rust-blockchain_evm
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29511" failed
+
+------------ CVE-2021-29512 (26 of 168)
+Stage 1
+working on CVE-2021-29512, tensorflow_tensorflow, bincount_op.cc
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file tensorflow/core/kernels/bincount_op.cc
+no 7a4591fd4f065f4fa903593bc39b2f79530a74b8 in 122
+no 4a684f1ca9e1cbf845a9cec2185e844429e2d8c8 in 74
+no bf4c14353c2328636a18bfad1e151052c81d5f43 in 63
+no 40adbe4dd15b582b0210dfbf40c243a62f5119fa in 64
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+no 7019ce4f68925fd01cdafde26f8d8c938f47e6f9 in 112
+filtering 10 parent commits for file tensorflow/core/kernels/bincount_op.cc
+0 out/out16/CVE-2021-29512/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29512 1621019700
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29512" failed
+
+------------ CVE-2021-29513 (27 of 168)
+Stage 1
+working on CVE-2021-29513, tensorflow_tensorflow, ndarray_tensor.cc
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file tensorflow/python/lib/core/ndarray_tensor.cc
+no 079e16663a0a060010a9113073c1823b3412de0f in 7
+filtering 24 parent commits for file tensorflow/python/lib/core/ndarray_tensor.cc
+0 out/out16/CVE-2021-29513/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29513 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29513" failed
+
+------------ CVE-2021-29514 (28 of 168)
+Stage 1
+working on CVE-2021-29514, tensorflow_tensorflow, bincount_op.cc
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file tensorflow/core/kernels/bincount_op.cc
+no 7a4591fd4f065f4fa903593bc39b2f79530a74b8 in 122
+no 4a684f1ca9e1cbf845a9cec2185e844429e2d8c8 in 74
+no bf4c14353c2328636a18bfad1e151052c81d5f43 in 63
+no 40adbe4dd15b582b0210dfbf40c243a62f5119fa in 64
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+no 7019ce4f68925fd01cdafde26f8d8c938f47e6f9 in 112
+filtering 10 parent commits for file tensorflow/core/kernels/bincount_op.cc
+0 out/out16/CVE-2021-29514/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29514 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29514" failed
+
+------------ CVE-2021-29515 (29 of 168)
+Stage 1
+working on CVE-2021-29515, tensorflow_tensorflow, matrix_diag_op.cc
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file tensorflow/core/kernels/linalg/matrix_diag_op.cc
+filtering 3 parent commits for file tensorflow/core/kernels/linalg/matrix_diag_op.cc
+0 out/out16/CVE-2021-29515/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29515 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29515" failed
+
+------------ CVE-2021-29516 (30 of 168)
+Stage 1
+working on CVE-2021-29516, tensorflow_tensorflow, ragged_tensor_to_variant_op.cc
+Calling ./rgl2 to get all commits
+filtering 9 child commits for file tensorflow/core/kernels/ragged_tensor_to_variant_op.cc
+no 88f93dfe691563baa4ae1e80ccde2d5c7a143821 in 8
+no 9166effef59dcc719358026018e5253ddcd001d6 in 17
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+no cea49f4321d2f124782e673a2498ebe2ce262129 in 78
+no 8aa22c42ed3d7212ff1741a855a0aa344617571c in 10
+no e1e7c6571f4b058aeead4f2f9aa1ff560a83daa8 in 97
+filtering 11 parent commits for file tensorflow/core/kernels/ragged_tensor_to_variant_op.cc
+0 out/out16/CVE-2021-29516/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29516 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29516" failed
+
+------------ CVE-2021-29517 (31 of 168)
+Stage 1
+working on CVE-2021-29517, tensorflow_tensorflow, conv_ops_3d.cc
+Calling ./rgl2 to get all commits
+Error: commit 799f835a3dfa00a4d852defa29b15841eea9d64f not in out/out16/CVE-2021-29517/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-29517"
+
+------------ CVE-2021-29518 (32 of 168)
+Stage 1
+working on CVE-2021-29518, tensorflow_tensorflow, session_ops.cc
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/core/kernels/session_ops.cc
+no cff267650c6a1b266e4b4500f69fbc49cdd773c5 in 79
+no 48305e8ffe5246d67570b64096a96f8e315a7281 in 72
+filtering 11 parent commits for file tensorflow/core/kernels/session_ops.cc
+ssh: Could not resolve hostname da5: Name or service not known
+0 out/out16/CVE-2021-29518/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29518 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29518" failed
+
+------------ CVE-2021-29519 (33 of 168)
+Stage 1
+working on CVE-2021-29519, tensorflow_tensorflow, sparse_cross_op.cc
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file tensorflow/core/kernels/sparse_cross_op.cc
+no 83dcb4dbfa094e33db084e97c4d0531a559e0ebf in 3
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+filtering 15 parent commits for file tensorflow/core/kernels/sparse_cross_op.cc
+0 out/out16/CVE-2021-29519/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29519 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29519" failed
+
+------------ CVE-2021-29520 (34 of 168)
+Stage 1
+working on CVE-2021-29520, tensorflow_tensorflow, conv_grad_ops_3d.cc
+Calling ./rgl2 to get all commits
+filtering 26 child commits for file tensorflow/core/kernels/conv_grad_ops_3d.cc
+no 9fe5cd080f7180a2f504b1de3ebb1e3f9cb324d2 in 31
+no 4ee6576068cdd8964cdd527399a1a2d2a8d597ca in 78
+no e4fdc0c71c4cc97030a3b141ca8f005bcc09b9cf in 100
+no 12cb0f37bf36a52cb469537092cd2bbe80725049 in 18
+no 4546aaf62970b7f1b7495ab979a253384331889a in 69
+no 174c5096f303d5be7ed2ca2662b08371bff4ab88 in 23
+filtering 4 parent commits for file tensorflow/core/kernels/conv_grad_ops_3d.cc
+0 out/out16/CVE-2021-29520/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29520 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29520" failed
+
+------------ CVE-2021-29521 (35 of 168)
+Stage 1
+working on CVE-2021-29521, tensorflow_tensorflow, count_ops.cc
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file tensorflow/core/kernels/count_ops.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+no 881676cfd6264a12eb32bafa3db5f63cf6c40970 in 8
+no 6f4d3e8139ec724dbbcb40505891c81dd1052c4a in 111
+no adbbabdb0d3abb3cdeac69e38a96de1d678b24b3 in 45
+no 2b7100d6cdff36aa21010a82269bc05a6d1cc74a in 43
+filtering 6 parent commits for file tensorflow/core/kernels/count_ops.cc
+0 out/out16/CVE-2021-29521/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29521 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29521" failed
+
+------------ CVE-2021-29522 (36 of 168)
+Stage 1
+working on CVE-2021-29522, tensorflow_tensorflow, conv_grad_ops_3d.cc
+Calling ./rgl2 to get all commits
+filtering 25 child commits for file tensorflow/core/kernels/conv_grad_ops_3d.cc
+no 9fe5cd080f7180a2f504b1de3ebb1e3f9cb324d2 in 31
+no 4ee6576068cdd8964cdd527399a1a2d2a8d597ca in 78
+no e4fdc0c71c4cc97030a3b141ca8f005bcc09b9cf in 100
+no 12cb0f37bf36a52cb469537092cd2bbe80725049 in 18
+no 4546aaf62970b7f1b7495ab979a253384331889a in 69
+no 174c5096f303d5be7ed2ca2662b08371bff4ab88 in 23
+filtering 5 parent commits for file tensorflow/core/kernels/conv_grad_ops_3d.cc
+0 out/out16/CVE-2021-29522/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29522 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29522" failed
+
+------------ CVE-2021-29523 (37 of 168)
+Stage 1
+working on CVE-2021-29523, tensorflow_tensorflow, sparse_tensors_map_ops.cc
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file tensorflow/core/kernels/sparse_tensors_map_ops.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+no a68f68061e263a88321c104a6c911fe5598050a8 in 38
+no b51b82fe65ebace4475e3c54eb089c18a4403f1c in 53
+filtering 9 parent commits for file tensorflow/core/kernels/sparse_tensors_map_ops.cc
+0 out/out16/CVE-2021-29523/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29523 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29523" failed
+
+------------ CVE-2021-29524 (38 of 168)
+Stage 1
+working on CVE-2021-29524, tensorflow_tensorflow, conv_grad_shape_utils.cc
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file tensorflow/core/kernels/conv_grad_shape_utils.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+filtering 7 parent commits for file tensorflow/core/kernels/conv_grad_shape_utils.cc
+0 out/out16/CVE-2021-29524/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29524 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29524" failed
+
+------------ CVE-2021-29525 (39 of 168)
+Stage 1
+working on CVE-2021-29525, tensorflow_tensorflow, conv_grad_input_ops.h
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/core/kernels/conv_grad_input_ops.h
+no tree 7f45a3bdbc5fa41c4f4305cd98b642c646331e44 for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 4904e37ea19436b6693ad6b2211a3a6e9a41b8d5 for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree cf2aa0d641f2abc349aeda7dcf503bdbbd7853af for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree e1eb85cc22a5adc69f1a67b94f94c468e984cffb for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree d57ff54151fe980803d79f131da454ca32c7d94f for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 67c1fa74c5b1763271dc091ddf4eed741a3ef34d for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 013722a83705e10150eb958c47324814b3211af3 for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree ed2cd77c7f44183a2b338ec854eb3d360c70a5bd for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree c3460ee77f9a3caa9e2f2cb4d105ce6d5f07651c for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 0d27602d39f26a08d4a23f39e9fb80f3ca1ebf91 for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 8728c0e9355e68ddb7d0921ee308f1ad02e59a96 for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 991c8206f321817486c0e5e72d183aa9cf1c17fe for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 87c9ae03885803a079cdb97e75e52471994adc32 for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 2ba2293110ce85ffdaa70e8f84e362e6e90468be for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree f9d144b875558fe675df46b5c3a766bd7e85122b for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 672da6db86fa02a7a3a75bd7f2647ff7a87e501b for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 93199532f148194d2255029fc84510c575bb402a for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 43dfcb2a3b5efccaf62d27173be9ea28f9b4a014 for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 81a1cae20dcdf1a0c1cafd34f71ff6cf6c01c242 for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 0d1d746b7dcbb8fb4227d785d6d972716cd969cb for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree c3b2f1bfb2198e46ec9b954e442d39741602c75e for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 7f6002b9e6c64ef3406c614ab374d4ba842de058 for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree a5a7cbf042f2c3a6e6eb4e45d9048d61bc59f225 for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 312980f818d40ac2074735b7413c7cd2b59dbc1f for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 1f50c6e541106367dc0aad301826153e6c3a7f96 for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 49ca894db74a9b5d053fc696d0ac76764382eae2 for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 37aa500dd1cf1f4bdaaa7b1b7314e733d2f32777 for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 0d476c599cdccdd53e6d292d5b995af622dbac1b for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+no tree 13d30126a7fced59d5003012d68cfeb94ee595ac for commit 87e0abde2e51fa8c4cc10a683a226e378ca95576
+filtering 2 parent commits for file tensorflow/core/kernels/conv_grad_input_ops.h
+1 out/out16/CVE-2021-29525/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29525 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29525" failed
+
+------------ CVE-2021-29526 (40 of 168)
+Stage 1
+working on CVE-2021-29526, tensorflow_tensorflow, conv_ops.cc
+Calling ./rgl2 to get all commits
+Error: commit b12aa1d44352de21d1a6faaf04172d8c2508b42b not in out/out16/CVE-2021-29526/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-29526"
+
+------------ CVE-2021-29527 (41 of 168)
+Stage 1
+working on CVE-2021-29527, tensorflow_tensorflow, quantized_conv_ops.cc
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file tensorflow/core/kernels/quantized_conv_ops.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+no 0f0b080ecde4d3dfec158d6f60da34d5e31693c4 in 15
+filtering 21 parent commits for file tensorflow/core/kernels/quantized_conv_ops.cc
+0 out/out16/CVE-2021-29527/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29527 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29527" failed
+
+------------ CVE-2021-29528 (42 of 168)
+Stage 1
+working on CVE-2021-29528, tensorflow_tensorflow, quantized_mul_op.cc
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file tensorflow/core/kernels/quantized_mul_op.cc
+filtering 3 parent commits for file tensorflow/core/kernels/quantized_mul_op.cc
+0 out/out16/CVE-2021-29528/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29528 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29528" failed
+
+------------ CVE-2021-29529 (43 of 168)
+Stage 1
+working on CVE-2021-29529, tensorflow_tensorflow, quantized_resize_bilinear_op.cc
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file tensorflow/core/kernels/quantized_resize_bilinear_op.cc
+filtering 8 parent commits for file tensorflow/core/kernels/quantized_resize_bilinear_op.cc
+0 out/out16/CVE-2021-29529/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29529 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29529" failed
+
+------------ CVE-2021-29530 (44 of 168)
+Stage 1
+working on CVE-2021-29530, tensorflow_tensorflow, sparse_cholesky_op.cc
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/core/kernels/sparse/sparse_cholesky_op.cc
+no a2f82b02e0038110593536a10bdad4d4f501ed37 in 34
+filtering 5 parent commits for file tensorflow/core/kernels/sparse/sparse_cholesky_op.cc
+0 out/out16/CVE-2021-29530/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29530 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29530" failed
+
+------------ CVE-2021-29531 (45 of 168)
+Stage 1
+working on CVE-2021-29531, tensorflow_tensorflow, encode_png_op.cc
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file tensorflow/core/kernels/image/encode_png_op.cc
+filtering 1 parent commits for file tensorflow/core/kernels/image/encode_png_op.cc
+0 out/out16/CVE-2021-29531/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29531 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29531" failed
+
+------------ CVE-2021-29532 (46 of 168)
+Stage 1
+working on CVE-2021-29532, tensorflow_tensorflow, ragged_cross_op.cc
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/core/kernels/ragged_cross_op.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+filtering 1 parent commits for file tensorflow/core/kernels/ragged_cross_op.cc
+0 out/out16/CVE-2021-29532/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29532 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29532" failed
+
+------------ CVE-2021-29533 (47 of 168)
+Stage 1
+working on CVE-2021-29533, tensorflow_tensorflow, draw_bounding_box_op.cc
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file tensorflow/core/kernels/image/draw_bounding_box_op.cc
+no da0d65cdc1270038e72157ba35bf74b85d9bda11 in 90
+no tree 7f45a3bdbc5fa41c4f4305cd98b642c646331e44 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree 0d79b96317acdcf4059dadb6b680cd2b0d7908bf for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree 87c0d7e71f830b1bff7d78042894c0520a789220 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree dbce44a69a9bc2ec4bb0bcd5cdac7f55da89f1f5 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree c98dcd05919346c24c0b4d9f4d6e0c9b13a37328 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree f9d144b875558fe675df46b5c3a766bd7e85122b for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree 9f07e89614e4237fe8a745d4820c2548f5bf14c8 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree 93199532f148194d2255029fc84510c575bb402a for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree 3dd1efcf4c94666e409d4fdd622e37ba3160f416 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree e77f06412114f7b218c788efc792b41756410ba8 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree e719acba12ac613035c10a5dfdd52afd92f86167 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree 93c578b86a5a903011a137a57365e535b10ecfe9 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree e16acc3b4ea2db610f40e08bdb03bd6fa35c8d28 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree 4931b9a0c4eef103af0ceff1de0bcd63cec11943 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree c90d3b9791037048d1d5521ca333f99b77fa40e3 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+filtering 1 parent commits for file tensorflow/core/kernels/image/draw_bounding_box_op.cc
+0 out/out16/CVE-2021-29533/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29533 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29533" failed
+
+------------ CVE-2021-29534 (48 of 168)
+Stage 1
+working on CVE-2021-29534, tensorflow_tensorflow, sparse_tensors_map_ops.cc
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file tensorflow/core/kernels/sparse_tensors_map_ops.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+no a68f68061e263a88321c104a6c911fe5598050a8 in 38
+no b51b82fe65ebace4475e3c54eb089c18a4403f1c in 53
+filtering 9 parent commits for file tensorflow/core/kernels/sparse_tensors_map_ops.cc
+0 out/out16/CVE-2021-29534/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29534 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29534" failed
+
+------------ CVE-2021-29535 (49 of 168)
+Stage 1
+working on CVE-2021-29535, tensorflow_tensorflow, quantized_mul_op.cc
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file tensorflow/core/kernels/quantized_mul_op.cc
+filtering 4 parent commits for file tensorflow/core/kernels/quantized_mul_op.cc
+0 out/out16/CVE-2021-29535/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29535 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29535" failed
+
+------------ CVE-2021-29536 (50 of 168)
+Stage 1
+working on CVE-2021-29536, tensorflow_tensorflow, quantized_reshape_op.cc
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file tensorflow/core/kernels/quantized_reshape_op.cc
+filtering 2 parent commits for file tensorflow/core/kernels/quantized_reshape_op.cc
+0 out/out16/CVE-2021-29536/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29536 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29536" failed
+
+------------ CVE-2021-29537 (51 of 168)
+Stage 1
+working on CVE-2021-29537, tensorflow_tensorflow, quantized_resize_bilinear_op.cc
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file tensorflow/core/kernels/quantized_resize_bilinear_op.cc
+filtering 9 parent commits for file tensorflow/core/kernels/quantized_resize_bilinear_op.cc
+0 out/out16/CVE-2021-29537/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29537 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29537" failed
+
+------------ CVE-2021-29538 (52 of 168)
+Stage 1
+working on CVE-2021-29538, tensorflow_tensorflow, conv_grad_filter_ops.cc
+Calling ./rgl2 to get all commits
+filtering 26 child commits for file tensorflow/core/kernels/conv_grad_filter_ops.cc
+no 9fe5cd080f7180a2f504b1de3ebb1e3f9cb324d2 in 31
+no 4ee6576068cdd8964cdd527399a1a2d2a8d597ca in 78
+no e4fdc0c71c4cc97030a3b141ca8f005bcc09b9cf in 100
+no 8ee6744dc93d84bf9e68271f183fdafee1974576 in 14
+no 12cb0f37bf36a52cb469537092cd2bbe80725049 in 18
+no 4546aaf62970b7f1b7495ab979a253384331889a in 69
+no f8fcb1a74289d2260747c1809e52aba3eb5614a5 in 120
+filtering 4 parent commits for file tensorflow/core/kernels/conv_grad_filter_ops.cc
+0 out/out16/CVE-2021-29538/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29538 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29538" failed
+
+------------ CVE-2021-29539 (53 of 168)
+Stage 1
+working on CVE-2021-29539, tensorflow_tensorflow, immutable_constant_op.cc
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file tensorflow/core/kernels/immutable_constant_op.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+filtering 7 parent commits for file tensorflow/core/kernels/immutable_constant_op.cc
+0 out/out16/CVE-2021-29539/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29539 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29539" failed
+
+------------ CVE-2021-29540 (54 of 168)
+Stage 1
+working on CVE-2021-29540, tensorflow_tensorflow, conv_grad_filter_ops.cc
+Calling ./rgl2 to get all commits
+filtering 26 child commits for file tensorflow/core/kernels/conv_grad_filter_ops.cc
+no 9fe5cd080f7180a2f504b1de3ebb1e3f9cb324d2 in 31
+no 4ee6576068cdd8964cdd527399a1a2d2a8d597ca in 78
+no e4fdc0c71c4cc97030a3b141ca8f005bcc09b9cf in 100
+no 8ee6744dc93d84bf9e68271f183fdafee1974576 in 14
+no 12cb0f37bf36a52cb469537092cd2bbe80725049 in 18
+no 4546aaf62970b7f1b7495ab979a253384331889a in 69
+no f8fcb1a74289d2260747c1809e52aba3eb5614a5 in 120
+filtering 4 parent commits for file tensorflow/core/kernels/conv_grad_filter_ops.cc
+0 out/out16/CVE-2021-29540/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29540 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29540" failed
+
+------------ CVE-2021-29543 (55 of 168)
+Stage 1
+working on CVE-2021-29543, tensorflow_tensorflow, ctc_decoder_ops.cc
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file tensorflow/core/kernels/ctc_decoder_ops.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+filtering 14 parent commits for file tensorflow/core/kernels/ctc_decoder_ops.cc
+0 out/out16/CVE-2021-29543/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29543 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29543" failed
+
+------------ CVE-2021-29544 (56 of 168)
+Stage 1
+working on CVE-2021-29544, tensorflow_tensorflow, quantize_and_dequantize_op.cc
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/core/kernels/quantize_and_dequantize_op.cc
+no 098e7762d909bac47ce1dbabe6dfd06294cb9d58 in 9
+filtering 24 parent commits for file tensorflow/core/kernels/quantize_and_dequantize_op.cc
+0 out/out16/CVE-2021-29544/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29544 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29544" failed
+
+------------ CVE-2021-29545 (57 of 168)
+Stage 1
+working on CVE-2021-29545, tensorflow_tensorflow, kernels.cc
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/core/kernels/sparse/kernels.cc
+no a2f82b02e0038110593536a10bdad4d4f501ed37 in 34
+filtering 3 parent commits for file tensorflow/core/kernels/sparse/kernels.cc
+0 out/out16/CVE-2021-29545/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29545 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29545" failed
+
+------------ CVE-2021-29546 (58 of 168)
+Stage 1
+working on CVE-2021-29546, tensorflow_tensorflow, quantized_bias_add_op.cc
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file tensorflow/core/kernels/quantized_bias_add_op.cc
+no 785d67a78a1d533759fcd2f5e8d6ef778de849e0 in 120
+filtering 6 parent commits for file tensorflow/core/kernels/quantized_bias_add_op.cc
+0 out/out16/CVE-2021-29546/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29546 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29546" failed
+
+------------ CVE-2021-29547 (59 of 168)
+Stage 1
+working on CVE-2021-29547, tensorflow_tensorflow, quantized_batch_norm_op.cc
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file tensorflow/core/kernels/quantized_batch_norm_op.cc
+filtering 4 parent commits for file tensorflow/core/kernels/quantized_batch_norm_op.cc
+0 out/out16/CVE-2021-29547/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29547 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29547" failed
+
+------------ CVE-2021-29548 (60 of 168)
+Stage 1
+working on CVE-2021-29548, tensorflow_tensorflow, quantized_batch_norm_op.cc
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file tensorflow/core/kernels/quantized_batch_norm_op.cc
+filtering 4 parent commits for file tensorflow/core/kernels/quantized_batch_norm_op.cc
+0 out/out16/CVE-2021-29548/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29548 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29548" failed
+
+------------ CVE-2021-29549 (61 of 168)
+Stage 1
+working on CVE-2021-29549, tensorflow_tensorflow, quantized_add_op.cc
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/core/kernels/quantized_add_op.cc
+no 49b3824d83af706df0ad07e4e677d88659756d89 in 73
+filtering 3 parent commits for file tensorflow/core/kernels/quantized_add_op.cc
+0 out/out16/CVE-2021-29549/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29549 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29549" failed
+
+------------ CVE-2021-29550 (62 of 168)
+Stage 1
+working on CVE-2021-29550, tensorflow_tensorflow, fractional_avg_pool_op.cc
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file tensorflow/core/kernels/fractional_avg_pool_op.cc
+no 002408c3696b173863228223d535f9de72a101a9 in 0
+filtering 9 parent commits for file tensorflow/core/kernels/fractional_avg_pool_op.cc
+0 out/out16/CVE-2021-29550/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29550 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29550" failed
+
+------------ CVE-2021-29551 (63 of 168)
+Stage 1
+working on CVE-2021-29551, tensorflow_tensorflow, matrix_triangular_solve_op_impl.h
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file tensorflow/core/kernels/linalg/matrix_triangular_solve_op_impl.h
+no 54d32d1ee15a55a6294a97d5f42e7da3c34a9355 in 84
+filtering 3 parent commits for file tensorflow/core/kernels/linalg/matrix_triangular_solve_op_impl.h
+0 out/out16/CVE-2021-29551/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29551 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29551" failed
+
+------------ CVE-2021-29552 (64 of 168)
+Stage 1
+working on CVE-2021-29552, tensorflow_tensorflow, unsorted_segment_join_op.cc
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file tensorflow/core/kernels/unsorted_segment_join_op.cc
+no 13d38a07ce9143e044aa737cfd7bb759d0e9b400 in 19
+no 20cb18724b0bf6c09071a3f53434c4eec53cc147 in 32
+no 84563f265f28b3c36a15335c8b005d405260e943 in 4
+filtering 3 parent commits for file tensorflow/core/kernels/unsorted_segment_join_op.cc
+0 out/out16/CVE-2021-29552/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29552 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29552" failed
+
+------------ CVE-2021-29553 (65 of 168)
+Stage 1
+working on CVE-2021-29553, tensorflow_tensorflow, quantize_and_dequantize_op.cc
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file tensorflow/core/kernels/quantize_and_dequantize_op.cc
+no 098e7762d909bac47ce1dbabe6dfd06294cb9d58 in 9
+filtering 25 parent commits for file tensorflow/core/kernels/quantize_and_dequantize_op.cc
+0 out/out16/CVE-2021-29553/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29553 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29553" failed
+
+------------ CVE-2021-29554 (66 of 168)
+Stage 1
+working on CVE-2021-29554, tensorflow_tensorflow, count_ops.cc
+Calling ./rgl2 to get all commits
+filtering 9 child commits for file tensorflow/core/kernels/count_ops.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+no 881676cfd6264a12eb32bafa3db5f63cf6c40970 in 8
+no 6f4d3e8139ec724dbbcb40505891c81dd1052c4a in 111
+no adbbabdb0d3abb3cdeac69e38a96de1d678b24b3 in 45
+no 2b7100d6cdff36aa21010a82269bc05a6d1cc74a in 43
+filtering 7 parent commits for file tensorflow/core/kernels/count_ops.cc
+0 out/out16/CVE-2021-29554/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29554 1621019700
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29554" failed
+
+------------ CVE-2021-29555 (67 of 168)
+Stage 1
+working on CVE-2021-29555, tensorflow_tensorflow, fused_batch_norm_op.cc
+Calling ./rgl2 to get all commits
+filtering 17 child commits for file tensorflow/core/kernels/fused_batch_norm_op.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+no b89a2f2a1b761ac68aa808f2bcd847314b15c6c1 in 56
+no d7ea6945dd4d75d967ecdf7b88c2a24f981c5b9e in 87
+filtering 13 parent commits for file tensorflow/core/kernels/fused_batch_norm_op.cc
+0 out/out16/CVE-2021-29555/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29555 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29555" failed
+
+------------ CVE-2021-29556 (68 of 168)
+Stage 1
+working on CVE-2021-29556, tensorflow_tensorflow, reverse_op.cc
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/core/kernels/reverse_op.cc
+filtering 25 parent commits for file tensorflow/core/kernels/reverse_op.cc
+0 out/out16/CVE-2021-29556/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29556 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29556" failed
+
+------------ CVE-2021-29557 (69 of 168)
+Stage 1
+working on CVE-2021-29557, tensorflow_tensorflow, sparse_matmul_op.cc
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file tensorflow/core/kernels/sparse_matmul_op.cc
+no b89a2f2a1b761ac68aa808f2bcd847314b15c6c1 in 56
+filtering 27 parent commits for file tensorflow/core/kernels/sparse_matmul_op.cc
+0 out/out16/CVE-2021-29557/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29557 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29557" failed
+
+------------ CVE-2021-29558 (70 of 168)
+Stage 1
+working on CVE-2021-29558, tensorflow_tensorflow, sparse_tensor.h
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file tensorflow/core/util/sparse/sparse_tensor.h
+no 981d819e60a294c5c286f8509b1c70b3ac57798f in 24
+no 000e37b4bcc8fca2cf1e3c7369878bc6b3c5f4cb in 0
+no 512a76de0cac604fff35b1311433746af1c82892 in 81
+filtering 24 parent commits for file tensorflow/core/util/sparse/sparse_tensor.h
+0 out/out16/CVE-2021-29558/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29558 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29558" failed
+
+------------ CVE-2021-29559 (71 of 168)
+Stage 1
+working on CVE-2021-29559, tensorflow_tensorflow, unicode_ops.cc
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file tensorflow/core/kernels/unicode_ops.cc
+no 3884040df7444ad3b2a22cec653ad7953ca4aba8 in 56
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+filtering 12 parent commits for file tensorflow/core/kernels/unicode_ops.cc
+0 out/out16/CVE-2021-29559/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29559 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29559" failed
+
+------------ CVE-2021-29560 (72 of 168)
+Stage 1
+working on CVE-2021-29560, tensorflow_tensorflow, ragged_tensor_to_tensor_op.cc
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file tensorflow/core/kernels/ragged_tensor_to_tensor_op.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+filtering 14 parent commits for file tensorflow/core/kernels/ragged_tensor_to_tensor_op.cc
+0 out/out16/CVE-2021-29560/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29560 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29560" failed
+
+------------ CVE-2021-29561 (73 of 168)
+Stage 1
+working on CVE-2021-29561, tensorflow_tensorflow, load_and_remap_matrix_op.cc
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/core/kernels/load_and_remap_matrix_op.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+no 3150642acbbe254e3c3c5d2232143fa591855ac9 in 49
+filtering 3 parent commits for file tensorflow/core/kernels/load_and_remap_matrix_op.cc
+0 out/out16/CVE-2021-29561/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29561 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29561" failed
+
+------------ CVE-2021-29562 (74 of 168)
+Stage 1
+working on CVE-2021-29562, tensorflow_tensorflow, fft_ops.cc
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file tensorflow/core/kernels/fft_ops.cc
+no 0a8a781e597b18ead006d19b7d23d0a369e9ad73 in 10
+no 199f1ff12a28d571100b323ec54a5eee47078d8b in 25
+filtering 24 parent commits for file tensorflow/core/kernels/fft_ops.cc
+0 out/out16/CVE-2021-29562/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29562 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29562" failed
+
+------------ CVE-2021-29563 (75 of 168)
+Stage 1
+working on CVE-2021-29563, tensorflow_tensorflow, fft_ops.cc
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/core/kernels/fft_ops.cc
+no 0a8a781e597b18ead006d19b7d23d0a369e9ad73 in 10
+no 199f1ff12a28d571100b323ec54a5eee47078d8b in 25
+filtering 25 parent commits for file tensorflow/core/kernels/fft_ops.cc
+0 out/out16/CVE-2021-29563/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29563 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29563" failed
+
+------------ CVE-2021-29564 (76 of 168)
+Stage 1
+working on CVE-2021-29564, tensorflow_tensorflow, edit_distance_op.cc
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file tensorflow/core/kernels/edit_distance_op.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+no dddbc30cd16de33b55ad3b592001661a4ae58f10 in 93
+no 4510c68b7a32547e14f7b88c2bd5a59640380073 in 69
+no 30721cf564cb029d34535446d6a5a6357bebc8e7 in 48
+filtering 14 parent commits for file tensorflow/core/kernels/edit_distance_op.cc
+0 out/out16/CVE-2021-29564/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29564 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29564" failed
+
+------------ CVE-2021-29565 (77 of 168)
+Stage 1
+working on CVE-2021-29565, tensorflow_tensorflow, sparse_fill_empty_rows_op.cc
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file tensorflow/core/kernels/sparse_fill_empty_rows_op.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+no 8baa0b7252ef1e6bb4368f577f0e2e8a248fe7a5 in 11
+filtering 23 parent commits for file tensorflow/core/kernels/sparse_fill_empty_rows_op.cc
+0 out/out16/CVE-2021-29565/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29565 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29565" failed
+
+------------ CVE-2021-29566 (78 of 168)
+Stage 1
+working on CVE-2021-29566, tensorflow_tensorflow, dilation_ops.cc
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file tensorflow/core/kernels/dilation_ops.cc
+filtering 5 parent commits for file tensorflow/core/kernels/dilation_ops.cc
+0 out/out16/CVE-2021-29566/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29566 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29566" failed
+
+------------ CVE-2021-29567 (79 of 168)
+Stage 1
+working on CVE-2021-29567, tensorflow_tensorflow, sparse_dense_binary_op_shared.cc
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file tensorflow/core/kernels/sparse_dense_binary_op_shared.cc
+no e952a89b7026b98fe8cbe626514a93ed68b7c510 in 105
+no 1b54cadd19391b60b6fcccd8d076426f7221d5e8 in 27
+filtering 11 parent commits for file tensorflow/core/kernels/sparse_dense_binary_op_shared.cc
+0 out/out16/CVE-2021-29567/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29567 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29567" failed
+
+------------ CVE-2021-29568 (80 of 168)
+Stage 1
+working on CVE-2021-29568, tensorflow_tensorflow, parameterized_truncated_normal_op.cc
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file tensorflow/core/kernels/parameterized_truncated_normal_op.cc
+no 72180be03447a10810edca700cbc9af690dfeb51 in 114
+filtering 12 parent commits for file tensorflow/core/kernels/parameterized_truncated_normal_op.cc
+0 out/out16/CVE-2021-29568/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29568 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29568" failed
+
+------------ CVE-2021-29569 (81 of 168)
+Stage 1
+working on CVE-2021-29569, tensorflow_tensorflow, requantization_range_op.cc
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file tensorflow/core/kernels/requantization_range_op.cc
+filtering 2 parent commits for file tensorflow/core/kernels/requantization_range_op.cc
+0 out/out16/CVE-2021-29569/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29569 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29569" failed
+
+------------ CVE-2021-29570 (82 of 168)
+Stage 1
+working on CVE-2021-29570, tensorflow_tensorflow, maxpooling_op.cc
+Calling ./rgl2 to get all commits
+filtering 15 child commits for file tensorflow/core/kernels/maxpooling_op.cc
+filtering 15 parent commits for file tensorflow/core/kernels/maxpooling_op.cc
+0 out/out16/CVE-2021-29570/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29570 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29570" failed
+
+------------ CVE-2021-29571 (83 of 168)
+Stage 1
+working on CVE-2021-29571, tensorflow_tensorflow, draw_bounding_box_op.cc
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/core/kernels/image/draw_bounding_box_op.cc
+no da0d65cdc1270038e72157ba35bf74b85d9bda11 in 90
+no tree 7f45a3bdbc5fa41c4f4305cd98b642c646331e44 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree 0d79b96317acdcf4059dadb6b680cd2b0d7908bf for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree 87c0d7e71f830b1bff7d78042894c0520a789220 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree dbce44a69a9bc2ec4bb0bcd5cdac7f55da89f1f5 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree c98dcd05919346c24c0b4d9f4d6e0c9b13a37328 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree f9d144b875558fe675df46b5c3a766bd7e85122b for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree 9f07e89614e4237fe8a745d4820c2548f5bf14c8 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree 93199532f148194d2255029fc84510c575bb402a for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree 3dd1efcf4c94666e409d4fdd622e37ba3160f416 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree e77f06412114f7b218c788efc792b41756410ba8 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree e719acba12ac613035c10a5dfdd52afd92f86167 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree 93c578b86a5a903011a137a57365e535b10ecfe9 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree e16acc3b4ea2db610f40e08bdb03bd6fa35c8d28 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree 4931b9a0c4eef103af0ceff1de0bcd63cec11943 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+no tree c90d3b9791037048d1d5521ca333f99b77fa40e3 for commit a46d8e30860473a7ae6d4ab7e67cc457b9a8daf7
+filtering 2 parent commits for file tensorflow/core/kernels/image/draw_bounding_box_op.cc
+0 out/out16/CVE-2021-29571/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29571 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29571" failed
+
+------------ CVE-2021-29572 (84 of 168)
+Stage 1
+working on CVE-2021-29572, tensorflow_tensorflow, sdca_internal.cc
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file tensorflow/core/kernels/sdca_internal.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+filtering 12 parent commits for file tensorflow/core/kernels/sdca_internal.cc
+0 out/out16/CVE-2021-29572/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29572 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29572" failed
+
+------------ CVE-2021-29573 (85 of 168)
+Stage 1
+working on CVE-2021-29573, tensorflow_tensorflow, maxpooling_op.cc
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file tensorflow/core/kernels/maxpooling_op.cc
+filtering 16 parent commits for file tensorflow/core/kernels/maxpooling_op.cc
+0 out/out16/CVE-2021-29573/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29573 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29573" failed
+
+------------ CVE-2021-29574 (86 of 168)
+Stage 1
+working on CVE-2021-29574, tensorflow_tensorflow, pooling_ops_3d.cc
+Calling ./rgl2 to get all commits
+filtering 12 child commits for file tensorflow/core/kernels/pooling_ops_3d.cc
+no 9178ac9d6389bdc54638ab913ea0e419234d14eb in 17
+no b89a2f2a1b761ac68aa808f2bcd847314b15c6c1 in 56
+filtering 14 parent commits for file tensorflow/core/kernels/pooling_ops_3d.cc
+0 out/out16/CVE-2021-29574/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29574 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29574" failed
+
+------------ CVE-2021-29575 (87 of 168)
+Stage 1
+working on CVE-2021-29575, tensorflow_tensorflow, reverse_sequence_op.cc
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file tensorflow/core/kernels/reverse_sequence_op.cc
+no 83767b3f90202b842713248329a5b4a4149959ee in 3
+filtering 15 parent commits for file tensorflow/core/kernels/reverse_sequence_op.cc
+0 out/out16/CVE-2021-29575/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29575 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29575" failed
+
+------------ CVE-2021-29576 (88 of 168)
+Stage 1
+working on CVE-2021-29576, tensorflow_tensorflow, pooling_ops_3d.cc
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file tensorflow/core/kernels/pooling_ops_3d.cc
+no 9178ac9d6389bdc54638ab913ea0e419234d14eb in 17
+no b89a2f2a1b761ac68aa808f2bcd847314b15c6c1 in 56
+filtering 15 parent commits for file tensorflow/core/kernels/pooling_ops_3d.cc
+0 out/out16/CVE-2021-29576/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29576 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29576" failed
+
+------------ CVE-2021-29577 (89 of 168)
+Stage 1
+working on CVE-2021-29577, tensorflow_tensorflow, pooling_ops_3d.cc
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file tensorflow/core/kernels/pooling_ops_3d.cc
+no 9178ac9d6389bdc54638ab913ea0e419234d14eb in 17
+no b89a2f2a1b761ac68aa808f2bcd847314b15c6c1 in 56
+filtering 16 parent commits for file tensorflow/core/kernels/pooling_ops_3d.cc
+0 out/out16/CVE-2021-29577/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29577 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29577" failed
+
+------------ CVE-2021-29578 (90 of 168)
+Stage 1
+working on CVE-2021-29578, tensorflow_tensorflow, fractional_avg_pool_op.cc
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/core/kernels/fractional_avg_pool_op.cc
+no 002408c3696b173863228223d535f9de72a101a9 in 0
+filtering 10 parent commits for file tensorflow/core/kernels/fractional_avg_pool_op.cc
+0 out/out16/CVE-2021-29578/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29578 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29578" failed
+
+------------ CVE-2021-29579 (91 of 168)
+Stage 1
+working on CVE-2021-29579, tensorflow_tensorflow, maxpooling_op.cc
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file tensorflow/core/kernels/maxpooling_op.cc
+filtering 19 parent commits for file tensorflow/core/kernels/maxpooling_op.cc
+0 out/out16/CVE-2021-29579/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29579 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29579" failed
+
+------------ CVE-2021-29580 (92 of 168)
+Stage 1
+working on CVE-2021-29580, tensorflow_tensorflow, fractional_max_pool_op.cc
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/core/kernels/fractional_max_pool_op.cc
+no 8741e57d163a079db05a7107a7609af70931def4 in 7
+no tree b7c1904e168843ace36308702d5f17f76d7d6146 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 4904e37ea19436b6693ad6b2211a3a6e9a41b8d5 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 81b5d078e5839f3e18c0101568f253c6e54814b0 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree b102b0d7ec98e624385b5b1eab0ea0fd986b1a05 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 732bd6abb055237fbb768a037c105642e7ab66e3 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 0700d646c4d9e0eee278727e23b5d8c0de03982c for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree ff3de34001aca0a05f0dbf0e9e2c9b803292e286 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 1359d298da8a4dc6edef39bf7d7b94b8ea2a22d2 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 7fdbf73ce115e4e020b892f97c17ea65a71181e2 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree ff421e784212e5480e46016994c99b21e208c3c2 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 49d8b0c75bc97f60711a45353ea04300f182b033 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 3d3bf524dd9894d15d867fb13eeca526cf5f1240 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 4335cb724f5f7342cc7bf17a3b89006381582ef6 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree ab4f56f1f5ab48d05c8f567682030f4a38683a52 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 316957de09a0228c0f5f9644a582b30ee4f258dc for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 73c3467d8cb95642c8c5bba007ea175a76cdd7c9 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 93db01db14700a65f1c95289c71c744044191275 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 2564f73a819c62a0d851d52f367d689d3e9a6949 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 0da3751f139179265240b687cc0a78cc082215c5 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 070a361fbe0f3691566ed08dbe999bed134f1c49 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 6d13f128f9b4a0242d7bc5cc7f677a82e9596885 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 37652f9d21e5f4c40193cb09b237af6d1ea18f84 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 73950af5143c0acc211da1699b1603625688ea13 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 55eaf37ea5afdb3647aaa219e88e862894d61a20 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree c9cc69e682b7afa78881bd54594248c007b2e6dc for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 0d32fc5c5d7e0f27fca9698c20a0388066a66897 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 2b989f9d82c0f3defbb98e3c199bcae750d82880 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 6d96fbd1ec91afe1a9e9e777e38d8077228a66c3 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree d54f08ad58ab44702b48964c7fe47dc4159d9a6f for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree c3719ae96e21f1b24718cbb95daa33407afee69e for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 672e59852990cb16318da08980d6738f34d6a300 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree bd7bf6672b05bb1d895675bd2bcca721c8095ff6 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 2b3ab0adb7a94ada7f494bb926b8db1080f897e1 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree dbcbc25609f0321f4013e966ebdb555b7037770a for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree b7a3c1fbb1b16acda93481ce1a1cbbe167b7fd95 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree c9efbee86fec5c7c5718e2080e63360c4391ab7f for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree ffc8ef912c3e66c76f85a13da7b55d929595f81d for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 4faa1af223454693d4e1e8ca4ad887ba6be5b4d3 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 877f13922a8a7c04e6bcc841e6e1d17f8da466b4 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree abcebe990909645fe38a8db510e6799af1e99b88 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree d50d4bf66fbb5f0f41ae4134cb7069d48c26a9d4 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 813534fdc8f5e82e087f36641907419fb3299b80 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree ff8d75ce913d40b3fb950c763c19a1e0832c1863 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 314de4b1d26cde9bc699a3fd2392b636eb889b6e for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 9386caabc6ab9b419d41c43d31534b86502dc65b for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 13cf37e7943b95c123c8140bee1f053e36c95dfa for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 0793d5db2781687a7ce699f41c26243b17efbfb1 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree f927237d93671c52bcfe940ed5218fcb8db6b325 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree a52595f9b3c75f19e0d6bc1326f400c4777f515e for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree ab68a1f0f560eca86f27cb00fbf049654987046e for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 55570fa265ce80cfcad474a94cc1a0864c9378f2 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 13f83274e2a1b7543dcbc174f96e9bacb8d29d2d for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 1f1a659dfb5977627b8599c38cd70897f9b4ab10 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree dbce1272c619624d35eccbcf0490f8bfe9bd880b for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 8d66f1e962598898e65302896d0b9ceca504aa60 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 7f5736dd7db227c3a02f03a572762cc1d588eeaa for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 1f50c6e541106367dc0aad301826153e6c3a7f96 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 736e0b1eeaaeaa74163f6e8e2dbd01812cd75f39 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree edffb92a46aeb7fc6d266c5851d21fe15d286046 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree f94f6664e0d2d54fb20079d7e5259aa5f82514eb for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 8d7a092c7deac7fd40cf66f9049eed935319efd7 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree bdf34cad85930aed27c3e4d7dd8573ccff053db0 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree a5be58eb54217dd650cfd9155df0f92753bed15c for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree bd45002ca914c2c3325e441a0fc5164cc7ab232d for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 5b507b978c885e726147fc39a222aec15806860d for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 7fcd0f7bbdf25fb5d617bed4665094f3aa8ba3a3 for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+no tree 812eb169742d3ff0ac300199f8845f6cbf3b45bb for commit ba4e8ac4dc2991e350d5cc407f8598c8d4ee70fb
+filtering 8 parent commits for file tensorflow/core/kernels/fractional_max_pool_op.cc
+0 out/out16/CVE-2021-29580/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29580 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29580" failed
+
+------------ CVE-2021-29581 (93 of 168)
+Stage 1
+working on CVE-2021-29581, tensorflow_tensorflow, ctc_decoder_ops.cc
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/core/kernels/ctc_decoder_ops.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+filtering 15 parent commits for file tensorflow/core/kernels/ctc_decoder_ops.cc
+0 out/out16/CVE-2021-29581/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29581 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29581" failed
+
+------------ CVE-2021-29582 (94 of 168)
+Stage 1
+working on CVE-2021-29582, tensorflow_tensorflow, dequantize_op.cc
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file tensorflow/core/kernels/dequantize_op.cc
+no tree e1519b1f72d639fb75666922cb4bcddf5512e79f for commit 23968a8bf65b009120c43b5ebcceaf52dbc9e943
+filtering 21 parent commits for file tensorflow/core/kernels/dequantize_op.cc
+0 out/out16/CVE-2021-29582/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29582 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29582" failed
+
+------------ CVE-2021-29583 (95 of 168)
+Stage 1
+working on CVE-2021-29583, tensorflow_tensorflow, fused_batch_norm_op.cc
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file tensorflow/core/kernels/fused_batch_norm_op.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+no b89a2f2a1b761ac68aa808f2bcd847314b15c6c1 in 56
+no d7ea6945dd4d75d967ecdf7b88c2a24f981c5b9e in 87
+filtering 16 parent commits for file tensorflow/core/kernels/fused_batch_norm_op.cc
+0 out/out16/CVE-2021-29583/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29583 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29583" failed
+
+------------ CVE-2021-29584 (96 of 168)
+Stage 1
+working on CVE-2021-29584, tensorflow_tensorflow, sparse_split_op.cc
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file tensorflow/core/kernels/sparse_split_op.cc
+no 528e88c3cb07c56715c7277d5a387d3451a19893 in 82
+no 5a5a4edd9d0cd227b002350613dcd1f80b222662 in 90
+no 8ddc0e2a9d686900a260ac04609ff4eccbd54df8 in 13
+no e08a728fcd69ba26b7dacf73b9adab1bff5ff467 in 96
+no 142b99de7a736bdf037632b9eede884e49f7af50 in 20
+filtering 11 parent commits for file tensorflow/core/kernels/sparse_split_op.cc
+0 out/out16/CVE-2021-29584/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29584 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29584" failed
+
+------------ CVE-2021-29585 (97 of 168)
+Stage 1
+working on CVE-2021-29585, tensorflow_tensorflow, padding.h
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file tensorflow/lite/kernels/padding.h
+filtering 5 parent commits for file tensorflow/lite/kernels/padding.h
+0 out/out16/CVE-2021-29585/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29585 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29585" failed
+
+------------ CVE-2021-29587 (98 of 168)
+Stage 1
+working on CVE-2021-29587, tensorflow_tensorflow, space_to_depth.cc
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file tensorflow/lite/kernels/space_to_depth.cc
+no f463040eb3997e42e60a2ffc6dc72de7ef11dbb4 in 116
+filtering 7 parent commits for file tensorflow/lite/kernels/space_to_depth.cc
+0 out/out16/CVE-2021-29587/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29587 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29587" failed
+
+------------ CVE-2021-29588 (99 of 168)
+Stage 1
+working on CVE-2021-29588, tensorflow_tensorflow, transpose_conv.cc
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file tensorflow/lite/kernels/transpose_conv.cc
+no f463040eb3997e42e60a2ffc6dc72de7ef11dbb4 in 116
+no 086285480ef831a17e17d664f30515fbf3a4ff20 in 8
+filtering 22 parent commits for file tensorflow/lite/kernels/transpose_conv.cc
+0 out/out16/CVE-2021-29588/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29588 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29588" failed
+
+------------ CVE-2021-29589 (100 of 168)
+Stage 1
+working on CVE-2021-29589, tensorflow_tensorflow, gather_nd.cc
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file tensorflow/lite/kernels/gather_nd.cc
+no f463040eb3997e42e60a2ffc6dc72de7ef11dbb4 in 116
+no 0510ca8bcc1c6abbc97d9d6bf62531a7d81607f0 in 5
+filtering 6 parent commits for file tensorflow/lite/kernels/gather_nd.cc
+0 out/out16/CVE-2021-29589/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29589 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29589" failed
+
+------------ CVE-2021-29590 (101 of 168)
+Stage 1
+working on CVE-2021-29590, tensorflow_tensorflow, maximum_minimum.cc
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file tensorflow/lite/kernels/maximum_minimum.cc
+no f463040eb3997e42e60a2ffc6dc72de7ef11dbb4 in 116
+filtering 13 parent commits for file tensorflow/lite/kernels/maximum_minimum.cc
+0 out/out16/CVE-2021-29590/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29590 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29590" failed
+
+------------ CVE-2021-29592 (102 of 168)
+Stage 1
+working on CVE-2021-29592, tensorflow_tensorflow, subgraph.cc
+Calling ./rgl2 to get all commits
+Error: commit f8378920345f4f4604202d4ab15ef64b2aceaa16 not in out/out16/CVE-2021-29592/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-29592"
+
+------------ CVE-2021-29593 (103 of 168)
+Stage 1
+working on CVE-2021-29593, tensorflow_tensorflow, batch_to_space_nd.cc
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file tensorflow/lite/kernels/batch_to_space_nd.cc
+no f463040eb3997e42e60a2ffc6dc72de7ef11dbb4 in 116
+filtering 5 parent commits for file tensorflow/lite/kernels/batch_to_space_nd.cc
+0 out/out16/CVE-2021-29593/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29593 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29593" failed
+
+------------ CVE-2021-29594 (104 of 168)
+Stage 1
+working on CVE-2021-29594, tensorflow_tensorflow, conv.cc
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file tensorflow/lite/kernels/conv.cc
+no 37d0fbc16a1be4b66c93bc830d6e711a3ab3f8c7 in 55
+no 8ec0a3be4ccb1c13a32125ce9f17c3a919b36a68 in 14
+no 7e7ac3b79502f5a61256a6173facd1813db7c87c in 126
+no 32ef4282a43d70da78ec2c26bfbd360ab868698f in 50
+no 0d8705c82c64dfb39c49e346de1a66182e5eabd1 in 13
+no b094c1977ac55e6eeaa44f0957aad10a3e2e240f in 48
+filtering 22 parent commits for file tensorflow/lite/kernels/conv.cc
+0 out/out16/CVE-2021-29594/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29594 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29594" failed
+
+------------ CVE-2021-29596 (105 of 168)
+Stage 1
+working on CVE-2021-29596, tensorflow_tensorflow, embedding_lookup.cc
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file tensorflow/lite/kernels/embedding_lookup.cc
+no f463040eb3997e42e60a2ffc6dc72de7ef11dbb4 in 116
+filtering 8 parent commits for file tensorflow/lite/kernels/embedding_lookup.cc
+0 out/out16/CVE-2021-29596/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29596 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29596" failed
+
+------------ CVE-2021-29597 (106 of 168)
+Stage 1
+working on CVE-2021-29597, tensorflow_tensorflow, space_to_batch_nd.cc
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file tensorflow/lite/kernels/space_to_batch_nd.cc
+no f463040eb3997e42e60a2ffc6dc72de7ef11dbb4 in 116
+filtering 7 parent commits for file tensorflow/lite/kernels/space_to_batch_nd.cc
+0 out/out16/CVE-2021-29597/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29597 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29597" failed
+
+------------ CVE-2021-29598 (107 of 168)
+Stage 1
+working on CVE-2021-29598, tensorflow_tensorflow, svdf.cc
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file tensorflow/lite/kernels/svdf.cc
+no f463040eb3997e42e60a2ffc6dc72de7ef11dbb4 in 116
+filtering 18 parent commits for file tensorflow/lite/kernels/svdf.cc
+0 out/out16/CVE-2021-29598/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29598 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29598" failed
+
+------------ CVE-2021-29599 (108 of 168)
+Stage 1
+working on CVE-2021-29599, tensorflow_tensorflow, split.cc
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file tensorflow/lite/kernels/split.cc
+no f463040eb3997e42e60a2ffc6dc72de7ef11dbb4 in 116
+filtering 8 parent commits for file tensorflow/lite/kernels/split.cc
+0 out/out16/CVE-2021-29599/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29599 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29599" failed
+
+------------ CVE-2021-29600 (109 of 168)
+Stage 1
+working on CVE-2021-29600, tensorflow_tensorflow, one_hot.cc
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file tensorflow/lite/kernels/one_hot.cc
+filtering 6 parent commits for file tensorflow/lite/kernels/one_hot.cc
+0 out/out16/CVE-2021-29600/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29600 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29600" failed
+
+------------ CVE-2021-29601 (110 of 168)
+Stage 1
+working on CVE-2021-29601, tensorflow_tensorflow, concatenation.cc
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file tensorflow/lite/kernels/concatenation.cc
+no f463040eb3997e42e60a2ffc6dc72de7ef11dbb4 in 116
+filtering 25 parent commits for file tensorflow/lite/kernels/concatenation.cc
+0 out/out16/CVE-2021-29601/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29601 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29601" failed
+
+------------ CVE-2021-29602 (111 of 168)
+Stage 1
+working on CVE-2021-29602, tensorflow_tensorflow, depthwise_conv.cc
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/lite/kernels/depthwise_conv.cc
+no f463040eb3997e42e60a2ffc6dc72de7ef11dbb4 in 116
+no e5b0eec199c2d03de54fd6a7fd9275692218e2bc in 101
+filtering 25 parent commits for file tensorflow/lite/kernels/depthwise_conv.cc
+0 out/out16/CVE-2021-29602/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29602 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29602" failed
+
+------------ CVE-2021-29603 (112 of 168)
+Stage 1
+working on CVE-2021-29603, tensorflow_tensorflow, arg_min_max.cc
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file tensorflow/lite/kernels/arg_min_max.cc
+no e7899c49ba73e466d6f3167691c63d8dd0121f08 in 103
+no 7e0776f0f10a23cbdc4d7351c584de073762f445 in 126
+filtering 10 parent commits for file tensorflow/lite/kernels/arg_min_max.cc
+0 out/out16/CVE-2021-29603/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29603 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29603" failed
+
+------------ CVE-2021-29604 (113 of 168)
+Stage 1
+working on CVE-2021-29604, tensorflow_tensorflow, hashtable_lookup.cc
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file tensorflow/lite/kernels/hashtable_lookup.cc
+filtering 6 parent commits for file tensorflow/lite/kernels/hashtable_lookup.cc
+0 out/out16/CVE-2021-29604/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29604 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29604" failed
+
+------------ CVE-2021-29606 (114 of 168)
+Stage 1
+working on CVE-2021-29606, tensorflow_tensorflow, split_v.cc
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file tensorflow/lite/kernels/split_v.cc
+no f463040eb3997e42e60a2ffc6dc72de7ef11dbb4 in 116
+filtering 8 parent commits for file tensorflow/lite/kernels/split_v.cc
+0 out/out16/CVE-2021-29606/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29606 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29606" failed
+
+------------ CVE-2021-29607 (115 of 168)
+Stage 1
+working on CVE-2021-29607, tensorflow_tensorflow, sparse_sparse_binary_op_shared.cc
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file tensorflow/core/kernels/sparse_sparse_binary_op_shared.cc
+filtering 6 parent commits for file tensorflow/core/kernels/sparse_sparse_binary_op_shared.cc
+0 out/out16/CVE-2021-29607/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29607 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29607" failed
+
+------------ CVE-2021-29608 (116 of 168)
+Stage 1
+working on CVE-2021-29608, tensorflow_tensorflow, ragged_tensor_to_tensor_op.cc
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file tensorflow/core/kernels/ragged_tensor_to_tensor_op.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+filtering 13 parent commits for file tensorflow/core/kernels/ragged_tensor_to_tensor_op.cc
+0 out/out16/CVE-2021-29608/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29608 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29608" failed
+
+------------ CVE-2021-29609 (117 of 168)
+Stage 1
+working on CVE-2021-29609, tensorflow_tensorflow, sparse_add_op.cc
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file tensorflow/core/kernels/sparse_add_op.cc
+filtering 8 parent commits for file tensorflow/core/kernels/sparse_add_op.cc
+0 out/out16/CVE-2021-29609/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29609 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29609" failed
+
+------------ CVE-2021-29610 (118 of 168)
+Stage 1
+working on CVE-2021-29610, tensorflow_tensorflow, quantize_and_dequantize_op.cc
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file tensorflow/core/kernels/quantize_and_dequantize_op.cc
+no 098e7762d909bac47ce1dbabe6dfd06294cb9d58 in 9
+filtering 26 parent commits for file tensorflow/core/kernels/quantize_and_dequantize_op.cc
+0 out/out16/CVE-2021-29610/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29610 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29610" failed
+
+------------ CVE-2021-29611 (119 of 168)
+Stage 1
+working on CVE-2021-29611, tensorflow_tensorflow, sparse_reshape_op.cc
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file tensorflow/core/kernels/sparse_reshape_op.cc
+filtering 8 parent commits for file tensorflow/core/kernels/sparse_reshape_op.cc
+0 out/out16/CVE-2021-29611/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29611 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29611" failed
+
+------------ CVE-2021-29612 (120 of 168)
+Stage 1
+working on CVE-2021-29612, tensorflow_tensorflow, banded_triangular_solve_op.cc
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file tensorflow/core/kernels/linalg/banded_triangular_solve_op.cc
+filtering 5 parent commits for file tensorflow/core/kernels/linalg/banded_triangular_solve_op.cc
+0 out/out16/CVE-2021-29612/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29612 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29612" failed
+
+------------ CVE-2021-29613 (121 of 168)
+Stage 1
+working on CVE-2021-29613, tensorflow_tensorflow, ctc_loss_op.cc
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file tensorflow/core/kernels/ctc_loss_op.cc
+no e4fdc0c71c4cc97030a3b141ca8f005bcc09b9cf in 100
+filtering 23 parent commits for file tensorflow/core/kernels/ctc_loss_op.cc
+0 out/out16/CVE-2021-29613/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29613 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29613" failed
+
+------------ CVE-2021-29615 (122 of 168)
+Stage 1
+working on CVE-2021-29615, tensorflow_tensorflow, attr_value_util.cc
+Calling ./rgl2 to get all commits
+filtering 9 child commits for file tensorflow/core/framework/attr_value_util.cc
+no 7bd3190f775f8e66375b4a2cd2d22f5154546200 in 123
+no 7662d70f75f423ef1cc2486d3ddc0c53ee7bb8eb in 118
+no adf80abf2148f54af7635819f44c6ff54ec485b1 in 45
+no tree b7c1904e168843ace36308702d5f17f76d7d6146 for commit c2426bba00a01de6913738df8fa78e0215fcce02
+no tree 5b7070787ad9aeae5e59b5271ae313e323833ce6 for commit c2426bba00a01de6913738df8fa78e0215fcce02
+no tree 73b45c4952b0d4ed1a01f6a08278073f572517b6 for commit c2426bba00a01de6913738df8fa78e0215fcce02
+no tree 5b5ef752e2a65338c30967c8d9eff24026095408 for commit c2426bba00a01de6913738df8fa78e0215fcce02
+no tree 5b507b978c885e726147fc39a222aec15806860d for commit c2426bba00a01de6913738df8fa78e0215fcce02
+no tree 7fcd0f7bbdf25fb5d617bed4665094f3aa8ba3a3 for commit c2426bba00a01de6913738df8fa78e0215fcce02
+filtering 21 parent commits for file tensorflow/core/framework/attr_value_util.cc
+0 out/out16/CVE-2021-29615/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29615 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29615" failed
+
+------------ CVE-2021-29619 (123 of 168)
+Stage 1
+working on CVE-2021-29619, tensorflow_tensorflow, count_ops.cc
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file tensorflow/core/kernels/count_ops.cc
+no 769eddaf479c8debead9a59a72617d6ed6f0fe10 in 118
+no 881676cfd6264a12eb32bafa3db5f63cf6c40970 in 8
+no 6f4d3e8139ec724dbbcb40505891c81dd1052c4a in 111
+no adbbabdb0d3abb3cdeac69e38a96de1d678b24b3 in 45
+no 2b7100d6cdff36aa21010a82269bc05a6d1cc74a in 43
+filtering 5 parent commits for file tensorflow/core/kernels/count_ops.cc
+0 out/out16/CVE-2021-29619/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29619 1621023300
+Original Project = tensorflow_tensorflow
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29619" failed
+
+------------ CVE-2021-29621 (124 of 168)
+Stage 1
+working on CVE-2021-29621, dpgaspar_Flask-AppBuilder, manager.py
+Calling ./rgl2 to get all commits
+filtering 13 child commits for file flask_appbuilder/security/manager.py
+no d47352901f191937d1f4e3bcc783ab8accfbc288 in 84
+no b21010249a33f657897d26b0a7bec93908290266 in 50
+no 090ddb4645992fb390da93906301c63b204db0df in 9
+no 2e2931f2fc470a4f1756a0c39e0cc04b86818d84 in 46
+no e2d3f017bfeb30e863a25fa63de4699db20bc8d4 in 98
+no e2b744c258ff62ece9d5ac7172c3b4644ff4c2fe in 98
+no c59b4136d6036d53ff1af33e14385b5a86121b7a in 69
+no afc8e2c9209a928fa6a791919ceae3ce3cdc48a7 in 47
+no baddd7c73e68c347abe74973c4a122003393fd71 in 58
+no eba517aab121afa3f3f2edb011ec6bc4efd61fbc in 107
+filtering 17 parent commits for file flask_appbuilder/security/manager.py
+0 out/out16/CVE-2021-29621/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29621 1623093300
+Original Project = dpgaspar_Flask-AppBuilder
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29621" failed
+
+------------ CVE-2021-29625 (125 of 168)
+Stage 1
+working on CVE-2021-29625, vrana_adminer, editing.inc.php
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file adminer/include/editing.inc.php
+filtering 28 parent commits for file adminer/include/editing.inc.php
+0 out/out16/CVE-2021-29625/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29625 1621462500
+Original Project = vrana_adminer
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29625" failed
+
+------------ CVE-2021-29658 (126 of 168)
+Stage 1
+working on CVE-2021-29658, jnbt_vscode-rufo, package.json
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file package.json
+no 03cdb4f28983cb24a1572c1a104764d894cffbcf in 3
+no 99b5f2d5c2c61e2a2f762e03f3812c413c6c0aea in 25
+no 0cfba270012d5e01f1c3eb5f953c38ab5d8d3c0d in 12
+filtering 7 parent commits for file package.json
+0 out/out16/CVE-2021-29658/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-29658 1617210900
+Original Project = jnbt_vscode-rufo
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-29658" failed
+
+------------ CVE-2021-30014 (127 of 168)
+Stage 1
+working on CVE-2021-30014, gpac_gpac, av_parsers.c
+Calling ./rgl2 to get all commits
+Error: commit 51cdb67ff7c5f1242ac58c5aa603ceaf1793b788 not in out/out16/CVE-2021-30014/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-30014"
+
+------------ CVE-2021-30015 (128 of 168)
+Stage 1
+working on CVE-2021-30015, gpac_gpac, reframe_av1.c
+Calling ./rgl2 to get all commits
+Error: commit 13dad7d5ef74ca2e6fe4010f5b03eb12e9bbe0ec not in out/out16/CVE-2021-30015/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-30015"
+
+------------ CVE-2021-30019 (129 of 168)
+Stage 1
+working on CVE-2021-30019, gpac_gpac, reframe_adts.c
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file src/filters/reframe_adts.c
+no 5edeb71186641f2b099dc6f86c1e1e9718873c72 in 94
+no 20677375dc7b726e8eccba488be40a14f273a20b in 32
+no e06aa717ea5373b27fb026c14a602cf7fec7acbf in 96
+no 958e9bcf82f6d42299893a98606bb1abc7e2af8d in 21
+no 84fc58921b6c4ce219f9eeecbc6c4c79649307e4 in 4
+no 588f5cc8c112cec64f137cf217de908ed208a9d8 in 88
+filtering 16 parent commits for file src/filters/reframe_adts.c
+0 out/out16/CVE-2021-30019/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-30019 1618863300
+Original Project = gpac_gpac
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-30019" failed
+
+------------ CVE-2021-30020 (130 of 168)
+Stage 1
+working on CVE-2021-30020, gpac_gpac, av_parsers.c
+Calling ./rgl2 to get all commits
+Error: commit 51cdb67ff7c5f1242ac58c5aa603ceaf1793b788 not in out/out16/CVE-2021-30020/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-30020"
+
+------------ CVE-2021-30022 (131 of 168)
+Stage 1
+working on CVE-2021-30022, gpac_gpac, av_parsers.c
+Calling ./rgl2 to get all commits
+Error: commit 51cdb67ff7c5f1242ac58c5aa603ceaf1793b788 not in out/out16/CVE-2021-30022/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-30022"
+
+------------ CVE-2021-30027 (132 of 168)
+Stage 1
+working on CVE-2021-30027, mity_md4c, md4c.c
+Calling ./rgl2 to get all commits
+filtering 20 child commits for file src/md4c.c
+no f7c8db7588573f3b0de166166a6f6756baf222dc in 119
+no 6abb7789f6ad9bc1e05fa9989d4daec5cebb880d in 106
+no 62b60979f6a281b2b3cf883abc84299431fe2f76 in 98
+no db9ab417b11eaf96722b6cfb22f8ead5e22513c9 in 91
+no 8dd35762d99cbd5fc3d1860bced5e8566e58d9f4 in 13
+no 4358c40ab740ed13b12921464467e6a90a689950 in 67
+no c058e82c6a939f591059672dab08ddd0d4ce416e in 64
+no b42e7f5ceac7f72601b9c28c88693e63df95e416 in 52
+no 2e9b13cc512b5984b010a7934253702a6763f4f7 in 46
+no f436c3029850c138e54a0de055d61db45130409e in 116
+no eeb32ecc9ed35615226cb11f112d34b46c9b204a in 110
+no a8bb4d3020eb1cfa07f01241c2aa668d91011cb5 in 40
+filtering 10 parent commits for file src/md4c.c
+0 out/out16/CVE-2021-30027/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-30027 1619709300
+Original Project = mity_md4c
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-30027" failed
+
+------------ CVE-2021-30045 (133 of 168)
+Stage 1
+working on CVE-2021-30045, SerenityOS_serenity, Zip.h
+Calling ./rgl2 to get all commits
+filtering 9 child commits for file Userland/Libraries/LibArchive/Zip.h
+no acc9be9f7d6d65278fa912ca5d9af5762e91eb70 in 44
+no 086969277e74d8ba065bf8145d3aeb0dec0bfee5 in 8
+no be360db2232ffd401b86627d3e682cf5be71492c in 62
+no c0735b047e09aea0e6890a30aa6169f2eaea5a04 in 64
+no 484c0edafc0d4d004243b23b1d833e836d3e449e in 72
+no 80d4e830a0a95a41e3a3a6ccdc938fdfc4c7430b in 0
+filtering 2 parent commits for file Userland/Libraries/LibArchive/Zip.h
+0 out/out16/CVE-2021-30045/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-30045 1617714900
+Original Project = SerenityOS_serenity
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-30045" failed
+
+------------ CVE-2021-30145 (134 of 168)
+Stage 1
+working on CVE-2021-30145, mpv-player_mpv, demux_mf.c
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file demux/demux_mf.c
+filtering 26 parent commits for file demux/demux_mf.c
+0 out/out16/CVE-2021-30145/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-30145 1621347300
+Original Project = mpv-player_mpv
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-30145" failed
+
+------------ CVE-2021-30199 (135 of 168)
+Stage 1
+working on CVE-2021-30199, gpac_gpac, reframe_latm.c
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file src/filters/reframe_latm.c
+no 9dd5346ae40c7fc485f35c62d2c5cbb3e2a253a8 in 29
+no 5edeb71186641f2b099dc6f86c1e1e9718873c72 in 94
+no 20677375dc7b726e8eccba488be40a14f273a20b in 32
+no 958e9bcf82f6d42299893a98606bb1abc7e2af8d in 21
+no 84fc58921b6c4ce219f9eeecbc6c4c79649307e4 in 4
+filtering 20 parent commits for file src/filters/reframe_latm.c
+0 out/out16/CVE-2021-30199/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-30199 1618863300
+Original Project = gpac_gpac
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-30199" failed
+
+------------ CVE-2021-30218 (136 of 168)
+Stage 1
+working on CVE-2021-30218, michaelforney_samurai, util.c
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file util.c
+filtering 27 parent commits for file util.c
+0 out/out16/CVE-2021-30218/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-30218 1619709300
+Original Project = michaelforney_samurai
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-30218" failed
+
+------------ CVE-2021-30219 (137 of 168)
+Stage 1
+working on CVE-2021-30219, michaelforney_samurai, parse.c
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file parse.c
+filtering 28 parent commits for file parse.c
+0 out/out16/CVE-2021-30219/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-30219 1619709300
+Original Project = michaelforney_samurai
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-30219" failed
+
+------------ CVE-2021-30500 (138 of 168)
+Stage 1
+working on CVE-2021-30500, upx_upx, p_lx_elf.cpp
+Calling ./rgl2 to get all commits
+filtering 27 child commits for file src/p_lx_elf.cpp
+no d61edc9c7f043ad312ea29a752f70b8257115b91 in 86
+no 907c17bacdc8a946c278ad99f988d57ba0ebcb45 in 16
+no 3b84aa4376ac420aee43611c1a267eacfe3251d5 in 59
+no 63f163e4594a13fc0c4ed06bc8823262ff5c22cb in 99
+no 388d1717bed83bc5bf15c1918f07d52264e96f11 in 56
+no 7bafa3938c60cb01dd265c8aecf3be6e0ee0deea in 123
+no f13486de6e36dec52c6471d2482f01d52576357c in 113
+no 691725f9f664dd25eab349e9eb1b622be50f45f2 in 105
+no d496df3191cedb1f341f7ba676202c7cbd644012 in 84
+no e867dda8cd96f25a86df7936abf16361bff47d21 in 104
+no 913ac251581c2ad79816500e116c6d8641add4bb in 17
+no eaae680edf66dc6f25d1bb7af6f940c0a89e1825 in 106
+no 6bd3a03cf8a31b952ca2a3ad301fa651166df31d in 107
+no d73d4f1e68036a2b457a8ce1e6aafa7c03f36902 in 87
+no 1289d358342d5436abb91e40a63c349a0782aa76 in 18
+no 471da7e2e01e08a066701c9a707472c3168fe847 in 71
+no 49e24ed317bc073b67fff4e08cf7bffe3d3c7446 in 73
+no e338225cadeee9e47049327441d11c15b77dad4c in 99
+no b81491c812a8975b5e3f7d8b5b364366f82d9d53 in 56
+no 1a5c0cedd13730b9fb4db3d34ca3f4cd55347826 in 26
+no 364bbef9926ee08b4cad4455dd5b3351f8d5a04c in 54
+no d19b6a30f4c59259a182780a378089f6b5c478a9 in 81
+filtering 3 parent commits for file src/p_lx_elf.cpp
+0 out/out16/CVE-2021-30500/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-30500 1622074500
+Original Project = upx_upx
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-30500" failed
+
+------------ CVE-2021-31245 (139 of 168)
+Stage 1
+working on CVE-2021-31245, Ysurac_openmptcprouter-vps-admin, omr-admin.py
+Calling ./rgl2 to get all commits
+filtering 15 child commits for file omr-admin.py
+no 20314b11f21eb5878ba62c85d874528e0e394024 in 32
+no 412edf41c0bc58b0a09fd0f109cfaf41da0bbc94 in 65
+no 3b91c0735f5b157ae95fea89ed62503cd8d529e8 in 59
+no 0f5ba7f272adf4c5a9ebc214c72749a8c4889022 in 15
+no 8009729b3053e6fcfd5733b81c6b54aace7b99ec in 0
+no db01ce67301012ce39ecf3d6bcf9a7fa7b763435 in 91
+no 4ee847b92a701bdc34a78542c8c225292e9e4b6d in 78
+no 8dcc64d1a455a71b63117963098a5525ba217518 in 13
+no d6be57678519467f357cb53b5c701d3d3452a9ff in 86
+no b08f320e8873e50a4e5560c718455e134238d2be in 48
+no 2a8f642f89a982d2c26c3e176f6c4c1e3e91ffcb in 42
+filtering 15 parent commits for file omr-admin.py
+0 out/out16/CVE-2021-31245/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-31245 1620306900
+Original Project = Ysurac_openmptcprouter-vps-admin
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-31245" failed
+
+------------ CVE-2021-31254 (140 of 168)
+Stage 1
+working on CVE-2021-31254, gpac_gpac, box_code_drm.c
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file src/isomedia/box_code_drm.c
+no 275394b43a0a4516b88fc42cca2b9299004b50f8 in 39
+no 532753d809ad463e1c3e8e7ed09a56f14bf29846 in 83
+no 76caa7f5d069f203c4b8a17ba15185665ae96dde in 118
+no 5e1f084e0c6ad2736c9913715c4abb57c554209d in 94
+filtering 20 parent commits for file src/isomedia/box_code_drm.c
+0 out/out16/CVE-2021-31254/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-31254 1618859700
+Original Project = gpac_gpac
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-31254" failed
+
+------------ CVE-2021-31255 (141 of 168)
+Stage 1
+working on CVE-2021-31255, gpac_gpac, box_code_adobe.c
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file src/isomedia/box_code_adobe.c
+no 34a23ca102a0030927ca369086ec3d9685a83ff2 in 52
+no 7ec101c9de33573b5dcb1f7fb7d019fbe3816a1e in 126
+filtering 22 parent commits for file src/isomedia/box_code_adobe.c
+0 out/out16/CVE-2021-31255/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-31255 1618859700
+Original Project = gpac_gpac
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-31255" failed
+
+------------ CVE-2021-31256 (142 of 168)
+Stage 1
+working on CVE-2021-31256, gpac_gpac, stbl_read.c
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file src/isomedia/stbl_read.c
+filtering 29 parent commits for file src/isomedia/stbl_read.c
+0 out/out16/CVE-2021-31256/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-31256 1618859700
+Original Project = gpac_gpac
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-31256" failed
+
+------------ CVE-2021-31257 (143 of 168)
+Stage 1
+working on CVE-2021-31257, gpac_gpac, main.c
+Calling ./rgl2 to get all commits
+Error: commit 87afe070cd6866df7fe80f11b26ef75161de85e0 not in out/out16/CVE-2021-31257/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-31257"
+
+------------ CVE-2021-31259 (144 of 168)
+Stage 1
+working on CVE-2021-31259, gpac_gpac, drm_sample.c
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file src/isomedia/drm_sample.c
+no 4cf5e89ec7697ff4daf48bb91a349790107cff52 in 76
+no 1436f96654974ee3a9cddd379fda4b941c54ef1a in 20
+no 532753d809ad463e1c3e8e7ed09a56f14bf29846 in 83
+no 4df3cc07bfdd63147b9a740a17eb260ef05613f6 in 77
+no 588f5cc8c112cec64f137cf217de908ed208a9d8 in 88
+filtering 20 parent commits for file src/isomedia/drm_sample.c
+0 out/out16/CVE-2021-31259/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-31259 1618859700
+Original Project = gpac_gpac
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-31259" failed
+
+------------ CVE-2021-31260 (145 of 168)
+Stage 1
+working on CVE-2021-31260, gpac_gpac, track.c
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file src/isomedia/track.c
+no f6b88a11929c7163f2caf91d245ae4ca83ccc10a in 118
+no b40fcf50b862e605119b8d5f54c257aa475dd27f in 52
+no 4618974c85eb3c0788c19791a517907d81d2608c in 70
+no 093f3ab53838c92c3467fd352c6e666825fec32a in 9
+no 07bfa83deb0fa7a39521f11bf14c9579ba341751 in 7
+no 4df3cc07bfdd63147b9a740a17eb260ef05613f6 in 77
+no b7dd76de81dc5362d79611f706ab7a8dfb637e1a in 55
+filtering 20 parent commits for file src/isomedia/track.c
+0 out/out16/CVE-2021-31260/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-31260 1618859700
+Original Project = gpac_gpac
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-31260" failed
+
+------------ CVE-2021-31261 (146 of 168)
+Stage 1
+working on CVE-2021-31261, gpac_gpac, isom_hinter.c
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file src/media_tools/isom_hinter.c
+no 3ffe59c88363f87e279a7fc0a6da557458762252 in 63
+no 1c4256fe98b848dddb7cb65b698e4689587d687c in 28
+no dd2e8b1b9378a9679de8e7e5dcb2d7841acd5dbd in 93
+no d119fcf9077070c01b9530f3da011f0cbae0c03e in 81
+filtering 19 parent commits for file src/media_tools/isom_hinter.c
+0 out/out16/CVE-2021-31261/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-31261 1618859700
+Original Project = gpac_gpac
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-31261" failed
+
+------------ CVE-2021-31262 (147 of 168)
+Stage 1
+working on CVE-2021-31262, gpac_gpac, avc_ext.c
+Calling ./rgl2 to get all commits
+filtering 25 child commits for file src/isomedia/avc_ext.c
+no a2271561c0851ff9c5820bd2d41a2ed1ef534a1a in 34
+no 9ea93a2ec8f555ceed1ee27294cf94822f14f10f in 30
+no 6cb9dddc56a4e1588926c2afefe3ac3d72cf56f8 in 108
+no 9c74581c7827a6e1aea0f0a6f787ae22b4331a12 in 28
+no ebedc7a797e60779a9544a59617f6cf01ec164e8 in 107
+no cd8b1775065db90a2c4e67ae04708f3e76bbc6bb in 77
+no eb5a6ed481e3d1bb1e13441058bb61a2ab8227ff in 107
+no a4716c06ff8bed10ca73a57b7526d2fb71f58356 in 36
+no f68c0feff7fb0fa7e3498ffef95f2988ddbadf77 in 118
+filtering 5 parent commits for file src/isomedia/avc_ext.c
+0 out/out16/CVE-2021-31262/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-31262 1618859700
+Original Project = gpac_gpac
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-31262" failed
+
+------------ CVE-2021-31414 (148 of 168)
+Stage 1
+working on CVE-2021-31414, LaurentTreguier_vscode-rpm-spec, package.json
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file package.json
+no 38c820666d41d297e149afeacf3829ae44859b30 in 56
+no 9ae51e3d99c7014a6a6510e07a5466267969151a in 26
+no e19fb8e29cb48cadfd3238371e060d4ffd3384f9 in 97
+filtering 21 parent commits for file package.json
+no fc035846fa984332bef16cf3d1c2e71a9e5c3e51 in 124
+no 0ad777b9d745bbc09beb18de13bbcf0b18515171 in 10
+no 7cb6ebc2479ce90138b45aad796c2448162be81e in 124
+0 out/out16/CVE-2021-31414/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-31414 1618546500
+Original Project = LaurentTreguier_vscode-rpm-spec
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-31414" failed
+
+------------ CVE-2021-31571 (149 of 168)
+Stage 1
+working on CVE-2021-31571, FreeRTOS_FreeRTOS-Kernel, queue.c
+Calling ./rgl2 to get all commits
+filtering 16 child commits for file queue.c
+no dca4f80a6be40f77848749ea18efd92b9d8ef66a in 92
+no becbb89181df9f76ddfee8ed67997dfe04f17e05 in 62
+no e13f9903850a57ed5cdf3fc330f5faf4d3096d1b in 97
+filtering 14 parent commits for file queue.c
+0 out/out16/CVE-2021-31571/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-31571 1619115300
+Original Project = FreeRTOS_FreeRTOS-Kernel
+Success (go2)
+Stage 3
+./go3 CVE-2021-31571 out/out16/CVE-2021-31571/results.csv
+out/out16/CVE-2021-31571/results.csv
+out/out16/CVE-2021-31571/results.html
+Success (go3)
+
+
+------------ CVE-2021-31572 (150 of 168)
+Stage 1
+working on CVE-2021-31572, FreeRTOS_FreeRTOS-Kernel, stream_buffer.c
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file stream_buffer.c
+no 7af41c29cb1bd6587b814a1a95de73d811eacd74 in 122
+no 0b46492740518eb7ba90ecbfbd8a5d2228a0fed7 in 11
+no dca4f80a6be40f77848749ea18efd92b9d8ef66a in 92
+filtering 16 parent commits for file stream_buffer.c
+0 out/out16/CVE-2021-31572/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-31572 1619115300
+Original Project = FreeRTOS_FreeRTOS-Kernel
+Success (go2)
+Stage 3
+./go3 CVE-2021-31572 out/out16/CVE-2021-31572/results.csv
+out/out16/CVE-2021-31572/results.csv
+out/out16/CVE-2021-31572/results.html
+Success (go3)
+
+
+------------ CVE-2021-31780 (151 of 168)
+Stage 1
+working on CVE-2021-31780, MISP_MISP, MispObject.php
+Calling ./rgl2 to get all commits
+Error: commit a0f08501d2850025892e703f40fb1570c7995478 not in out/out16/CVE-2021-31780/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-31780"
+
+------------ CVE-2021-31783 (152 of 168)
+Stage 1
+working on CVE-2021-31783, Piwigo_LocalFilesEditor, show_default.php
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file show_default.php
+filtering 16 parent commits for file show_default.php
+0 out/out16/CVE-2021-31783/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-31783 1619464500
+Original Project = Piwigo_LocalFilesEditor
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-31783" failed
+
+------------ CVE-2021-3184 (153 of 168)
+Stage 1
+working on CVE-2021-3184, MISP_MISP, global_menu.ctp
+Calling ./rgl2 to get all commits
+filtering 19 child commits for file app/View/Elements/global_menu.ctp
+no f1f1a2465f72fa4b5b21dbad600e2f028f9e84c4 in 113
+no 6431f286c6314dfb9fcbb7c7688e731106b312ae in 100
+no 5ccab0d15790a934499cfb06f040f7f91c723185 in 92
+no 639a4929e372b75f1ccaf8ac922c47f880df88b6 in 99
+no 18bcf683e08d08ab1b71b1f1ef97948b44cd0e55 in 24
+no 0d78d0f994a1b729211dac06f4057a5cbc6890a6 in 13
+filtering 11 parent commits for file app/View/Elements/global_menu.ctp
+0 out/out16/CVE-2021-3184/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-3184 1611072900
+Original Project = MISP_MISP
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-3184" failed
+
+------------ CVE-2021-31916 (154 of 168)
+Stage 1
+working on CVE-2021-31916, torvalds_linux, dm-ioctl.c
+Calling ./rgl2 to get all commits
+filtering 12 child commits for file drivers/md/dm-ioctl.c
+no dbdcc906d978650417b076a875b0f962fcdf79dd in 91
+no cd9c88da171a62c4b0f1c70e50c75845969fbc18 in 77
+filtering 18 parent commits for file drivers/md/dm-ioctl.c
+0 out/out16/CVE-2021-31916/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-31916 1620321300
+Original Project = torvalds_linux
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-31916" failed
+
+------------ CVE-2021-32055 (155 of 168)
+Stage 1
+working on CVE-2021-32055, neomutt_neomutt, util.c
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file imap/util.c
+no 7380cb5fae63481d5d8c10c9a669ebfafcd80ef3 in 115
+no c916fe35fa1f4cbf9c935bc34f1257e4688c244f in 73
+filtering 23 parent commits for file imap/util.c
+0 out/out16/CVE-2021-32055/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-32055 1620231300
+Original Project = neomutt_neomutt
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-32055" failed
+
+------------ CVE-2021-32399 (156 of 168)
+Stage 1
+working on CVE-2021-32399, torvalds_linux, hci_request.c
+Calling ./rgl2 to get all commits
+filtering 26 child commits for file net/bluetooth/hci_request.c
+no e1cff7002b716bd0b5f5f4afd4273c99aa8644be in 97
+no edcb185fa9c4f8fa1301f032fb503d2597a92b1e in 109
+no 50a3633ae5e98cf1b80ef5b73c9e341aee9ad896 in 80
+no 8e8b92ee60de5341e9db83c11f75a525e555e2b3 in 14
+no 744451c162a514044a912cbbd64b7a386035cc5b in 116
+no fe92ee6425a2c79ee84f0b9b8a14117200d15f7d in 126
+no 914b08b330d6722ed081e14580aae6fe66cd5946 in 17
+no ae422391e17d30a2fb1d0968142dcd1e4cdc172a in 46
+filtering 4 parent commits for file net/bluetooth/hci_request.c
+0 out/out16/CVE-2021-32399/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-32399 1620684900
+Original Project = torvalds_linux
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-32399" failed
+
+------------ CVE-2021-3258 (157 of 168)
+Stage 1
+working on CVE-2021-3258, q2a-projects_Q2A-Ultimate-SEO, layer.php
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file q2a-ultimate-seo/layer.php
+filtering 9 parent commits for file q2a-ultimate-seo/layer.php
+0 out/out16/CVE-2021-3258/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-3258 1612541700
+Original Project = q2a-projects_Q2A-Ultimate-SEO
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-3258" failed
+
+------------ CVE-2021-32607 (158 of 168)
+Stage 1
+working on CVE-2021-32607, smartstore_SmartStoreNET, View.cshtml
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file src/Presentation/SmartStore.Web/Views/PrivateMessages/View.cshtml
+filtering 12 parent commits for file src/Presentation/SmartStore.Web/Views/PrivateMessages/View.cshtml
+0 out/out16/CVE-2021-32607/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-32607 1620832500
+Original Project = smartstore_SmartStoreNET
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-32607" failed
+
+------------ CVE-2021-32608 (159 of 168)
+Stage 1
+working on CVE-2021-32608, smartstore_SmartStoreNET, _ForumPost.cshtml
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file src/Presentation/SmartStore.Web/Views/Boards/Partials/_ForumPost.cshtml
+filtering 18 parent commits for file src/Presentation/SmartStore.Web/Views/Boards/Partials/_ForumPost.cshtml
+0 out/out16/CVE-2021-32608/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-32608 1620832500
+Original Project = smartstore_SmartStoreNET
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-32608" failed
+
+------------ CVE-2021-32637 (160 of 168)
+Stage 1
+working on CVE-2021-32637, authelia_authelia, handler_verify.go
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file internal/handlers/handler_verify.go
+no 24f5caed9740f71a107af0974436eb70b572512b in 36
+no da012ab2d660e742f03e321a38fa5569fd93cd3f in 90
+no b2c60ef898f2d94c3f6122b5376135e02866d7bc in 50
+no ce6bf74c8d9013171066482c628c9e60fe6c741e in 78
+no 1772a831905ef160808f8f744ceb1a3e22434b0d in 23
+no 104a61ecd68e8cf4270efa59f4c2ed2257b6496e in 16
+no bf9ab360bd8dd46739d4aa0018ceb4c08e05dba8 in 63
+no 92d328926d96b8d20c44042675a7e5243fb6aeed in 18
+filtering 16 parent commits for file internal/handlers/handler_verify.go
+0 out/out16/CVE-2021-32637/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-32637 1622222100
+Original Project = authelia_authelia
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-32637" failed
+
+------------ CVE-2021-32640 (161 of 168)
+Stage 1
+working on CVE-2021-32640, websockets_ws, websocket-server.js
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file lib/websocket-server.js
+no 6e5a5ce341ffab5ea48542f0aa82c7f4eae80df9 in 110
+no fb658bdd11e05a89ad5dc48e126e53976c5bb67a in 123
+no e56cdfe1ec54cdb04bc83ca91f8c4c983db6cde4 in 101
+no e1ddacce06d302884e674f50c12cb376e000c6ea in 97
+filtering 16 parent commits for file lib/websocket-server.js
+0 out/out16/CVE-2021-32640/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-32640 1621970100
+Original Project = websockets_ws
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-32640" failed
+
+------------ CVE-2021-32645 (162 of 168)
+Stage 1
+working on CVE-2021-32645, tenancy_multi-tenant, HostnameActions.php
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file src/Middleware/HostnameActions.php
+filtering 18 parent commits for file src/Middleware/HostnameActions.php
+0 out/out16/CVE-2021-32645/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-32645 1622135700
+Original Project = tenancy_multi-tenant
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-32645" failed
+
+------------ CVE-2021-32646 (163 of 168)
+Stage 1
+working on CVE-2021-32646, Dav-Git_Dav-Cogs, roomer.py
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file roomer/roomer.py
+no 3e64275b05f964e046f761359e900c8e6efa9f21 in 62
+no 6a80a0b025ad5b7fbf47600c816a9c79c807b04a in 106
+filtering 23 parent commits for file roomer/roomer.py
+0 out/out16/CVE-2021-32646/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-32646 1622225700
+Original Project = Dav-Git_Dav-Cogs
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-32646" failed
+
+------------ CVE-2021-32651 (164 of 168)
+Stage 1
+working on CVE-2021-32651, theonedev_onedev, LdapAuthenticator.java
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file server-plugin/server-plugin-authenticator-ldap/src/main/java/io/onedev/server/plugin/authenticator/ldap/LdapAuthenticator.java
+filtering 1 parent commits for file server-plugin/server-plugin-authenticator-ldap/src/main/java/io/onedev/server/plugin/authenticator/ldap/LdapAuthenticator.java
+0 out/out16/CVE-2021-32651/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-32651 1622571300
+Original Project = theonedev_onedev
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-32651" failed
+
+------------ CVE-2021-32671 (165 of 168)
+Stage 1
+working on CVE-2021-32671, flarum_core, Translator.tsx
+Calling ./rgl2 to get all commits
+Error: commit 440bed81b8019dff00642c8f493b4909d505a28a not in out/out16/CVE-2021-32671/stage1/commits
+Failure (go1): "./go1 out/out16/CVE-2021-32671"
+
+------------ CVE-2021-3311 (166 of 168)
+Stage 1
+working on CVE-2021-3311, octobercms_library, Manager.php
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file src/Auth/Manager.php
+no 6ca78f3d6ab982a4477f4314ded740a8df6b2636 in 108
+no 104523203f695a3dc9ca40b05ec7bd1d8d8dbcdc in 16
+no 7b5b78456124e8cf9c7f0f7e4cbfb1c8d35cb590 in 123
+no f3a873996a60297b52753b34e668d01e80ee4a1d in 115
+no 2c00c84a4f3aa0b98d1f2b6a13e4ea8358b7ce06 in 44
+filtering 16 parent commits for file src/Auth/Manager.php
+0 out/out16/CVE-2021-3311/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-3311 1612534500
+Original Project = octobercms_library
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-3311" failed
+
+------------ CVE-2021-3325 (167 of 168)
+Stage 1
+working on CVE-2021-3325, mikaku_Monitorix, HTTPServer.pm
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file lib/HTTPServer.pm
+no 95dbed04e5cda01be5ee6668d5887e82fb183599 in 21
+filtering 25 parent commits for file lib/HTTPServer.pm
+0 out/out16/CVE-2021-3325/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-3325 1611774900
+Original Project = mikaku_Monitorix
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-3325" failed
+
+------------ CVE-2021-33815 (168 of 168)
+Stage 1
+working on CVE-2021-33815, FFmpeg_FFmpeg, exr.c
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file libavcodec/exr.c
+no 21b23ceab3cfcc2aa0a833bbff11cf38b2177800 in 33
+no 4243da4ff42e306b3622b181e12f5cd127d21414 in 66
+no ce7dbd0481f990e249c2a05f179228489d3062cf in 78
+no 1291568c9834c02413ab5d87762308f15b4ae9c6 in 18
+no 20f972701806be20a77f808db332d9489343bb78 in 32
+no a688f3c13ce55c2ba51dbbb344564649f1bb52fe in 38
+no 2233ef1db9059758bcf0ac3ea5630a72d7e838c1 in 34
+no 02220b88fc38ef9dd4f2d519f5d3e4151258b60c in 2
+filtering 16 parent commits for file libavcodec/exr.c
+0 out/out16/CVE-2021-33815/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out16/CVE-2021-33815 1622740500
+Original Project = FFmpeg_FFmpeg
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out16/CVE-2021-33815" failed
+============
+164 failed (see out/out16/log.error)
+4 succeeded (see out/out16/CVE-*)
+

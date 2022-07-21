@@ -1,0 +1,2626 @@
+
+------------ CVE-2019-11565 (1 of 173)
+Stage 1
+working on CVE-2019-11565, mnelson4_printmyblog, RestApiDetector.php
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file includes/vendor/mnelson4/RestApiDetector/RestApiDetector.php
+filtering 5 parent commits for file includes/vendor/mnelson4/RestApiDetector/RestApiDetector.php
+0 out/out12/CVE-2019-11565/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-11565 1556375340
+Original Project = mnelson4_printmyblog
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-11565" failed
+
+------------ CVE-2019-11596 (2 of 173)
+Stage 1
+working on CVE-2019-11596, memcached_memcached, memcached.c
+Calling ./rgl2 to get all commits
+Error: commit d35334f368817a77a6bd1f33c6a5676b2c402c02 not in out/out12/CVE-2019-11596/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-11596"
+
+------------ CVE-2019-11810 (3 of 173)
+Stage 1
+working on CVE-2019-11810, torvalds_linux, megaraid_sas_base.c
+Calling ./rgl2 to get all commits
+Error: commit bcf3b67d16a4c8ffae0aa79de5853435e683945c not in out/out12/CVE-2019-11810/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-11810"
+
+------------ CVE-2019-11812 (4 of 173)
+Stage 1
+working on CVE-2019-11812, MISP_MISP, CommandHelper.php
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file app/View/Helper/CommandHelper.php
+filtering 16 parent commits for file app/View/Helper/CommandHelper.php
+0 out/out12/CVE-2019-11812/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-11812 1557322140
+Original Project = MISP_MISP
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-11812" failed
+
+------------ CVE-2019-11813 (5 of 173)
+Stage 1
+working on CVE-2019-11813, MISP_MISP, value_field.ctp
+Calling ./rgl2 to get all commits
+filtering 29 child commits for file app/View/Elements/Events/View/value_field.ctp
+no 6f238403aeb55ae894d4636251f2523ece408690 in 111
+no a58e58ea9c789d044eb809ba88891ff75a968fa7 in 37
+no b246b4560feb3dce16d38c848bdac4c2734038b8 in 50
+no 250e3d0399f6bdfebfe8e699cbd61572f384d4af in 37
+no ba6cdd1f7baf5be78b2507c79df9fb648ff75df9 in 58
+filtering 1 parent commits for file app/View/Elements/Events/View/value_field.ctp
+0 out/out12/CVE-2019-11813/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-11813 1557322140
+Original Project = MISP_MISP
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-11813" failed
+
+------------ CVE-2019-11814 (6 of 173)
+Stage 1
+working on CVE-2019-11814, MISP_MISP, misp.js
+Calling ./rgl2 to get all commits
+Error: commit 62f15433e42fb92e45bd57dd6fc0c0bf53deb6fc not in out/out12/CVE-2019-11814/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-11814"
+
+------------ CVE-2019-11815 (7 of 173)
+Stage 1
+working on CVE-2019-11815, torvalds_linux, tcp.c
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file net/rds/tcp.c
+no 6997fbd7a3dafa754f81d541498ace35b43246d8 in 105
+no 3a58f13a881ed351198ffab4cf9953cf19d2ab3a in 58
+no 19f36edf14bcdb783aef3af8217df96f76a8ce34 in 25
+filtering 22 parent commits for file net/rds/tcp.c
+1 out/out12/CVE-2019-11815/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-11815 1557325740
+Original Project = torvalds_linux
+./go2: line 89: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-11815/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-11815 out/out12/CVE-2019-11815/results.csv
+out/out12/CVE-2019-11815/results.csv
+out/out12/CVE-2019-11815/results.html
+Success (go3)
+
+
+------------ CVE-2019-11833 (8 of 173)
+Stage 1
+working on CVE-2019-11833, torvalds_linux, extents.c
+Calling ./rgl2 to get all commits
+Error: commit 592acbf16821288ecdc4192c47e3774a4c48bb64 not in out/out12/CVE-2019-11833/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-11833"
+
+------------ CVE-2019-11884 (9 of 173)
+Stage 1
+working on CVE-2019-11884, torvalds_linux, sock.c
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file net/bluetooth/hidp/sock.c
+no b6459415b384cb829f0b2a4268f211c789f6cf0b in 54
+filtering 26 parent commits for file net/bluetooth/hidp/sock.c
+0 out/out12/CVE-2019-11884/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-11884 1557527340
+Original Project = torvalds_linux
+./go2: line 89: out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-11884/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-11884 out/out12/CVE-2019-11884/results.csv
+out/out12/CVE-2019-11884/results.csv
+out/out12/CVE-2019-11884/results.html
+Success (go3)
+
+
+------------ CVE-2019-11921 (10 of 173)
+Stage 1
+working on CVE-2019-11921, facebook_proxygen, StructuredHeadersUtilities.cpp
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file proxygen/lib/http/structuredheaders/StructuredHeadersUtilities.cpp
+no f17945dafddc14b757eb108f28db2d46def2c1a7 in 113
+no acc779bede18306a02d37dd7099b56b250b0dc0a in 44
+filtering 1 parent commits for file proxygen/lib/http/structuredheaders/StructuredHeadersUtilities.cpp
+0 out/out12/CVE-2019-11921/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-11921 1564089300
+Original Project = facebook_proxygen
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-11921" failed
+
+------------ CVE-2019-11932 (11 of 173)
+Stage 1
+working on CVE-2019-11932, koral--_android-gif-drawable, decoding.c
+Calling ./rgl2 to get all commits
+Error: commit cc5b4f8e43463995a84efd594f89a21f906c2d20 not in out/out12/CVE-2019-11932/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-11932"
+
+------------ CVE-2019-12106 (12 of 173)
+Stage 1
+working on CVE-2019-12106, miniupnp_miniupnp, minissdpd.c
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file minissdpd/minissdpd.c
+filtering 22 parent commits for file minissdpd/minissdpd.c
+0 out/out12/CVE-2019-12106/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-12106 1557962940
+Original Project = miniupnp_miniupnp
+Success (go2)
+Stage 3
+./go3 CVE-2019-12106 out/out12/CVE-2019-12106/results.csv
+out/out12/CVE-2019-12106/results.csv
+out/out12/CVE-2019-12106/results.html
+Success (go3)
+
+
+------------ CVE-2019-12107 (13 of 173)
+Stage 1
+working on CVE-2019-12107, miniupnp_miniupnp, upnpevents.c
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file miniupnpd/upnpevents.c
+filtering 26 parent commits for file miniupnpd/upnpevents.c
+0 out/out12/CVE-2019-12107/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-12107 1557962940
+Original Project = miniupnp_miniupnp
+Success (go2)
+Stage 3
+./go3 CVE-2019-12107 out/out12/CVE-2019-12107/results.csv
+out/out12/CVE-2019-12107/results.csv
+out/out12/CVE-2019-12107/results.html
+Success (go3)
+
+
+------------ CVE-2019-12108 (14 of 173)
+Stage 1
+working on CVE-2019-12108, miniupnp_miniupnp, upnpsoap.c
+Calling ./rgl2 to get all commits
+filtering 17 child commits for file miniupnpd/upnpsoap.c
+filtering 13 parent commits for file miniupnpd/upnpsoap.c
+0 out/out12/CVE-2019-12108/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-12108 1557962940
+Original Project = miniupnp_miniupnp
+Success (go2)
+Stage 3
+./go3 CVE-2019-12108 out/out12/CVE-2019-12108/results.csv
+out/out12/CVE-2019-12108/results.csv
+out/out12/CVE-2019-12108/results.html
+Success (go3)
+
+
+------------ CVE-2019-12109 (15 of 173)
+Stage 1
+working on CVE-2019-12109, miniupnp_miniupnp, upnpsoap.c
+Calling ./rgl2 to get all commits
+filtering 17 child commits for file miniupnpd/upnpsoap.c
+filtering 13 parent commits for file miniupnpd/upnpsoap.c
+0 out/out12/CVE-2019-12109/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-12109 1557962940
+Original Project = miniupnp_miniupnp
+Success (go2)
+Stage 3
+./go3 CVE-2019-12109 out/out12/CVE-2019-12109/results.csv
+out/out12/CVE-2019-12109/results.csv
+out/out12/CVE-2019-12109/results.html
+Success (go3)
+
+
+------------ CVE-2019-12110 (16 of 173)
+Stage 1
+working on CVE-2019-12110, miniupnp_miniupnp, upnpredirect.c
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file miniupnpd/upnpredirect.c
+filtering 25 parent commits for file miniupnpd/upnpredirect.c
+0 out/out12/CVE-2019-12110/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-12110 1557962940
+Original Project = miniupnp_miniupnp
+Success (go2)
+Stage 3
+./go3 CVE-2019-12110 out/out12/CVE-2019-12110/results.csv
+out/out12/CVE-2019-12110/results.csv
+out/out12/CVE-2019-12110/results.html
+Success (go3)
+
+
+------------ CVE-2019-12111 (17 of 173)
+Stage 1
+working on CVE-2019-12111, miniupnp_miniupnp, pcpserver.c
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file miniupnpd/pcpserver.c
+no b734f94bdf6ff555a2747b855ffd2e10de881705 in 55
+filtering 25 parent commits for file miniupnpd/pcpserver.c
+0 out/out12/CVE-2019-12111/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-12111 1557962940
+Original Project = miniupnp_miniupnp
+Success (go2)
+Stage 3
+./go3 CVE-2019-12111 out/out12/CVE-2019-12111/results.csv
+out/out12/CVE-2019-12111/results.csv
+out/out12/CVE-2019-12111/results.html
+Success (go3)
+
+
+------------ CVE-2019-12272 (18 of 173)
+Stage 1
+working on CVE-2019-12272, openwrt_luci, status.lua
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file modules/luci-mod-admin-full/luasrc/controller/admin/status.lua
+filtering 7 parent commits for file modules/luci-mod-admin-full/luasrc/controller/admin/status.lua
+0 out/out12/CVE-2019-12272/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-12272 1558625400
+Original Project = openwrt_luci
+Success (go2)
+Stage 3
+./go3 CVE-2019-12272 out/out12/CVE-2019-12272/results.csv
+out/out12/CVE-2019-12272/results.csv
+out/out12/CVE-2019-12272/results.html
+Success (go3)
+
+
+------------ CVE-2019-12439 (19 of 173)
+Stage 1
+working on CVE-2019-12439, projectatomic_bubblewrap, bubblewrap.c
+Calling ./rgl2 to get all commits
+Error: commit efc89e3b939b4bde42c10f065f6b7b02958ed50e not in out/out12/CVE-2019-12439/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-12439"
+
+------------ CVE-2019-12730 (20 of 173)
+Stage 1
+working on CVE-2019-12730, FFmpeg_FFmpeg, aadec.c
+Calling ./rgl2 to get all commits
+filtering 21 child commits for file libavformat/aadec.c
+no 35ec5c819b0f472536eb48e8f3871eb5ca222da6 in 53
+no c72095739c3aca02499a3c451ae7874676eedd7e in 71
+no 72745beb44b4ddf60b77833b2edddf80e8f79ef2 in 114
+no e5ba554edf961e1ff761d68d4ebf5a7ea4e5a3b7 in 101
+no d27b97b04321db147cf7db6fa9cb05ba7f6ef06f in 82
+no c9b30992102bbc4120b5c0139d1aa8a2dbb2ebb0 in 73
+no a0900a318a60e38ffeb14c322b09f98fcbd97c73 in 32
+no 0a76f8217e0d80d336ad8d9c46523fd3d1262c8c in 10
+filtering 9 parent commits for file libavformat/aadec.c
+0 out/out12/CVE-2019-12730/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-12730 1559658540
+Original Project = FFmpeg_FFmpeg
+Success (go2)
+Stage 3
+./go3 CVE-2019-12730 out/out12/CVE-2019-12730/results.csv
+out/out12/CVE-2019-12730/results.csv
+out/out12/CVE-2019-12730/results.html
+Success (go3)
+
+
+------------ CVE-2019-12742 (21 of 173)
+Stage 1
+working on CVE-2019-12742, bludit_bludit, user-password.php
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file bl-kernel/admin/controllers/user-password.php
+filtering 11 parent commits for file bl-kernel/admin/controllers/user-password.php
+0 out/out12/CVE-2019-12742/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-12742 1559752140
+Original Project = bludit_bludit
+Success (go2)
+Stage 3
+./go3 CVE-2019-12742 out/out12/CVE-2019-12742/results.csv
+out/out12/CVE-2019-12742/results.csv
+out/out12/CVE-2019-12742/results.html
+Success (go3)
+
+
+------------ CVE-2019-12819 (22 of 173)
+Stage 1
+working on CVE-2019-12819, torvalds_linux, mdio_bus.c
+Calling ./rgl2 to get all commits
+Error: commit 6ff7b060535e87c2ae14dd8548512abfdda528fb not in out/out12/CVE-2019-12819/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-12819"
+
+------------ CVE-2019-12868 (23 of 173)
+Stage 1
+working on CVE-2019-12868, MISP_MISP, Server.php
+Calling ./rgl2 to get all commits
+Error: commit c42c5fe92783dd306b7600db1f6a25324445b40c not in out/out12/CVE-2019-12868/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-12868"
+
+------------ CVE-2019-12875 (24 of 173)
+Stage 1
+working on CVE-2019-12875, sroracle_abuild, abuild-sudo.c
+Calling ./rgl2 to get all commits
+Error: commit 4f90ce92778d0ee302e288def75591b96a397c8b not in out/out12/CVE-2019-12875/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-12875"
+
+------------ CVE-2019-12904 (25 of 173)
+Stage 1
+working on CVE-2019-12904, gpg_libgcrypt, cipher-gcm.c
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file cipher/cipher-gcm.c
+filtering 25 parent commits for file cipher/cipher-gcm.c
+0 out/out12/CVE-2019-12904/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-12904 1560989700
+Original Project = gpg_libgcrypt
+Success (go2)
+Stage 3
+./go3 CVE-2019-12904 out/out12/CVE-2019-12904/results.csv
+out/out12/CVE-2019-12904/results.csv
+out/out12/CVE-2019-12904/results.html
+Success (go3)
+
+
+------------ CVE-2019-12973 (26 of 173)
+Stage 1
+working on CVE-2019-12973, uclouvain_openjpeg, convertbmp.c
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file src/bin/jp2/convertbmp.c
+no tree 01cd6a4f6a78f6709cd25cb03b6e9b9b560ba6e3 for commit 0b5d62684fe360e098e3bccaef02ee3e9781cec4
+filtering 21 parent commits for file src/bin/jp2/convertbmp.c
+0 out/out12/CVE-2019-12973/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-12973 1561572900
+Original Project = uclouvain_openjpeg
+Success (go2)
+Stage 3
+./go3 CVE-2019-12973 out/out12/CVE-2019-12973/results.csv
+out/out12/CVE-2019-12973/results.csv
+out/out12/CVE-2019-12973/results.html
+Success (go3)
+
+
+------------ CVE-2019-12980 (27 of 173)
+Stage 1
+working on CVE-2019-12980, libming_libming, input.c
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file src/blocks/input.c
+filtering 29 parent commits for file src/blocks/input.c
+0 out/out12/CVE-2019-12980/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-12980 1561572900
+Original Project = libming_libming
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-12980" failed
+
+------------ CVE-2019-12981 (28 of 173)
+Stage 1
+working on CVE-2019-12981, libming_libming, shape.c
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file src/blocks/shape.c
+filtering 29 parent commits for file src/blocks/shape.c
+0 out/out12/CVE-2019-12981/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-12981 1561572900
+Original Project = libming_libming
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-12981" failed
+
+------------ CVE-2019-12982 (29 of 173)
+Stage 1
+working on CVE-2019-12982, libming_libming, decompile.c
+Calling ./rgl2 to get all commits
+filtering 7 child commits for file util/decompile.c
+filtering 23 parent commits for file util/decompile.c
+0 out/out12/CVE-2019-12982/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-12982 1561572900
+Original Project = libming_libming
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-12982" failed
+
+------------ CVE-2019-12984 (30 of 173)
+Stage 1
+working on CVE-2019-12984, torvalds_linux, netlink.c
+Calling ./rgl2 to get all commits
+filtering 19 child commits for file net/nfc/netlink.c
+no 4071bf121d59944d5cd2238de0642f3d7995a997 in 64
+no 4cd8371a234d051f9c9557fcbb1f8c523b1c0d10 in 76
+no fd79a0cbf0b2e34bcc45b13acf962e2032a82203 in 125
+filtering 11 parent commits for file net/nfc/netlink.c
+0 out/out12/CVE-2019-12984/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-12984 1561572900
+Original Project = torvalds_linux
+./go2: line 89: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-12984/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-12984 out/out12/CVE-2019-12984/results.csv
+out/out12/CVE-2019-12984/results.csv
+out/out12/CVE-2019-12984/results.html
+Success (go3)
+
+
+------------ CVE-2019-13127 (31 of 173)
+Stage 1
+working on CVE-2019-13127, jgraph_mxgraph, Dialogs.js
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file javascript/examples/grapheditor/www/js/Dialogs.js
+filtering 20 parent commits for file javascript/examples/grapheditor/www/js/Dialogs.js
+0 out/out12/CVE-2019-13127/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13127 1561994100
+Original Project = jgraph_mxgraph
+Success (go2)
+Stage 3
+./go3 CVE-2019-13127 out/out12/CVE-2019-13127/results.csv
+out/out12/CVE-2019-13127/results.csv
+out/out12/CVE-2019-13127/results.html
+Success (go3)
+
+
+------------ CVE-2019-13135 (32 of 173)
+Stage 1
+working on CVE-2019-13135, ImageMagick_ImageMagick6, cut.c
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file coders/cut.c
+no 3b18a98dfb1e614a7a95716b8629326e4901318a in 59
+no 78395b3affd854ff8aa349e42767202d30f574a0 in 120
+filtering 24 parent commits for file coders/cut.c
+0 out/out12/CVE-2019-13135/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13135 1562012100
+Original Project = ImageMagick_ImageMagick6
+Success (go2)
+Stage 3
+./go3 CVE-2019-13135 out/out12/CVE-2019-13135/results.csv
+out/out12/CVE-2019-13135/results.csv
+out/out12/CVE-2019-13135/results.html
+Success (go3)
+
+
+------------ CVE-2019-13136 (33 of 173)
+Stage 1
+working on CVE-2019-13136, ImageMagick_ImageMagick, tiff.c
+Calling ./rgl2 to get all commits
+Error: commit fe5f4b85e6b1b54d3b4588a77133c06ade46d891 not in out/out12/CVE-2019-13136/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13136"
+
+------------ CVE-2019-13137 (34 of 173)
+Stage 1
+working on CVE-2019-13137, ImageMagick_ImageMagick, ps.c
+Calling ./rgl2 to get all commits
+Error: commit 35ccb468ee2dcbe8ce9cf1e2f1957acc27f54c34 not in out/out12/CVE-2019-13137/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13137"
+
+------------ CVE-2019-13173 (35 of 173)
+Stage 1
+working on CVE-2019-13173, npm_fstream, writer.js
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file lib/writer.js
+filtering 29 parent commits for file lib/writer.js
+0 out/out12/CVE-2019-13173/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13173 1562098500
+Original Project = npm_fstream
+./go2: line 89: out/out12/CVE-2019-13173/stage2/gitlab.com_dante-sttr_dante-presentations/dante-internal062619_good.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-13173/stage2/gitlab.com_dante-sttr_dante-presentations/dante-internal062619_bad.txt: No such file or directory
+./go2: line 96: out/out12/CVE-2019-13173/stage2/gitlab.com_dante-sttr_dante-presentations/dante-internal062619_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-13173/stage2/gitlab.com_dante-sttr_dante-presentations/dante-internal062619_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-13173/stage2/gitlab.com_dante-sttr_dante-presentations/dante-internal062619_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-13173/stage2/gitlab.com_dante-sttr_dante-presentations/dante-internal062619_good_sorted.txt’ for reading: No such file or directory
+./go2: line 89: out/out12/CVE-2019-13173/stage2/gitlab.com_kalilinux_packages/bloodhound_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-13173/stage2/gitlab.com_kalilinux_packages/bloodhound_good.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-13173/stage2/gitlab.com_kalilinux_packages/bloodhound_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-13173/stage2/gitlab.com_kalilinux_packages/bloodhound_bad.txt: No such file or directory
+./go2: line 96: out/out12/CVE-2019-13173/stage2/gitlab.com_kalilinux_packages/bloodhound_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-13173/stage2/gitlab.com_kalilinux_packages/bloodhound_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-13173/stage2/gitlab.com_kalilinux_packages/bloodhound_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-13173/stage2/gitlab.com_kalilinux_packages/bloodhound_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-13173 out/out12/CVE-2019-13173/results.csv
+out/out12/CVE-2019-13173/results.csv
+out/out12/CVE-2019-13173/results.html
+Success (go3)
+
+
+------------ CVE-2019-13217 (36 of 173)
+Stage 1
+working on CVE-2019-13217, nothings_stb, stb_vorbis.c
+Calling ./rgl2 to get all commits
+Error: commit 98fdfc6df88b1e34a736d5e126e6c8139c8de1a6 not in out/out12/CVE-2019-13217/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13217"
+
+------------ CVE-2019-13218 (37 of 173)
+Stage 1
+working on CVE-2019-13218, nothings_stb, stb_vorbis.c
+Calling ./rgl2 to get all commits
+Error: commit 98fdfc6df88b1e34a736d5e126e6c8139c8de1a6 not in out/out12/CVE-2019-13218/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13218"
+
+------------ CVE-2019-13219 (38 of 173)
+Stage 1
+working on CVE-2019-13219, nothings_stb, stb_vorbis.c
+Calling ./rgl2 to get all commits
+Error: commit 98fdfc6df88b1e34a736d5e126e6c8139c8de1a6 not in out/out12/CVE-2019-13219/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13219"
+
+------------ CVE-2019-13220 (39 of 173)
+Stage 1
+working on CVE-2019-13220, nothings_stb, stb_vorbis.c
+Calling ./rgl2 to get all commits
+Error: commit 98fdfc6df88b1e34a736d5e126e6c8139c8de1a6 not in out/out12/CVE-2019-13220/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13220"
+
+------------ CVE-2019-13221 (40 of 173)
+Stage 1
+working on CVE-2019-13221, nothings_stb, stb_vorbis.c
+Calling ./rgl2 to get all commits
+Error: commit 98fdfc6df88b1e34a736d5e126e6c8139c8de1a6 not in out/out12/CVE-2019-13221/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13221"
+
+------------ CVE-2019-13222 (41 of 173)
+Stage 1
+working on CVE-2019-13222, nothings_stb, stb_vorbis.c
+Calling ./rgl2 to get all commits
+Error: commit 98fdfc6df88b1e34a736d5e126e6c8139c8de1a6 not in out/out12/CVE-2019-13222/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13222"
+
+------------ CVE-2019-13223 (42 of 173)
+Stage 1
+working on CVE-2019-13223, nothings_stb, stb_vorbis.c
+Calling ./rgl2 to get all commits
+Error: commit 98fdfc6df88b1e34a736d5e126e6c8139c8de1a6 not in out/out12/CVE-2019-13223/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13223"
+
+------------ CVE-2019-13224 (43 of 173)
+Stage 1
+working on CVE-2019-13224, kkos_oniguruma, regext.c
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file src/regext.c
+filtering 6 parent commits for file src/regext.c
+0 out/out12/CVE-2019-13224/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13224 1562768100
+Original Project = kkos_oniguruma
+Success (go2)
+Stage 3
+./go3 CVE-2019-13224 out/out12/CVE-2019-13224/results.csv
+out/out12/CVE-2019-13224/results.csv
+out/out12/CVE-2019-13224/results.html
+Success (go3)
+
+
+------------ CVE-2019-13225 (44 of 173)
+Stage 1
+working on CVE-2019-13225, kkos_oniguruma, regcomp.c
+Calling ./rgl2 to get all commits
+Error: commit c509265c5f6ae7264f7b8a8aae1cfa5fc59d108c not in out/out12/CVE-2019-13225/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13225"
+
+------------ CVE-2019-13233 (45 of 173)
+Stage 1
+working on CVE-2019-13233, torvalds_linux, insn-eval.c
+Calling ./rgl2 to get all commits
+filtering 25 child commits for file arch/x86/lib/insn-eval.c
+no 3a24a60854d2ef19e0edcd11cdbbb4fabc655dde in 58
+no 64ad9461521b1a357846ef6cedc4bccd48a046e0 in 100
+no 9cdbeec4096804083944d05da96bbaf59a1eb4f9 in 28
+no 4b5305decc8436bfe363d1c1773e8fa1c828b14d in 75
+no 70a81f99e45b15b3e77f70720742545e1c7541da in 112
+no d5ec1877df6da6a14bbc353aff50689528930dd2 in 85
+no 23ef731e4365196bfc186358eb4f6265d60ab352 in 35
+filtering 5 parent commits for file arch/x86/lib/insn-eval.c
+0 out/out12/CVE-2019-13233/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13233 1562246100
+Original Project = torvalds_linux
+./go2: line 89: out/out12/CVE-2019-13233/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-13233/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-13233/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-13233/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-13233/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-13233/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out12/CVE-2019-13233/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-13233/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-13233/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-13233/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-13233 out/out12/CVE-2019-13233/results.csv
+out/out12/CVE-2019-13233/results.csv
+out/out12/CVE-2019-13233/results.html
+Success (go3)
+
+
+------------ CVE-2019-13239 (46 of 173)
+Stage 1
+working on CVE-2019-13239, glpi-project_glpi, user.class.php
+Calling ./rgl2 to get all commits
+Error: commit c2aa7a7cd6af28be3809acc7e7842d2d2008c0fb not in out/out12/CVE-2019-13239/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13239"
+
+------------ CVE-2019-13240 (47 of 173)
+Stage 1
+working on CVE-2019-13240, glpi-project_glpi, user.class.php
+Calling ./rgl2 to get all commits
+Error: commit 5da9f99b2d81713b1e36016b47ce656a33648bc7 not in out/out12/CVE-2019-13240/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13240"
+
+------------ CVE-2019-13272 (48 of 173)
+Stage 1
+working on CVE-2019-13272, torvalds_linux, ptrace.c
+Calling ./rgl2 to get all commits
+filtering 27 child commits for file kernel/ptrace.c
+no de2a34771f5123270bc3842535ac91673116dd03 in 94
+no 67850b7bdcd2803e10d019f0da5673a92139b43a in 103
+no 31cae1eaae4fd65095ad6a3659db467bc3c2599e in 49
+no 5b4197cb287daf3cfd008fbf8682a1d6f4b13c0b in 91
+no 2500ad1c7fa42ad734677853961a3a8bec0772c5 in 37
+no 7b0fe1367ef2d2591c20f03c4e64b7230e1ebcd7 in 123
+no 6a2d90ba027adba528509ffa27097cffd3879257 in 106
+no 16cc1bc67de88be19fa595f4645506ea2ac106d2 in 22
+no f26b2afd53e70db67be8252d340b4a1387ec8b55 in 114
+no ee1fee900537b5d9560e9f937402de5ddc8412f3 in 110
+no 6707d0fc60576fa8ef2dfa2f9009b606df35ba24 in 103
+filtering 3 parent commits for file kernel/ptrace.c
+0 out/out12/CVE-2019-13272/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13272 1563369300
+Original Project = torvalds_linux
+Success (go2)
+Stage 3
+./go3 CVE-2019-13272 out/out12/CVE-2019-13272/results.csv
+out/out12/CVE-2019-13272/results.csv
+out/out12/CVE-2019-13272/results.html
+Success (go3)
+
+
+------------ CVE-2019-13295 (49 of 173)
+Stage 1
+working on CVE-2019-13295, ImageMagick_ImageMagick, threshold.c
+Calling ./rgl2 to get all commits
+filtering 27 child commits for file MagickCore/threshold.c
+no 7ba113a0d26b6d2b008ce0fcf428050a84e5a0ac in 123
+no 5775664a028c8fdd9fe9d99a4628d08ec57f424c in 87
+no 8891ec1db10a70558deef45f61941b4fe0576b66 in 8
+no d6da28b0e03c15d1290ed17c94ff35d85b7ac5a5 in 86
+no dfa9f1a3b4d270ecf9dcd4c507e128d65241a574 in 95
+no 4df253e17e8b224866088ef396eed2c760cb2753 in 77
+filtering 3 parent commits for file MagickCore/threshold.c
+0 out/out12/CVE-2019-13295/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13295 1562289300
+Original Project = ImageMagick_ImageMagick
+Success (go2)
+Stage 3
+./go3 CVE-2019-13295 out/out12/CVE-2019-13295/results.csv
+out/out12/CVE-2019-13295/results.csv
+out/out12/CVE-2019-13295/results.html
+Success (go3)
+
+
+------------ CVE-2019-13296 (50 of 173)
+Stage 1
+working on CVE-2019-13296, ImageMagick_ImageMagick, operation.c
+Calling ./rgl2 to get all commits
+Error: commit ce08a3691a8ac29125e29fc41967b3737fa3f425 not in out/out12/CVE-2019-13296/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13296"
+
+------------ CVE-2019-13297 (51 of 173)
+Stage 1
+working on CVE-2019-13297, ImageMagick_ImageMagick6, threshold.c
+Calling ./rgl2 to get all commits
+filtering 16 child commits for file magick/threshold.c
+no 78395b3affd854ff8aa349e42767202d30f574a0 in 120
+no 8860c28c64ae2cf5717e309325592c1ccb7cb969 in 8
+no fbb8139444e7d2debede07ceec91295243fb7619 in 123
+no c9753f9113014a3d0283e8e4332447e7d1e5ed52 in 73
+filtering 14 parent commits for file magick/threshold.c
+0 out/out12/CVE-2019-13297/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13297 1562289300
+Original Project = ImageMagick_ImageMagick6
+Success (go2)
+Stage 3
+./go3 CVE-2019-13297 out/out12/CVE-2019-13297/results.csv
+out/out12/CVE-2019-13297/results.csv
+out/out12/CVE-2019-13297/results.html
+Success (go3)
+
+
+------------ CVE-2019-13299 (52 of 173)
+Stage 1
+working on CVE-2019-13299, ImageMagick_ImageMagick, pixel-accessor.h
+Calling ./rgl2 to get all commits
+filtering 13 child commits for file MagickCore/pixel-accessor.h
+no 0dcacb8ca5b1b986ce1599a7b9642fc08deb328b in 13
+no eab8155547f7422239e58e48a41f0268a629b4fb in 106
+no 91c6c5300f0c6eba01f2e5a01de83d00c65d0f11 in 17
+no fa0e7bf41ae8362216b180c33c3f152805374b05 in 122
+no 8891ec1db10a70558deef45f61941b4fe0576b66 in 8
+no 50780da98acdb8b427bc589a6e3637308d7f9fd9 in 80
+no 7366f2608cbf893212024955a1851ede76449ddf in 115
+filtering 17 parent commits for file MagickCore/pixel-accessor.h
+1 out/out12/CVE-2019-13299/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13299 1562289300
+Original Project = ImageMagick_ImageMagick
+./go2: line 89: out/out12/CVE-2019-13299/stage2/gitlab.com_exconfidential_t-alps-release-q0/sauce/source_root_good.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-13299/stage2/gitlab.com_exconfidential_t-alps-release-q0/sauce/source_root_bad.txt: No such file or directory
+./go2: line 96: out/out12/CVE-2019-13299/stage2/gitlab.com_exconfidential_t-alps-release-q0/sauce/source_root_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-13299/stage2/gitlab.com_exconfidential_t-alps-release-q0/sauce/source_root_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-13299/stage2/gitlab.com_exconfidential_t-alps-release-q0/sauce/source_root_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-13299/stage2/gitlab.com_exconfidential_t-alps-release-q0/sauce/source_root_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-13299 out/out12/CVE-2019-13299/results.csv
+out/out12/CVE-2019-13299/results.csv
+out/out12/CVE-2019-13299/results.html
+Success (go3)
+
+
+------------ CVE-2019-13300 (53 of 173)
+Stage 1
+working on CVE-2019-13300, ImageMagick_ImageMagick6, statistic.c
+Calling ./rgl2 to get all commits
+filtering 29 child commits for file magick/statistic.c
+no 78395b3affd854ff8aa349e42767202d30f574a0 in 120
+no 68fe465b16694f67f1e09e8c1c7fbaec396e4a41 in 104
+no 8860c28c64ae2cf5717e309325592c1ccb7cb969 in 8
+no 6dc7e946ad28bc74f0385f32409382d2c290f6c2 in 109
+no b1a86095382b696ffef5a286b3cdb2ecf1599683 in 49
+no 072d7b10dbe74d1cf4ec0d008990c1a28c076f9e in 7
+filtering 1 parent commits for file magick/statistic.c
+0 out/out12/CVE-2019-13300/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13300 1562289300
+Original Project = ImageMagick_ImageMagick6
+Success (go2)
+Stage 3
+./go3 CVE-2019-13300 out/out12/CVE-2019-13300/results.csv
+out/out12/CVE-2019-13300/results.csv
+out/out12/CVE-2019-13300/results.html
+Success (go3)
+
+
+------------ CVE-2019-13301 (54 of 173)
+Stage 1
+working on CVE-2019-13301, ImageMagick_ImageMagick, annotate.c
+Calling ./rgl2 to get all commits
+Error: commit f595a1985233c399a05c0c37cc41de16a90dd025 not in out/out12/CVE-2019-13301/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13301"
+
+------------ CVE-2019-13302 (55 of 173)
+Stage 1
+working on CVE-2019-13302, ImageMagick_ImageMagick, fourier.c
+Calling ./rgl2 to get all commits
+filtering 28 child commits for file MagickCore/fourier.c
+no 354669f10c64bed9ae55ae81da53d7af25ab5f80 in 53
+no b7d240bd8745bccbbfaabfeb1a4b7d3fd5218526 in 55
+no c506f551e56d075886b7950de1a7df76ae552e28 in 69
+no 8649f4f9b9fc6a4ca6e7edbadce08367b790b872 in 6
+no 6d2c75e57e05180c4c47b4028b906203efcd710f in 109
+no 6820800c9c8c0bc60fc7e43462160a9782f2c304 in 104
+no 7ba113a0d26b6d2b008ce0fcf428050a84e5a0ac in 123
+no 8891ec1db10a70558deef45f61941b4fe0576b66 in 8
+no d6da28b0e03c15d1290ed17c94ff35d85b7ac5a5 in 86
+filtering 2 parent commits for file MagickCore/fourier.c
+0 out/out12/CVE-2019-13302/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13302 1562289300
+Original Project = ImageMagick_ImageMagick
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-13302" failed
+
+------------ CVE-2019-13303 (56 of 173)
+Stage 1
+working on CVE-2019-13303, ImageMagick_ImageMagick, composite.c
+Calling ./rgl2 to get all commits
+Error: commit d29148fae06c01ef215940e084cf41853c117bab not in out/out12/CVE-2019-13303/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13303"
+
+------------ CVE-2019-13304 (57 of 173)
+Stage 1
+working on CVE-2019-13304, ImageMagick_ImageMagick, pnm.c
+Calling ./rgl2 to get all commits
+Error: commit 7689875ef64f34141e7292f6945efdf0530b4a5e not in out/out12/CVE-2019-13304/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13304"
+
+------------ CVE-2019-13305 (58 of 173)
+Stage 1
+working on CVE-2019-13305, ImageMagick_ImageMagick, pnm.c
+Calling ./rgl2 to get all commits
+Error: commit 29efd648f38b73a64d73f14cd2019d869a585888 not in out/out12/CVE-2019-13305/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13305"
+
+------------ CVE-2019-13306 (59 of 173)
+Stage 1
+working on CVE-2019-13306, ImageMagick_ImageMagick6, pnm.c
+Calling ./rgl2 to get all commits
+Error: commit cb5ec7d98195aa74d5ed299b38eff2a68122f3fa not in out/out12/CVE-2019-13306/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13306"
+
+------------ CVE-2019-13307 (60 of 173)
+Stage 1
+working on CVE-2019-13307, ImageMagick_ImageMagick6, statistic.c
+Calling ./rgl2 to get all commits
+filtering 28 child commits for file magick/statistic.c
+no 78395b3affd854ff8aa349e42767202d30f574a0 in 120
+no 68fe465b16694f67f1e09e8c1c7fbaec396e4a41 in 104
+no 8860c28c64ae2cf5717e309325592c1ccb7cb969 in 8
+no 6dc7e946ad28bc74f0385f32409382d2c290f6c2 in 109
+no b1a86095382b696ffef5a286b3cdb2ecf1599683 in 49
+no 072d7b10dbe74d1cf4ec0d008990c1a28c076f9e in 7
+filtering 2 parent commits for file magick/statistic.c
+0 out/out12/CVE-2019-13307/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13307 1562289300
+Original Project = ImageMagick_ImageMagick6
+Success (go2)
+Stage 3
+./go3 CVE-2019-13307 out/out12/CVE-2019-13307/results.csv
+out/out12/CVE-2019-13307/results.csv
+out/out12/CVE-2019-13307/results.html
+Success (go3)
+
+
+------------ CVE-2019-13309 (61 of 173)
+Stage 1
+working on CVE-2019-13309, ImageMagick_ImageMagick6, mogrify.c
+Calling ./rgl2 to get all commits
+filtering 22 child commits for file wand/mogrify.c
+no e3595ebb4b8633dc76f912706429ff8c4eed449b in 99
+no 78395b3affd854ff8aa349e42767202d30f574a0 in 120
+no 2318bfb4009f8742b4c09007f3c8ba72bac7bf89 in 35
+no 9d8e86156f0f2c949623bfbd5c78d6c89a7c5467 in 29
+filtering 8 parent commits for file wand/mogrify.c
+0 out/out12/CVE-2019-13309/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13309 1562289300
+Original Project = ImageMagick_ImageMagick6
+Success (go2)
+Stage 3
+./go3 CVE-2019-13309 out/out12/CVE-2019-13309/results.csv
+out/out12/CVE-2019-13309/results.csv
+out/out12/CVE-2019-13309/results.html
+Success (go3)
+
+
+------------ CVE-2019-13310 (62 of 173)
+Stage 1
+working on CVE-2019-13310, ImageMagick_ImageMagick6, mogrify.c
+Calling ./rgl2 to get all commits
+filtering 22 child commits for file wand/mogrify.c
+no e3595ebb4b8633dc76f912706429ff8c4eed449b in 99
+no 78395b3affd854ff8aa349e42767202d30f574a0 in 120
+no 2318bfb4009f8742b4c09007f3c8ba72bac7bf89 in 35
+no 9d8e86156f0f2c949623bfbd5c78d6c89a7c5467 in 29
+filtering 8 parent commits for file wand/mogrify.c
+0 out/out12/CVE-2019-13310/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13310 1562289300
+Original Project = ImageMagick_ImageMagick6
+Success (go2)
+Stage 3
+./go3 CVE-2019-13310 out/out12/CVE-2019-13310/results.csv
+out/out12/CVE-2019-13310/results.csv
+out/out12/CVE-2019-13310/results.html
+Success (go3)
+
+
+------------ CVE-2019-13311 (63 of 173)
+Stage 1
+working on CVE-2019-13311, ImageMagick_ImageMagick6, mogrify.c
+Calling ./rgl2 to get all commits
+filtering 21 child commits for file wand/mogrify.c
+no e3595ebb4b8633dc76f912706429ff8c4eed449b in 99
+no 78395b3affd854ff8aa349e42767202d30f574a0 in 120
+no 2318bfb4009f8742b4c09007f3c8ba72bac7bf89 in 35
+no 9d8e86156f0f2c949623bfbd5c78d6c89a7c5467 in 29
+filtering 9 parent commits for file wand/mogrify.c
+0 out/out12/CVE-2019-13311/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13311 1562289300
+Original Project = ImageMagick_ImageMagick6
+Success (go2)
+Stage 3
+./go3 CVE-2019-13311 out/out12/CVE-2019-13311/results.csv
+out/out12/CVE-2019-13311/results.csv
+out/out12/CVE-2019-13311/results.html
+Success (go3)
+
+
+------------ CVE-2019-13343 (64 of 173)
+Stage 1
+working on CVE-2019-13343, bitbucket.org_butor-team_portal, WhiteLabelingServlet.java
+Calling ./rgl2 to get all commits
+jq: error (at <stdin>:4): Cannot index string with string "sha"
+Error: commit cd7055d33e194fcf530100ee1d8d13aa9cde230b not in out/out12/CVE-2019-13343/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13343"
+
+------------ CVE-2019-13454 (65 of 173)
+Stage 1
+working on CVE-2019-13454, ImageMagick_ImageMagick6, layer.c
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file magick/layer.c
+no 78395b3affd854ff8aa349e42767202d30f574a0 in 120
+no aee3f004aa62bafb20dcb7c7c0675ee7d5bf9255 in 46
+no bec4e2dabf96dd93ef0ca7bb384521acdcb4be1e in 62
+no d4f04b4dfb783996b8f48c28d64c04ca8b8cd542 in 84
+filtering 19 parent commits for file magick/layer.c
+0 out/out12/CVE-2019-13454/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13454 1562692500
+Original Project = ImageMagick_ImageMagick6
+Success (go2)
+Stage 3
+./go3 CVE-2019-13454 out/out12/CVE-2019-13454/results.csv
+out/out12/CVE-2019-13454/results.csv
+out/out12/CVE-2019-13454/results.html
+Success (go3)
+
+
+------------ CVE-2019-13456 (66 of 173)
+Stage 1
+working on CVE-2019-13456, FreeRADIUS_freeradius-server, eap_pwd.c
+Calling ./rgl2 to get all commits
+Error: commit 3ea2a5a026e73d81cd9a3e9bbd4300c433004bfa not in out/out12/CVE-2019-13456/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13456"
+
+------------ CVE-2019-13568 (67 of 173)
+Stage 1
+working on CVE-2019-13568, dtschump_CImg, CImg.h
+Calling ./rgl2 to get all commits
+Error: commit ac8003393569aba51048c9d67e1491559877b1d1 not in out/out12/CVE-2019-13568/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-13568"
+
+------------ CVE-2019-13575 (68 of 173)
+Stage 1
+working on CVE-2019-13575, wpeverest_everest-forms, evf-entry-functions.php
+Calling ./rgl2 to get all commits
+filtering 21 child commits for file includes/evf-entry-functions.php
+no ddf20fe0dc6f1e795c1a519a31c7f28c57e3e096 in 93
+no 28d123459e7e217097c03fc00049b0435f8d6bf2 in 40
+filtering 9 parent commits for file includes/evf-entry-functions.php
+0 out/out12/CVE-2019-13575/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13575 1563462900
+Original Project = wpeverest_everest-forms
+Success (go2)
+Stage 3
+./go3 CVE-2019-13575 out/out12/CVE-2019-13575/results.csv
+out/out12/CVE-2019-13575/results.csv
+out/out12/CVE-2019-13575/results.html
+Success (go3)
+
+
+------------ CVE-2019-13578 (69 of 173)
+Stage 1
+working on CVE-2019-13578, impress-org_give, class-payments-query.php
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file includes/payments/class-payments-query.php
+filtering 24 parent commits for file includes/payments/class-payments-query.php
+0 out/out12/CVE-2019-13578/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13578 1565885700
+Original Project = impress-org_give
+Success (go2)
+Stage 3
+./go3 CVE-2019-13578 out/out12/CVE-2019-13578/results.csv
+out/out12/CVE-2019-13578/results.csv
+out/out12/CVE-2019-13578/results.html
+Success (go3)
+
+
+------------ CVE-2019-13615 (70 of 173)
+Stage 1
+working on CVE-2019-13615, Matroska-Org_libebml, EbmlElement.cpp
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file src/EbmlElement.cpp
+filtering 19 parent commits for file src/EbmlElement.cpp
+0 out/out12/CVE-2019-13615/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-13615 1563297300
+Original Project = Matroska-Org_libebml
+Success (go2)
+Stage 3
+./go3 CVE-2019-13615 out/out12/CVE-2019-13615/results.csv
+out/out12/CVE-2019-13615/results.csv
+out/out12/CVE-2019-13615/results.html
+Success (go3)
+
+
+------------ CVE-2019-14283 (71 of 173)
+Stage 1
+working on CVE-2019-14283, torvalds_linux, floppy.c
+Calling ./rgl2 to get all commits
+Error: commit da99466ac243f15fbba65bd261bfc75ffa1532b6 not in out/out12/CVE-2019-14283/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-14283"
+
+------------ CVE-2019-14284 (72 of 173)
+Stage 1
+working on CVE-2019-14284, torvalds_linux, floppy.c
+Calling ./rgl2 to get all commits
+Error: commit f3554aeb991214cbfafd17d55e2bfddb50282e32 not in out/out12/CVE-2019-14284/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-14284"
+
+------------ CVE-2019-14286 (73 of 173)
+Stage 1
+working on CVE-2019-14286, MISP_MISP, event-graph.js
+Calling ./rgl2 to get all commits
+filtering 19 child commits for file app/webroot/js/event-graph.js
+filtering 11 parent commits for file app/webroot/js/event-graph.js
+0 out/out12/CVE-2019-14286/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14286 1564251300
+Original Project = MISP_MISP
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-14286" failed
+
+------------ CVE-2019-14323 (74 of 173)
+Stage 1
+working on CVE-2019-14323, troglobit_ssdp-responder, ssdpd.c
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file ssdpd.c
+filtering 28 parent commits for file ssdpd.c
+0 out/out12/CVE-2019-14323/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14323 1564319700
+Original Project = troglobit_ssdp-responder
+Success (go2)
+Stage 3
+./go3 CVE-2019-14323 out/out12/CVE-2019-14323/results.csv
+out/out12/CVE-2019-14323/results.csv
+out/out12/CVE-2019-14323/results.html
+Success (go3)
+
+
+------------ CVE-2019-14430 (75 of 173)
+Stage 1
+working on CVE-2019-14430, YouPHPTube_YouPHPTube, AuditTable.php
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file plugin/Audit/Objects/AuditTable.php
+no 9b7a2ed4fc77c700c4d12d26276bb6ca4db85a7c in 27
+no bc8d1769822fde44b9cdce0c1ac0c4c1378fb31d in 60
+no 62b80b4e3eaff95945ee38040944f59c2955bdc5 in 98
+filtering 15 parent commits for file plugin/Audit/Objects/AuditTable.php
+0 out/out12/CVE-2019-14430/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14430 1566310500
+Original Project = YouPHPTube_YouPHPTube
+Success (go2)
+Stage 3
+./go3 CVE-2019-14430 out/out12/CVE-2019-14430/results.csv
+out/out12/CVE-2019-14430/results.csv
+out/out12/CVE-2019-14430/results.html
+Success (go3)
+
+
+------------ CVE-2019-14439 (76 of 173)
+Stage 1
+working on CVE-2019-14439, FasterXML_jackson-databind, SubTypeValidator.java
+Calling ./rgl2 to get all commits
+Error: commit ad418eeb974e357f2797aef64aa0e3ffaaa6125b not in out/out12/CVE-2019-14439/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-14439"
+
+------------ CVE-2019-14452 (77 of 173)
+Stage 1
+working on CVE-2019-14452, Sigil-Ebook_Sigil, ImportEPUB.cpp
+Calling ./rgl2 to get all commits
+Error: commit 369eebe936e4a8c83cc54662a3412ce8bef189e4 not in out/out12/CVE-2019-14452/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-14452"
+
+------------ CVE-2019-14459 (78 of 173)
+Stage 1
+working on CVE-2019-14459, phaag_nfdump, ipfix.c
+Calling ./rgl2 to get all commits
+filtering 23 child commits for file bin/ipfix.c
+filtering 7 parent commits for file bin/ipfix.c
+0 out/out12/CVE-2019-14459/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14459 1564607700
+Original Project = phaag_nfdump
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-14459" failed
+
+------------ CVE-2019-14462 (79 of 173)
+Stage 1
+working on CVE-2019-14462, stephane_libmodbus, modbus.c
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file src/modbus.c
+no cfeca264b4a5bbfdcfe7e2d4ddba9093b88e75f1 in 79
+no 1a503b7f4ba5ac6c889c2206a48dfae355680de8 in 26
+no b4ef4c17d618eba0adccc4c7d9e9a1ef809fc9b6 in 52
+no 89f5c50415748e82e98c143f80bc888e389f030f in 9
+filtering 20 parent commits for file src/modbus.c
+0 out/out12/CVE-2019-14462/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14462 1564614900
+Original Project = stephane_libmodbus
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-14462" failed
+
+------------ CVE-2019-14463 (80 of 173)
+Stage 1
+working on CVE-2019-14463, stephane_libmodbus, modbus.c
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file src/modbus.c
+no cfeca264b4a5bbfdcfe7e2d4ddba9093b88e75f1 in 79
+no 1a503b7f4ba5ac6c889c2206a48dfae355680de8 in 26
+no b4ef4c17d618eba0adccc4c7d9e9a1ef809fc9b6 in 52
+no 89f5c50415748e82e98c143f80bc888e389f030f in 9
+filtering 20 parent commits for file src/modbus.c
+0 out/out12/CVE-2019-14463/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14463 1564614900
+Original Project = stephane_libmodbus
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-14463" failed
+
+------------ CVE-2019-14495 (81 of 173)
+Stage 1
+working on CVE-2019-14495, z3APA3A_3proxy, webadmin.c
+Calling ./rgl2 to get all commits
+Error: commit 3b67dc844789dc0f00e934270c7b349bcb547865 not in out/out12/CVE-2019-14495/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-14495"
+
+------------ CVE-2019-14512 (82 of 173)
+Stage 1
+working on CVE-2019-14512, LimeSurvey_LimeSurvey, box.php
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file application/extensions/PanelBoxWidget/views/box.php
+filtering 13 parent commits for file application/extensions/PanelBoxWidget/views/box.php
+0 out/out12/CVE-2019-14512/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14512 1584371700
+Original Project = LimeSurvey_LimeSurvey
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-14512" failed
+
+------------ CVE-2019-14667 (83 of 173)
+Stage 1
+working on CVE-2019-14667, firefly-iii_firefly-iii, convert.twig
+Calling ./rgl2 to get all commits
+filtering 12 child commits for file resources/views/v1/transactions/convert.twig
+no b0e6d12325110e5602a70742a5546599f62936b1 in 48
+filtering 5 parent commits for file resources/views/v1/transactions/convert.twig
+0 out/out12/CVE-2019-14667/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14667 1565036100
+Original Project = firefly-iii_firefly-iii
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-14667" failed
+
+------------ CVE-2019-14668 (84 of 173)
+Stage 1
+working on CVE-2019-14668, firefly-iii_firefly-iii, delete.twig
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file resources/views/v1/transactions/links/delete.twig
+no b0e6d12325110e5602a70742a5546599f62936b1 in 48
+filtering 1 parent commits for file resources/views/v1/transactions/links/delete.twig
+0 out/out12/CVE-2019-14668/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14668 1565036100
+Original Project = firefly-iii_firefly-iii
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-14668" failed
+
+------------ CVE-2019-14669 (85 of 173)
+Stage 1
+working on CVE-2019-14669, firefly-iii_firefly-iii, report.twig
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file resources/views/v1/reports/audit/report.twig
+no b0e6d12325110e5602a70742a5546599f62936b1 in 48
+filtering 2 parent commits for file resources/views/v1/reports/audit/report.twig
+0 out/out12/CVE-2019-14669/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14669 1565036100
+Original Project = firefly-iii_firefly-iii
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-14669" failed
+
+------------ CVE-2019-14670 (86 of 173)
+Stage 1
+working on CVE-2019-14670, firefly-iii_firefly-iii, CreateController.php
+Calling ./rgl2 to get all commits
+filtering 24 child commits for file app/Http/Controllers/Rule/CreateController.php
+no 50f87a210acd863845c121a31980dc57abe63aae in 80
+no 123693096cae2387b4e7968de618bafb998c7ab6 in 18
+no 29bed2547c4efb8b49b3e0325f46532d2ee7b3a9 in 41
+no 003d8ba02a2d32b85fe3b6565176973c6da01916 in 0
+no c2c8c42ef3194d1aeba8c48240fe2e9063f77635 in 66
+no 4003cea75997a724de99cbc9f8dfa03cf44acd53 in 64
+filtering 6 parent commits for file app/Http/Controllers/Rule/CreateController.php
+0 out/out12/CVE-2019-14670/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14670 1565036100
+Original Project = firefly-iii_firefly-iii
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-14670" failed
+
+------------ CVE-2019-14671 (87 of 173)
+Stage 1
+working on CVE-2019-14671, firefly-iii_firefly-iii, NewFinTSJobHandler.php
+Calling ./rgl2 to get all commits
+filtering 8 child commits for file app/Support/Import/JobConfiguration/FinTS/NewFinTSJobHandler.php
+filtering 11 parent commits for file app/Support/Import/JobConfiguration/FinTS/NewFinTSJobHandler.php
+0 out/out12/CVE-2019-14671/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14671 1565036100
+Original Project = firefly-iii_firefly-iii
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-14671" failed
+
+------------ CVE-2019-14672 (88 of 173)
+Stage 1
+working on CVE-2019-14672, firefly-iii_firefly-iii, UserNavigation.php
+Calling ./rgl2 to get all commits
+filtering 26 child commits for file app/Support/Http/Controllers/UserNavigation.php
+no 50f87a210acd863845c121a31980dc57abe63aae in 80
+no d1a09ff33b11613872acc30dda941b8960057058 in 81
+no 4e7a27dd655784fef20ea57d72a7b31260969930 in 78
+no 8662dfa4c0f71efef61c31dc015c6f723db8318d in 6
+no 2e3877f77020bd669d510672303eda4931989629 in 46
+no 4003cea75997a724de99cbc9f8dfa03cf44acd53 in 64
+filtering 4 parent commits for file app/Support/Http/Controllers/UserNavigation.php
+0 out/out12/CVE-2019-14672/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14672 1565036100
+Original Project = firefly-iii_firefly-iii
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-14672" failed
+
+------------ CVE-2019-14748 (89 of 173)
+Stage 1
+working on CVE-2019-14748, osTicket_osTicket, class.file.php
+Calling ./rgl2 to get all commits
+filtering 18 child commits for file include/class.file.php
+no 3bb36ff4f326ed10e55ff6e7bb11fff2f350407a in 59
+no a4ab19d36185239022f199cf6d74e6e7cad1753a in 36
+filtering 12 parent commits for file include/class.file.php
+0 out/out12/CVE-2019-14748/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14748 1565198100
+Original Project = osTicket_osTicket
+Success (go2)
+Stage 3
+./go3 CVE-2019-14748 out/out12/CVE-2019-14748/results.csv
+out/out12/CVE-2019-14748/results.csv
+out/out12/CVE-2019-14748/results.html
+Success (go3)
+
+
+------------ CVE-2019-14750 (90 of 173)
+Stage 1
+working on CVE-2019-14750, osTicket_osTicket, class.installer.php
+Calling ./rgl2 to get all commits
+filtering 9 child commits for file setup/inc/class.installer.php
+filtering 21 parent commits for file setup/inc/class.installer.php
+0 out/out12/CVE-2019-14750/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14750 1565198100
+Original Project = osTicket_osTicket
+Success (go2)
+Stage 3
+./go3 CVE-2019-14750 out/out12/CVE-2019-14750/results.csv
+out/out12/CVE-2019-14750/results.csv
+out/out12/CVE-2019-14750/results.html
+Success (go3)
+
+
+------------ CVE-2019-14751 (91 of 173)
+Stage 1
+working on CVE-2019-14751, nltk_nltk, downloader.py
+Calling ./rgl2 to get all commits
+Error: commit f59d7ed8df2e0e957f7f247fe218032abdbe9a10 not in out/out12/CVE-2019-14751/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-14751"
+
+------------ CVE-2019-14763 (92 of 173)
+Stage 1
+working on CVE-2019-14763, torvalds_linux, f_hid.c
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file drivers/usb/gadget/function/f_hid.c
+filtering 19 parent commits for file drivers/usb/gadget/function/f_hid.c
+0 out/out12/CVE-2019-14763/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14763 1565216100
+Original Project = torvalds_linux
+./go2: line 89: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-14763/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-14763 out/out12/CVE-2019-14763/results.csv
+out/out12/CVE-2019-14763/results.csv
+out/out12/CVE-2019-14763/results.html
+Success (go3)
+
+
+------------ CVE-2019-14980 (93 of 173)
+Stage 1
+working on CVE-2019-14980, ImageMagick_ImageMagick6, blob.c
+Calling ./rgl2 to get all commits
+Error: commit 614a257295bdcdeda347086761062ac7658b6830 not in out/out12/CVE-2019-14980/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-14980"
+
+------------ CVE-2019-14981 (94 of 173)
+Stage 1
+working on CVE-2019-14981, ImageMagick_ImageMagick, feature.c
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file MagickCore/feature.c
+no 7ba113a0d26b6d2b008ce0fcf428050a84e5a0ac in 123
+no 8891ec1db10a70558deef45f61941b4fe0576b66 in 8
+no 157b21d508b8a3662c922b762aa92e524e67e57c in 21
+filtering 19 parent commits for file MagickCore/feature.c
+0 out/out12/CVE-2019-14981/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-14981 1565651700
+Original Project = ImageMagick_ImageMagick
+Success (go2)
+Stage 3
+./go3 CVE-2019-14981 out/out12/CVE-2019-14981/results.csv
+out/out12/CVE-2019-14981/results.csv
+out/out12/CVE-2019-14981/results.html
+Success (go3)
+
+
+------------ CVE-2019-15026 (95 of 173)
+Stage 1
+working on CVE-2019-15026, memcached_memcached, memcached.c
+Calling ./rgl2 to get all commits
+Error: commit 554b56687a19300a75ec24184746b5512580c819 not in out/out12/CVE-2019-15026/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-15026"
+
+------------ CVE-2019-15074 (96 of 173)
+Stage 1
+working on CVE-2019-15074, mantisbt_mantisbt, IssueAttachmentTimelineEvent.class.php
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file core/classes/IssueAttachmentTimelineEvent.class.php
+filtering 4 parent commits for file core/classes/IssueAttachmentTimelineEvent.class.php
+0 out/out12/CVE-2019-15074/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15074 1566414900
+Original Project = mantisbt_mantisbt
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-15074" failed
+
+------------ CVE-2019-15090 (97 of 173)
+Stage 1
+working on CVE-2019-15090, torvalds_linux, qedi_dbg.c
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file drivers/scsi/qedi/qedi_dbg.c
+filtering 2 parent commits for file drivers/scsi/qedi/qedi_dbg.c
+0 out/out12/CVE-2019-15090/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15090 1565914500
+Original Project = torvalds_linux
+./go2: line 89: out/out12/CVE-2019-15090/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15090/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15090/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15090/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15090/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15090/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out12/CVE-2019-15090/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-15090/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-15090/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-15090/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-15090 out/out12/CVE-2019-15090/results.csv
+out/out12/CVE-2019-15090/results.csv
+out/out12/CVE-2019-15090/results.html
+Success (go3)
+
+
+------------ CVE-2019-15119 (98 of 173)
+Stage 1
+working on CVE-2019-15119, cnlh_nps, install.go
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file lib/install/install.go
+filtering 4 parent commits for file lib/install/install.go
+0 out/out12/CVE-2019-15119/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15119 1565968500
+Original Project = cnlh_nps
+Success (go2)
+Stage 3
+./go3 CVE-2019-15119 out/out12/CVE-2019-15119/results.csv
+out/out12/CVE-2019-15119/results.csv
+out/out12/CVE-2019-15119/results.html
+Success (go3)
+
+
+------------ CVE-2019-15139 (99 of 173)
+Stage 1
+working on CVE-2019-15139, ImageMagick_ImageMagick, xwd.c
+Calling ./rgl2 to get all commits
+filtering 13 child commits for file coders/xwd.c
+no b2eaec135972c582335f7ad034100ad88b6552b3 in 50
+no 7ba113a0d26b6d2b008ce0fcf428050a84e5a0ac in 123
+no 3ddbe16bbe136160f4bbff3804a8423816974e57 in 61
+filtering 17 parent commits for file coders/xwd.c
+0 out/out12/CVE-2019-15139/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15139 1566155700
+Original Project = ImageMagick_ImageMagick
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-15139" failed
+
+------------ CVE-2019-15140 (100 of 173)
+Stage 1
+working on CVE-2019-15140, ImageMagick_ImageMagick, mat.c
+Calling ./rgl2 to get all commits
+filtering 20 child commits for file coders/mat.c
+no de806730111e471eba40164823ad21e18632bd7c in 94
+no 3ddbe16bbe136160f4bbff3804a8423816974e57 in 61
+no 8960f4d9433627848550f86cecedbad6f5bd4a34 in 9
+no 7347fb36cafe764d9d67c66adf3d80a6c784d22e in 115
+no 62845d5672eca4446b952dd0ab2e3e0dab0309d4 in 98
+no 075565e93c71bcaaabf0ce70b7d1060bccdf0020 in 7
+no c05a26d41177de18191ce595f78d0d64e573a9d3 in 64
+no b1d42802bb46e86aa2d45fb9b3e31fc70cae1e8c in 49
+filtering 10 parent commits for file coders/mat.c
+0 out/out12/CVE-2019-15140/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15140 1566155700
+Original Project = ImageMagick_ImageMagick
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-15140" failed
+
+------------ CVE-2019-15141 (101 of 173)
+Stage 1
+working on CVE-2019-15141, ImageMagick_ImageMagick6, tiff.c
+Calling ./rgl2 to get all commits
+Error: commit 3c53413eb544cc567309b4c86485eae43e956112 not in out/out12/CVE-2019-15141/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-15141"
+
+------------ CVE-2019-15522 (102 of 173)
+Stage 1
+working on CVE-2019-15522, LINBIT_csync2, daemon.c
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file daemon.c
+filtering 28 parent commits for file daemon.c
+0 out/out12/CVE-2019-15522/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15522 1584738900
+Original Project = LINBIT_csync2
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-15522" failed
+
+------------ CVE-2019-15532 (103 of 173)
+Stage 1
+working on CVE-2019-15532, gchq_CyberChef, TextEncodingBruteForce.mjs
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file src/core/operations/TextEncodingBruteForce.mjs
+filtering 4 parent commits for file src/core/operations/TextEncodingBruteForce.mjs
+0 out/out12/CVE-2019-15532/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15532 1566821700
+Original Project = gchq_CyberChef
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-15532" failed
+
+------------ CVE-2019-15538 (104 of 173)
+Stage 1
+working on CVE-2019-15538, torvalds_linux, xfs_iops.c
+Calling ./rgl2 to get all commits
+Error: commit 1fb254aa983bf190cfd685d40c64a480a9bafaee not in out/out12/CVE-2019-15538/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-15538"
+
+------------ CVE-2019-15539 (105 of 173)
+Stage 1
+working on CVE-2019-15539, mantisbt_mantisbt, proj_doc_edit_page.php
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file proj_doc_edit_page.php
+filtering 27 parent commits for file proj_doc_edit_page.php
+0 out/out12/CVE-2019-15539/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15539 1584645300
+Original Project = mantisbt_mantisbt
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-15539" failed
+
+------------ CVE-2019-15541 (106 of 173)
+Stage 1
+working on CVE-2019-15541, ctz_rustls, tlsserver.rs
+Calling ./rgl2 to get all commits
+Error: commit a93ee1abd2ab19ebe4bf9d684d56637ee54a6074 not in out/out12/CVE-2019-15541/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-15541"
+
+------------ CVE-2019-15640 (107 of 173)
+Stage 1
+working on CVE-2019-15640, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 0479e3ff93ff1473a25c71e83cc011920b072b4c not in out/out12/CVE-2019-15640/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-15640"
+
+------------ CVE-2019-15642 (108 of 173)
+Stage 1
+working on CVE-2019-15642, webmin_webmin, web-lib-funcs.pl
+Calling ./rgl2 to get all commits
+Error: commit df8a43fb4bdc9c858874f72773bcba597ae9432c not in out/out12/CVE-2019-15642/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-15642"
+
+------------ CVE-2019-15681 (109 of 173)
+Stage 1
+working on CVE-2019-15681, LibVNC_libvncserver, rfbserver.c
+Calling ./rgl2 to get all commits
+filtering 24 child commits for file libvncserver/rfbserver.c
+no 0ab7a73916b72559c7fffb58b08e6ccba2d7050b in 10
+no f8f6b3d7489e56adcd547e138a8e11b425633ae4 in 120
+filtering 6 parent commits for file libvncserver/rfbserver.c
+0 out/out12/CVE-2019-15681/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15681 1572376500
+Original Project = LibVNC_libvncserver
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-15681" failed
+
+------------ CVE-2019-15692 (110 of 173)
+Stage 1
+working on CVE-2019-15692, CendioOssman_tigervnc, PixelBuffer.cxx
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file common/rfb/PixelBuffer.cxx
+no b6d6db9b7c49898a663e9a9bc309ba10275a65f4 in 54
+filtering 24 parent commits for file common/rfb/PixelBuffer.cxx
+0 out/out12/CVE-2019-15692/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15692 1577373300
+Original Project = CendioOssman_tigervnc
+Success (go2)
+Stage 3
+./go3 CVE-2019-15692 out/out12/CVE-2019-15692/results.csv
+out/out12/CVE-2019-15692/results.csv
+out/out12/CVE-2019-15692/results.html
+Success (go3)
+
+
+------------ CVE-2019-15693 (111 of 173)
+Stage 1
+working on CVE-2019-15693, CendioOssman_tigervnc, tightDecode.h
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file common/rfb/tightDecode.h
+filtering 26 parent commits for file common/rfb/tightDecode.h
+0 out/out12/CVE-2019-15693/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15693 1577373300
+Original Project = CendioOssman_tigervnc
+Success (go2)
+Stage 3
+./go3 CVE-2019-15693 out/out12/CVE-2019-15693/results.csv
+out/out12/CVE-2019-15693/results.csv
+out/out12/CVE-2019-15693/results.html
+Success (go3)
+
+
+------------ CVE-2019-15715 (112 of 173)
+Stage 1
+working on CVE-2019-15715, mantisbt_mantisbt, graphviz_api.php
+Calling ./rgl2 to get all commits
+filtering 2 child commits for file core/graphviz_api.php
+filtering 28 parent commits for file core/graphviz_api.php
+0 out/out12/CVE-2019-15715/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15715 1570652100
+Original Project = mantisbt_mantisbt
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-15715" failed
+
+------------ CVE-2019-15900 (113 of 173)
+Stage 1
+working on CVE-2019-15900, slicer69_doas, doas.c
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file doas.c
+filtering 16 parent commits for file doas.c
+1 out/out12/CVE-2019-15900/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15900 1571415300
+Original Project = slicer69_doas
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-15900" failed
+
+------------ CVE-2019-15901 (114 of 173)
+Stage 1
+working on CVE-2019-15901, slicer69_doas, doas.c
+Calling ./rgl2 to get all commits
+filtering 15 child commits for file doas.c
+filtering 15 parent commits for file doas.c
+1 out/out12/CVE-2019-15901/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15901 1571415300
+Original Project = slicer69_doas
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-15901" failed
+
+------------ CVE-2019-15903 (115 of 173)
+Stage 1
+working on CVE-2019-15903, libexpat_libexpat, xmlparse.c
+Calling ./rgl2 to get all commits
+Error: commit c20b758c332d9a13afbbb276d30db1d183a85d43 not in out/out12/CVE-2019-15903/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-15903"
+
+------------ CVE-2019-15917 (116 of 173)
+Stage 1
+working on CVE-2019-15917, torvalds_linux, hci_ldisc.c
+Calling ./rgl2 to get all commits
+filtering 17 child commits for file drivers/bluetooth/hci_ldisc.c
+no tree 8d942e2b4568192ede79d28b9471d80b6d63b59e for commit d78328bcc4d0e677f2ff83f4ae1f43c933fbd143
+no tree bd31985da2fc0fcdd29322115c100e4e6ac148dd for commit d78328bcc4d0e677f2ff83f4ae1f43c933fbd143
+filtering 13 parent commits for file drivers/bluetooth/hci_ldisc.c
+0 out/out12/CVE-2019-15917/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15917 1567624500
+Original Project = torvalds_linux
+./go2: line 89: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-15917/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-15917 out/out12/CVE-2019-15917/results.csv
+out/out12/CVE-2019-15917/results.csv
+out/out12/CVE-2019-15917/results.html
+Success (go3)
+
+
+------------ CVE-2019-15918 (117 of 173)
+Stage 1
+working on CVE-2019-15918, torvalds_linux, smb2pdu.c
+Calling ./rgl2 to get all commits
+Error: commit b57a55e2200ede754e4dc9cce4ba9402544b9365 not in out/out12/CVE-2019-15918/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-15918"
+
+------------ CVE-2019-15919 (118 of 173)
+Stage 1
+working on CVE-2019-15919, torvalds_linux, smb2pdu.c
+Calling ./rgl2 to get all commits
+Error: commit 6a3eb3360667170988f8a6477f6686242061488a not in out/out12/CVE-2019-15919/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-15919"
+
+------------ CVE-2019-15920 (119 of 173)
+Stage 1
+working on CVE-2019-15920, torvalds_linux, smb2pdu.c
+Calling ./rgl2 to get all commits
+Error: commit 088aaf17aa79300cab14dbee2569c58cfafd7d6e not in out/out12/CVE-2019-15920/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-15920"
+
+------------ CVE-2019-15921 (120 of 173)
+Stage 1
+working on CVE-2019-15921, torvalds_linux, genetlink.c
+Calling ./rgl2 to get all commits
+Error: commit ceabee6c59943bdd5e1da1a6a20dc7ee5f8113a2 not in out/out12/CVE-2019-15921/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-15921"
+
+------------ CVE-2019-15922 (121 of 173)
+Stage 1
+working on CVE-2019-15922, torvalds_linux, pf.c
+Calling ./rgl2 to get all commits
+filtering 11 child commits for file drivers/block/paride/pf.c
+no f3fa33acca9f0058157214800f68b10d8e71ab7a in 115
+no 1ebe2e5f9d68e94c524aba876f27b945669a7879 in 30
+filtering 19 parent commits for file drivers/block/paride/pf.c
+0 out/out12/CVE-2019-15922/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15922 1567624500
+Original Project = torvalds_linux
+./go2: line 89: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-15922/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-15922 out/out12/CVE-2019-15922/results.csv
+out/out12/CVE-2019-15922/results.csv
+out/out12/CVE-2019-15922/results.html
+Success (go3)
+
+
+------------ CVE-2019-15923 (122 of 173)
+Stage 1
+working on CVE-2019-15923, torvalds_linux, pcd.c
+Calling ./rgl2 to get all commits
+filtering 19 child commits for file drivers/block/paride/pcd.c
+no f3fa33acca9f0058157214800f68b10d8e71ab7a in 115
+no 1ebe2e5f9d68e94c524aba876f27b945669a7879 in 30
+no 1545e0b419ba1d9b9bee4061d4826340afe6b0aa in 21
+filtering 11 parent commits for file drivers/block/paride/pcd.c
+0 out/out12/CVE-2019-15923/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15923 1567624500
+Original Project = torvalds_linux
+./go2: line 89: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-15923/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-15923 out/out12/CVE-2019-15923/results.csv
+out/out12/CVE-2019-15923/results.csv
+out/out12/CVE-2019-15923/results.html
+Success (go3)
+
+
+------------ CVE-2019-15924 (123 of 173)
+Stage 1
+working on CVE-2019-15924, torvalds_linux, fm10k_main.c
+Calling ./rgl2 to get all commits
+filtering 19 child commits for file drivers/net/ethernet/intel/fm10k/fm10k_main.c
+filtering 11 parent commits for file drivers/net/ethernet/intel/fm10k/fm10k_main.c
+0 out/out12/CVE-2019-15924/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-15924 1567624500
+Original Project = torvalds_linux
+./go2: line 89: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-15924/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-15924 out/out12/CVE-2019-15924/results.csv
+out/out12/CVE-2019-15924/results.csv
+out/out12/CVE-2019-15924/results.html
+Success (go3)
+
+
+------------ CVE-2019-15945 (124 of 173)
+Stage 1
+working on CVE-2019-15945, OpenSC_OpenSC, asn1.c
+Calling ./rgl2 to get all commits
+Error: commit 412a6142c27a5973c61ba540e33cdc22d5608e68 not in out/out12/CVE-2019-15945/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-15945"
+
+------------ CVE-2019-15946 (125 of 173)
+Stage 1
+working on CVE-2019-15946, OpenSC_OpenSC, asn1.c
+Calling ./rgl2 to get all commits
+Error: commit a3fc7693f3a035a8a7921cffb98432944bb42740 not in out/out12/CVE-2019-15946/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-15946"
+
+------------ CVE-2019-16058 (126 of 173)
+Stage 1
+working on CVE-2019-16058, OpenSC_pam_p11, pam_p11.c
+Calling ./rgl2 to get all commits
+filtering 1 child commits for file src/pam_p11.c
+filtering 29 parent commits for file src/pam_p11.c
+0 out/out12/CVE-2019-16058/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-16058 1567793700
+Original Project = OpenSC_pam_p11
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-16058" failed
+
+------------ CVE-2019-16124 (127 of 173)
+Stage 1
+working on CVE-2019-16124, YouPHPTube_YouPHPTube, checkConfiguration.php
+Calling ./rgl2 to get all commits
+Error: commit b32b410c9191c3c5db888514c29d7921f124d883 not in out/out12/CVE-2019-16124/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16124"
+
+------------ CVE-2019-16147 (128 of 173)
+Stage 1
+working on CVE-2019-16147, liferay_liferay-portal, page.jsp
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file modules/apps/journal/journal-taglib/src/main/resources/META-INF/resources/journal_article/page.jsp
+no 34f6ce15cbd41657f95beaecd2cfc119ad06110a in 52
+no a173913809e9eaa061c63dd7992ac45bfc1513c7 in 33
+no 1a2e6696a8d7baeb961e20f2e6c602a04a511d47 in 26
+no dc3656e15b65575921e014fc5d72cdc08521a30d in 92
+no e9d7b4cd1a0cde73f7c9aef7c6b4a4a3aba13d0f in 105
+no 2963e524de135a307560188e22b758b2d0426cbb in 41
+no 0b07d9e00b00c508ab11664c6e464073c434e40d in 11
+no 6a7cc86cfebfbaf30af64ac6bf39266ddb8d4ea1 in 106
+no f9fa01a86bd68298594f6b6715e11d2044027d5d in 121
+no d299e31157fffd889594a983f5f1957f0d19a576 in 82
+filtering 11 parent commits for file modules/apps/journal/journal-taglib/src/main/resources/META-INF/resources/journal_article/page.jsp
+0 out/out12/CVE-2019-16147/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-16147 1568063700
+Original Project = liferay_liferay-portal
+Success (go2)
+Stage 3
+./go3 CVE-2019-16147 out/out12/CVE-2019-16147/results.csv
+out/out12/CVE-2019-16147/results.csv
+out/out12/CVE-2019-16147/results.html
+Success (go3)
+
+
+------------ CVE-2019-16163 (129 of 173)
+Stage 1
+working on CVE-2019-16163, kkos_oniguruma, regparse.c
+Calling ./rgl2 to get all commits
+Error: commit 4097828d7cc87589864fecf452f2cd46c5f37180 not in out/out12/CVE-2019-16163/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16163"
+
+------------ CVE-2019-16172 (130 of 173)
+Stage 1
+working on CVE-2019-16172, LimeSurvey_LimeSurvey, SurveysGroupsController.php
+Calling ./rgl2 to get all commits
+Error: commit 32d6a5224327b246ee3a2a08500544e4f80f9a9a not in out/out12/CVE-2019-16172/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16172"
+
+------------ CVE-2019-16173 (131 of 173)
+Stage 1
+working on CVE-2019-16173, LimeSurvey_LimeSurvey, Survey_Common_Action.php
+Calling ./rgl2 to get all commits
+Error: commit f1c1ad2d24eb262363511fcca2e96ce737064006 not in out/out12/CVE-2019-16173/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16173"
+
+------------ CVE-2019-16174 (132 of 173)
+Stage 1
+working on CVE-2019-16174, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 5870fd1037058bc4e43cccf893b576c72293371e not in out/out12/CVE-2019-16174/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16174"
+
+------------ CVE-2019-16175 (133 of 173)
+Stage 1
+working on CVE-2019-16175, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 5870fd1037058bc4e43cccf893b576c72293371e not in out/out12/CVE-2019-16175/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16175"
+
+------------ CVE-2019-16176 (134 of 173)
+Stage 1
+working on CVE-2019-16176, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 5870fd1037058bc4e43cccf893b576c72293371e not in out/out12/CVE-2019-16176/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16176"
+
+------------ CVE-2019-16177 (135 of 173)
+Stage 1
+working on CVE-2019-16177, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 5870fd1037058bc4e43cccf893b576c72293371e not in out/out12/CVE-2019-16177/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16177"
+
+------------ CVE-2019-16178 (136 of 173)
+Stage 1
+working on CVE-2019-16178, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 5870fd1037058bc4e43cccf893b576c72293371e not in out/out12/CVE-2019-16178/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16178"
+
+------------ CVE-2019-16179 (137 of 173)
+Stage 1
+working on CVE-2019-16179, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 5870fd1037058bc4e43cccf893b576c72293371e not in out/out12/CVE-2019-16179/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16179"
+
+------------ CVE-2019-16180 (138 of 173)
+Stage 1
+working on CVE-2019-16180, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 5870fd1037058bc4e43cccf893b576c72293371e not in out/out12/CVE-2019-16180/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16180"
+
+------------ CVE-2019-16181 (139 of 173)
+Stage 1
+working on CVE-2019-16181, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 5870fd1037058bc4e43cccf893b576c72293371e not in out/out12/CVE-2019-16181/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16181"
+
+------------ CVE-2019-16182 (140 of 173)
+Stage 1
+working on CVE-2019-16182, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 5870fd1037058bc4e43cccf893b576c72293371e not in out/out12/CVE-2019-16182/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16182"
+
+------------ CVE-2019-16183 (141 of 173)
+Stage 1
+working on CVE-2019-16183, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 5870fd1037058bc4e43cccf893b576c72293371e not in out/out12/CVE-2019-16183/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16183"
+
+------------ CVE-2019-16184 (142 of 173)
+Stage 1
+working on CVE-2019-16184, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 5870fd1037058bc4e43cccf893b576c72293371e not in out/out12/CVE-2019-16184/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16184"
+
+------------ CVE-2019-16185 (143 of 173)
+Stage 1
+working on CVE-2019-16185, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 5870fd1037058bc4e43cccf893b576c72293371e not in out/out12/CVE-2019-16185/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16185"
+
+------------ CVE-2019-16186 (144 of 173)
+Stage 1
+working on CVE-2019-16186, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 5870fd1037058bc4e43cccf893b576c72293371e not in out/out12/CVE-2019-16186/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16186"
+
+------------ CVE-2019-16187 (145 of 173)
+Stage 1
+working on CVE-2019-16187, LimeSurvey_LimeSurvey, version.php
+Calling ./rgl2 to get all commits
+Error: commit 5870fd1037058bc4e43cccf893b576c72293371e not in out/out12/CVE-2019-16187/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16187"
+
+------------ CVE-2019-16235 (146 of 173)
+Stage 1
+working on CVE-2019-16235, dino_dino, 0280_message_carbons.vala
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file xmpp-vala/src/module/xep/0280_message_carbons.vala
+filtering 10 parent commits for file xmpp-vala/src/module/xep/0280_message_carbons.vala
+0 out/out12/CVE-2019-16235/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-16235 1568229300
+Original Project = dino_dino
+Success (go2)
+Stage 3
+./go3 CVE-2019-16235 out/out12/CVE-2019-16235/results.csv
+out/out12/CVE-2019-16235/results.csv
+out/out12/CVE-2019-16235/results.html
+Success (go3)
+
+
+------------ CVE-2019-16236 (147 of 173)
+Stage 1
+working on CVE-2019-16236, dino_dino, module.vala
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file xmpp-vala/src/module/roster/module.vala
+filtering 11 parent commits for file xmpp-vala/src/module/roster/module.vala
+0 out/out12/CVE-2019-16236/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-16236 1568229300
+Original Project = dino_dino
+Success (go2)
+Stage 3
+./go3 CVE-2019-16236 out/out12/CVE-2019-16236/results.csv
+out/out12/CVE-2019-16236/results.csv
+out/out12/CVE-2019-16236/results.html
+Success (go3)
+
+
+------------ CVE-2019-16237 (148 of 173)
+Stage 1
+working on CVE-2019-16237, dino_dino, 0313_message_archive_management.vala
+Calling ./rgl2 to get all commits
+filtering 10 child commits for file xmpp-vala/src/module/xep/0313_message_archive_management.vala
+filtering 7 parent commits for file xmpp-vala/src/module/xep/0313_message_archive_management.vala
+0 out/out12/CVE-2019-16237/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-16237 1568229300
+Original Project = dino_dino
+Success (go2)
+Stage 3
+./go3 CVE-2019-16237 out/out12/CVE-2019-16237/results.csv
+out/out12/CVE-2019-16237/results.csv
+out/out12/CVE-2019-16237/results.html
+Success (go3)
+
+
+------------ CVE-2019-16317 (149 of 173)
+Stage 1
+working on CVE-2019-16317, pimcore_pimcore, Asset.php
+Calling ./rgl2 to get all commits
+Error: commit 6ee5d8536d0802e377594cbe39083e822710aab9 not in out/out12/CVE-2019-16317/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16317"
+
+------------ CVE-2019-16318 (150 of 173)
+Stage 1
+working on CVE-2019-16318, pimcore_pimcore, Asset.php
+Calling ./rgl2 to get all commits
+Error: commit 732f1647cc6e0a29b5b1f5d904b4d726b5e9455f not in out/out12/CVE-2019-16318/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16318"
+
+------------ CVE-2019-16346 (151 of 173)
+Stage 1
+working on CVE-2019-16346, miniupnp_ngiflib, ngiflib.c
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file ngiflib.c
+no 5d928cb2b82b5fb5c89262bc789ba1990b270189 in 93
+filtering 24 parent commits for file ngiflib.c
+0 out/out12/CVE-2019-16346/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-16346 1568639700
+Original Project = miniupnp_ngiflib
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-16346" failed
+
+------------ CVE-2019-16347 (152 of 173)
+Stage 1
+working on CVE-2019-16347, miniupnp_ngiflib, ngiflib.c
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file ngiflib.c
+no 5d928cb2b82b5fb5c89262bc789ba1990b270189 in 93
+filtering 24 parent commits for file ngiflib.c
+0 out/out12/CVE-2019-16347/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-16347 1568639700
+Original Project = miniupnp_ngiflib
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-16347" failed
+
+------------ CVE-2019-16714 (153 of 173)
+Stage 1
+working on CVE-2019-16714, torvalds_linux, recv.c
+Calling ./rgl2 to get all commits
+filtering 5 child commits for file net/rds/recv.c
+filtering 25 parent commits for file net/rds/recv.c
+0 out/out12/CVE-2019-16714/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-16714 1569240900
+Original Project = torvalds_linux
+./go2: line 89: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 89: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_good.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 94: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_bad.txt: No such file or directory
+./go2: line 96: out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+head: cannot open ‘out/out12/CVE-2019-16714/stage2/gitlab.com_kalilinux_packages/linux_good_sorted.txt’ for reading: No such file or directory
+Success (go2)
+Stage 3
+./go3 CVE-2019-16714 out/out12/CVE-2019-16714/results.csv
+out/out12/CVE-2019-16714/results.csv
+out/out12/CVE-2019-16714/results.html
+Success (go3)
+
+
+------------ CVE-2019-16718 (154 of 173)
+Stage 1
+working on CVE-2019-16718, radareorg_radare2, cmd.c
+Calling ./rgl2 to get all commits
+Error: commit dd739f5a45b3af3d1f65f00fe19af1dbfec7aea7 not in out/out12/CVE-2019-16718/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16718"
+
+------------ CVE-2019-16774 (155 of 173)
+Stage 1
+working on CVE-2019-16774, PHPSocialNetwork_phpfastcache, Driver.php
+Calling ./rgl2 to get all commits
+Error: commit c4527205cb7a402b595790c74310791f5b04a1a4 not in out/out12/CVE-2019-16774/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16774"
+
+------------ CVE-2019-16790 (156 of 173)
+Stage 1
+working on CVE-2019-16790, prasathmani_tinyfilemanager, tinyfilemanager.php
+Calling ./rgl2 to get all commits
+Error: commit 9a499734c5084e3c2eb505f100d50baac1793bd8 not in out/out12/CVE-2019-16790/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16790"
+
+------------ CVE-2019-16914 (157 of 173)
+Stage 1
+working on CVE-2019-16914, pfsense_pfsense, services_captiveportal_mac.php
+Calling ./rgl2 to get all commits
+filtering 9 child commits for file src/usr/local/www/services_captiveportal_mac.php
+no b7ddc1b810f16c827cb6e61b6316a23c649d1e1c in 55
+no 7c2468c510ea7da6f284a7afad7f62c6c9880717 in 124
+no 8f2f85c3d79f70dbde4332930ff81dd56c767e25 in 15
+filtering 21 parent commits for file src/usr/local/www/services_captiveportal_mac.php
+0 out/out12/CVE-2019-16914/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-16914 1569521700
+Original Project = pfsense_pfsense
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-16914" failed
+
+------------ CVE-2019-16915 (158 of 173)
+Stage 1
+working on CVE-2019-16915, pfsense_pfsense, picture.widget.php
+Calling ./rgl2 to get all commits
+filtering 9 child commits for file src/usr/local/www/widgets/widgets/picture.widget.php
+no 8f2f85c3d79f70dbde4332930ff81dd56c767e25 in 15
+filtering 21 parent commits for file src/usr/local/www/widgets/widgets/picture.widget.php
+0 out/out12/CVE-2019-16915/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-16915 1569521700
+Original Project = pfsense_pfsense
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-16915" failed
+
+------------ CVE-2019-16921 (159 of 173)
+Stage 1
+working on CVE-2019-16921, torvalds_linux, hns_roce_main.c
+Calling ./rgl2 to get all commits
+Error: commit df7e40425813c50cd252e6f5e348a81ef1acae56 not in out/out12/CVE-2019-16921/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16921"
+
+------------ CVE-2019-16930 (160 of 173)
+Stage 1
+working on CVE-2019-16930, zcash_zcash, Note.cpp
+Calling ./rgl2 to get all commits
+filtering 20 child commits for file src/zcash/Note.cpp
+filtering 10 parent commits for file src/zcash/Note.cpp
+0 out/out12/CVE-2019-16930/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-16930 1569708900
+Original Project = zcash_zcash
+Success (go2)
+Stage 3
+./go3 CVE-2019-16930 out/out12/CVE-2019-16930/results.csv
+out/out12/CVE-2019-16930/results.csv
+out/out12/CVE-2019-16930/results.html
+Success (go3)
+
+
+------------ CVE-2019-16966 (161 of 173)
+Stage 1
+working on CVE-2019-16966, FreePBX_contactmanager, Contactmanager.class.php
+Calling ./rgl2 to get all commits
+filtering 4 child commits for file Contactmanager.class.php
+filtering 26 parent commits for file Contactmanager.class.php
+0 out/out12/CVE-2019-16966/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-16966 1571685300
+Original Project = FreePBX_contactmanager
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-16966" failed
+
+------------ CVE-2019-16993 (162 of 173)
+Stage 1
+working on CVE-2019-16993, phpbb_phpbb, acp_bbcodes.php
+Calling ./rgl2 to get all commits
+filtering 30 child commits for file phpBB/includes/acp/acp_bbcodes.php
+no 0a64ffa83468e34ac3d8d1e57cfeafb1c04a11d9 in 10
+no 9b2f42748c37ad06dcc0c74047629528e4bfdc39 in 27
+filtering 0 parent commits for file phpBB/includes/acp/acp_bbcodes.php
+cat: out/out12/CVE-2019-16993/stage1/commits.old.filtered: No such file or directory
+rm: cannot remove ‘out/out12/CVE-2019-16993/stage1/commits.old.filtered’: No such file or directory
+0 out/out12/CVE-2019-16993/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-16993 1569845700
+Original Project = phpbb_phpbb
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-16993" failed
+
+------------ CVE-2019-16994 (163 of 173)
+Stage 1
+working on CVE-2019-16994, torvalds_linux, sit.c
+Calling ./rgl2 to get all commits
+Error: commit 07f12b26e21ab359261bf75cfcb424fdc7daeb6d not in out/out12/CVE-2019-16994/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-16994"
+
+------------ CVE-2019-17091 (164 of 173)
+Stage 1
+working on CVE-2019-17091, eclipse-ee4j_mojarra, PartialViewContextImpl.java
+Calling ./rgl2 to get all commits
+filtering 14 child commits for file impl/src/main/java/com/sun/faces/context/PartialViewContextImpl.java
+no 39b25b50218d12223e3d4b11a04d1ba300a571e8 in 57
+no 17c1c32a65fd80e83ee859cccb8ce3b165f1e7c5 in 23
+no 8b92fe284805acef4558ed57c5d1bc2191bad963 in 11
+no 6c2c7e57069de3b470f288d1b843e506461b5469 in 108
+filtering 4 parent commits for file impl/src/main/java/com/sun/faces/context/PartialViewContextImpl.java
+0 out/out12/CVE-2019-17091/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-17091 1570025700
+Original Project = eclipse-ee4j_mojarra
+Success (go2)
+Stage 3
+./go3 CVE-2019-17091 out/out12/CVE-2019-17091/results.csv
+out/out12/CVE-2019-17091/results.csv
+out/out12/CVE-2019-17091/results.html
+Success (go3)
+
+
+------------ CVE-2019-17113 (165 of 173)
+Stage 1
+working on CVE-2019-17113, OpenMPT_openmpt, libopenmpt_modplug.c
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file libopenmpt/libopenmpt_modplug.c
+filtering 26 parent commits for file libopenmpt/libopenmpt_modplug.c
+1 out/out12/CVE-2019-17113/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-17113 1570148100
+Original Project = OpenMPT_openmpt
+Success (go2)
+Stage 3
+./go3 CVE-2019-17113 out/out12/CVE-2019-17113/results.csv
+out/out12/CVE-2019-17113/results.csv
+out/out12/CVE-2019-17113/results.html
+Success (go3)
+
+
+------------ CVE-2019-17358 (166 of 173)
+Stage 1
+working on CVE-2019-17358, Cacti_cacti, functions.php
+Calling ./rgl2 to get all commits
+Error: commit adf221344359f5b02b8aed43dfb6b33ae5d708c8 not in out/out12/CVE-2019-17358/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-17358"
+
+------------ CVE-2019-17367 (167 of 173)
+Stage 1
+working on CVE-2019-17367, openwrt_luci, dispatcher.lua
+Calling ./rgl2 to get all commits
+filtering 26 child commits for file modules/luci-base/luasrc/dispatcher.lua
+no e1932592c3e0804eec5d85fee989ceeed1e1050a in 97
+no 2e4b5fb8ff2fb3bfd1400bf7cbf721057f02fab9 in 46
+filtering 4 parent commits for file modules/luci-base/luasrc/dispatcher.lua
+1 out/out12/CVE-2019-17367/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-17367 1571418900
+Original Project = openwrt_luci
+Success (go2)
+Stage 3
+./go3 CVE-2019-17367 out/out12/CVE-2019-17367/results.csv
+out/out12/CVE-2019-17367/results.csv
+out/out12/CVE-2019-17367/results.html
+Success (go3)
+
+
+------------ CVE-2019-17426 (168 of 173)
+Stage 1
+working on CVE-2019-17426, Automattic_mongoose, cast.js
+Calling ./rgl2 to get all commits
+filtering 22 child commits for file lib/cast.js
+no e6128d1f83d66f1723514c15b5286c2a6f079dc8 in 102
+no c0731fd242f39d1c2522de046569d89248b15a5e in 64
+no cc6a6970704a2db89094f12b3a4360f8d5a2564f in 76
+no b72f06198bc1f0027c1a861e7c0b7f3d51cdb714 in 55
+no d1d8492fe2ecb120a39af1a8ab0a2624b0bdb834 in 81
+no 2afec2618f056286f46b20d5eeb0e6bd4c57b33f in 42
+no 94570a640cd3d1a0d7b7f20bbe5eba700d725f08 in 20
+no 56691bfcced17aeb241d2394ec0a51b2c2ae525f in 86
+no 38d86e1009e469dd69f2b074a735a10bc2d2cf62 in 56
+no 039806fbd07fc7be45152ab22fe0f946fa82c241 in 3
+no ca7dcf889c2fee672899285e9f887b5d2284e83e in 74
+filtering 8 parent commits for file lib/cast.js
+0 out/out12/CVE-2019-17426/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-17426 1570673100
+Original Project = Automattic_mongoose
+Success (go2)
+Stage 3
+./go3 CVE-2019-17426 out/out12/CVE-2019-17426/results.csv
+out/out12/CVE-2019-17426/results.csv
+out/out12/CVE-2019-17426/results.html
+Success (go3)
+
+
+------------ CVE-2019-17498 (169 of 173)
+Stage 1
+working on CVE-2019-17498, libssh2_libssh2, packet.c
+Calling ./rgl2 to get all commits
+filtering 6 child commits for file src/packet.c
+no 2a2aaed3b6c3c1dc25e35e11afcfb23f88a18510 in 42
+no 64a555d6f5aafed504a10e5b756e85c91b1d56ce in 100
+filtering 24 parent commits for file src/packet.c
+0 out/out12/CVE-2019-17498/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-17498 1571696100
+Original Project = libssh2_libssh2
+Success (go2)
+Stage 3
+./go3 CVE-2019-17498 out/out12/CVE-2019-17498/results.csv
+out/out12/CVE-2019-17498/results.csv
+out/out12/CVE-2019-17498/results.html
+Success (go3)
+
+
+------------ CVE-2019-17513 (170 of 173)
+Stage 1
+working on CVE-2019-17513, ratpack_ratpack, NettyHandlerAdapter.java
+Calling ./rgl2 to get all commits
+filtering 3 child commits for file ratpack-core/src/main/java/ratpack/server/internal/NettyHandlerAdapter.java
+filtering 27 parent commits for file ratpack-core/src/main/java/ratpack/server/internal/NettyHandlerAdapter.java
+0 out/out12/CVE-2019-17513/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-17513 1571368500
+Original Project = ratpack_ratpack
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-17513" failed
+
+------------ CVE-2019-17533 (171 of 173)
+Stage 1
+working on CVE-2019-17533, tbeu_matio, mat4.c
+Calling ./rgl2 to get all commits
+filtering 23 child commits for file src/mat4.c
+no 357ed29a96304d7038005402ef988208801a870d in 53
+no a3730c09797372a5919140b4618f217bb54bd1a1 in 35
+filtering 7 parent commits for file src/mat4.c
+0 out/out12/CVE-2019-17533/stage1/comm_blobs.txt
+Success (go1)
+Stage 2
+./go2 out/out12/CVE-2019-17533 1570932900
+Original Project = tbeu_matio
+There are no clone projects that contain both vulnerable and fixed blobs
+Failure (go2): "./go2 out/out12/CVE-2019-17533" failed
+
+------------ CVE-2019-17534 (172 of 173)
+Stage 1
+working on CVE-2019-17534, libvips_libvips, gifload.c
+Calling ./rgl2 to get all commits
+Error: commit ce684dd008532ea0bf9d4a1d89bacb35f4a83f4d not in out/out12/CVE-2019-17534/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-17534"
+
+------------ CVE-2019-17539 (173 of 173)
+Stage 1
+working on CVE-2019-17539, FFmpeg_FFmpeg, utils.c
+Calling ./rgl2 to get all commits
+Error: commit 8df6884832ec413cf032dfaa45c23b1c7876670c not in out/out12/CVE-2019-17539/stage1/commits
+Failure (go1): "./go1 out/out12/CVE-2019-17539"
+============
+116 failed (see out/out12/log.error)
+57 succeeded (see out/out12/CVE-*)
+
