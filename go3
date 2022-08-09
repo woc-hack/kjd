@@ -5,7 +5,7 @@
 # Check the command line args
 if [[ $# -ne 2 ]]; then
    echo "usage: go3 <cve: project and path> <filename for csv file> "  >&2
-   echo "example: ./go3 CVE-2002-2443:https://github.com/foo/fum/src/test.c  out/CVE-2002-2443/results.csv"
+   echo "example: ./go3 CVE-2002-2443:https://github.com/foo/fum/src/test.c  out/CVE-2002-2443/results.fixed.csv"
    exit 1
 fi
 

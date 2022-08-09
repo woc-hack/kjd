@@ -14,6 +14,7 @@
 
 #default_data_file=data/short.cvefixes2.csv
 default_data_file=data/cvefixes_with_repo.csv
+#default_data_file=veryshort
 
 #
 # Call when user hits control-c. Kill all child processes before exitting.
@@ -73,12 +74,12 @@ function url2proj {
 
 # Initialize some variables that are just used for informational purposes
 count=0
-num_entries=`grep -v "^#" "$data_file" | wc -l`
+num_entries=`grep -v "^#" "$data_file" | grep -v "^$" | wc -l`
 
 # Read and process the input data file
 while read line; do
-    if [[ "$line" == "#"* ]]; then
-        # skip comments
+    if [[ "$line" == "#"* ]] || [[ "$line" == "" ]]; then
+        # skip comments and blank lines
         continue
     fi
 
@@ -110,7 +111,8 @@ while read line; do
     filename=`basename $filepath`
     v_unixtime=$(date -d "${vdate}" +"%s")
 
-    echo "Stage 1"
+    echo -n "Stage 1" 
+    echo ' (echo $cve;$commit;$project_name;$filepath" | ./go1 $working_dir)'
     echo "$cve;$commit;$project_name;$filepath" | ./go1 $working_dir
     if [ $? -ne 0 ]; then
         echo "Failure (go1): \"./go1 $working_dir\""
@@ -118,8 +120,8 @@ while read line; do
         continue
     fi
 
-    echo "Stage 2"
-    echo "./go2 $working_dir" $v_unixtime
+    echo -n "Stage 2"
+    echo " (./go2 $working_dir $v_unixtime)"
     ./go2 $working_dir $v_unixtime
     if [ $? -ne 0 ]; then
         echo "Failure (go2): \"./go2 $working_dir\" failed"
@@ -127,9 +129,9 @@ while read line; do
         continue
     fi
 
-    echo "Stage 3"
-    file="$working_dir/results.csv"
-    echo "./go3 $cve: $project_name, $filepath $file"
+    echo -n "Stage 3"
+    file="$working_dir/results.fixed.csv"
+    echo " (./go3 $cve: $project_name, $filepath $file)"
     ./go3 "$cve: $project_name, $filepath" $file
     if [ $? -ne 0 ]; then
         echo "Failure (go3): \"./go3 $cve ...\" failed"
@@ -138,7 +140,8 @@ while read line; do
     fi
 
     # Create a top level html file to link all the results.html files together
-    echo "<a href='$cve/results.html'>$cve</a><br>" >> $outdir/allresults.html
+    #echo "<a href='$cve/results.html'>$cve</a><br>" >> $outdir/allresults.html
+    echo "<a href='$cve'>$cve</a><br>" >> $outdir/allresults.html
 
     echo ""
 done < $data_file
@@ -146,14 +149,19 @@ echo "============"
 
 # Create the error log by copying error messages from each directory to one
 # top level file named log.error
-for dir in $( ls -1d $outdir/fail/CVE-*); do
-    echo -n "`basename "$dir"`: " >> $outdir/log.error
-    if [ -f $dir/error_log ]; then
-        cat $dir/error_log >> $outdir/log.error
-    else
-        echo "Error (no error_log)" >> $outdir/log.error
-    fi
-done
+if [ -z "$(ls -A $outdir/fail)" ]; then
+    # if there are no failures, just remove the fail directory
+    rmdir $outdir/fail
+else
+    for dir in $( ls -1d $outdir/fail/CVE-*); do
+        echo -n "`basename "$dir"`: " >> $outdir/log.error
+        if [ -f $dir/error_log ]; then
+            cat $dir/error_log >> $outdir/log.error
+        else
+            echo "Error (no error_log)" >> $outdir/log.error
+        fi
+    done
+fi
 
 # Output some summary information
 echo "`cat $outdir/log.error | wc -l` failed (see $outdir/log.error)"

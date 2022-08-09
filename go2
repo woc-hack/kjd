@@ -52,29 +52,71 @@ if [ "$orig_project" == "" ]; then
 fi
 echo "Original Project = $orig_project"
 
-# Get all project with good (fixed) blobs (_c file also include commit)
-cat $stage1_dir/good_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P | cut -d\; -f 2 | sort -u > $outdir/good_projs.txt
-cat $stage1_dir/good_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P | sort -u > $outdir/good_projs_c.txt
+# Get all project with good (fixed) blobs (_cb file also include commit and 
+# blob hashes)
+cat $stage1_dir/good_blobs.txt | ~/lookup/getValues -f b2c | awk -F\; '{ printf ("%s;%s\n", $2, $1) }' | ~/lookup/getValues -f c2P | sort -u > $outdir/good_projs_cb.txt
+cut -d \; -f 3 $outdir/good_projs_cb.txt | sort -u > $outdir/good_projs.txt
+
 
 # Get all project with bad (vulnerable) blobs (_c file also include commit)
-cat $stage1_dir/bad_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P | cut -d\; -f 2 | sort -u > $outdir/bad_projs.txt
-cat $stage1_dir/bad_blobs.txt | ~/lookup/getValues -f b2c | cut -d\; -f 2 | ~/lookup/getValues -f c2P |  sort -u > $outdir/bad_projs_c.txt
+cat $stage1_dir/bad_blobs.txt | ~/lookup/getValues -f b2c | awk -F\; '{ printf ("%s;%s\n", $2, $1) }' | ~/lookup/getValues -f c2P | sort -u > $outdir/bad_projs_cb.txt
+cut -d \; -f 3 $outdir/bad_projs_cb.txt | sort -u > $outdir/bad_projs.txt
 
 # comm.txt is all the projects that contain both vulnerable and fixed 
 # versions of a file. 
 comm -12 $outdir/good_projs.txt $outdir/bad_projs.txt | grep -v "$orig_project" > $outdir/comm.txt
-rm -f $outdir/good_comm.txt $outdir/bad_comm.txt
 
-# If there are no projects that contain both vulnerable and fixed blobs, quit.
-count=`cat $outdir/comm.txt | wc -l`
-if [ "$count" == "0" ]; then
-    echo "There are no clone projects that contain both vulnerable and fixed blobs" | tee $error_log
-    exit 1
-fi
+# only_bad.txt is all the projects which contain vulnerable versions of the
+# file but no fixed version.
+comm -13 $outdir/good_projs.txt $outdir/bad_projs.txt > $outdir/only_bad.txt
 
-# create header line for results.csv file
+# find out of the most recent version of the blobs is vulnerable or
+# unknown (we know it is not fixed, but we are looking at only_bad.txt
+touch $dir/results.notfixed.txt
+touch $dir/results.unknown.txt
+for line in $(cat $outdir/only_bad.txt); do
+    commit=`grep $line $outdir/bad_projs_cb.txt | head -n 1 | cut -d\; -f 1`
+    blob=`grep $line $outdir/bad_projs_cb.txt | head -n 1 | cut -d\; -f 2`
+    pathname=`echo $commit | ~/lookup/showCmtTree.perl | grep ";$blob" | head -n 1 | cut -d\; -f 3`
+    url=`./toUrl $line`
+    # get the host platform (hp), like github.com or bitbucket.org
+    hp=`echo $url | sed -e "s@https://@@" -e "s@\.com.*@@" -e "s@\.org.*@@"`
+
+    proj=`echo $line | sed -e "s@_@/@"`
+    rev=`./get_latest_rev $hp $proj $pathname`
+    if [ $? -ne 0 ]; then
+        if [[ "$rev" == *"Not Found"* ]]; then
+            continue
+        fi
+        echo "Error: get_latest_rev failed:"
+        echo "./get_latest_rev \"$hp\" \"$proj\" \"$pathname\""
+        echo "   $rev"
+        continue
+    fi
+    latest_blob=`echo $rev | cut -d ';' -f 1`
+    # see if latest_blob is in bad_blobs.txt. if so, proj is still vulnerable
+    bad=`grep "$latest_blob" $outdir/../stage1/bad_blobs.txt`
+    #echo "github.com/$proj/blob/HEAD/$pathname"
+    if [ "$bad" != "" ]; then
+        # project is still vulnerable
+        echo $line >> $dir/results.notfixed.txt
+    else
+        # file has changed, we don't know if the change fixed it.
+        echo $line >> $dir/results.unknown.txt
+    fi
+done
+
+
+## If there are no projects that contain both vulnerable and fixed blobs, quit.
+#count=`cat $outdir/comm.txt | wc -l`
+#if [ "$count" == "0" ]; then
+#    echo "There are no clone projects that contain both vulnerable and fixed blobs" | tee $error_log
+#    exit 1
+#fi
+
+# create header line for results.fixed.csv file
 # time diff is time from cve publication to first fixed commit
-echo  "time_diff, project, first good blob commit, first good blob commit time, cve publication date" > $dir/results.csv
+echo  "time_diff, project, first good blob commit, first good commit time, first bad blob commit, first bad commit time, cve publication date" > $dir/results.fixed.csv
 
 # For each project that has contained both vulnerable and fixed blobs, collect
 # information.
@@ -83,12 +125,12 @@ for line in $(cat $outdir/comm.txt); do
         # c2P does not seem to return the right format for gitorious
         continue
     fi
-    grep $line $outdir/good_projs_c.txt > $outdir/tmpfile
+    grep $line $outdir/good_projs_cb.txt > $outdir/tmpfile
     for tmp in $(cat $outdir/tmpfile); do
        time=`echo $tmp | ~/lookup/showCnt commit | cut -d \; -f 7 | awk -F\; '{ printf ("%s;%s\n", $1, strftime("%F:%T", $1)) }'`
         echo "$time;$tmp" >> $outdir/${line}_good.txt
     done
-    grep $line $outdir/bad_projs_c.txt > $outdir/tmpfile
+    grep $line $outdir/bad_projs_cb.txt > $outdir/tmpfile
     for tmp in $(cat $outdir/tmpfile); do
        time=`echo $tmp | ~/lookup/showCnt commit | cut -d \; -f 7 | awk -F\; '{ printf ("%s;%s\n", $1, strftime("%F:%T", $1)) }'`
         echo "$time;$tmp" >> $outdir/${line}_bad.txt
@@ -97,18 +139,17 @@ for line in $(cat $outdir/comm.txt); do
     first_good_blob_commit=`head -n 1 $outdir/${line}_good_sorted.txt | cut -d\; -f3`
     first_good_blob_commit_time=`head -n 1 $outdir/${line}_good_sorted.txt | cut -d\; -f1`
     good_time_formatted=`head -n 1 $outdir/${line}_good_sorted.txt | cut -d\; -f2`
-    #sort -n $outdir/${line}_bad.txt > $outdir/${line}_bad_sorted.txt
-    #first_bad_blob_commit=`head -n 1 $outdir/${line}_bad_sorted.txt | cut -d\; -f3`
-    #first_bad_blob_commit_time=`head -n 1 $outdir/${line}_bad_sorted.txt | cut -d\; -f1`
-    #bad_time_formatted=`head -n 1 $outdir/${line}_bad_sorted.txt | cut -d\; -f2`
+    sort -n $outdir/${line}_bad.txt > $outdir/${line}_bad_sorted.txt
+    first_bad_blob_commit=`head -n 1 $outdir/${line}_bad_sorted.txt | cut -d\; -f3`
+    first_bad_blob_commit_time=`head -n 1 $outdir/${line}_bad_sorted.txt | cut -d\; -f1`
+    bad_time_formatted=`head -n 1 $outdir/${line}_bad_sorted.txt | cut -d\; -f2`
 
     # find the number of days between cve publication and fixed commit
     diff=$(((first_good_blob_commit_time-v_unixtime)/86400))
     # convert to years and days
     years=`echo "$diff 365.25" | awk '{printf "%.2f", $1 / $2}' | awk -F'.' '{print $1 " years and " $2 " days"}'`
 
-    #echo  $years, $line, $first_good_blob_commit, $good_time_formatted, $first_bad_blob_commit, $bad_time_formatted >> $dir/results.csv
-    echo  $years, $line, $first_good_blob_commit, $good_time_formatted, `date -d @$v_unixtime +%Y-%m-%d_%H:%M:%S` >> $dir/results.csv
+    echo  $years, $line, $first_good_blob_commit, $good_time_formatted, $first_bad_blob_commit, $bad_time_formatted, `date -d @$v_unixtime +%Y-%m-%d_%H:%M:%S` >> $dir/results.fixed.csv
 done
 rm -f $outdir/tmpfile
 

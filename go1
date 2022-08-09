@@ -2,12 +2,11 @@
 #
 # Read line in the form: 
 #    CVE, fixing commit, project name, file path
-
 #
 # Create files with all the good (fixed) blobs and all the old (vulnerable)
 # blobs. 
 #
-# For now, we use remote-git-logc to find all blobs all the way to the 
+# For now, we use remote-git-log2 to find all blobs all the way to the 
 # beginning.
 # Ideally, we would only find blobs until we find the commit that 
 # introduced the vulnerability.
