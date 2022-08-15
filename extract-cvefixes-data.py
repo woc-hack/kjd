@@ -94,10 +94,11 @@ for row in cve_df.itertuples():
 #------------------------------------------------------------------------
 for cve in cves:
     data = cves[cve]
-    files = data[3].split(",")
-    # Print only CVEs with one file
-    if len(files) == 1 and len(files[0]) > 0:
-        print("{};{};{};{};{};{}".format(cve,data[0], data[1], files[0], data[2], data[4]))
+    if len(data) >= 4:
+        files = data[3].split(",")
+        # Print only CVEs with one file
+        if len(files) == 1 and len(files[0]) > 0:
+            print("{};{};{};{};{};{}".format(cve,data[0], data[1], files[0], data[2], data[4]))
     # FIXME: print all CVEs regardless of how many files
     # for file in files:
     #     print("{};{};{};{};{}".format(cve, data[0], file, data[1], data[3]))
