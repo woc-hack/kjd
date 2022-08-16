@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 
 from github import Github
-from gitlab import Gitlab
 from pathlib import Path
+import requests
 import sys
-import urllib.parse
+from urllib.parse import urljoin, urlencode
+
+debug = False
 
 #------------------------------------------------------------------------
 # Get API token for host
@@ -29,7 +31,7 @@ def github_commits(token, project, filepath):
     i = 0
     for commit in commits:
         i = i + 1
-        if i == 10:
+        if i == 10 and debug:
             break
         print(commit.sha)
 
@@ -47,6 +49,28 @@ def gitlab_commits(token, project, filepath):
         print(commit.sha)
 
 #------------------------------------------------------------------------
+# Get commits for filename from project on BitBucket 
+#------------------------------------------------------------------------
+def bitbucket_commits(project, filepath):
+    bb_base='https://api.bitbucket.org/'
+    bb_path = '2.0/repositories/' + project + "/commits/"
+    bb_params = { 'path': filepath, 'pagelen': 10 }
+    bb_query = '?' + urlencode(bb_params)
+    bb_url = urljoin(bb_base, bb_path + bb_query)
+
+    while True:
+        r = requests.get(bb_url)
+        r_data = r.json()
+
+        for commit in r_data['values']:
+            print(commit['hash'])
+
+        if 'next' in r_data.keys():
+            bb_url = r_data['next']
+        else:
+            break
+
+#------------------------------------------------------------------------
 # Get commits for filename from project on Github 
 #------------------------------------------------------------------------
 def github_commits(token, project, filepath):
@@ -57,7 +81,7 @@ def github_commits(token, project, filepath):
     i = 0
     for commit in commits:
         i = i + 1
-        if i == 10:
+        if i == 10 and debug:
             break
         print(commit.sha)
 
@@ -94,9 +118,8 @@ elif host == "gitlab" or host == "gl":
     access_token = load_token('gitlab-auth')
     gitlab_commits(access_token, project, filepath)
 elif host == "bitbucket" or host == "bb":
-    pass
+    bitbucket_commits(project, filepath)
 else:
     print("Invalid host type \"{}\" specified.".format(host))
     printusage()
     sys.exit(2)
-
