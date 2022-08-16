@@ -50,5 +50,10 @@
    
 - Malin Källén et al; Jupyter Notebooks on GitHub: Characteristics and Code Clones
 
-
    This study analysed Jupyter notebooks found on GitHub. They found that more than 70% of all code snippets are exact copies of other snippets. Note: this might not be completely relevant to us, as jupyter notebooks are not really programs with vulnerabilities?
+
+
+- Joel Ossher et al; File Cloning in Open Source Java Projects: The Good, The Bad, and The Ugly
+
+   This study analysed 13000 Java project from the Sourcerer Repository (aggregation of multiple open source repositories). They found that over 10% of file are clones and that over 15% of projects contain at least one cloned file. They found that most commonly cloned fles were Java extension classes and popular third-party libraries. 
+  
