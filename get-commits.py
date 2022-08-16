@@ -4,7 +4,7 @@ from github import Github
 from pathlib import Path
 import requests
 import sys
-from urllib.parse import urljoin, urlencode
+from urllib.parse import quote, urljoin, urlencode
 
 debug = False
 
@@ -39,28 +39,46 @@ def github_commits(token, project, filepath):
 # Get commits for filename from project on Gitlab 
 #------------------------------------------------------------------------
 def gitlab_commits(token, project, filepath):
-    g = Gitlab(private_token=token)
-    p = g.projects.get(project)
-    commits = p.commits.list(get_all=True, path=filepath)
-    # FIXME: Use HTTP access instead of gitlab module
-    # This returns 404 API Version Not Found, apparently a known issue @
-    # https://app.bountysource.com/issues/95835557-commits-list-does-not-filter-by-path
-    for commit in commits:
-        print(commit.sha)
+    project = 'tortoisegit/tortoisegit'
+    project = quote(project, safe='')
+    filepath = 'LICENSE'
+    gl_base = 'https://gitlab.com/'
+    gl_path = 'api/v4/projects/' + project + "/repository/commits"
+    gl_params = { 'file': filepath, 'per_page': 20 }
+    gl_query = '?' + urlencode(gl_params)
+    gl_url = urljoin(gl_base, gl_path + gl_query)
+
+    while True:
+        r = requests.get(gl_url)
+        if r.status_code == 200:
+            r_data = r.json()
+        else:
+            print("Error: HTTP response \"{} {}\" from URL {}.".format(r.status_code, r.reason, gl_url))
+            sys.exit(3)
+
+        for commit in r_data:
+            print(commit['id'])
+
+        break
+        # FIXME: Handle pagination according to https://docs.gitlab.com/ee/api/
 
 #------------------------------------------------------------------------
 # Get commits for filename from project on BitBucket 
 #------------------------------------------------------------------------
 def bitbucket_commits(project, filepath):
-    bb_base='https://api.bitbucket.org/'
+    bb_base ='https://api.bitbucket.org/'
     bb_path = '2.0/repositories/' + project + "/commits/"
-    bb_params = { 'path': filepath, 'pagelen': 10 }
+    bb_params = { 'path': filepath, 'pagelen': 20 }
     bb_query = '?' + urlencode(bb_params)
     bb_url = urljoin(bb_base, bb_path + bb_query)
 
     while True:
         r = requests.get(bb_url)
-        r_data = r.json()
+        if r.status_code == 200:
+            r_data = r.json()
+        else:
+            print("Error: HTTP response \"{} {}\" from URL {}.".format(r.status_code, r.reason, bb_url))
+            sys.exit(3)
 
         for commit in r_data['values']:
             print(commit['hash'])
