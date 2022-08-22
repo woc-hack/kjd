@@ -11,34 +11,21 @@ debug = False
 #------------------------------------------------------------------------
 # Get API token for host
 #------------------------------------------------------------------------
-def load_token(tokenfile):
+def load_tokens(tokenfile):
     token_path = Path.home() / tokenfile
     if token_path.is_file():
-        access_token = token_path.read_text().replace('\n','')
-        return(access_token)
+        with open(token_path) as tf:
+            lines = tf.readlines()
+            tokens = [line.rstrip() for line in lines]
+        return tokens
     else:
         print("Token file does not exist at {}.".format(token_path))
         sys.exit(3)
 
 #------------------------------------------------------------------------
-# Get commits for filename from project on Github 
-#------------------------------------------------------------------------
-def github_commits(token, project, filepath):
-    g = Github(login_or_token=token)
-    repo = g.get_repo(project)
-    commits = repo.get_commits(path=filepath)
-    # Print no more than 10 items for testing
-    i = 0
-    for commit in commits:
-        i = i + 1
-        if i == 10 and debug:
-            break
-        print(commit.sha)
-
-#------------------------------------------------------------------------
 # Get commits for filename from project on Gitlab 
 #------------------------------------------------------------------------
-def gitlab_commits(token, project, filepath):
+def gitlab_commits(tokens, project, filepath):
     project = 'tortoisegit/tortoisegit'
     project = quote(project, safe='')
     filepath = 'LICENSE'
@@ -92,19 +79,25 @@ def bitbucket_commits(project, filepath):
             break
 
 #------------------------------------------------------------------------
-# Get commits for filename from project on Github 
+# Get commits for filename from project on Github
+# We use the first token that has enough queries left on its rate limit
+# to complete listing the desired commits.
 #------------------------------------------------------------------------
-def github_commits(token, project, filepath):
-    g = Github(login_or_token=token)
-    repo = g.get_repo(project)
-    commits = repo.get_commits(path=filepath)
-    # Print no more than 10 items for testing
-    i = 0
-    for commit in commits:
-        i = i + 1
-        if i == 10 and debug:
+def github_commits(tokens, project, filepath):
+    for token in tokens:
+        try:
+            g = Github(login_or_token=tokens.pop())
+            repo = g.get_repo(project)
+            commits = repo.get_commits(path=filepath)
+            for commit in commits:
+                print(commit.sha)
+        except github.GithubException.RateLimitExceededException:
+            pass
+        else:
             break
-        print(commit.sha)
+    else:
+        print("No GitHub access token had enough queries to complete.")
+        sys.exit(5)
 
 #------------------------------------------------------------------------
 # Print usage message
@@ -133,8 +126,8 @@ else:
 # Check for valid host then load access tokens for specified host
 #------------------------------------------------------------------------
 if host == "github" or host == "gh":
-    access_token = load_token('github-auth')
-    github_commits(access_token, project, filepath)
+    access_tokens = load_tokens('github-auth')
+    github_commits(access_tokens, project, filepath)
 elif host == "gitlab" or host == "gl":
     access_token = load_token('gitlab-auth')
     gitlab_commits(access_token, project, filepath)
