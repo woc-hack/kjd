@@ -48,6 +48,7 @@ def gitlab_commits(token, project, filepath):
     gl_query = '?' + urlencode(gl_params)
     gl_url = urljoin(gl_base, gl_path + gl_query)
 
+    # Loop through pages while a next URL exists in HTTP link header
     while True:
         r = requests.get(gl_url)
         if r.status_code == 200:
@@ -59,8 +60,10 @@ def gitlab_commits(token, project, filepath):
         for commit in r_data:
             print(commit['id'])
 
-        break
-        # FIXME: Handle pagination according to https://docs.gitlab.com/ee/api/
+        if 'next' in r.links:
+            gl_url = r.links['next']['url']
+        else:
+            break
 
 #------------------------------------------------------------------------
 # Get commits for filename from project on BitBucket 
