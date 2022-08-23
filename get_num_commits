@@ -1,0 +1,61 @@
+#! /bin/bash
+
+#
+# get_num_commits: get the number of commits in a remo repo.
+# currently only supports github 
+#
+
+#
+# Check the command line args
+#
+if [ $# -ne 2 ]; then
+   echo "usage: get_num_commits: <host> <project>"
+   echo "       supported hosts: github, gitlab, bitbucket"
+   echo "           shortcuts: gh, gl, bb"
+   echo "       example: get_num_commits github openssl/openssl"
+   echo "       example: get_num_commits gitlab tortoisegit/tortoisegit"
+   echo "       example: get_num_commits bitbucket swsc/lookup"
+   exit 1
+fi
+
+host=$1
+proj=$2
+
+#
+# get the github API auth key(s) from ~/github-auth
+#
+if [ ! -f ~/github-auth ]; then
+    echo Error: missing ~/github-auth file
+    echo Error: missing ~/github-auth file >&2
+    echo ~/github-auth must exists and contain github API auth key or keys >&2
+    echo 'Create keys at github->Settings->Developer Settings->personal access tokens' >&2
+    exit 1
+fi
+mapfile -t auth_array < ~/github-auth
+len="${#auth_array[@]}"
+i="$(($RANDOM % $len))"
+auth=${auth_array[$i]}
+
+
+#
+# Main body of script
+#
+case $host in
+    github|gh)
+        response=$(curl -s -k -I -H "Authorization: token $auth" "https://api.github.com/repos/$proj/commits?per_page=1" | sed -n '/^[Ll]ink:/ s/.*"next".*page=\([0-9]*\).*"last".*/\1/p')
+        echo $response
+        ;;
+    gitlab|gl)
+        echo "unknown (gitlab)"
+        ;;
+    bitbucket|bb)
+        echo "unknown (bitbucket)"
+        ;;
+    *)
+        echo "unknown ($host)"
+#        echo "Error: $host not supported, must be one of github, gitlab, or bitbucket"
+        exit 1
+esac
+
+exit 0
+
