@@ -86,7 +86,7 @@ def bitbucket_commits(project, filepath):
 def github_commits(tokens, project, filepath):
     for token in tokens:
         try:
-            g = Github(login_or_token=tokens.pop())
+            g = Github(login_or_token=token)
             repo = g.get_repo(project)
             commits = repo.get_commits(path=filepath)
             for commit in commits:
