@@ -37,3 +37,23 @@
   - Markus Zimmerman; Small world with high risks: A study of security threats in the npm ecosystem; USENIX Security 2019.
 
     This study analyzes dependencies between package maintainers as well as the packages themselves. Study examined 609 vulnerabilities in 5,386,237 package versions with 199,327 maintainers. Found mean number of dependencies for an npm package to be 79 packages and 39 maintainers. Packages in the npm ecosystem has a higher number of dependencies than Java packages, and include micropackages with only a few lines of source code. Up to 40% of packages have dependencies with at least one known vulnerability. The paper provides a set of threat models for attacking software via dependencies.
+    
+- Mohammad Gharehyazie et al; Some From Here, Some From There: Cross-Project Code Reuse in GitHub
+
+   This study analyses code reuse in GitHub projects. They found that cross-project code reuse is prevalent on GitHub. In total 5753 projects contained clones with token size 20, 5533 with tokensize 30 and 628 projcts contained clones with tokensize 50. They found that cross-project clones are generally restricted to projects in the same domain and follow certain patterns. 
+   
+   
+- Niko Schwarz et al; On How Often Code Is Cloned across Repositories
+
+   This study analysed projects in the Squeaksource ecosystem. This ecosystem contains thousands of projects with more than 40 million versions of methods. They found that 15 to 18 percent of methods were cloned (depending on the clone type considered). 
+   
+   
+- Malin Källén et al; Jupyter Notebooks on GitHub: Characteristics and Code Clones
+
+   This study analysed Jupyter notebooks found on GitHub. They found that more than 70% of all code snippets are exact copies of other snippets. Note: this might not be completely relevant to us, as jupyter notebooks are not really programs with vulnerabilities?
+
+
+- Joel Ossher et al; File Cloning in Open Source Java Projects: The Good, The Bad, and The Ugly
+
+   This study analysed 13000 Java project from the Sourcerer Repository (aggregation of multiple open source repositories). They found that over 10% of file are clones and that over 15% of projects contain at least one cloned file. They found that most commonly cloned fles were Java extension classes and popular third-party libraries. 
+  
