@@ -88,9 +88,12 @@ case $host in
             #echo $url
             response=$(curl -s -L -H "Authorization: token $auth" "$url")
             if [[ $response = *"rate limit exceeded"* ]]; then
-                echo $response
-                exit 2
+                # wait minute then try again 
+                sleep 60
+                page=$((page - 1))
+                continue
             elif [[ "$response" = "$empty" ]]; then
+                echo ""
                 break
             else
                 render_github "$response"
@@ -98,21 +101,40 @@ case $host in
         done
         ;;
     gitlab|gl)
-        proj=`echo $proj | sed -e "s@/@%2F@"`
-        filepath=`echo $filepath | sed -e "s@/@%2F@"`
-        url="https://gitlab.com/api/v4/projects/$proj/repository/commits?file=$filepath"
-        #echo $url
-        response=$(curl -s "$url")
-        render_gitlab "$response"
+        page=0
+        while true; do
+            page=$((page + 1))
+            proj=`echo $proj | sed -e "s@/@%2F@"`
+            filepath=`echo $filepath | sed -e "s@/@%2F@"`
+            url="https://gitlab.com/api/v4/projects/$proj/repository/commits?path=$filepath&per_page=100&page=$page"
+            #echo $url
+            response=$(curl -s "$url")
+            if [[ "$response" = "[]" ]]; then
+                echo ""
+                break
+            else
+                render_gitlab "$response"
+            fi
+        done
         ;;
     bitbucket|bb)
-        url="https://api.bitbucket.org/2.0/repositories/$proj/commits/?path=$filepath"
-        #echo "$url"
-        response=$(curl -s "$url")
-        render_bitbucket "$response"
+        page=0
+        while true; do
+            page=$((page + 1))
+            url="https://api.bitbucket.org/2.0/repositories/$proj/commits/?path=$filepath&pagelen=100&page=$page"
+            #echo "$url"
+            response=$(curl -s "$url")
+            end=`echo "$response" | jq-linux64 -r '{commit: .values[].hash}'`
+            if [[ "$end" = "" ]]; then
+                echo ""
+                break
+            else
+                render_bitbucket "$response"
+            fi
+        done
         ;;
     *)
-        echo "Error: host must be one of github, gitlab, or bitbucket"
+        echo "Error: $host not supported, must be one of github, gitlab, or bitbucket"
         exit 1
 esac
 
