@@ -13,7 +13,8 @@
 #------------------------------------------------------------------------
 
 #default_data_file=data/short.cvefixes2.csv
-default_data_file=data/cvefixes_with_repo.csv
+#default_data_file=data/cvefixes_with_repo.csv
+default_data_file=data/cvefixes_new.csv
 #default_data_file=veryshort
 
 #
@@ -59,19 +60,6 @@ if [ $? -ne 0 ]; then
 fi
 touch $outdir/log.error
 
-# convert from URL to WoC project name
-function url2proj {
-   local url="$1"
-   tmp1=`echo $url | sed -e "s@https?*://@@"`
-   if [[ "$url" == *"github.com"* ]]; then 
-       tmp2=`echo $tmp1 | sed -e "s@github.com/@@"`
-       result=`echo $tmp2 | sed -e "s@/@_@"`
-   else
-       result=`echo $tmp1 | sed -e "s@/@_@g"`
-   fi
-   printf "$result"
-}
-
 # Initialize some variables that are just used for informational purposes
 count=0
 num_entries=`grep -v "^#" "$data_file" | grep -v "^$" | wc -l`
@@ -90,14 +78,15 @@ while read line; do
     cve=`echo $line | cut -d\; -f 1`
     working_dir="$outdir/$cve"
     echo ""
-    echo "------------ $cve ($count of $num_entries)"
+    echo "------------ $cve ($count of $num_entries, `date +"%D %T"`)"
     if [ "$cve" == "" ]; then
         echo "Failure: Invalid input line: CVE missing: $line" | tee -a $outdir/log.error
         continue
     fi
     commit=`echo $line | cut -d\; -f 2`
     project_url=`echo $line | cut -d\; -f 3`
-    project_name=$(url2proj $project_url)
+    platform=`echo $project_url | sed -e "s@https?*://@@" -e "s/\.com.*$//"`
+    project_name=`echo $project_url | sed -e "s@http.*\.com/@@" -e "s@/@_@"`
     filepath=`echo $line | cut -d\; -f 4`
     #commit_date=`echo $line | cut -d\; -f 5`
     vdate=`echo $line | cut -d\; -f 6`  # date vulnerability was published
@@ -112,13 +101,15 @@ while read line; do
     v_unixtime=$(date -d "${vdate}" +"%s")
 
     echo -n "Stage 1" 
-    echo ' (echo $cve;$commit;$project_name;$filepath" | ./go1 $working_dir)'
-    echo "$cve;$commit;$project_name;$filepath" | ./go1 $working_dir
+    echo " (echo $cve;$commit;$platform;$project_name;$filepath | ./go1 $working_dir)"
+    echo "$cve;$commit;$platform;$project_name;$filepath" | ./go1 $working_dir
     if [ $? -ne 0 ]; then
         echo "Failure (go1): \"./go1 $working_dir\""
         mv $working_dir $outdir/fail/$cve.stage1
         continue
     fi
+#echo SKIPPING stage 2/3
+#continue
 
     echo -n "Stage 2"
     echo " (./go2 $working_dir $v_unixtime)"
@@ -138,6 +129,8 @@ while read line; do
         mv $working_dir $outdir/fail/$cve.stage3
         continue
     fi
+    ./go3 "$cve: $project_name, $filepath" $working_dir/results.notfixed.csv
+    ./go3 "$cve: $project_name, $filepath" $working_dir/results.unknown.csv
 
     # Create a top level html file to link all the results.html files together
     #echo "<a href='$cve/results.html'>$cve</a><br>" >> $outdir/allresults.html

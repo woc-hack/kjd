@@ -1,7 +1,7 @@
 #! /bin/bash
 #
 # Read line in the form: 
-#    CVE, fixing commit, project name, file path
+#    CVE, fixing commit, platform, project name, file path
 #
 # Create files with all the good (fixed) blobs and all the old (vulnerable)
 # blobs. 
@@ -49,11 +49,12 @@ error_log="$working_dir/error_log"
 read line
 cve=`echo $line | cut -d\; -f 1`
 commit=`echo $line | cut -d\; -f 2`
-project=`echo $line | cut -d\; -f 3`
-filepath=`echo $line | cut -d\; -f 4`
+platform=`echo $line | cut -d\; -f 3`
+project=`echo $line | cut -d\; -f 4 | sed -e "s/\.git//"`
+filepath=`echo $line | cut -d\; -f 5`
 filename=`basename $filepath`
-#time=`echo $line | cut -d\; -f 5`
-#time2=`echo $line | cut -d\; -f 6`
+#time=`echo $line | cut -d\; -f 6`
+#time2=`echo $line | cut -d\; -f 7`
 
 echo "working on $cve, $project, $filename"
 
@@ -95,12 +96,13 @@ elif [ $method == "c2cc" ]; then
     echo $commit > $outdir/c
 elif [ $method == "rgl" ]; then
     echo "Calling ./rgl2 to get all commits"
+    echo "  ./rgl2 $platform $proj_mod $filepath > $outdir/commits"
    
     proj_mod=`echo $project | sed -e 's@_@/@'`
-    ./rgl2 github $proj_mod $filepath > $outdir/commits
+    ./rgl2 $platform $proj_mod $filepath > $outdir/commits
     err=$?
     if [ $err -ne 0 ]; then
-        echo "./rgl2 github $proj_mod $filepath" 
+        echo "./rgl2 $platform $proj_mod $filepath" 
         if [ $err -eq 2 ]; then
             echo "Error: rgl2 failed: rate limit exceeded" | tee $error_log
         else
