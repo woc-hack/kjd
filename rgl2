@@ -96,7 +96,16 @@ case $host in
                 echo ""
                 break
             else
-                render_github "$response"
+                commits=`render_github "$response"`
+                # quick sanity check: make sure the first commit is a
+                # valid sha1 hash (only check the first to save time)
+                clen=`printf "%s\n" "$commits" | head -1 | wc -c`
+                if [ $clen -ne 41 ]; then
+                    echo ""
+                    echo "Error: rgl2 returned invalid response" >&2
+                    break
+                fi
+                printf "$commits\n"
             fi
         done
         ;;
@@ -113,7 +122,16 @@ case $host in
                 echo ""
                 break
             else
-                render_gitlab "$response"
+                commits=`render_gitlab "$response"`
+                # quick sanity check: make sure the first commit is a
+                # valid sha1 hash (only check the first to save time)
+                clen=`printf "%s\n" "$commits" | head -1 | wc -c`
+                if [ $clen -ne 41 ]; then
+                    echo ""
+                    echo "Error: rgl2 returned invalid response" >&2
+                    break
+                fi
+                printf "$commits\n"
             fi
         done
         ;;
@@ -129,7 +147,16 @@ case $host in
                 echo ""
                 break
             else
-                render_bitbucket "$response"
+                commits=`render_bitbucket "$response"`
+                # quick sanity check: make sure the first commit is a
+                # valid sha1 hash (only check the first to save time)
+                clen=`printf "%s\n" "$commits" | head -1 | wc -c`
+                if [ $clen -ne 41 ]; then
+                    echo ""
+                    echo "Error: rgl2 returned invalid response" >&2
+                    break
+                fi
+                echo "$commits\n"
             fi
         done
         ;;
