@@ -95,18 +95,20 @@ elif [ $method == "c2cc" ]; then
     ./map_r c2cc $commit > $outdir/commits.new
     echo $commit > $outdir/c
 elif [ $method == "rgl" ]; then
-    echo "Calling ./rgl2 to get all commits"
-    echo "  ./rgl2 $platform $proj_mod $filepath > $outdir/commits"
-   
     proj_mod=`echo $project | sed -e 's@_@/@'`
+    echo "Calling ./rgl2 to get all commits"
+    # get the file history with rgl2, platform is github/gitlab/bitbucket, etc
+    echo "  ./rgl2 $platform $proj_mod $filepath > $outdir/commits"
     ./rgl2 $platform $proj_mod $filepath > $outdir/commits
     err=$?
     if [ $err -ne 0 ]; then
-        echo "./rgl2 $platform $proj_mod $filepath" 
+        echo "./rgl2 $platform $proj_mod $filepath" | tee -a $error_log
         if [ $err -eq 2 ]; then
-            echo "Error: rgl2 failed: rate limit exceeded" | tee $error_log
+            echo "Error: rgl2 failed: rate limit exceeded A" | tee -a $error_log
+        elif [ $err -eq 3 ]; then
+            echo "Error: rgl2 returned invalid response" | tee -a $error_log
         else
-            echo "Error: rgl2 failed" | tee $error_log
+            echo "Error: rgl2 failed" | tee -a $error_log
         fi
         exit 1
     fi
