@@ -85,8 +85,8 @@ while read line; do
     fi
     commit=`echo $line | cut -d\; -f 2`
     project_url=`echo $line | cut -d\; -f 3`
-    platform=`echo $project_url | sed -e "s@https?*://@@" -e "s/\.com.*$//"`
-    project_name=`echo $project_url | sed -e "s@http.*\.com/@@" -e "s@/@_@"`
+    platform=`echo $project_url | sed -e "s@https?*://@@" -e "s/\.com.*$//" -e "s/\.org.*$//"`
+    project_name=`echo $project_url | sed -e "s@http.*\.com/@@" -e "s@http.*\.org/@@" -e "s@/@_@"`
     filepath=`echo $line | cut -d\; -f 4`
     #commit_date=`echo $line | cut -d\; -f 5`
     vdate=`echo $line | cut -d\; -f 6`  # date vulnerability was published
