@@ -102,8 +102,8 @@ case $host in
                 clen=`printf "%s\n" "$commits" | head -1 | wc -c`
                 if [ $clen -ne 41 ]; then
                     echo ""
-                    echo "Error: rgl2 returned invalid response" >&2
-                    break
+                    echo "Error: rgl2 returned invalid response"
+                    exit 3
                 fi
                 printf "$commits\n"
             fi
@@ -128,8 +128,8 @@ case $host in
                 clen=`printf "%s\n" "$commits" | head -1 | wc -c`
                 if [ $clen -ne 41 ]; then
                     echo ""
-                    echo "Error: rgl2 returned invalid response" >&2
-                    break
+                    echo "Error: rgl2 returned invalid response"
+                    exit 3
                 fi
                 printf "$commits\n"
             fi
@@ -153,10 +153,10 @@ case $host in
                 clen=`printf "%s\n" "$commits" | head -1 | wc -c`
                 if [ $clen -ne 41 ]; then
                     echo ""
-                    echo "Error: rgl2 returned invalid response" >&2
-                    break
+                    echo "Error: rgl2 returned invalid response"
+                    exit 3
                 fi
-                echo "$commits\n"
+                printf "$commits\n"
             fi
         done
         ;;
