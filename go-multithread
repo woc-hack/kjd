@@ -1,0 +1,90 @@
+#! /bin/bash
+
+
+skip_stage_1="yes"
+
+
+
+#
+# This script runs the go script in multiple threads
+#
+#------------------------------------------------------------------------
+
+#data_file=data/short.cvefixes2.csv
+data_file=data/cvefixes_new.csv
+
+# Make sure the input data file exists
+if [ ! -f $data_file ]; then
+    echo Error: file not found: $data_file
+    exit 1
+fi
+
+#
+# Call when user hits control-c. Kill all child processes before exitting.
+#
+trap 'pkill -P $$; echo killed; exit' SIGINT SIGTERM
+
+# Check the command line args
+if [[ $# -ne 1 ]]; then
+   echo "usage: go-multithread <output directory> "
+   echo "example: ./go-multithread out"
+   exit 1
+fi
+outdir="$1"
+
+if ! [ "$skip_stage_1" == "yes" ]; then
+# Initialize the output directory
+if [ "$outdir" == "out" ]; then
+    # If the output directory has the special name "out", remove it if it
+    # already exists. 
+    rm -rf out
+elif [ -d $outdir ]; then
+   # In all other cases, do not remove or overwrite the directory, just exit.
+   echo Error: directory $outdir already exists >&2
+   exit 1
+fi
+mkdir $outdir
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+else  # skip stage 1
+    if ! [ -d $outdir ]; then
+        echo "Error: $outdir does not exist"
+    fi
+fi
+
+# how many processes to run in parallel
+if [[ -z "${MAX_THREADS}" ]]; then
+    max_threads="4"
+else
+    max_threads="${MAX_THREADS}"
+fi
+# HACK
+
+# number of lines in input file
+num_lines=`cat $data_file | wc -l`
+
+if [ $num_lines -lt $max_threads ]; then
+    max_threads=2
+fi
+
+echo $max_threads, $num_lines
+
+lines_per_thread=$(( ($num_lines/$max_threads) + 1))
+echo $lines_per_thread
+echo --
+
+# divide the lines in the input file into smaller files to be processed
+# by different threads
+end=0
+for (( i=1; i<=$max_threads; i++ )); do
+    start=$(($end + 1))
+    end=$(($i * $lines_per_thread))
+    sed -n "$start,${end}p" $data_file > $outdir/input.$i
+    echo starting thread $i: lines $start..$end
+    ./go $outdir/out$i $outdir/input.$i > $outdir/log.status.thread$i 2>&1 &
+done
+
+echo "To see status, look at files $outdir/log.status.*"
+wait
+exit 0
