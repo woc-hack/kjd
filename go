@@ -88,17 +88,17 @@ while read line; do
     platform=`echo $project_url | sed -e "s@https?*://@@" -e "s/\.com.*$//" -e "s/\.org.*$//"`
     project_name=`echo $project_url | sed -e "s@http.*\.com/@@" -e "s@http.*\.org/@@" -e "s@/@_@"`
     filepath=`echo $line | cut -d\; -f 4`
-    #commit_date=`echo $line | cut -d\; -f 5`
-    vdate=`echo $line | cut -d\; -f 6`  # date vulnerability was published
+    fix_date=`echo $line | cut -d\; -f 5` # date vulnerability was fixed
+    #vdate=`echo $line | cut -d\; -f 6`  # date vulnerability was published
 
     # Error check the input line
-    if [[ "$commit" == "" ]] || [[ "$project_url" == "" ]] || [[ "$filepath" == "" ]] || [[ "$vdate" == "" ]] ; then
+    if [[ "$commit" == "" ]] || [[ "$project_url" == "" ]] || [[ "$filepath" == "" ]] || [[ "$fix_date" == "" ]] ; then
         echo "$cve Failure: Invalid input line: $line" | tee -a $outdir/log.error
         continue
     fi
 
     filename=`basename $filepath`
-    v_unixtime=$(date -d "${vdate}" +"%s")
+    fix_unixtime=$(date -d "${fix_date}" +"%s")
 
     echo -n "Stage 1" 
     echo " (echo $cve;$commit;$platform;$project_name;$filepath | ./go1 $working_dir)"
@@ -108,12 +108,10 @@ while read line; do
         mv $working_dir $outdir/fail/$cve.stage1
         continue
     fi
-#echo SKIPPING stage 2/3
-#continue
 
     echo -n "Stage 2"
-    echo " (./go2 $working_dir $v_unixtime)"
-    ./go2 $working_dir $v_unixtime
+    echo " (./go2 $working_dir $fix_unixtime)"
+    ./go2 $working_dir $fix_unixtime
     if [ $? -ne 0 ]; then
         echo "Failure (go2): \"./go2 $working_dir\" failed"
         mv $working_dir $outdir/fail/$cve.stage2
