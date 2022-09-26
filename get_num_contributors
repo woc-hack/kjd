@@ -1,0 +1,101 @@
+#! /bin/bash
+
+#
+# get_num_contributors: get the number of contributors in a remote repo.
+# currently only supports github and gitlab
+#
+
+#
+# Check the command line args
+#
+if [ $# -ne 2 ]; then
+   echo "usage: get_num_contributors: <host> <project>"
+   echo "       supported hosts: github, gitlab, bitbucket"
+   echo "           shortcuts: gh, gl, bb"
+   echo "       example: get_num_contributors github openssl/openssl"
+   echo "       example: get_num_contributors gitlab tortoisegit/tortoisegit"
+   echo "       example: get_num_contributors bitbucket swsc/lookup"
+   exit 1
+fi
+
+host=$1
+proj=$2
+
+#
+# Use jq-linux64 if available, otherwise use jq
+#
+if which jq-linux64 >/dev/null; then
+    JQ=jq-linux64
+elif which jq >/dev/null; then
+    JQ=jq
+else
+    echo "The jq command needed for this script is unavailable."
+fi
+
+#
+# get the github API auth key(s) from ~/github-auth
+#
+if [ ! -f ~/github-auth ]; then
+    echo Error: missing ~/github-auth file
+    echo Error: missing ~/github-auth file >&2
+    echo ~/github-auth must exists and contain github API auth key or keys >&2
+    echo 'Create keys at github->Settings->Developer Settings->personal access tokens' >&2
+    exit 1
+fi
+mapfile -t auth_array < ~/github-auth
+len="${#auth_array[@]}"
+i="$(($RANDOM % $len))"
+auth=${auth_array[$i]}
+
+#
+# get the gitlab API auth key(s) from ~/gitlab-auth
+#
+if [ ! -f ~/gitlab-auth ]; then
+    echo Error: missing ~/gitlab-auth file
+    echo Error: missing ~/gitlab-auth file >&2
+    echo ~/gitlab-auth must exists and contain gitlab API auth key or keys >&2
+    echo 'Create keys at gitlab->User Settings>Access Tokens' >&2
+    exit 1
+fi
+mapfile -t auth_array < ~/gitlab-auth
+len="${#auth_array[@]}"
+i="$(($RANDOM % $len))"
+glauth=${auth_array[$i]}
+
+
+#
+# Main body of script
+#
+case $host in
+    github|gh)
+        response=$(curl -s -k -I -H "Authorization: token $auth" "https://api.github.com/repos/$proj/contributors?per_page=1" | sed -n '/^[Ll]ink:/ s/.*"next".*page=\([0-9]*\).*"last".*/\1/p')
+        echo $response
+        ;;
+    gitlab|gl)
+        proj=$(echo $proj | sed -e "s@/@%2F@")
+        page=0
+        total=0
+        while true; do
+            page=$((page + 1))
+            url="https://gitlab.com/api/v4/projects/$proj/repository/contributors?per_page=100&page=$page"
+            response=$(curl -s -H "PRIVATE-TOKEN: $glauth" "$url")
+            if [[ "$response" = "[]" ]]; then
+                break
+            else
+                contributors=$(echo "$response" | $JQ length)
+                total=$((total + contributors))
+            fi
+        done
+        echo $total
+        ;;
+    bitbucket|bb)
+        echo "unknown (bitbucket)"
+        ;;
+    *)
+        echo "unknown ($host)"
+#        echo "Error: $host not supported, must be one of github, gitlab, or bitbucket"
+        exit 1
+esac
+
+exit 0
+
