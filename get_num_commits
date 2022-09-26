@@ -1,8 +1,8 @@
 #! /bin/bash
 
 #
-# get_num_commits: get the number of commits in a remo repo.
-# currently only supports github 
+# get_num_commits: get the number of commits in a remote repo.
+# currently only supports github and gitlab
 #
 
 #
