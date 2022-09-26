@@ -46,7 +46,9 @@ case $host in
         echo $response
         ;;
     gitlab|gl)
-        echo "unknown (gitlab)"
+        response=$(curl -s "https://gitlab.com/$proj" | awk -F'">|</' '/ Commits/ {print $7}' | 
+            sed 's/,//')
+        echo $response
         ;;
     bitbucket|bb)
         echo "unknown (bitbucket)"
