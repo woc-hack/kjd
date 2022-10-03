@@ -1,0 +1,362 @@
+#! /bin/bash
+
+# VCAnalyzer (Vulnerable Clones Analyzer) is a tool to analyze vulnerabilies 
+# that are propogated through copy-based code reuse.
+
+# The fields in the input file are: CVE identifier, fixing commit, project, 
+#     path of file that fixed vulnerability, author commit date, 
+#     vulnerability publication date
+#
+#
+# VCAnalyzer (vca) is composed of 4 phases. This script calls each of those
+# phases.  This script is mainly a wrapper around the following scripts:
+#     phase1: find bad (vulnerable) and good (fixed) blobs.
+#     phase2: find projects containing both good and bad blobs and timestamps
+#     phase3: retrieve stats about the projects with cloned code
+#     phase4: analyze the results 
+#
+#------------------------------------------------------------------------
+
+# Call when user hits control-c. Kill all child processes before exitting.
+# (this doesn't always work with multiple sub-processes, I don't know why)
+trap 'pkill -P $$; echo killed; exit' SIGINT SIGTERM
+
+# Check the command line args
+if [[ $# -eq 1 ]]; then
+    orig_data_file=""
+elif [[ $# -eq 2 ]]; then
+    orig_data_file="$2"
+else
+   echo "usage: vca <output directory> [<input data file>]" >&2
+   echo "example: ./vca output ../cvefixes_new.csv" >&2
+   exit 1
+fi
+outdir="$1"
+data_file="$outdir/cvefixes.csv"
+
+# Make sure the input data file exists and do quick sanity check on the file
+if [ "$orig_data_file" == "" ]; then
+    if [ ! -f $data_file ]; then
+        echo "Error: $data_file does not exist"
+        exit 1
+    fi
+else
+    if [ ! -f $orig_data_file ]; then
+        echo Error: file not found: $orig_data_file >&2
+        exit 1
+    fi
+    # make sure there are no duplicate CVEs entries
+    dups=`cut -d ";" -f 1 $orig_data_file | egrep -v "^$|^#" | sort | uniq -cd`
+    if [ "$dups" != "" ]; then
+        echo "Error: input file $orig_data_file contains duplicate CVEs:" >&2
+        echo "$dups" >&2
+        exit 1
+    fi
+    # Make sure there are 6 fields, unless the line is blank or a comment
+    ret=`awk -F';' \
+        'NF != 6 && !/^\s*$/ && !/^#/ {print "line", NR, "is invalid";exit 1}' \
+        $orig_data_file`
+    if [ $? -ne 0 ]; then
+        echo "Error: input file $orig_data_file: $ret" >&2
+        exit
+    fi
+fi
+
+# This runs faster on da5 because it does not have to ssh da5
+hostname=`uname -n`
+if [ ! "$hostname" = "da5.eecs.utk.edu" ]; then
+    echo "Note: $0 runs faster on da5"
+fi
+
+# set how many processes to run in parallel
+if [[ -z "${MAX_THREADS}" ]]; then
+    max_threads="4"
+else
+    max_threads="${MAX_THREADS}"
+fi
+max_threads="32"
+
+# Initialize the output directory
+if [ -d $outdir ]; then
+    echo -n "Output directory $outdir already exists, reuse? (y/n) " >&2
+    read -n 1 answer
+    echo ""
+    if ! [ "$answer" == "y" ] || [ "$answer" == "Y" ]; then
+        exit 1
+    fi
+else
+    mkdir $outdir
+    if [ $? -ne 0 ]; then
+        exit 1
+    fi
+fi
+if [ ! -d $outdir/CVE ]; then
+    mkdir $outdir/CVE
+    if [ $? -ne 0 ]; then
+        exit 1
+    fi
+fi
+touch $outdir/log.error
+
+# Copy the input data file into the output directory
+if [ "$orig_data_file" != "" ]; then
+    cp $orig_data_file $data_file
+    if [ $? -ne 0 ]; then
+        exit 1
+    fi
+fi
+
+#
+# Phase 1
+#
+
+# call_phase_1: function to call phase 1
+#
+# Note that this function runs in a separate thread, so only
+# write in this blob's directory so as to not conflict with
+# other threads.
+#
+call_phase_1 ()
+{
+    local outdir="$1"
+    local cve="$2"
+    local commit="$3"
+    local platform="$4"
+    local project_name="$5"
+    local filepath="$6"
+
+    if [ ! -d $outdir/CVE/$cve/phase1 ]; then
+        mkdir -p $outdir/CVE/$cve/phase1
+        if [ $? -ne 0 ]; then
+            return 1
+        fi
+    fi
+    echo "Phase 1 (echo $cve;$commit;$platform;$project_name;$filepath | ./vca-phase1 $outdir/$cve)" >> $outdir/CVE/$cve/phase1/log
+    echo "$cve;$commit;$platform;$project_name;$filepath" | ./vca-phase1 $outdir/CVE/$cve >> $outdir/CVE/$cve/phase1/log 2>&1
+    if [ $? -ne 0 ]; then
+        echo "Failure (vca-phase1): \"./vca-phase1 $outdir/CVE/$cve\"" >> $outdir/CVE/$cve/phase1/log 2>&1
+        echo "Finished at `date +'%D %T'`" >> $outdir/CVE/$cve/phase1/finished.failure
+        return 0
+    fi
+    echo "Finished at `date +'%D %T'`" >> $outdir/CVE/$cve/phase1/finished.success
+    echo "-------- Phase 1: finished $cve (`date +"%D %T"`)"
+    return 0
+}
+
+echo "======== Phase 1 Beginning"
+echo "To get the current status:"
+echo "  for file in \$(ls -1t $outdir/CVE/*/phase1/log); do cat \$file; echo ''; done"
+
+# Initialize some variables that are just used for informational purposes
+count=0
+num_entries=`grep -v "^#" "$data_file" | grep -v "^$" | wc -l`
+
+# Read and process the input data file
+while read line; do
+    if [[ "$line" == "#"* ]] || [[ "$line" == "" ]]; then
+        # skip comments and blank lines
+        continue
+    fi
+
+    # count lines (just to provide user feedback)
+    count=$((count+1))
+
+    # extract the fields from the input data file.
+    cve=`echo $line | cut -d\; -f 1`
+    if [ "$cve" == "" ]; then
+        echo "Failure: Invalid input line: CVE missing: $line" | tee -a $outdir/log.error
+        continue
+    fi
+    commit=`echo $line | cut -d\; -f 2`
+    project_url=`echo $line | cut -d\; -f 3`
+    platform=`echo $project_url | sed -e "s@https?*://@@" -e "s/\.com.*$//" -e "s/\.org.*$//"`
+    project_name=`echo $project_url | sed -e "s@http.*\.com/@@" -e "s@http.*\.org/@@" -e "s@/@_@"`
+    filepath=`echo $line | cut -d\; -f 4`
+    fix_date=`echo $line | cut -d\; -f 5` # date vulnerability was fixed
+    pub_date=`echo $line | cut -d\; -f 6` # date vulnerability was published
+
+    # Error check the input line
+    if [[ "$commit" == "" ]] || [[ "$project_url" == "" ]] || [[ "$filepath" == "" ]] || [[ "$fix_date" == "" ]] ; then
+        echo "$cve Failure: Invalid input line: $line" | tee -a $outdir/log.error
+        continue
+    fi
+
+    filename=`basename $filepath`
+
+    echo "-------- Phase 1: starting $cve (`date +"%D %T"`, $count of $num_entries)" 
+    if [ -d "$outdir/CVE/$cve/phase1" ]; then
+        echo "output for $cve phase 1 already exists ($outdir/CVE/$cve/phase1)"
+        echo "-------- Phase 1: finished $cve (`date +"%D %T"`)"
+    else
+        # Create the output directory
+        mkdir $outdir/CVE/$cve
+        if [ $? -ne 0 ]; then
+            continue
+        fi
+
+        # Put the line from the input file for this CVE in a file named input
+        echo "$line" >> $outdir/CVE/$cve/input
+
+        call_phase_1 "$outdir" "$cve" "$commit" "$platform" "$project_name" "$filepath" &
+        sleep 0.2 # give it a little time to start before starting the next
+        # limit how many sub-processes are running in parallel
+        while [ `pgrep -c -P $$` -ge $max_threads ]; do
+            sleep 2
+        done
+    fi
+
+done < $data_file
+echo "Waiting for remaining phase 1 processes to finish (all have started)"
+wait
+
+# Create logs
+echo "-------- Phase 1" > $outdir/log
+for file in $(ls -1 $outdir/CVE/*/phase1/log); do
+    cat $file >> $outdir/log
+    echo "" >> $outdir/log
+done
+
+echo "======== Phase 1 Complete"
+
+
+#
+# Phase 2
+#
+
+# call_phase_2: function to call phase 2
+#
+# Note that this function runs in a separate thread, so only
+# write in this blob's directory so as to not conflict with
+# other threads.
+#
+call_phase_2 () 
+{
+    local working_dir="$1"
+    local fix_unixtime="$2"
+
+    if [ ! -d $working_dir/phase2 ]; then
+        mkdir -p $working_dir/phase2
+        if [ $? -ne 0 ]; then
+            continue
+        fi
+    fi
+
+    echo "Phase 2 (./vca-phase2 $working_dir $fix_unixtime)" >> $working_dir/phase2/log 2>&1
+    ./vca-phase2 $working_dir $fix_unixtime >> $working_dir/phase2/log 2>&1
+    if [ $? -ne 0 ]; then
+        echo "Failure (vca-phase2): \"./vca-phase2 $working_dir\" failed" >> $working_dir/phase2/log 2>&1
+
+        echo "Finished at `date +'%D %T'`" >> $outdir/CVE/$cve/phase2/finished.failure
+        return 0
+    fi
+    echo "Finished at `date +'%D %T'`" >> $outdir/CVE/$cve/phase2/finished.success
+    echo "-------- Phase 2: finished $cve (`date +"%D %T"`)"
+    return 0
+}
+
+
+echo ""
+echo "======== Phase 2 Beginning"
+echo "To get the current status:"
+echo "  for file in \$(ls -1t $outdir/CVE/*/phase2/log); do cat \$file; echo ''; done"
+
+# Initialize some variables that are just used for informational purposes
+count=0
+num_entries=`ls -1 $outdir/CVE | grep CVE | wc -l`
+
+# Walk through each of the CVEs that passed phase 1
+for cve_dir in $(ls -1 $outdir/CVE | grep CVE); do
+    count=$((count+1))
+    working_dir="$outdir/CVE/$cve_dir"
+
+    cve=`cut -d\; -f 1 $working_dir/input`
+    fix_date=`cut -d\; -f 5 $working_dir/input`
+    fix_unixtime=$(date -d "${fix_date}" +"%s")
+
+    echo "-------- Phase 2: starting $cve (`date +"%D %T"`, $count of $num_entries )"
+    if [ ! -f $outdir/CVE/$cve_dir/phase1/finished.success ]; then
+        echo "Skipping $cve because it failed in phase 1"
+        continue
+    fi
+
+    if [ -d "$outdir/CVE/$cve/phase2" ] ; then
+        echo "output for $cve phase 2 already exists ($outdir/CVE/$cve/phase2)"
+        echo "-------- Phase 2: starting $cve (`date +"%D %T"`)"
+        continue
+    else
+        call_phase_2 "$working_dir" "$fix_unixtime" &
+        sleep 0.2 # give it a little time to start before starting the next
+        # limit how many sub-processes are running in parallel
+        while [ `pgrep -c -P $$` -ge $max_threads ]; do
+            sleep 2
+        done
+    fi
+done
+echo "Waiting for remaining phase 2 processes to finish (all have started)"
+wait
+
+
+# Create logs
+echo "" >> $outdir/log
+echo "-------- Phase 2" >> $outdir/log
+for file in $(ls -1 $outdir/CVE/*/phase1/log); do
+    cat $file >> $outdir/log
+    echo "" >> $outdir/log
+done
+
+echo "======== Phase 2 Complete"
+
+
+#
+# Phase 3
+#
+echo ""
+echo "======== Phase 3 Beginning"
+
+mydir="$(pwd)"
+for cve_dir in $(ls -1 $outdir/CVE | grep CVE); do
+    if [ -f "$outdir/CVE/$cve_dir/results.fixed.csv" ]; then
+        echo $outdir/CVE/$cve_dir/results.fixed.csv
+        OLDIFS=$IFS
+        IFS=$'\n'
+	for line in $(tail -n +2 $outdir/CVE/$cve_dir/results.fixed.csv); do
+	    project=$(echo $line | cut -d "," -f 2 | sed -e "s/^[ \t]*//" -e "s/[ \t]*$//")
+            echo -n "$project, "
+            ssh da1 $mydir/get_meta_from_mongo.py "$project"
+	done
+        IFS=$OLDIFS
+    else
+        echo NO $outdir/CVE/$cve_dir/results.fixed.csv
+    fi
+done
+
+echo "======== Phase 3 Complete"
+
+exit
+
+
+
+
+
+# Create the error log by copying error messages from each directory to one
+# top level file named log.error
+if [ -z "$(ls -A $outdir/fail)" ]; then
+    # if there are no failures, just remove the fail directory
+    rmdir $outdir/fail
+else
+    for dir in $( ls -1d $outdir/fail/CVE-*); do
+        echo -n "`basename "$dir"`: " >> $outdir/log.error
+        if [ -f $dir/error_log ]; then
+            cat $dir/error_log >> $outdir/log.error
+        else
+            echo "Error (no error_log)" >> $outdir/log.error
+        fi
+    done
+fi
+
+# Output some summary information
+echo "`cat $outdir/log.error | wc -l` failed (see $outdir/log.error)"
+echo "`ls -1d $outdir/CVE-* | wc -l` succeeded (see $outdir/CVE-*)"
+echo ""
+
+exit 0

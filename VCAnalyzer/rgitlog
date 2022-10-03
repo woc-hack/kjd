@@ -1,0 +1,170 @@
+#! /bin/bash
+
+#
+# rgitlog (remote-git-log): get git log information from a remote git 
+# repository without having a local checked out version. The results 
+# are the same as git log --format="%H" or git rev-parse HEAD.
+#
+
+#
+# Check the command line args
+#
+if [ $# -ne 3 ]; then
+   echo "usage: rgitlog <host> <project> <file path>"
+   echo "       supported hosts: github, gitlab, bitbucket"
+   echo "           shortcuts: gh, gl, bb"
+   echo "       example: rgitlog github openssl/openssl apps/info.c"
+   echo "       example: rgitlog gitlab tortoisegit/tortoisegit LICENSE"
+   echo "       example: rgitlog bitbucket swsc/lookup showCnt"
+   exit 1
+fi
+
+host=$1
+proj=$2
+filepath=$3
+
+#
+# get the github API auth key(s) from ~/github-auth
+#
+if [ ! -f ~/github-auth ]; then
+    echo Error: missing ~/github-auth file
+    echo Error: missing ~/github-auth file >&2
+    echo ~/github-auth must exists and contain github API auth key or keys >&2
+    echo 'Create keys at github->Settings->Developer Settings->personal access tokens' >&2
+    exit 1
+fi
+mapfile -t auth_array < ~/github-auth
+len="${#auth_array[@]}"
+i="$(($RANDOM % $len))"
+auth=${auth_array[$i]}
+
+
+#
+# Functions
+#
+
+# format data from github 
+function render_github {
+    response="$1"
+    echo "$response" | jq-linux64 -r '.[] | {commit: .sha}' | sed \
+    -e '/^{/d'  \
+    -e '/^}/d'  \
+    -e 's/\"//g'  \
+    -e 's/^  commit: //' 
+}
+
+# format data from gitlab 
+function render_gitlab {
+    response="$1"
+    echo "$response" | jq-linux64 -r '{commit: .[].id}' | sed \
+    -e '/^{/d'  \
+    -e '/^}/d'  \
+    -e 's/\"//g'  \
+    -e 's/^  commit: //'
+}
+
+# format data from bitbucket 
+function render_bitbucket {
+    response="$1"
+    echo "$response" | jq-linux64 -r '{commit: .values[].hash}' | sed \
+    -e '/^{/d'  \
+    -e '/^}/d'  \
+    -e 's/\"//g'  \
+    -e 's/^  commit: //'
+}
+
+#
+# Main body of script
+#
+case $host in
+    github|gh)
+        empty='[
+
+]'
+        page=0
+        while true; do
+            page=$((page + 1))
+
+            url="https://api.github.com/repos/$proj/commits?path=$filepath&per_page=100&page=$page"
+            #echo $url
+            response=$(curl -s -L -H "Authorization: token $auth" "$url")
+            if [[ $response = *"rate limit exceeded"* ]]; then
+                # wait minute then try again 
+                sleep 60
+                page=$((page - 1))
+                continue
+            elif [[ "$response" = "$empty" ]]; then
+                echo ""
+                break
+            else
+                commits=`render_github "$response"`
+                # quick sanity check: make sure the first commit is a
+                # valid sha1 hash (only check the first to save time)
+                clen=`printf "%s\n" "$commits" | head -1 | wc -c`
+                if [ $clen -ne 41 ]; then
+                    echo ""
+                    echo "Error: rgitlog returned invalid response"
+                    exit 3
+                fi
+                printf "$commits"
+            fi
+        done
+        ;;
+    gitlab|gl)
+        page=0
+        while true; do
+            page=$((page + 1))
+            proj=`echo $proj | sed -e "s@/@%2F@"`
+            filepath=`echo $filepath | sed -e "s@/@%2F@"`
+            url="https://gitlab.com/api/v4/projects/$proj/repository/commits?path=$filepath&per_page=100&page=$page"
+            #echo $url
+            response=$(curl -s "$url")
+            if [[ "$response" = "[]" ]]; then
+                echo ""
+                break
+            else
+                commits=`render_gitlab "$response"`
+                # quick sanity check: make sure the first commit is a
+                # valid sha1 hash (only check the first to save time)
+                clen=`printf "%s\n" "$commits" | head -1 | wc -c`
+                if [ $clen -ne 41 ]; then
+                    echo ""
+                    echo "Error: rgitlog returned invalid response"
+                    exit 3
+                fi
+                printf "$commits"
+            fi
+        done
+        ;;
+    bitbucket|bb)
+        page=0
+        while true; do
+            page=$((page + 1))
+            url="https://api.bitbucket.org/2.0/repositories/$proj/commits/?path=$filepath&pagelen=100&page=$page"
+            #echo "$url"
+            response=$(curl -s "$url")
+            end=`echo "$response" | jq-linux64 -r '{commit: .values[].hash}'`
+            if [[ "$end" = "" ]]; then
+                echo ""
+                break
+            else
+                commits=`render_bitbucket "$response"`
+                # quick sanity check: make sure the first commit is a
+                # valid sha1 hash (only check the first to save time)
+                clen=`printf "%s\n" "$commits" | head -1 | wc -c`
+                if [ $clen -ne 41 ]; then
+                    echo ""
+                    echo "Error: rgitlog returned invalid response"
+                    exit 3
+                fi
+                printf "$commits"
+            fi
+        done
+        ;;
+    *)
+        echo "Error: $host not supported, must be one of github, gitlab, or bitbucket"
+        exit 1
+esac
+
+exit 0
+

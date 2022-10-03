@@ -1,0 +1,183 @@
+#! /bin/bash
+
+# Copied from VDiOS
+
+# NOTE: only works for github right now.
+
+# Todos:
+# only check rate limit when it fails for rate limit instead of every time
+# maybe need to urlencode, curl does not seem to handle non english characters: libpng:  https://api.github.com/repos/xiaojiantaoi/Library/contents/2.扩展模块/GSM900A模块资料/2-程序/MINI开发板配套例程/5.SIM900A_ISO_MINI_emWin/3.SIM900A_ISO_MINI_emWin/PNGlib/pngpread.c, or ones with ` or other special characters. unzipper also has some examples of this.
+# example: ./get_latest_rev gh repos/liaoronghuiyao linux-diceng/contents/linux底层/src_mini2440/linux-2.6.32.2/arch/arm/kernel/sys_oabi-compat.c
+
+
+#
+# get_latest_rev: get the sha1 hash for the most current revision in the
+# default branch of a file from a remote github repository without having 
+# a local checked out version.
+#
+
+#
+# Check the command line args
+#
+if [ $# -ne 3 ]; then
+   echo "usage: get_latest_rev <host> <project> <file path>"
+   echo "       supported hosts: github, gitlab, bitbucket"
+   echo "           shortcuts: gh, gl, bb"
+   echo "       example: get_latest_rev github openssl/openssl apps/info.c"
+   echo "       example: get_latest_rev github openssl/openssl ssl/statem/extensions.c"
+   echo "       example: get_latest_rev gitlab tortoisegit/tortoisegit LICENSE"
+   echo "       example: get_latest_rev bitbucket swsc/lookup showCnt"
+   exit 1
+fi
+
+host=$1
+proj=$2
+filepath=$3
+urle_filepath=`echo $filepath | sed 's/ /%20/g'`    # url-encoded filepath
+
+# validate filepath
+#echo PATH = $filepath
+#LC_CTYPE=C
+#case $filepath in
+#  *[![:cntrl:][:print:]]*) echo "Contain Non-ASCII";;
+#esac
+#if [[ $filepath = *[![:ascii:]]* ]]; then
+#    echo Error: pathname contains non-ascii characters, which get_latest_rev can't handle:
+#    echo "    $pathname"
+#    exit 1
+#fi
+
+
+
+#
+# get the github API auth key(s) from ~/github-auth
+#
+if [ ! -f ~/github-auth ]; then
+    echo Error: missing ~/github-auth file
+    echo Error: missing ~/github-auth file >&2
+    echo ~/github-auth must exists and contain github API auth key or keys >&2
+    echo 'Create keys at github->Settings->Developer Settings->personal access tokens' >&2
+    exit 1
+fi
+mapfile -t auth_array < ~/github-auth
+len="${#auth_array[@]}"
+i="$(($RANDOM % $len))"
+auth=${auth_array[$i]}
+
+#
+# Main body of script
+#
+case $host in
+    github|github.com|gh)
+        # First, get rate limit information
+        url="https://api.github.com/rate_limit"
+        rate_response=`curl -s -H "Authorization: token $auth" "$url"`
+        #rate_response=`curl -s "$url"`
+        retVal=$?
+        if [ $retVal -ne 0 ]; then
+            echo "Warning: curl failed with error code $retVal, retrying" >&2
+            rate_response=`curl -s -H "Authorization: token $auth" "$url"`
+            retVal=$?
+            if [ $retVal -ne 0 ]; then
+                echo "Error: curl failed with error code $retVal, giving up" >&2
+                echo "Error: curl failed with error code $retVal;;"
+                exit 1
+            fi
+        fi
+        # validate the response
+        echo "$rate_response" | jq-linux64 empty
+        if [ $? -ne 0 ]; then
+            echo "Error: jq reports invalid json in response" >&2
+            echo "URL = $url" >&2
+            echo "$rate_response" >&2
+            echo "Error: jq reports invalid json in response;;"
+            exit 1
+        fi
+        # number of requests remaining in the time period
+        rate_remain=`echo "$rate_response" | jq-linux64 -r '{limit: .resources.core.remaining}' | sed -e "s/[^0-9]*//g" -e "/^$/d"`
+        # time left until the limits reset (in seconds)
+        rate_reset=`echo "$rate_response" | jq-linux64 -r '{limit: .resources.core.reset}' | sed -e "s/[^0-9]*//g" -e "/^$/d"`
+        cur_time=`date "+%s"`
+        let "time_left=rate_reset - cur_time"
+#echo rate_remain = "$rate_remain" >&2
+#echo time_left = "$time_left seconds" >&2
+        # verify that rate_limit is a number
+        re='^[0-9]+$'
+        if ! [[ $rate_remain =~ $re ]] ; then
+           echo "ERROR-------> Not a number: $rate_remain" >&2
+           echo "'$rate_response'" >&2
+           echo "Error: could not get github rate limit;;"
+           exit 1
+        fi
+        # pause if we have reached the rate limit
+        if [ "$rate_remain" -lt "10" ]; then  # 10 since running in parallel
+            t=`date "+%T"`
+            echo "Rate limit exceeded, sleeping $time_left seconds (from $t)" >&2
+            sleep $time_left
+            ran=`echo $((1 + $RANDOM % 10))`
+            sleep $ran # so all threads don't start back at the same time
+            echo "Rate limit reset, continuing" >&2
+        fi
+
+        # Get sha1 hash of file
+        url="https://api.github.com/repos/$proj/contents/$urle_filepath"
+        #url="https://api.github.com/repos/$proj/commits?path=$urle_filepath&page=1&per_page=1"
+
+        response=$(curl -s -L -H "Authorization: token $auth" "$url")
+        # validate the response
+        echo "$response" | jq-linux64 empty
+        if [ $? -ne 0 ]; then
+            echo "Error: jq reports invalid json in response" >&2
+            echo "URL = $url" >&2
+            echo "$response"  >&2
+            echo "Error: jq reports invalid json in response;;"
+            exit 1
+        fi
+        sha1=`echo "$response" | jq-linux64 -r '{sha1: .sha}' | sed -e "s/sha1//" -e "s/[^0-9a-zA-Z]*//g" -e "/^$/d"`
+        html_url=`echo "$response" | jq-linux64 -r '{html_url: .html_url}' | sed -e "s/ *\"html_url\": *//" -e 's/[\{\}\"]//g' -e "/^$/d"`
+        message=`echo "$response" | jq-linux64 -r '{message: .message}' | sed -e "s/message//" -e "s/[^0-9a-zA-Z \-]*//g" -e "/^$/d" -e "s/^ *//"`
+
+        #echo $url
+        if [[ $response = *"rate limit exceeded"* ]]; then
+            echo "API Rate Limit Exceeded;;"
+            exit 1
+        elif [[ "$message" != "" && "$message" != "null" ]]; then
+            echo "$message: $url;;"
+            exit 1
+        else
+            #echo "$sha1"
+            echo "$sha1;$html_url;$url"
+        fi
+        ;;
+    gitlab|gitlab.com|gitlab.org|gl)
+        proj=`echo $proj | sed -e "s@/@%2F@" -e "s@\.@%2E@g" -e "s@-@%2D@g" -e "s@_@%5F@g"`
+        #filepath=`echo $filepath | sed -e "s@/@%2F@g"`
+        filepath=`echo $filepath | sed -e "s@/@%2F@g" -e "s@\.@%2E@g" -e "s@-@%2D@g" -e "s@_@%5F@g"`
+        url="https://gitlab.com/api/v4/projects/$proj/repository/files/$filepath?ref=HEAD"
+        response=$(curl -s -L "$url")
+        # validate the response
+        echo "$response" | jq-linux64 empty
+        if [ $? -ne 0 ]; then
+            echo "Error: jq reports invalid json in response" >&2
+            echo "URL = $url" >&2
+            echo "$response"  >&2
+            echo "Error: jq reports invalid json in response;;"
+            exit 1
+        fi
+        sha1=`echo "$response" | jq-linux64 -r '{sha1: .blob_id}' | sed -e "s/sha1//" -e "s/[^0-9a-zA-Z]*//g" -e "/^$/d"`
+        echo "$sha1;;$url"
+        ;;
+    bitbucket|bb)
+        url="https://api.bitbucket.org/2.0/repositories/$proj/src/HEAD/$filepath"
+        response=$(curl -s -L "$url")
+        echo "$response" > tmpfile.$$
+        sha1=`git hash-object tmpfile.$$`
+        rm tmpfile.$$
+        echo "$sha1;;$url"
+        ;;
+    *)
+        echo "Error: host must be one of github, gitlab, or bitbucket;;"
+        exit 1
+esac
+
+exit 0
