@@ -24,11 +24,11 @@ v_unixtime="$2"
 error_log=$dir/error_log
 outdir="$1/phase2"
 if [ ! -d "$dir" ]; then
-   echo Error: directory $dir does not exists | tee $error_log
+   echo Error: directory $dir does not exists
    exit 1
 fi
 if [ ! -d "$outdir" ]; then
-   echo Error: directory $outdir does not exists | tee $error_log
+   echo Error: directory $outdir does not exists
    exit 1
 fi
 
