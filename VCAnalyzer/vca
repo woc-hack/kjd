@@ -132,9 +132,9 @@ call_phase_1 ()
         fi
     fi
     echo "Phase 1 (echo $cve;$commit;$platform;$project_name;$filepath | ./vca-phase1 $outdir/$cve)" >> $outdir/CVE/$cve/phase1/log
-    echo "$cve;$commit;$platform;$project_name;$filepath" | ./vca-phase1 $outdir/CVE/$cve >> $outdir/CVE/$cve/phase1/log 2>&1
+    echo "$cve;$commit;$platform;$project_name;$filepath" | ./vca-phase1 $outdir/CVE/$cve >> $outdir/CVE/$cve/phase1/log
     if [ $? -ne 0 ]; then
-        echo "Failure (vca-phase1): \"./vca-phase1 $outdir/CVE/$cve\"" >> $outdir/CVE/$cve/phase1/log 2>&1
+        echo "Failure (vca-phase1): \"./vca-phase1 $outdir/CVE/$cve\"" >> $outdir/CVE/$cve/phase1/log
         echo "Finished at `date +'%D %T'`" >> $outdir/CVE/$cve/phase1/finished.failure
         return 0
     fi
@@ -241,10 +241,10 @@ call_phase_2 ()
         fi
     fi
 
-    echo "Phase 2 (./vca-phase2 $working_dir $fix_unixtime)" >> $working_dir/phase2/log 2>&1
-    ./vca-phase2 $working_dir $fix_unixtime >> $working_dir/phase2/log 2>&1
+    echo "Phase 2 (./vca-phase2 $working_dir $fix_unixtime)" >> $working_dir/phase2/log
+    ./vca-phase2 $working_dir $fix_unixtime >> $working_dir/phase2/log
     if [ $? -ne 0 ]; then
-        echo "Failure (vca-phase2): \"./vca-phase2 $working_dir\" failed" >> $working_dir/phase2/log 2>&1
+        echo "Failure (vca-phase2): \"./vca-phase2 $working_dir\" failed" >> $working_dir/phase2/log
 
         echo "Finished at `date +'%D %T'`" >> $outdir/CVE/$cve/phase2/finished.failure
         return 0
@@ -299,7 +299,7 @@ wait
 # Create logs
 echo "" >> $outdir/log
 echo "-------- Phase 2" >> $outdir/log
-for file in $(ls -1 $outdir/CVE/*/phase1/log); do
+for file in $(ls -1 $outdir/CVE/*/phase2/log); do
     cat $file >> $outdir/log
     echo "" >> $outdir/log
 done
@@ -310,24 +310,83 @@ echo "======== Phase 2 Complete"
 #
 # Phase 3
 #
+# call_phase_3: function to call phase 3
+#
+# Note that this function runs in a separate thread, so only
+# write in this blob's directory so as to not conflict with
+# other threads.
+#
+call_phase_3 ()
+{
+    local working_dir="$1"
+
+    if [ ! -d $working_dir/phase3 ]; then
+        mkdir -p $working_dir/phase3
+        if [ $? -ne 0 ]; then
+            continue
+        fi
+    fi
+
+    echo "Phase 3 (./vca-phase3 $working_dir)" >> $working_dir/phase3/log 
+    ./vca-phase3 $working_dir $fix_unixtime >> $working_dir/phase3/log 
+    if [ $? -ne 0 ]; then
+        echo "Failure (vca-phase3): \"./vca-phase3 $working_dir\" failed" >> $working_dir/phase3/log 
+
+        echo "Finished at `date +'%D %T'`" >> $outdir/CVE/$cve/phase3/finished.failure
+        return 0
+    fi
+    echo "Finished at `date +'%D %T'`" >> $outdir/CVE/$cve/phase3/finished.success
+    echo "-------- Phase 3: finished $cve (`date +"%D %T"`)"
+    return 0
+}
+
 echo ""
 echo "======== Phase 3 Beginning"
+echo "To get the current status:"
+echo "  for file in \$(ls -1t $outdir/CVE/*/phase3/log); do cat \$file; echo ''; done"
 
-mydir="$(pwd)"
+# Initialize some variables that are just used for informational purposes
+count=0
+num_entries=`ls -1 $outdir/CVE | grep CVE | wc -l`
+
+# Walk through each of the CVEs that passed phase 2
 for cve_dir in $(ls -1 $outdir/CVE | grep CVE); do
-    if [ -f "$outdir/CVE/$cve_dir/results.fixed.csv" ]; then
-        echo $outdir/CVE/$cve_dir/results.fixed.csv
-        OLDIFS=$IFS
-        IFS=$'\n'
-	for line in $(tail -n +2 $outdir/CVE/$cve_dir/results.fixed.csv); do
-	    project=$(echo $line | cut -d "," -f 2 | sed -e "s/^[ \t]*//" -e "s/[ \t]*$//")
-            echo -n "$project, "
-            ssh da1 $mydir/get_meta_from_mongo.py "$project"
-	done
-        IFS=$OLDIFS
-    else
-        echo NO $outdir/CVE/$cve_dir/results.fixed.csv
+    count=$((count+1))
+    working_dir="$outdir/CVE/$cve_dir"
+
+    cve=`cut -d\; -f 1 $working_dir/input`
+    fix_date=`cut -d\; -f 5 $working_dir/input`
+
+    echo "-------- Phase 3: starting $cve (`date +"%D %T"`, $count of $num_entries )"
+    if [ ! -f $outdir/CVE/$cve_dir/phase2/finished.success ]; then
+        echo "Skipping $cve because it failed in phase 1"
+        continue
     fi
+
+    if [ -d "$outdir/CVE/$cve/phase3" ] ; then
+        echo "output for $cve phase 3 already exists ($outdir/CVE/$cve/phase2)"
+        echo "-------- Phase 3: starting $cve (`date +"%D %T"`)"
+        continue
+    else
+        call_phase_3 "$working_dir" &
+        sleep 0.2 # give it a little time to start before starting the next
+        # limit how many sub-processes are running in parallel
+        while [ `pgrep -c -P $$` -ge $max_threads ]; do
+            sleep 2
+        done
+    fi
+done
+
+echo "Waiting for remaining phase 3 processes to finish (all have started)"
+wait
+
+
+# Create logs
+echo "" >> $outdir/log
+echo "-------- Phase 3" >> $outdir/log
+for file in $(ls -1 $outdir/CVE/*/phase3/log); do
+    cat $file >> $outdir/log
+    echo "" >> $outdir/log
 done
 
 echo "======== Phase 3 Complete"
