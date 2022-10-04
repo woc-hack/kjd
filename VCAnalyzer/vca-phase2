@@ -72,8 +72,8 @@ comm -13 $outdir/good_projs.txt $outdir/bad_projs.txt > $outdir/only_bad.txt
 
 # find out if the most recent version of the blob is vulnerable or
 # unknown (we know it is not fixed, because we are looking at only_bad.txt)
-echo  "project, first bad blob commit, first bad commit time, formatted time" > $dir/results.notfixed.csv
-echo  "project, first bad blob commit, first bad commit time, formatted time" > $dir/results.unknown.csv
+echo  "project, first bad blob commit, first bad commit time, formatted time" > $outdir/results.notfixed.csv
+echo  "project, first bad blob commit, first bad commit time, formatted time" > $outdir/results.unknown.csv
 for line in $(cat $outdir/only_bad.txt); do
     commit=`grep $line $outdir/bad_projs_cb.txt | head -n 1 | cut -d\; -f 1`
     blob=`grep $line $outdir/bad_projs_cb.txt | head -n 1 | cut -d\; -f 2`
@@ -112,10 +112,10 @@ for line in $(cat $outdir/only_bad.txt); do
     output_line="$line, $first_bad_blob_commit, $first_bad_blob_commit_time, $bad_time_formatted"
     if [ "$bad" != "" ]; then
         # project is still vulnerable
-        echo "$output_line" >> $dir/results.notfixed.csv
+        echo "$output_line" >> $outdir/results.notfixed.csv
     else
         # file has changed, we don't know if the change fixed it.
-        echo "$output_line" >> $dir/results.unknown.csv
+        echo "$output_line" >> $outdir/results.unknown.csv
     fi
 done
 
@@ -129,7 +129,7 @@ done
 
 # create header line for results.fixed.csv file
 # time diff is time from cve publication to first fixed commit
-echo  "time_diff, project, first good blob commit, first good commit time, first bad blob commit, first bad commit time, cve publication date" > $dir/results.fixed.csv
+echo  "time_diff, project, first good blob commit, first good commit time, first bad blob commit, first bad commit time, cve publication date" > $outdir/results.fixed.csv
 
 # For each project that has contained both vulnerable and fixed blobs, collect
 # information.
@@ -168,8 +168,9 @@ for line in $(cat $outdir/comm.txt); do
     # convert to years and days
     years=`echo "$diff 365.25" | awk '{printf "%.2f", $1 / $2}' | awk -F'.' '{print $1 " years and " $2 " days"}'`
 
-    echo  $years, $line, $first_good_blob_commit, $good_time_formatted, $first_bad_blob_commit, $bad_time_formatted, `date -d @$v_unixtime +%Y-%m-%d_%H:%M:%S` >> $dir/results.fixed.csv
+    echo  $years, $line, $first_good_blob_commit, $good_time_formatted, $first_bad_blob_commit, $bad_time_formatted, `date -d @$v_unixtime +%Y-%m-%d_%H:%M:%S` >> $outdir/results.fixed.csv
 done
 rm -f $outdir/tmpfile
 
 echo "Success (vca-phase2)"
+exit 0
