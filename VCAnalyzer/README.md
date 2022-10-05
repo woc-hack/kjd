@@ -5,10 +5,10 @@ do i need more implementation details (for replication)
 
 # VCAnalyzer (Vulnerable Clones Analyzer)
 
-VCAnalyzer is a tool to analyze vulnerabilities that are propogated 
+VCAnalyzer is a tool to analyze vulnerabilities that are propagated
 through copy-based code reuse. The tool reads a file with information
 about known vulnerabilities in open source projects and then it
-produces statistics about projects that have copied the vulnerabily.
+produces statistics about projects that have copied the vulnerability.
 
 Run VCAnalyzer from the command line with the following usage:
 - usage: vca <output directory> <input data file>
@@ -129,8 +129,8 @@ The output from phase 2, for each CVE, is:
     - For fixed projects, time the first known fixed file was committed.
     - Length of time elapsed between time the CVE was published and the
       first fixing commit for each cloned project.
-    - Length of time elapsed between time the vulnerablitly was fixed
-      in the original prject and the time of the first fixing commit in
+    - Length of time elapsed between time the vulnerability was fixed
+      in the original project and the time of the first fixing commit in
 
 ### Phase 3
 Phase 3 finds statistics about each project. 
@@ -141,7 +141,7 @@ phase 2.
 For each project, the tool retrieves statistics from either World of Code or
 from the repository hosting platform. In most cases, the statistics
 are available from World of Code. In a few cases, the tool uses the API of the
-repository hosting platform to get the information directly fro the plaform.
+repository hosting platform to get the information directly fro the platform.
 
 The output of phase 3 includes the output of phase 2 and the following 
 additional information about each cloned project:
