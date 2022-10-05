@@ -31,9 +31,6 @@ if (numitems > 1):
 
 
 for data in dataset:
-    sys.stdout.write(project)
-    sys.stdout.write(", ")
-
     sys.stdout.write("NumAuthors:")
     if (data.has_key("NumAuthors")):
         sys.stdout.write(str(data["NumAuthors"]))
