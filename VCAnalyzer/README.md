@@ -1,17 +1,20 @@
-todo: define blob, define original project vs cloned project
+<!--todo: define blob, define original project vs cloned project
 phases allow replacing a phase, for example, to get a different (maybe better)
 list of vulnerable projects or to get more accurate idea of when a vulnerability was introduced
 do i need more implementation details (for replication)
+-->
 
 # VCAnalyzer (Vulnerable Clones Analyzer)
 
 VCAnalyzer is a tool to analyze vulnerabilities that are propagated
-through copy-based code reuse. The tool reads a file with information
-about known vulnerabilities in open source projects and then it
-produces statistics about projects that have copied the vulnerability.
+through copy-based code reuse. The tool reads a list of information
+about known vulnerabilities in open source projects, it finds 
+other projects which have cloned the vulnerable file, and then it
+produces statistics about those projects with the cloned vulnerable file.
 
 Run VCAnalyzer from the command line with the following usage:
-- usage: vca <output directory> <input data file>
+- usage: vca \<output directory\> \<input data file\>
+
 See the description below for full details of the input file format. 
 
 
@@ -28,7 +31,8 @@ The input file contains one line per vulnerability with the following fields:
   - Date the CVE Record was created
 
 Here is an example input line:
-CVE-2022-34299,7ef09e1fc9ba07653dd078edb2408631c7969162,https://github.com/davea42/libdwarf-code,src/lib/libdwarf/dwarf_form.c,2022-06-15 14:46:01-07:00,2022-06-23T17:15Z
+  
+CVE-2022-34299,7ef09e1fc9ba07653dd078edb2408631c7969162,http&#8203;s://github.com/davea42/libdwarf-code,src/lib/libdwarf/dwarf_form.c,2022-06-15 14:46:01-07:00,2022-06-23T17:15Z
 
 ## Output
 The output of the tool is a .csv file with one line for each project that
@@ -61,6 +65,7 @@ The output records contain the following fields:
   - FileInfo (The most used language in this project)
 
 Here is an example line from the final output file:
+  
 CVE:CVE-2002-2443, ProjectUrl:github.com/eurolinux-enterprise-linux-sources/krb5, Project:eurolinux-enterprise-linux-sources_krb5, status:fixed, 1stBadBlob:f0b9a295b5eee43a73d103f81dabfaa8dfc8da36, 1stBadTime:1578606599, 1stGoodBlob:63c6ddb376f0d04c9bbb8b36413cda390d8b49a1, 1stGoodTime:1578634380, TimeSinceFix:2432, TimeSinceFixF:6 years and 66 days, TimeSincePub:2416, TimeSincePubF: 6 years and 61 days, NumAuthors:1, EarliestCommitDate:1578575615, LatestCommitDate:1578634769, NumActiveMon:1, RootFork:-, NumStars:-, NumCore:1, CommunitySize:1, NumCommits:11, NumForks:0, NumAuthors:1, EarliestCommitDate:1578575615, FileInfo:C/C++
 
 ## Architecture
