@@ -10,9 +10,9 @@
 #------------------------------------------------------------------------
 
 # Check the command line args
-if [[ $# -ne 2 ]]; then
-   echo "usage: vca-phase2 <output directory> <time>"
-   echo "example: ./vca-phase2 out/CVE-2007-12345" 1242055800
+if [[ $# -ne 3 ]]; then
+   echo "usage: vca-phase2 <output directory> <fix time> <cve pub time>"
+   echo "example: ./vca-phase2 out/CVE-2007-12345" 1242055800 1242055800
    echo ""
    echo "Output directory is per-project directory created by ./vca"
    echo "This script is called by vca once for each project."
@@ -20,7 +20,8 @@ if [[ $# -ne 2 ]]; then
 fi
 
 dir="$1"
-v_unixtime="$2"
+fix_unixtime="$2"
+cvepub_unixtime="$3"
 error_log=$dir/error_log
 outdir="$1/phase2"
 proj_info_dir="$outdir/proj_info"
@@ -122,7 +123,7 @@ for line in $(cat $outdir/only_bad.txt); do
     # see if latest_blob is in bad_blobs.txt. if so, proj is still vulnerable
     bad=`grep "$latest_blob" $outdir/../phase1/bad_blobs.txt`
     #echo "github.com/$proj/blob/HEAD/$pathname"
-    output_line="1stBadBlob:$first_bad_blob_commit, 1stBadTime:$first_bad_blob_commit_time, 1stGoodBlob:, 1stGoodTime"
+    output_line="1stBadBlob:$first_bad_blob_commit, 1stBadTime:$first_bad_blob_commit_time, 1stGoodBlob:, 1stGoodTime, TimeSinceFix:, TimeSinceFixF, TimeSincePub:, TimeSincePubF:"
     if [ "$bad" != "" ]; then
         # project is still vulnerable
         echo "Project:$line, status:notfixed, $output_line" >> $outdir/results.notfixed.csv
@@ -171,7 +172,15 @@ for line in $(cat $outdir/comm.txt); do
     first_bad_blob_commit=`head -n 1 $proj_info_dir/${line}_bad_sorted.txt | cut -d\; -f3`
     first_bad_blob_commit_time=`head -n 1 $proj_info_dir/${line}_bad_sorted.txt | cut -d\; -f1`
 
-    echo "Project:$line, status:fixed, 1stBadBlob:$first_bad_blob_commit, 1stBadTime:$first_bad_blob_commit_time, 1stGoodBlob:$first_good_blob_commit, 1stGoodTime:$first_good_blob_commit_time" >> $outdir/results.fixed.csv
+    # find the number of days between cve fix or cve publication and 
+    # fixed commit
+    diff=$(((first_good_blob_commit_time-fix_unixtime)/86400))
+    diff_from_pub=$(((first_good_blob_commit_time-cvepub_unixtime)/86400))
+    # convert to years and days
+    years=`echo "$diff 365.25" | awk '{printf "%.2f", $1 / $2}' | awk -F'.' '{print $1 " years and " $2 " days"}'`
+    years_from_pub=`echo "$diff_from_pub= 365.25" | awk '{printf "%.2f", $1 / $2}' | awk -F'.' '{print $1 " years and " $2 " days"}'`
+
+    echo "Project:$line, status:fixed, 1stBadBlob:$first_bad_blob_commit, 1stBadTime:$first_bad_blob_commit_time, 1stGoodBlob:$first_good_blob_commit, 1stGoodTime:$first_good_blob_commit_time, TimeSinceFix:$diff, TimeSinceFixF:$years, TimeSincePub:$diff_from_pub, TimeSincePubF: $years_from_pub" >> $outdir/results.fixed.csv
 done
 rm -f $outdir/tmpfile
 
