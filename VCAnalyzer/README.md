@@ -13,9 +13,9 @@ other projects which have cloned the vulnerable file, and then it
 produces statistics about those projects with the cloned vulnerable file.
 
 Run VCAnalyzer from the command line with the following usage:
-- usage: vca <output directory> <input data file>
+- usage: vca \<output directory\> \<input data file\>
 
-  See the description below for full details of the input file format. 
+See the description below for full details of the input file format. 
 
 
 ## Input
