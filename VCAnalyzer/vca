@@ -209,11 +209,12 @@ done < $data_file
 echo "Waiting for remaining phase 1 processes to finish (all have started)"
 wait
 
-# Create logs
-echo "-------- Phase 1" > $outdir/log
+# Create phase 1 log file
+rm -f $outdir/log.phase1
+echo "-------- Phase 1" > $outdir/log.phase1
 for file in $(ls -1 $outdir/CVE/*/phase1/log); do
-    cat $file >> $outdir/log
-    echo "" >> $outdir/log
+    cat $file >> $outdir/log.phase1
+    echo "" >> $outdir/log.phase1
 done
 
 echo "======== Phase 1 Complete"
@@ -295,13 +296,12 @@ done
 echo "Waiting for remaining phase 2 processes to finish (all have started)"
 wait
 
-
-# Create logs
-echo "" >> $outdir/log
-echo "-------- Phase 2" >> $outdir/log
+# Create phase 2 log file
+rm -f $outdir/log.phase2
+echo "-------- Phase 2" > $outdir/log.phase2
 for file in $(ls -1 $outdir/CVE/*/phase2/log); do
-    cat $file >> $outdir/log
-    echo "" >> $outdir/log
+    cat $file >> $outdir/log.phase2
+    echo "" >> $outdir/log.phase2
 done
 
 echo "======== Phase 2 Complete"
@@ -380,16 +380,27 @@ done
 echo "Waiting for remaining phase 3 processes to finish (all have started)"
 wait
 
-
-# Create logs
-echo "" >> $outdir/log
-echo "-------- Phase 3" >> $outdir/log
+# Create phase 3 log file
+rm -f $outdir/log.phase3
+echo "-------- Phase 3" > $outdir/log.phase3
 for file in $(ls -1 $outdir/CVE/*/phase3/log); do
-    cat $file >> $outdir/log
-    echo "" >> $outdir/log
+    cat $file >> $outdir/log.phase3
+    echo "" >> $outdir/log.phase3
 done
 
 echo "======== Phase 3 Complete"
+
+# Create final report
+echo "Creating Final Report"
+rm -f $outdir/final_report.csv $outdir/final_failures.csv
+for cve in $(ls -1 $outdir/CVE/ | grep CVE-); do
+    file="$outdir/CVE/$cve/report.csv" 
+    if [ -f "$file" ]; then
+        cat "$file" | sed -e "s/^/CVE:$cve, /" >> $outdir/final_report.csv
+    else
+        echo "$cve" >> $outdir/final_failures.csv
+    fi
+done
 
 exit
 
