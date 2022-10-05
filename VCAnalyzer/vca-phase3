@@ -1,0 +1,85 @@
+#! /bin/bash
+#
+# Find meta data from each project
+#
+#------------------------------------------------------------------------
+
+# Check the command line args
+if [[ $# -ne 1 ]]; then
+   echo "usage: vca-phase2 <output directory>"
+   echo "example: ./vca-phase3 out/CVE-2007-12345"
+   exit 1
+fi
+
+dir="$1"
+error_log=$dir/error_log
+outdir="$dir/phase3"
+phase2_dir="$dir/phase2"
+mydir="$(pwd)"
+
+
+if [ ! -d "$dir" ]; then
+   echo Error: directory $dir does not exists
+   exit 1
+fi
+if [ ! -d "$outdir" ]; then
+   echo Error: directory $outdir does not exists 
+   exit 1
+fi
+
+# Make sure good_blobs.txt and bad_blobs.txt exist in the directory
+if [ ! -d "$phase2_dir" ]; then
+    echo "$phase2_dir not found" | tee -a $error_log
+    exit 1
+fi
+
+# If there is an old report, remove it
+rm -f $dir/report.csv
+touch $dir/report.csv
+rm -f $dir/report.md
+
+# get the CVE name
+cve=`cut -d\; -f 1 $dir/input_line`
+
+# Create the final results file
+if [ -f "$phase2_dir/results.csv" ]; then
+    OLDIFS=$IFS
+    IFS=$'\n'
+    for line in $(cat $phase2_dir/results.csv); do
+        project=$(echo $line | cut -d "," -f 1 | sed -e "s/^[ \t]*//" -e "s/[ \t]*$//" -e "s/Project://")
+        project_url=$(./toUrl $project | sed -e "s@https?*://@@")
+        data=$(ssh da1 $mydir/get_meta_from_mongo.py "$project")
+        if [[ $data =~ ^Error ]]; then
+            echo "get_meta_from_mongo.py: $data"
+        else
+            echo -n "ProjectUrl:$project_url, " >> $dir/report.csv
+            echo -n "$line, " >> $dir/report.csv
+            echo -n "$data" >> $dir/report.csv
+        fi
+        echo "" >> $dir/report.csv
+    done
+    IFS=$OLDIFS
+else
+    echo "Error: $phase2_dir/results.csv not found" | tee -a $error_log
+    exit 1
+fi
+
+# convert csv file to a more readable format
+echo "# $cve" >> $dir/report.md
+sed -e "s/,/\n  -/g" -e "s/ProjectUrl:/\n## /" $dir/report.csv | sed "s/^ *- *$//" >> $dir/report.md
+
+# remove labels from csv file, might make it easier to parse 
+#rm -f $dir/report_values.csv
+#cat $dir/report.csv | awk -F, ' \
+#    { printf("NF = %d\n", NF); \
+#      for (i = 1; i <= NF; i++) { \
+#        printf ("%d: ", i); \
+#        name=gsub(".*:", "", $i); \
+#        printf ("name = %s\n", $name) \
+#      }\
+#    }' \
+# >> $dir/report_values.csv 
+
+
+echo "Success (vca-phase3)"
+exit 0
