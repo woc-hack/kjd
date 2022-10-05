@@ -194,8 +194,8 @@ while read line; do
             continue
         fi
 
-        # Put the line from the input file for this CVE in a file named input
-        echo "$line" >> $outdir/CVE/$cve/input
+        # Put the line from the input file for this CVE in file named input_line
+        echo "$line" >> $outdir/CVE/$cve/input_line
 
         call_phase_1 "$outdir" "$cve" "$commit" "$platform" "$project_name" "$filepath" &
         sleep 0.2 # give it a little time to start before starting the next
@@ -234,6 +234,7 @@ call_phase_2 ()
 {
     local working_dir="$1"
     local fix_unixtime="$2"
+    local cvepub_unixtime="$3"
 
     if [ ! -d $working_dir/phase2 ]; then
         mkdir -p $working_dir/phase2
@@ -242,8 +243,8 @@ call_phase_2 ()
         fi
     fi
 
-    echo "Phase 2 (./vca-phase2 $working_dir $fix_unixtime)" >> $working_dir/phase2/log
-    ./vca-phase2 $working_dir $fix_unixtime >> $working_dir/phase2/log
+    echo "Phase 2 (./vca-phase2 $working_dir $fix_unixtime $cvepub_unixtime)" >> $working_dir/phase2/log
+    ./vca-phase2 $working_dir $fix_unixtime $cvepub_unixtime >> $working_dir/phase2/log
     if [ $? -ne 0 ]; then
         echo "Failure (vca-phase2): \"./vca-phase2 $working_dir\" failed" >> $working_dir/phase2/log
 
@@ -270,9 +271,11 @@ for cve_dir in $(ls -1 $outdir/CVE | grep CVE); do
     count=$((count+1))
     working_dir="$outdir/CVE/$cve_dir"
 
-    cve=`cut -d\; -f 1 $working_dir/input`
-    fix_date=`cut -d\; -f 5 $working_dir/input`
+    cve=`cut -d\; -f 1 $working_dir/input_line`
+    fix_date=`cut -d\; -f 5 $working_dir/input_line`
     fix_unixtime=$(date -d "${fix_date}" +"%s")
+    cvepub_date=`cut -d\; -f 6 $working_dir/input_line`
+    cvepub_unixtime=$(date -d "${cvepub_date}" +"%s")
 
     echo "-------- Phase 2: starting $cve (`date +"%D %T"`, $count of $num_entries )"
     if [ ! -f $outdir/CVE/$cve_dir/phase1/finished.success ]; then
@@ -285,7 +288,7 @@ for cve_dir in $(ls -1 $outdir/CVE | grep CVE); do
         echo "-------- Phase 2: finished $cve (`date +"%D %T"`)"
         continue
     else
-        call_phase_2 "$working_dir" "$fix_unixtime" &
+        call_phase_2 "$working_dir" "$fix_unixtime" "$cvepub_unixtime" &
         sleep 0.2 # give it a little time to start before starting the next
         # limit how many sub-processes are running in parallel
         while [ `pgrep -c -P $$` -ge $max_threads ]; do
@@ -354,8 +357,8 @@ for cve_dir in $(ls -1 $outdir/CVE | grep CVE); do
     count=$((count+1))
     working_dir="$outdir/CVE/$cve_dir"
 
-    cve=`cut -d\; -f 1 $working_dir/input`
-    fix_date=`cut -d\; -f 5 $working_dir/input`
+    cve=`cut -d\; -f 1 $working_dir/input_line`
+    fix_date=`cut -d\; -f 5 $working_dir/input_line`
 
     echo "-------- Phase 3: starting $cve (`date +"%D %T"`, $count of $num_entries )"
     if [ ! -f $outdir/CVE/$cve_dir/phase2/finished.success ]; then
