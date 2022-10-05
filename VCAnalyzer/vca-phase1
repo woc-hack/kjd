@@ -113,7 +113,7 @@ elif [ $method == "rgl" ]; then
     count=`sort $outdir/commits | uniq -c | grep "$commit" | sed -e 's/^ *//' | cut -d " " -f 1`
     if [ "$count" == "" ]; then
         # if the commit is not in this project, move on.
-        echo "Error: commit $commit not in $outdir/commits" | tee $error_log
+        echo "Error: commit $commit not in $outdir/commits" | tee -a $error_log
         exit 1
     fi
     if [ $count -ne 1 ]; then
@@ -125,7 +125,7 @@ elif [ $method == "rgl" ]; then
     cat $outdir/commits | sed -n "/$commit/,\$ p" | grep -v "$commit" > $outdir/commits.old
     tac $outdir/commits | sed -n "/$commit/,\$ p" | tac > $outdir/commits.new
 else
-    echo "Internal Error: invalid method"  | tee $error_log
+    echo "Internal Error: invalid method"  | tee -a $error_log
     exit 1
 fi
 
