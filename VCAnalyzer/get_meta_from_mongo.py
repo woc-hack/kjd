@@ -108,13 +108,6 @@ for data in dataset:
         sys.stdout.write("-")
     sys.stdout.write(", ")
 
-    sys.stdout.write("EarliestCommitDate:")
-    if (data.has_key("EarliestCommitDate")):
-        sys.stdout.write(str(data["EarliestCommitDate"]))
-    else:
-        sys.stdout.write("-")
-    sys.stdout.write(", ")
-
     sys.stdout.write("FileInfo:")
     if (data.has_key("FileInfo")):
         FileInfo = data["FileInfo"]
