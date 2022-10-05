@@ -1,7 +1,8 @@
-todo: define blob, define original project vs cloned project
+<!--todo: define blob, define original project vs cloned project
 phases allow replacing a phase, for example, to get a different (maybe better)
 list of vulnerable projects or to get more accurate idea of when a vulnerability was introduced
 do i need more implementation details (for replication)
+-->
 
 # VCAnalyzer (Vulnerable Clones Analyzer)
 
