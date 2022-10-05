@@ -30,7 +30,7 @@ The input file contains one line per vulnerability with the following fields:
   - Date the CVE Record was created
 
 Here is an example input line:
-CVE-2022-34299,7ef09e1fc9ba07653dd078edb2408631c7969162,https://github.com/davea42/libdwarf-code,src/lib/libdwarf/dwarf_form.c,2022-06-15 14:46:01-07:00,2022-06-23T17:15Z
+CVE-2022-34299,7ef09e1fc9ba07653dd078edb2408631c7969162,http&#8203;s://github.com/davea42/libdwarf-code,src/lib/libdwarf/dwarf_form.c,2022-06-15 14:46:01-07:00,2022-06-23T17:15Z
 
 ## Output
 The output of the tool is a .csv file with one line for each project that
