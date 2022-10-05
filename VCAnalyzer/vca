@@ -145,7 +145,7 @@ call_phase_1 ()
 
 echo "======== Phase 1 Beginning"
 echo "To get the current status:"
-echo "  for file in \$(ls -1t $outdir/CVE/*/phase1/log); do cat \$file; echo ''; done"
+echo "  for file in \$(ls -1rt $outdir/CVE/*/phase1/log); do cat \$file; echo ''; done"
 
 # Initialize some variables that are just used for informational purposes
 count=0
@@ -184,7 +184,7 @@ while read line; do
     filename=`basename $filepath`
 
     echo "-------- Phase 1: starting $cve (`date +"%D %T"`, $count of $num_entries)" 
-    if [ -d "$outdir/CVE/$cve/phase1" ]; then
+    if [ -f "$outdir/CVE/$cve/phase1/finished.success" ] || [ -f "$outdir/CVE/$cve/phase1/finished.failure" ] ; then
         echo "output for $cve phase 1 already exists ($outdir/CVE/$cve/phase1)"
         echo "-------- Phase 1: finished $cve (`date +"%D %T"`)"
     else
@@ -258,7 +258,7 @@ call_phase_2 ()
 echo ""
 echo "======== Phase 2 Beginning"
 echo "To get the current status:"
-echo "  for file in \$(ls -1t $outdir/CVE/*/phase2/log); do cat \$file; echo ''; done"
+echo "  for file in \$(ls -1rt $outdir/CVE/*/phase2/log); do cat \$file; echo ''; done"
 
 # Initialize some variables that are just used for informational purposes
 count=0
@@ -279,9 +279,9 @@ for cve_dir in $(ls -1 $outdir/CVE | grep CVE); do
         continue
     fi
 
-    if [ -d "$outdir/CVE/$cve/phase2" ] ; then
+    if [ -f "$outdir/CVE/$cve/phase2/finished.success" ] || [ -f "$outdir/CVE/$cve/phase2/finished.failure" ] ; then
         echo "output for $cve phase 2 already exists ($outdir/CVE/$cve/phase2)"
-        echo "-------- Phase 2: starting $cve (`date +"%D %T"`)"
+        echo "-------- Phase 2: finished $cve (`date +"%D %T"`)"
         continue
     else
         call_phase_2 "$working_dir" "$fix_unixtime" &
@@ -328,9 +328,9 @@ call_phase_3 ()
     fi
 
     echo "Phase 3 (./vca-phase3 $working_dir)" >> $working_dir/phase3/log 
-    ./vca-phase3 $working_dir $fix_unixtime >> $working_dir/phase3/log 
+    ./vca-phase3 $working_dir >> $working_dir/phase3/log 
     if [ $? -ne 0 ]; then
-        echo "Failure (vca-phase3): \"./vca-phase3 $working_dir\" failed" >> $working_dir/phase3/log 
+        echo "Failure (vca-phase3): \"./vca-phase3 $working_dir\" failed" | tee -a $working_dir/phase3/log 
 
         echo "Finished at `date +'%D %T'`" >> $outdir/CVE/$cve/phase3/finished.failure
         return 0
@@ -343,7 +343,7 @@ call_phase_3 ()
 echo ""
 echo "======== Phase 3 Beginning"
 echo "To get the current status:"
-echo "  for file in \$(ls -1t $outdir/CVE/*/phase3/log); do cat \$file; echo ''; done"
+echo "  for file in \$(ls -1rt $outdir/CVE/*/phase3/log); do cat \$file; echo ''; done"
 
 # Initialize some variables that are just used for informational purposes
 count=0
@@ -363,9 +363,9 @@ for cve_dir in $(ls -1 $outdir/CVE | grep CVE); do
         continue
     fi
 
-    if [ -d "$outdir/CVE/$cve/phase3" ] ; then
-        echo "output for $cve phase 3 already exists ($outdir/CVE/$cve/phase2)"
-        echo "-------- Phase 3: starting $cve (`date +"%D %T"`)"
+    if [ -f "$outdir/CVE/$cve/phase3/finished.success" ] || [ -f "$outdir/CVE/$cve/phase3/finished.failure" ] ; then
+        echo "output for $cve phase 3 already exists ($outdir/CVE/$cve/phase3)"
+        echo "-------- Phase 3: finished $cve (`date +"%D %T"`)"
         continue
     else
         call_phase_3 "$working_dir" &
