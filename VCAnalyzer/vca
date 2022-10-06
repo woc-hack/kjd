@@ -37,7 +37,7 @@ data_file="$outdir/cvefixes.csv"
 # Make sure the input data file exists and do quick sanity check on the file
 if [ "$orig_data_file" == "" ]; then
     if [ ! -f $data_file ]; then
-        echo "Error: $data_file does not exist"
+        echo "Error: $data_file does not exist" >&2
         exit 1
     fi
 else
@@ -212,7 +212,7 @@ wait
 # Create phase 1 log file
 rm -f $outdir/log.phase1
 echo "-------- Phase 1" > $outdir/log.phase1
-for file in $(ls -1 $outdir/CVE/*/phase1/log); do
+for file in $(ls -1rt $outdir/CVE/*/phase1/log); do
     cat $file >> $outdir/log.phase1
     echo "" >> $outdir/log.phase1
 done
@@ -302,7 +302,7 @@ wait
 # Create phase 2 log file
 rm -f $outdir/log.phase2
 echo "-------- Phase 2" > $outdir/log.phase2
-for file in $(ls -1 $outdir/CVE/*/phase2/log); do
+for file in $(ls -1rt $outdir/CVE/*/phase2/log); do
     cat $file >> $outdir/log.phase2
     echo "" >> $outdir/log.phase2
 done
@@ -345,6 +345,9 @@ call_phase_3 ()
 
 echo ""
 echo "======== Phase 3 Beginning"
+# tmp HACK to avoid ssh_exchange_identification errors
+#max_threads=4
+
 echo "To get the current status:"
 echo "  for file in \$(ls -1rt $outdir/CVE/*/phase3/log); do cat \$file; echo ''; done"
 
@@ -386,7 +389,7 @@ wait
 # Create phase 3 log file
 rm -f $outdir/log.phase3
 echo "-------- Phase 3" > $outdir/log.phase3
-for file in $(ls -1 $outdir/CVE/*/phase3/log); do
+for file in $(ls -1rt $outdir/CVE/*/phase3/log); do
     cat $file >> $outdir/log.phase3
     echo "" >> $outdir/log.phase3
 done
@@ -396,7 +399,7 @@ echo "======== Phase 3 Complete"
 # Create final report
 echo "Creating Final Report"
 rm -f $outdir/final_report.csv $outdir/final_failures.csv
-for cve in $(ls -1 $outdir/CVE/ | grep CVE-); do
+for cve in $(ls -1rt $outdir/CVE/ | grep CVE-); do
     file="$outdir/CVE/$cve/report.csv" 
     if [ -f "$file" ]; then
         cat "$file" | sed -e "s/^/CVE:$cve, /" >> $outdir/final_report.csv
