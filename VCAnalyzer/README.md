@@ -113,8 +113,12 @@ Phase 2 finds all projects in WoC that have at some time contained
 the vulnerable file. These are the cloned project. It then discovers 
 if each cloned project has been fixed and, if so, the time of the fix.
 
-The input for phase 2 is the lists of good blobs and bad blobs generated in 
-phase 1 for each CVE from the input file.
+The input for phase 2 is:
+    - The CVE ID for each CVE to be processed.
+    - The lists of good blobs and bad blobs generated in phase 1 for each 
+      CVE from the original input file
+    - The CVE publication date from the original input file 
+    - The date the original project was fixed from the original input file
 
 For each CVE from phase 1, the tool:
     - Finds all open source projects available in World of Code that have 
@@ -128,7 +132,7 @@ For each CVE from phase 1, the tool:
       fixed file.
 
 The output from phase 2, for each CVE, is:
-    - Lists of cloned  projects that are fixed, still vulnerable, or unknown.
+    - Lists of cloned projects that are fixed, still vulnerable, or unknown.
     - Time the first potentially vulnerable file was committed in the cloned
       projects.
     - For fixed projects, time the first known fixed file was committed.
@@ -140,8 +144,8 @@ The output from phase 2, for each CVE, is:
 ### Phase 3
 Phase 3 finds statistics about each project. 
 
-The input to phase 3 is the list of cloned projects and the data produced from
-phase 2.
+The input to phase 3 is the CVE ID, the list of cloned projects, and the 
+data produced from phase 2.
 
 For each project, the tool retrieves statistics from either World of Code or
 from the repository hosting platform. In most cases, the statistics
