@@ -126,10 +126,10 @@ for line in $(cat $outdir/only_bad.txt); do
     output_line="1stBadBlob:$first_bad_blob_commit, 1stBadTime:$first_bad_blob_commit_time, 1stGoodBlob:, 1stGoodTime, TimeSinceFix:, TimeSinceFixF, TimeSincePub:, TimeSincePubF:"
     if [ "$bad" != "" ]; then
         # project is still vulnerable
-        echo "Project:$line, status:notfixed, $output_line" >> $outdir/results.notfixed.csv
+        echo "Project:$line, Path:$pathname, status:notfixed, $output_line" >> $outdir/results.notfixed.csv
     else
         # file has changed, we don't know if the change fixed it.
-        echo "Project:$line, status:unknown, $output_line" >> $outdir/results.unknown.csv
+        echo "Project:$line, Path:$pathname, status:unknown, $output_line" >> $outdir/results.unknown.csv
     fi
 done
 
@@ -180,7 +180,7 @@ for line in $(cat $outdir/comm.txt); do
     years=`echo "$diff 365.25" | awk '{printf "%.2f", $1 / $2}' | awk -F'.' '{print $1 " years and " $2 " days"}'`
     years_from_pub=`echo "$diff_from_pub= 365.25" | awk '{printf "%.2f", $1 / $2}' | awk -F'.' '{print $1 " years and " $2 " days"}'`
 
-    echo "Project:$line, status:fixed, 1stBadBlob:$first_bad_blob_commit, 1stBadTime:$first_bad_blob_commit_time, 1stGoodBlob:$first_good_blob_commit, 1stGoodTime:$first_good_blob_commit_time, TimeSinceFix:$diff, TimeSinceFixF:$years, TimeSincePub:$diff_from_pub, TimeSincePubF: $years_from_pub" >> $outdir/results.fixed.csv
+    echo "Project:$line, Path:$pathname, status:fixed, 1stBadBlob:$first_bad_blob_commit, 1stBadTime:$first_bad_blob_commit_time, 1stGoodBlob:$first_good_blob_commit, 1stGoodTime:$first_good_blob_commit_time, TimeSinceFix:$diff, TimeSinceFixF:$years, TimeSincePub:$diff_from_pub, TimeSincePubF: $years_from_pub" >> $outdir/results.fixed.csv
 done
 rm -f $outdir/tmpfile
 
