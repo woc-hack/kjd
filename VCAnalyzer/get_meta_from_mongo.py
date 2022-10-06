@@ -112,8 +112,9 @@ for data in dataset:
     if (data.has_key("FileInfo")):
         FileInfo = data["FileInfo"]
         FileInfo.pop("other")
-        sorted_FileInfo = sorted(FileInfo.items(), key=lambda t: t[1], reverse=True)
-        sys.stdout.write(sorted_FileInfo[0][0])
+        if (len(FileInfo) > 0):
+            sorted_FileInfo = sorted(FileInfo.items(), key=lambda t: t[1], reverse=True)
+            sys.stdout.write(sorted_FileInfo[0][0])
     else:
         sys.stdout.write("- ")
 
