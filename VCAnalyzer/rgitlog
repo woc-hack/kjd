@@ -90,11 +90,11 @@ case $host in
             response=$(curl -s -L -H "Authorization: token $auth" "$url")
             if [[ $response = *"rate limit exceeded"* ]]; then
                 # wait minute then try again 
+                echo "Rate limit exceeded in rgitlog, sleeping 60" >&2
                 sleep 60
                 page=$((page - 1))
                 continue
             elif [[ "$response" = "$empty" ]]; then
-                echo ""
                 break
             else
                 commits=`render_github "$response"`
@@ -106,7 +106,7 @@ case $host in
                     echo "Error: rgitlog returned invalid response"
                     exit 3
                 fi
-                printf "$commits"
+                printf "$commits\n"
             fi
         done
         ;;
@@ -120,7 +120,6 @@ case $host in
             #echo $url
             response=$(curl -s "$url")
             if [[ "$response" = "[]" ]]; then
-                echo ""
                 break
             else
                 commits=`render_gitlab "$response"`
@@ -132,7 +131,7 @@ case $host in
                     echo "Error: rgitlog returned invalid response"
                     exit 3
                 fi
-                printf "$commits"
+                printf "$commits\n"
             fi
         done
         ;;
@@ -145,7 +144,6 @@ case $host in
             response=$(curl -s "$url")
             end=`echo "$response" | jq-linux64 -r '{commit: .values[].hash}'`
             if [[ "$end" = "" ]]; then
-                echo ""
                 break
             else
                 commits=`render_bitbucket "$response"`
@@ -157,7 +155,7 @@ case $host in
                     echo "Error: rgitlog returned invalid response"
                     exit 3
                 fi
-                printf "$commits"
+                printf "$commits\n"
             fi
         done
         ;;
