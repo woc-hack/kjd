@@ -6,10 +6,15 @@
 # Create files with all the good (fixed) blobs and all the old (vulnerable)
 # blobs. 
 #
-# For now, we use remote-git-log2 to find all blobs all the way to the 
-# beginning.
+# For now, we use rgitlog (remote git log) to find all blobs all the way 
+# to the beginning.
 # Ideally, we would only find blobs until we find the commit that 
 # introduced the vulnerability.
+# Since rgitlog gets data directly from the hosting platform, the data is
+# up-to-date. We later look for those commits in WoC. Since WoC's data is
+# generally a few weeks old, we may find commits that are not yet in Woc.
+# This results in a message like: 
+#     "no e52f7c1ddf3e47243c330923ea764e7ccfbe99f7 in 101"
 #
 #------------------------------------------------------------------------
 
@@ -59,7 +64,7 @@ echo "working on $cve, $project, $filename"
 # save the project and file info
 url=`./toUrl $project`
 path_url="$url/blob/HEAD/$filepath"
-echo path_url=$path_url >> $outdir/info
+echo path_url=$path_url > $outdir/info
 echo fixing commit=$commit >> $outdir/info
 echo "" >> $outdir/info
 echo project=$project >> $outdir/info
@@ -73,6 +78,7 @@ echo cve=$cve >> $outdir/info
 #
 
 # get commit hashes for all revisions
+rm -f $outdir/good_blobs.txt $outdir/bad_blobs.txt
 if [ $method == "b2ob" ]; then
     blob=`echo $commit | ~/lookup/showCmtTree.perl | grep ";$filepath\$" | cut -d ";" -f 2` 
     echo "calling ob2b to find new (fixed) blobs"
@@ -132,9 +138,13 @@ fi
 # go through all new commits, find the ones that match filepath,
 # and extract the blob hash. these are the presumably fixed blobs.
 # include the initial blob in this list also.
+rm -f $outdir/commits.new.filtered
 echo "filtering `wc -l $outdir/commits.new | cut -d " " -f 1` child commits for file $filepath"
 cat $outdir/commits.new |
     while read line ; do
+        if [ "$line" == "" ]; then
+            continue
+        fi
         if [ "$hostname" = "da5.eecs.utk.edu" ]; then
             echo $line | ~/lookup/showCmtTree.perl | grep ";$filepath\$" >> $outdir/commits.new.filtered
         else
