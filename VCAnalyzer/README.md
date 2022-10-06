@@ -132,7 +132,10 @@ For each CVE from phase 1, the tool:
       fixed file.
 
 The output from phase 2, for each CVE, is:
-    - Lists of cloned projects that are fixed, still vulnerable, or unknown.
+    - List of cloned projects and the full pathname of the vulnerable files
+      within each project.
+    - The status of the cloned project. One of fixed, still vulnerable, 
+      or unknown.
     - Time the first potentially vulnerable file was committed in the cloned
       projects.
     - For fixed projects, time the first known fixed file was committed.
