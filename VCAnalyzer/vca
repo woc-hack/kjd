@@ -198,9 +198,11 @@ while read line; do
         echo "-------- Phase 1: finished $cve (`date +"%D %T"`)"
     else
         # Create the output directory
-        mkdir $outdir/CVE/$cve
-        if [ $? -ne 0 ]; then
-            continue
+        if [ ! -d $outdir/CVE/$cve]; then
+            mkdir $outdir/CVE/$cve
+            if [ $? -ne 0 ]; then
+                continue
+            fi
         fi
 
         # Put the line from the input file for this CVE in file named input_line
@@ -226,7 +228,7 @@ for file in $(ls -1rt $outdir/CVE/*/phase1/log.status); do
     echo "" >> $outdir/logs/log.status.phase1
 done
 rm -f $outdir/log.error.phase1
-for file in $(ls -1rt $outdir/CVE/*/phase1/log.error); do
+for file in $(ls -1rt $outdir/CVE/*/phase1/log.error 2>/dev/null); do
     echo $file >> $outdir/log.error.phase1
     cat $file >> $outdir/log.error.phase1
     echo "" >> $outdir/log.error.phase1
@@ -295,6 +297,7 @@ for cve_dir in $(ls -1 $outdir/CVE | grep CVE); do
     echo "-------- Phase 2: starting $cve (`date +"%D %T"`, $count of $num_entries )"
     if [ ! -f $outdir/CVE/$cve_dir/phase1/finished.success ]; then
         echo "Skipping $cve because it failed in phase 1"
+        echo "-------- Phase 2: finished $cve (`date +"%D %T"`)"
         continue
     fi
 
@@ -322,7 +325,7 @@ for file in $(ls -1rt $outdir/CVE/*/phase2/log.status); do
     echo "" >> $outdir/logs/log.status.phase2
 done
 rm -f $outdir/log.error.phase2
-for file in $(ls -1rt $outdir/CVE/*/phase2/log.error); do
+for file in $(ls -1rt $outdir/CVE/*/phase2/log.error 2>/dev/null); do
     echo $file >> $outdir/log.error.phase2
     cat $file >> $outdir/log.error.phase2
     echo "" >> $outdir/log.error.phase2
@@ -386,7 +389,8 @@ for cve_dir in $(ls -1 $outdir/CVE | grep CVE); do
 
     echo "-------- Phase 3: starting $cve (`date +"%D %T"`, $count of $num_entries )"
     if [ ! -f $outdir/CVE/$cve_dir/phase2/finished.success ]; then
-        echo "Skipping $cve because it failed in phase 1"
+        echo "Skipping $cve because it failed in phase 2"
+        echo "-------- Phase 3: finished $cve (`date +"%D %T"`)"
         continue
     fi
 
