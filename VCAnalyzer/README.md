@@ -173,4 +173,49 @@ additional information about each cloned project:
 ### Phase 4
 Phase 4 Analyzes the results (not implemented yet)
 
+## Logging: Error, Warning, and Informational Messages
 
+VCAnalyzer provides error logs for error and warning messages and status
+logs for status messages. Multiple processes run in parallel working on
+different CVEs and different phases. Each process writes logs to a local
+directory to prevent the parallel processes from trying to write to the
+same file at the same time. The logs are aggregated at the end into an
+error log named log.error and a status log named log.status.
+
+VCAnalyzer starts one main process, named vca, which starts many parallel
+child processes. The child processes are named vca-phase1, vca-phase2, or
+vca-phase3. They will be referred to as vca-phaseX when we mean any of them.
+There may be multiple instances of each vca-phaseX process running in parallel.
+For example, there may be 16 vca-phase1 processes running at the same
+time.
+
+The output directory structure includes a directory named CVE which contains
+one subdirectory for each CVE in the input file. Each CVE subdirectory
+contains a phase subdirectory (phase1, phase2, or phase3) to hold output
+from each phase. For example, the output of phase 2 for CVE-2007-6762 would
+be in CVE/CVE-2007-6762/phase2. Log messages from the child processes are
+written into these phase subdirectories.
+At the end, VCAnalyzer aggregates the log files into an error log named 
+log.error and a status log named log.status in the top level logs directory.
+
+Fatal errors that would prevent VCAnalayzer from running (such as wrong
+parameters or permission errors) are output to stdout and the program exits
+with an error status of 1.
+
+Other errors and warnings that are produced by the main process (named vca), 
+and not the child processes, will print to stdout and also to a file named
+log.error in the top level output directory. Informational messages from
+the main process (vca) go to stdout.
+
+The child processes write information messages to stdout. The parent
+process (vca) redirects stdout to the phase subdirectories in a file
+named log.status.
+On success, the child processes exit with an exit status of 0 and a file 
+named finished.success is created in the phase subdirectory.
+On error, the child processes exit with an exit status of 1 and a file
+name finished.failure is created in the phase subdirectory.
+Error messages go to stdout and also to files named log.error in the phase 
+subdirectory.
+
+This is a long way of saying look at logs/log.error to find any problems.
+The log.status files can be useful for debugging.
