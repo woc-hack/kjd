@@ -11,26 +11,26 @@
 
 # Check the command line args
 if [[ $# -ne 3 ]]; then
-   echo "usage: vca-phase2 <output directory> <fix time> <cve pub time>"
-   echo "example: ./vca-phase2 out/CVE-2007-12345" 1242055800 1242055800
-   echo ""
-   echo "Output directory is per-project directory created by ./vca"
-   echo "This script is called by vca once for each project."
+   echo "usage: vca-phase2 <output directory> <fix time> <cve pub time>"  >&2
+   echo "example: ./vca-phase2 out/CVE-2007-12345" 1242055800 1242055800  >&2
+   echo ""  >&2
+   echo "Output directory is per-project directory created by ./vca"  >&2
+   echo "This script is called by vca once for each project."  >&2
    exit 1
 fi
 
 dir="$1"
 fix_unixtime="$2"
 cvepub_unixtime="$3"
-error_log=$dir/error_log
 outdir="$1/phase2"
+error_log=$outdir/log.error
 proj_info_dir="$outdir/proj_info"
 if [ ! -d "$dir" ]; then
-   echo Error: directory $dir does not exists
+   echo Error: directory $dir does not exists >&2
    exit 1
 fi
 if [ ! -d "$outdir" ]; then
-   echo Error: directory $outdir does not exists
+   echo Error: directory $outdir does not exists | tee -a $error_log
    exit 1
 fi
 if [ ! -d "$proj_info_dir" ]; then
@@ -44,18 +44,18 @@ fi
 # Make sure good_blobs.txt and bad_blobs.txt exist in the directory
 phase1_dir="$dir/phase1"
 if [ ! -d "$phase1_dir" ]; then
-    echo "$phase1_dir not found" | tee $error_log
+    echo "$phase1_dir not found" | tee -a $error_log
     exit 1
 fi
 if [[ ! -f $phase1_dir/good_blobs.txt || ! -f $phase1_dir/bad_blobs.txt ]]; then
-    echo "$phase1_dir (good_blobs.txt or bad_blobs.txt not found)" | tee $error_log
+    echo "$phase1_dir (good_blobs.txt or bad_blobs.txt not found)" | tee -a $error_log
     exit 1
 fi
 
 # Get the original project where the vulnerablity was fixed
 orig_project=`grep ^project= $phase1_dir/info | cut -d= -f2`
 if [ "$orig_project" == "" ]; then
-    echo "could not find project name in $phase1_dir/info" | tee $error_log
+    echo "could not find project name in $phase1_dir/info" | tee -a $error_log
     exit 1
 fi
 echo "Original Project = $orig_project"
@@ -102,9 +102,9 @@ for line in $(cat $outdir/only_bad.txt); do
         if [[ "$rev" == *"Not Found"* ]] || [[ "$rev" == *"Repository access blocked"* ]]; then
             continue
         fi
-        echo "Error: get_latest_rev failed:"
-        echo "   ./get_latest_rev \"$hp\" \"$proj\" \"$pathname\""
-        echo "   $rev"
+        echo "Error: get_latest_rev failed:" | tee -a $error_log
+        echo "   ./get_latest_rev \"$hp\" \"$proj\" \"$pathname\"" | tee -a $error_log
+        echo "   $rev" | tee -a $error_log
         continue
     fi
     latest_blob=`echo $rev | cut -d ';' -f 1`
@@ -132,15 +132,6 @@ for line in $(cat $outdir/only_bad.txt); do
         echo "Project:$line, Path:$pathname, status:unknown, $output_line" >> $outdir/results.unknown.csv
     fi
 done
-
-
-## If there are no projects that contain both vulnerable and fixed blobs, quit.
-#count=`cat $outdir/comm.txt | wc -l`
-#if [ "$count" == "0" ]; then
-#    echo "There are no clone projects that contain both vulnerable and fixed blobs" | tee $error_log
-#    exit 1
-#fi
-
 
 # For each project that has contained both vulnerable and fixed blobs, collect
 # information.
@@ -185,6 +176,12 @@ done
 rm -f $outdir/tmpfile
 
 cat $outdir/results.fixed.csv $outdir/results.notfixed.csv $outdir/results.unknown.csv > $outdir/results.csv
+
+# if the error log file is empty, delete it so that we only have a file if
+# there are errors
+if [ ! -s $error_log ]; then
+    rm -f $error_log
+fi
 
 echo "Success (vca-phase2)"
 exit 0

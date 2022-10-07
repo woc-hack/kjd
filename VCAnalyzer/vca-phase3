@@ -6,24 +6,24 @@
 
 # Check the command line args
 if [[ $# -ne 1 ]]; then
-   echo "usage: vca-phase2 <output directory>"
-   echo "example: ./vca-phase3 out/CVE-2007-12345"
+   echo "usage: vca-phase2 <output directory>" >&2
+   echo "example: ./vca-phase3 out/CVE-2007-12345" >&2
    exit 1
 fi
 
 dir="$1"
-error_log=$dir/error_log
 outdir="$dir/phase3"
+error_log=$outdir/log.error
 phase2_dir="$dir/phase2"
 mydir="$(pwd)"
 
 
 if [ ! -d "$dir" ]; then
-   echo Error: directory $dir does not exists
+   echo Error: directory $dir does not exists >&2
    exit 1
 fi
 if [ ! -d "$outdir" ]; then
-   echo Error: directory $outdir does not exists 
+   echo Error: directory $outdir does not exists >&2
    exit 1
 fi
 
@@ -80,6 +80,11 @@ sed -e "s/,/\n  -/g" -e "s/ProjectUrl:/\n## /" $dir/report.csv | sed "s/^ *- *$/
 #    }' \
 # >> $dir/report_values.csv 
 
+# if the error log file is empty, delete it so that we only have a file if
+# there are errors
+if [ ! -s $error_log ]; then
+    rm -f $error_log
+fi
 
 echo "Success (vca-phase3)"
 exit 0
