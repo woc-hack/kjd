@@ -198,7 +198,7 @@ while read line; do
         echo "-------- Phase 1: finished $cve (`date +"%D %T"`)"
     else
         # Create the output directory
-        if [ ! -d $outdir/CVE/$cve]; then
+        if [ ! -d $outdir/CVE/$cve ]; then
             mkdir $outdir/CVE/$cve
             if [ $? -ne 0 ]; then
                 continue
