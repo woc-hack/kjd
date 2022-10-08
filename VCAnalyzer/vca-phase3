@@ -51,7 +51,7 @@ if [ -f "$phase2_dir/results.csv" ]; then
         project_url=$(./toUrl $project | sed -e "s@https?*://@@")
 
         platform=`echo $project_url | sed -e "s@https?*://@@" -e "s/\.com.*$//" -e "s/\.org.*$//"`
-        pdata=$(./get_num_stars $platform $project_slash)
+        pdata=$(./get_metadata $platform $project_slash)
 
         if [ "$hostname" = "da1.eecs.utk.edu" ]; then
             mdata=$(./get_meta_from_mongo.py "$project")
