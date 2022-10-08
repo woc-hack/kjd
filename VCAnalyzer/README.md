@@ -7,15 +7,16 @@ do i need more implementation details (for replication)
 # VCAnalyzer (Vulnerable Clones Analyzer)
 
 VCAnalyzer is a tool to analyze vulnerabilities that are propagated
-through copy-based code reuse. The tool reads a list of information
+through copy-based code reuse. The tool reads a list containing information
 about known vulnerabilities in open source projects, it finds 
 other projects which have cloned the vulnerable file, and then it
-produces statistics about those projects with the cloned vulnerable file.
+produces statistics about those projects that have cloned the vulnerable file.
 
 Run VCAnalyzer from the command line with the following usage:
 - usage: vca \<output directory\> \<input data file\>
 
-See the description below for full details of the input file format. 
+See the description below for full details of the input file format and the
+results produced. 
 
 
 ## Input
