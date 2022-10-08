@@ -18,7 +18,6 @@ if [ $# -ne 2 ]; then
    echo "       example: get_num_stars github openssl/openssl" >&2
    echo "       example: get_num_stars gitlab tortoisegit/tortoisegit" >&2
    echo "       example: get_num_stars bitbucket swsc/lookup" >&2
-   echo "GHStars:"
    exit 1
 fi
 
