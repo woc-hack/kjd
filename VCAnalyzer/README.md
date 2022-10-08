@@ -64,6 +64,7 @@ The output records contain the following fields:
   - NumAuthors (Number of Authors)
   - FileInfo (The most used language in this project)
   - GHStars (number of stars as reported by GitHub, empty if not GitHub)
+  - GHCommits (number of commits as reported by GitHub, empty if not GitHub)
 
 Each line in the output file contains contains 1 record with name/value pairs for each field.
 Here is an example line from the final output file:
