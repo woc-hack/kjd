@@ -1,0 +1,151 @@
+#! /bin/bash
+
+#
+# get_num_stars: get the number of stars in a remote repo.
+# currently only supports github
+#
+# Error output must always go to stderr
+# Output of the form GHStars:<value> must always be output to stdout.
+#   <value> is a number or else is blank.
+
+#
+# Check the command line args
+#
+if [ $# -ne 2 ]; then
+   echo "usage: get_num_stars: <host> <project>" >&2
+   echo "       supported hosts: github, gitlab, bitbucket" >&2
+   echo "           shortcuts: gh, gl, bb" >&2
+   echo "       example: get_num_stars github openssl/openssl" >&2
+   echo "       example: get_num_stars gitlab tortoisegit/tortoisegit" >&2
+   echo "       example: get_num_stars bitbucket swsc/lookup" >&2
+   echo "GHStars:"
+   exit 1
+fi
+
+host=$1
+proj=$2
+error_status=0
+
+error_exit ()
+{
+    echo "GHStars:, GHCommits:"
+    exit 1
+}
+
+#
+# Use jq-linux64 if available, otherwise use jq
+#
+if which jq-linux64 >/dev/null; then
+    JQ=jq-linux64
+elif which jq >/dev/null; then
+    JQ=jq
+else
+    echo "The jq command needed for this script is unavailable." >&2
+    $(error_exit)
+fi
+
+#
+# get the github API auth key(s) from ~/github-auth
+#
+if [ ! -f ~/github-auth ]; then
+    echo Error: missing ~/github-auth file >&2
+    echo ~/github-auth must exists and contain github API auth key or keys >&2
+    echo 'Create keys at github->Settings->Developer Settings->personal access tokens' >&2
+    $(error_exit)
+fi
+mapfile -t auth_array < ~/github-auth
+len="${#auth_array[@]}"
+i="$(($RANDOM % $len))"
+auth=${auth_array[$i]}
+
+#
+# get the gitlab API auth key(s) from ~/gitlab-auth
+#
+#if [ ! -f ~/gitlab-auth ]; then
+#    echo Error: missing ~/gitlab-auth file >&2
+#    echo ~/gitlab-auth must exists and contain gitlab API auth key or keys >&2
+#    echo 'Create keys at gitlab->User Settings>Access Tokens' >&2
+#    $(error_exit)
+#fi
+#mapfile -t auth_array < ~/gitlab-auth
+#len="${#auth_array[@]}"
+#i="$(($RANDOM % $len))"
+#glauth=${auth_array[$i]}
+
+#
+# Main body of script
+#
+case $host in
+    github|gh)
+        # Get the number of stars
+        while true; do
+            response=$(curl -s -H "Authorization: token $auth" "https://api.github.com/repos/$proj")
+           if [[ $response = *"rate limit exceeded"* ]]; then
+              # wait minute then try again
+              echo "Rate limit exceeded in get_metadata, sleeping 60" >&2
+              sleep 60
+              continue
+           fi 
+           num_stars=$(echo "$response" | $JQ ".stargazers_count")
+           # make sure the response is a number (possibly with leading spaces)
+           if ! [[ $num_stars =~ ^\ *[0-9]+\ *$ ]]; then 
+               echo "Error: get_metadata: invalid response" >&2
+               num_stars=""
+               error_status=1
+           fi
+           break
+        done
+
+        # Get the number of commits
+        num_commits=""
+        while true; do
+            response=$(curl -s -k -I -H "Authorization: token $auth" "https://api.github.com/repos/$proj/commits?per_page=1")
+            http_code=`echo "$response" | head -n 1 | cut -d " " -f 2`
+            if [ $http_code -ne 200 ]; then
+                echo "get_metadata: Error: reponse code = $http_code" >&2
+                error_status=1
+            elif [[ "$response" = *"x-ratelimit-remaining: 0"* ]] || [[ "$response" = *"X-RateLimit-Remaining: 0"* ]]; then
+                echo "Rate limit exceeded in get_metadata, sleep 60" >&2
+                sleep 60
+            else
+                num_commits=`echo "$response" | sed -n '/^[Ll]ink:/ s/.*"next".*page=\([0-9]*\).*"last".*/\1/p'`
+               if ! [[ $num_commits =~ ^\ *[0-9]+\ *$ ]]; then 
+                   echo "Error: get_metadata: invalid response" >&2
+                   num_commits=""
+                   error_status=1
+               fi
+            fi
+            break
+        done
+
+        ;;
+#    gitlab|gl)
+#        proj=$(echo $proj | sed -e "s@/@%2F@")
+#        page=0
+#        total=0
+#        while true; do
+#            page=$((page + 1))
+#            url="https://gitlab.com/api/v4/projects/$proj/starrers?per_page=100&page=$page"
+#            response=$(curl -s -H "PRIVATE-TOKEN: $glauth" "$url")
+#            if [[ "$response" = "[]" ]]; then
+#                break
+#            else
+#                starrers=$(echo "$response" | $JQ length)
+#                total=$((total + starrers))
+#            fi
+#        done
+#        echo $total
+#        ;;
+#    bitbucket|bb)
+#        echo "unknown (bitbucket)"
+#        ;;
+    *)
+#        echo "Error: $host not supported, must be one of github, gitlab, or bitbucket" >&2
+        error_status=1
+
+esac
+
+echo "GHStars:$num_stars, GHCommits:$num_commits"
+
+exit $error_status
+
