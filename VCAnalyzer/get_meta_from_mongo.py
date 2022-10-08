@@ -1,36 +1,16 @@
 #! /usr/bin/python
 
+# Get meta data about a project from the WoC mongo database.
+# on error, write error message to stderr
+
 #mongos> db.P_metadata.U.find({"ProjectID":"openssl_openssl"}).pretty()
 
 import sys
 import pymongo
 import bson
 
-if (len(sys.argv) != 2):
-    print("usage: %s project" % sys.argv[0])
-    print("    example %s openssl_openssl" % sys.argv[0])
-    exit(1)
-
-project=sys.argv[1]
-
-client = pymongo.MongoClient("mongodb://da1.eecs.utk.edu/")
-db = client ['WoC']
-coll = db['P_metadata.U']
-
-dataset = coll.find({"ProjectID":project}, {"NumAuthors":1, "EarliestCommitDate":1, "LatestCommitDate":1, "NumActiveMon":1, "RootFork":1, "NumStars":1, "NumCore":1, "CommunitySize":1, "NumCommits":1, "NumForks":1, "FileInfo":1}) 
-
-#numitems = len(list(dataset.clone()))
-numitems = dataset.count()
-if (numitems == 0):
-    print("Error: no records found for project %s" % project)
-    exit(1)
-
-if (numitems > 1):
-    print("Error: more than 1 records found for project %s" % project)
-    exit(1)
-
-
-for data in dataset:
+# output the csv data. if data is null, each value will be blank.
+def write_data(data):
     sys.stdout.write("NumAuthors:")
     if (data.has_key("NumAuthors")):
         sys.stdout.write(str(data["NumAuthors"]))
@@ -59,12 +39,12 @@ for data in dataset:
         sys.stdout.write("-")
     sys.stdout.write(", ")
 
-    sys.stdout.write("RootFork:")
-    if (data.has_key("RootFork")):
-        sys.stdout.write(data["RootFork"].encode('utf-8').strip())
-    else:
-        sys.stdout.write ("-")
-    sys.stdout.write(", ")
+    #sys.stdout.write("RootFork:")
+    #if (data.has_key("RootFork")):
+    #    sys.stdout.write(data["RootFork"].encode('utf-8').strip())
+    #else:
+    #    sys.stdout.write ("-")
+    #sys.stdout.write(", ")
 
     sys.stdout.write("NumStars:")
     if (data.has_key("NumStars")):
@@ -123,6 +103,38 @@ for data in dataset:
         sys.stdout.write("- ")
 
     sys.stdout.write("\n")
+
+# creat an empty dict to use for error cases.
+empty = {}
+
+if (len(sys.argv) != 2):
+    sys.stderr.write( "usage: %s project\n" % sys.argv[0])
+    sys.stderr.write("    example %s openssl_openssl\n" % sys.argv[0])
+    write_data(empty)
+    exit(1)
+
+project=sys.argv[1]
+
+client = pymongo.MongoClient("mongodb://da1.eecs.utk.edu/")
+db = client ['WoC']
+coll = db['P_metadata.U']
+
+dataset = coll.find({"ProjectID":project}, {"NumAuthors":1, "EarliestCommitDate":1, "LatestCommitDate":1, "NumActiveMon":1, "RootFork":1, "NumStars":1, "NumCore":1, "CommunitySize":1, "NumCommits":1, "NumForks":1, "FileInfo":1}) 
+
+#numitems = len(list(dataset.clone()))
+numitems = dataset.count()
+if (numitems == 0):
+    sys.stderr.write("Error: no records found for project %s\n" % project)
+    write_data(empty)
+    exit(1)
+
+if (numitems > 1):
+    sys.stderr.write("Error: more than 1 records found for project %s\n" % project)
+    write_data(empty)
+    exit(1)
+
+for data in dataset:
+    write_data(data)
 
 dataset.close()
 exit(0)
