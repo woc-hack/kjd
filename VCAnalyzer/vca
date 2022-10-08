@@ -23,7 +23,7 @@
 
 # Call when user hits control-c. Kill all child processes before exitting.
 # (this doesn't always work with multiple sub-processes, I don't know why)
-trap 'pkill -P $$; echo killed; exit 2' SIGINT SIGTERM
+trap 'pkill -P $$; echo killed; echo exitting; exit 2' SIGINT SIGTERM
 
 # Check the command line args
 if [[ $# -eq 1 ]]; then
@@ -40,6 +40,10 @@ data_file="$outdir/cvefixes.csv"
 
 # Make sure the input data file exists and do quick sanity check on the file
 if [ "$orig_data_file" == "" ]; then
+    if [ ! -d $outdir ]; then
+        echo "Error: $outdir does not exist" >&2
+        exit 1
+    fi
     if [ ! -f $data_file ]; then
         echo "Error: $data_file does not exist" >&2
         exit 1
@@ -221,17 +225,23 @@ echo "Waiting for remaining phase 1 processes to finish (all have started)"
 wait
 
 # Create phase 1 log files
-echo "Creating log files ($outdir/log.*.phase1)"
+echo "Creating log files ($outdir/logs/log.*.phase1)"
 rm -f $outdir/logs/log.status.phase1
 for file in $(ls -1rt $outdir/CVE/*/phase1/log.status); do
     cat $file >> $outdir/logs/log.status.phase1
     echo "" >> $outdir/logs/log.status.phase1
 done
-rm -f $outdir/log.error.phase1
+rm -f $outdir/logs/log.error.phase1
 for file in $(ls -1rt $outdir/CVE/*/phase1/log.error 2>/dev/null); do
-    echo $file >> $outdir/log.error.phase1
-    cat $file >> $outdir/log.error.phase1
-    echo "" >> $outdir/log.error.phase1
+    echo $file >> $outdir/logs/log.error.phase1
+    cat $file >> $outdir/logs/log.error.phase1
+    echo "" >> $outdir/logs/log.error.phase1
+done
+rm -f $outdir/logs/log.warning.phase1
+for file in $(ls -1rt $outdir/CVE/*/phase1/log.warning 2>/dev/null); do
+    echo $file >> $outdir/logs/log.warning.phase1
+    cat $file >> $outdir/logs/log.warning.phase1
+    echo "" >> $outdir/logs/log.warning.phase1
 done
 
 echo "======== Phase 1 Complete"
@@ -318,17 +328,23 @@ echo "Waiting for remaining phase 2 processes to finish (all have started)"
 wait
 
 # Create phase 2 log file
-echo "Creating log files ($outdir/log.*.phase2)"
+echo "Creating log files ($outdir/logs/log.*.phase2)"
 rm -f $outdir/logs/log.status.phase2
 for file in $(ls -1rt $outdir/CVE/*/phase2/log.status); do
     cat $file >> $outdir/logs/log.status.phase2
     echo "" >> $outdir/logs/log.status.phase2
 done
-rm -f $outdir/log.error.phase2
+rm -f $outdir/logs/log.error.phase2
 for file in $(ls -1rt $outdir/CVE/*/phase2/log.error 2>/dev/null); do
-    echo $file >> $outdir/log.error.phase2
-    cat $file >> $outdir/log.error.phase2
-    echo "" >> $outdir/log.error.phase2
+    echo $file >> $outdir/logs/log.error.phase2
+    cat $file >> $outdir/logs/log.error.phase2
+    echo "" >> $outdir/logs/log.error.phase2
+done
+rm -f $outdir/logs/log.warning.phase2
+for file in $(ls -1rt $outdir/CVE/*/phase2/log.warning 2>/dev/null); do
+    echo $file >> $outdir/logs/log.warning.phase2
+    cat $file >> $outdir/logs/log.warning.phase2
+    echo "" >> $outdir/logs/log.warning.phase2
 done
 
 echo "======== Phase 2 Complete"
@@ -412,18 +428,23 @@ echo "Waiting for remaining phase 3 processes to finish (all have started)"
 wait
 
 # Create phase 3 log file
-echo "Creating log files ($outdir/log.*.phase3)"
+echo "Creating log files ($outdir/logs/log.*.phase3)"
 rm -f $outdir/logs/log.status.phase3
 for file in $(ls -1rt $outdir/CVE/*/phase3/log.status); do
     cat $file >> $outdir/logs/log.status.phase3
     echo "" >> $outdir/logs/log.status.phase3
 done
-rm -f $outdir/log.error.phase3
+rm -f $outdir/logs/log.error.phase3
 for file in $(ls -1rt $outdir/CVE/*/phase3/log.error 2>/dev/null); do
-    echo $file >> $outdir/log.error.phase3
-    cat $file >> $outdir/log.error.phase3
-    echo "" >> $outdir/log.error.phase3
+    echo $file >> $outdir/logs/log.error.phase3
+    cat $file >> $outdir/logs/log.error.phase3
+    echo "" >> $outdir/logs/log.error.phase3
 done
+#rm -f $outdir/logs/log.warning.phase3
+#for file in $(ls -1rt $outdir/CVE/*/phase3/log.warning 3>/dev/null); do
+#    echo $file >> $outdir/logs/log.warning.phase3
+#    cat $file >> $outdir/logs/log.warning.phase3
+#    echo "" >> $outdir/logs/log.warning.phase3
 
 echo "======== Phase 3 Complete"
 

@@ -47,6 +47,7 @@ if [ ! -d $working_dir ]; then
 fi
 outdir="$working_dir/phase1"
 error_log="$outdir/log.error"
+warning_log="$outdir/log.warning"
 
 read line
 cve=`echo $line | cut -d\; -f 1`
@@ -79,7 +80,7 @@ echo cve=$cve >> $outdir/info
 # get commit hashes for all revisions
 rm -f $outdir/good_blobs.txt $outdir/bad_blobs.txt
 if [ $method == "b2ob" ]; then
-    blob=`echo $commit | ~/lookup/showCmtTree.perl 2>>$error_log | grep ";$filepath\$" | cut -d ";" -f 2` 
+    blob=`echo $commit | ~/lookup/showCmtTree.perl 2>>$warning_log | grep ";$filepath\$" | cut -d ";" -f 2` 
     echo "calling ob2b to find new (fixed) blobs"
     echo $blob > $outdir/good_blobs.txt
     ./ob2b_r $blob >> $outdir/good_blobs.txt
@@ -145,9 +146,9 @@ cat $outdir/commits.new |
             continue
         fi
         if [ "$hostname" = "da5.eecs.utk.edu" ]; then
-            echo $line | ~/lookup/showCmtTree.perl 2>>$error_log | grep ";$filepath\$" >> $outdir/commits.new.filtered
+            echo $line | ~/lookup/showCmtTree.perl 2>>$warning_log | grep ";$filepath\$" >> $outdir/commits.new.filtered
         else
-            echo $line | ssh da5 ~/lookup/showCmtTree.perl 2>>$error_log | grep ";$filepath\$" >> $outdir/commits.new.filtered
+            echo $line | ssh da5 ~/lookup/showCmtTree.perl 2>>$warning_log | grep ";$filepath\$" >> $outdir/commits.new.filtered
         fi
     done
 cat $outdir/commits.new.filtered | cut -d ";" -f 2 | uniq > $outdir/good_blobs.txt
@@ -163,9 +164,9 @@ cat $outdir/commits.old |
             continue
         fi
         if [ "$hostname" = "da5.eecs.utk.edu" ]; then
-            echo $line | ~/lookup/showCmtTree.perl 2>>$error_log | grep ";$filepath\$" >> $outdir/commits.old.filtered
+            echo $line | ~/lookup/showCmtTree.perl 2>>$warning_log | grep ";$filepath\$" >> $outdir/commits.old.filtered
         else
-            echo $line | ssh da5 ~/lookup/showCmtTree.perl 2>>$error_log | grep ";$filepath\$" >> $outdir/commits.old.filtered
+            echo $line | ssh da5 ~/lookup/showCmtTree.perl 2>>$warning_log | grep ";$filepath\$" >> $outdir/commits.old.filtered
         fi
     done
 cat $outdir/commits.old.filtered | cut -d ";" -f 2 | uniq > $outdir/bad_blobs.txt
@@ -180,6 +181,9 @@ wc -l $outdir/comm_blobs.txt
 # there are errors
 if [ ! -s $error_log ]; then
     rm -f $error_log
+fi
+if [ ! -s $warning_log ]; then
+    rm -f $warning_log
 fi
 
 echo "Success (vca-phase1)"

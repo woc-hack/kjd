@@ -24,6 +24,7 @@ fix_unixtime="$2"
 cvepub_unixtime="$3"
 outdir="$1/phase2"
 error_log=$outdir/log.error
+warning_log=$outdir/log.warning
 proj_info_dir="$outdir/proj_info"
 if [ ! -d "$dir" ]; then
    echo Error: directory $dir does not exists >&2
@@ -102,9 +103,9 @@ for line in $(cat $outdir/only_bad.txt); do
         if [[ "$rev" == *"Not Found"* ]] || [[ "$rev" == *"Repository access blocked"* ]]; then
             continue
         fi
-        echo "Error: get_latest_rev failed:" | tee -a $error_log
-        echo "   ./get_latest_rev \"$hp\" \"$proj\" \"$pathname\"" | tee -a $error_log
-        echo "   $rev" | tee -a $error_log
+        echo "Error: get_latest_rev failed:" | tee -a $warning_log
+        echo "   ./get_latest_rev \"$hp\" \"$proj\" \"$pathname\"" | tee -a $warning_log
+        echo "   $rev" | tee -a $warning_log
         continue
     fi
     latest_blob=`echo $rev | cut -d ';' -f 1`
@@ -181,6 +182,9 @@ cat $outdir/results.fixed.csv $outdir/results.notfixed.csv $outdir/results.unkno
 # there are errors
 if [ ! -s $error_log ]; then
     rm -f $error_log
+fi
+if [ ! -s $warning_log ]; then
+    rm -f $warning_log
 fi
 
 echo "Success (vca-phase2)"
