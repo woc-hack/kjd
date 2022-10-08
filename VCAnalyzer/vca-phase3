@@ -47,8 +47,12 @@ if [ -f "$phase2_dir/results.csv" ]; then
     IFS=$'\n'
     for line in $(cat $phase2_dir/results.csv); do
         project=$(echo $line | cut -d "," -f 1 | sed -e "s/^[ \t]*//" -e "s/[ \t]*$//" -e "s/Project://")
+        project_slash=$(echo $project | sed -e "s@_@/@")
         project_url=$(./toUrl $project | sed -e "s@https?*://@@")
-        pdata=$(./get_num_stars $project)
+
+        platform=`echo $project_url | sed -e "s@https?*://@@" -e "s/\.com.*$//" -e "s/\.org.*$//"`
+        pdata=$(./get_num_stars $platform $project_slash)
+
         if [ "$hostname" = "da1.eecs.utk.edu" ]; then
             mdata=$(./get_meta_from_mongo.py "$project")
         else
