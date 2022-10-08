@@ -74,7 +74,7 @@ auth=${auth_array[$i]}
 case $host in
     github|gh)
         while true; do
-            response=$(curl -s -H "Authorization: token $auth" "https://api.github.com/repos/$proj" | $JQ ".stargazers_count")
+            response=$(curl -s -H "Authorization: token $auth" "https://api.github.com/repos/$proj")
            if [[ $response = *"rate limit exceeded"* ]]; then
               # wait minute then try again
               echo "Rate limit exceeded in get_num_stars, sleeping 60" >&2
@@ -82,8 +82,9 @@ case $host in
               continue
            fi 
            # make sure the response is a number (possibly with leading spaces)
-           if [[ $response =~ ^\ *[0-9]+\ *$ ]]; then 
-               echo "GHStars:$response"
+           stars=$(echo "$response" | $JQ ".stargazers_count")
+           if [[ $stars =~ ^\ *[0-9]+\ *$ ]]; then 
+               echo "GHStars:$stars"
            else
                echo "Error: get_num_stars: invalid response: $response" >&2
                echo "GHStars:"
