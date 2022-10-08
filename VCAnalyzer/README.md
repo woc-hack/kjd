@@ -37,7 +37,7 @@ CVE-2022-34299,7ef09e1fc9ba07653dd078edb2408631c7969162,http&#8203;s://github.co
 
 ## Output
 The output of the tool is a .csv file with one line for each project that
-had copied a vulnerable file for a particular CVE ID.
+copied a vulnerable file for a particular CVE ID. 
 
 The output records contain the following fields:
   - CVE ID
@@ -65,6 +65,7 @@ The output records contain the following fields:
   - NumAuthors (Number of Authors)
   - FileInfo (The most used language in this project)
 
+Each line in the output file contains contains 1 record with name/value pairs for each field.
 Here is an example line from the final output file:
   
 CVE:CVE-2002-2443, ProjectUrl:github.com/eurolinux-enterprise-linux-sources/krb5, Project:eurolinux-enterprise-linux-sources_krb5, status:fixed, 1stBadBlob:f0b9a295b5eee43a73d103f81dabfaa8dfc8da36, 1stBadTime:1578606599, 1stGoodBlob:63c6ddb376f0d04c9bbb8b36413cda390d8b49a1, 1stGoodTime:1578634380, TimeSinceFix:2432, TimeSinceFixF:6 years and 66 days, TimeSincePub:2416, TimeSincePubF: 6 years and 61 days, NumAuthors:1, EarliestCommitDate:1578575615, LatestCommitDate:1578634769, NumActiveMon:1, RootFork:-, NumStars:-, NumCore:1, CommunitySize:1, NumCommits:11, NumForks:0, NumAuthors:1, EarliestCommitDate:1578575615, FileInfo:C/C++
@@ -72,8 +73,8 @@ CVE:CVE-2002-2443, ProjectUrl:github.com/eurolinux-enterprise-linux-sources/krb5
 ## Architecture
 
 VCAnalyzer is layered on top the of the World of Code infrastructure.
-World of Code contains a nearly complete collection of open source software.
-It includes software from many git repository hosting platforms such as
+World of Code contains a nearly complete collection of open source software, and
+it includes software from many git repository hosting platforms such as
 github, gitlab, and bitbucket. VCAnalyzer also utilizes the APIs from those
 hosting platforms to get the most up-to-date versions of files.
 
