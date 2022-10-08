@@ -55,7 +55,6 @@ The output records contain the following fields:
   - EarliestCommitDate (Date of earliest commit in unix time format)
   - LatestCommitDate (Date of latest commit in unix time format)
   - NumActiveMon ()
-  - RootFork  ()
   - NumStars (The number of stars as reported by WoC. Github projects only)
   - NumCore ()
   - CommunitySize ()
@@ -63,6 +62,7 @@ The output records contain the following fields:
   - NumForks (Number of forks)
   - NumAuthors (Number of Authors)
   - FileInfo (The most used language in this project)
+  - GHStars (number of stars as reported by GitHub, empty if not GitHub)
 
 Here is an example line from the final output file:
   
@@ -175,19 +175,29 @@ Phase 4 Analyzes the results (not implemented yet)
 
 ## Logging: Error, Warning, and Informational Messages
 
-VCAnalyzer provides error logs for error and warning messages and status
-logs for status messages. Multiple processes run in parallel working on
+VCAnalyzer creates log files for error messages, warning messages, and 
+status messages. Multiple processes run in parallel working on
 different CVEs and different phases. Each process writes logs to a local
 directory to prevent the parallel processes from trying to write to the
 same file at the same time. The logs are aggregated at the end into an
-error log named log.error and a status log named log.status.
+error log named log.error, a warning log named log.warning, and a status 
+log named log.status. The log files contain the following information:
+  - Error log files contain fatal errors indicating that a phase could 
+    not complete for the given CVE. In these cases, VCAnalyzer moves on
+    to the next CVE. The error log can be viewed to see which CVEs failed.
+  - Warning log files contain errors within a phase that do not cause the
+    phase to fail. Examples of warnings are commit hashes that are not found
+    in WoC or projects that are no longer publicly accessible when the tool
+    tries to access them.
+  - Status log files just provide informational messages generated as the
+    tool is running. These are primarily used to watch the status as the
+    program runs. They can also be helpful for debugging if issues arise.
 
 VCAnalyzer starts one main process, named vca, which starts many parallel
 child processes. The child processes are named vca-phase1, vca-phase2, or
-vca-phase3. They will be referred to as vca-phaseX when we mean any of them.
-There may be multiple instances of each vca-phaseX process running in parallel.
-For example, there may be 16 vca-phase1 processes running at the same
-time.
+vca-phase3.  There may be multiple instances of each vca-phaseX process 
+running in parallel. For example, there may be 16 vca-phase1 processes 
+running at the same time.
 
 The output directory structure includes a directory named CVE which contains
 one subdirectory for each CVE in the input file. Each CVE subdirectory
@@ -195,8 +205,8 @@ contains a phase subdirectory (phase1, phase2, or phase3) to hold output
 from each phase. For example, the output of phase 2 for CVE-2007-6762 would
 be in CVE/CVE-2007-6762/phase2. Log messages from the child processes are
 written into these phase subdirectories.
-At the end, VCAnalyzer aggregates the log files into an error log named 
-log.error and a status log named log.status in the top level logs directory.
+At the end, VCAnalyzer aggregates the log files and puts the aggregate log
+files in a top level directory named logs.
 
 Fatal errors that would prevent VCAnalayzer from running (such as wrong
 parameters or permission errors) are output to stdout and the program exits
@@ -217,5 +227,5 @@ name finished.failure is created in the phase subdirectory.
 Error messages go to stdout and also to files named log.error in the phase 
 subdirectory.
 
-This is a long way of saying look at logs/log.error to find any problems.
-The log.status files can be useful for debugging.
+This is a long way of saying look at logs/log.error.phase* to find any problems.
+The logs/log.status* and logs/log.warning* files can be useful for debugging.
