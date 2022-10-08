@@ -16,7 +16,7 @@ outdir="$dir/phase3"
 error_log=$outdir/log.error
 phase2_dir="$dir/phase2"
 mydir="$(pwd)"
-
+hostname=`uname -n`
 
 if [ ! -d "$dir" ]; then
    echo Error: directory $dir does not exists >&2
@@ -48,7 +48,11 @@ if [ -f "$phase2_dir/results.csv" ]; then
     for line in $(cat $phase2_dir/results.csv); do
         project=$(echo $line | cut -d "," -f 1 | sed -e "s/^[ \t]*//" -e "s/[ \t]*$//" -e "s/Project://")
         project_url=$(./toUrl $project | sed -e "s@https?*://@@")
-        data=$(ssh da1 $mydir/get_meta_from_mongo.py "$project")
+        if [ "$hostname" = "da1.eecs.utk.edu" ]; then
+            data=$(./get_meta_from_mongo.py "$project")
+        else
+            data=$(ssh da1 $mydir/get_meta_from_mongo.py "$project")
+        fi
         if [[ $data =~ ^Error ]]; then
             echo "get_meta_from_mongo.py: $data"
         else
