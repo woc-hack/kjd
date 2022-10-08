@@ -48,17 +48,19 @@ if [ -f "$phase2_dir/results.csv" ]; then
     for line in $(cat $phase2_dir/results.csv); do
         project=$(echo $line | cut -d "," -f 1 | sed -e "s/^[ \t]*//" -e "s/[ \t]*$//" -e "s/Project://")
         project_url=$(./toUrl $project | sed -e "s@https?*://@@")
+        pdata=$(./get_num_stars $project)
         if [ "$hostname" = "da1.eecs.utk.edu" ]; then
-            data=$(./get_meta_from_mongo.py "$project")
+            mdata=$(./get_meta_from_mongo.py "$project")
         else
-            data=$(ssh da1 $mydir/get_meta_from_mongo.py "$project")
+            mdata=$(ssh da1 $mydir/get_meta_from_mongo.py "$project")
         fi
-        if [[ $data =~ ^Error ]]; then
-            echo "get_meta_from_mongo.py: $data"
+        if [[ $mdata =~ ^Error ]]; then
+            echo "get_meta_from_mongo.py: $mdata"
         else
             echo -n "ProjectUrl:$project_url, " >> $dir/report.csv
             echo -n "$line, " >> $dir/report.csv
-            echo -n "$data" >> $dir/report.csv
+            echo -n "$mdata, " >> $dir/report.csv
+            echo -n "$pdata" >> $dir/report.csv
         fi
         echo "" >> $dir/report.csv
     done
