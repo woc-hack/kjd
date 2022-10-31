@@ -1,8 +1,10 @@
 #! /bin/bash
 
 #
-# get_num_stars: get the number of stars in a remote repo.
-# currently only supports github
+# get_metadata: get the number of stars and number of commits in a remote repo.
+#    currently only supports github
+# Also get if a project contains a SECURITY.md file.
+#    currently supports github, gitlab, and bitbucket.
 #
 # Error output must always go to stderr
 # Output of the form GHStars:<value> must always be output to stdout.
@@ -12,12 +14,13 @@
 # Check the command line args
 #
 if [ $# -ne 2 ]; then
-   echo "usage: get_num_stars: <host> <project>" >&2
+   echo "usage: get_metadata: <host> <project>" >&2
    echo "       supported hosts: github, gitlab, bitbucket" >&2
    echo "           shortcuts: gh, gl, bb" >&2
-   echo "       example: get_num_stars github openssl/openssl" >&2
-   echo "       example: get_num_stars gitlab tortoisegit/tortoisegit" >&2
-   echo "       example: get_num_stars bitbucket swsc/lookup" >&2
+   echo "       example: get_metadata github openssl/openssl" >&2
+   echo "       example: get_metadata github ory/examples" >&2
+   echo "       example: get_metadata gitlab tortoisegit/tortoisegit" >&2
+   echo "       example: get_metadata bitbucket swsc/lookup" >&2
    exit 1
 fi
 
@@ -74,6 +77,8 @@ auth=${auth_array[$i]}
 #
 # Main body of script
 #
+
+# Check for stars and commits
 case $host in
     github|gh)
         # Get the number of stars
@@ -102,6 +107,7 @@ case $host in
             http_code=`echo "$response" | head -n 1 | cut -d " " -f 2`
             if [ $http_code -ne 200 ]; then
                 echo "get_metadata: Error: reponse code = $http_code" >&2
+                echo "   ./get_metadata: $1 $2" >&2
                 error_status=1
             elif [[ "$response" = *"x-ratelimit-remaining: 0"* ]] || [[ "$response" = *"X-RateLimit-Remaining: 0"* ]]; then
                 echo "Rate limit exceeded in get_metadata, sleep 60" >&2
@@ -144,7 +150,13 @@ case $host in
 
 esac
 
-echo "GHStars:$num_stars, GHCommits:$num_commits"
+# Check for SECURITY.md
+secmd=$(./file_exists $host $proj SECURITY.md)
+
+#
+# Output final results
+#
+echo "GHStars:$num_stars, GHCommits:$num_commits, SECURITY.md:$secmd"
 
 exit $error_status
 
