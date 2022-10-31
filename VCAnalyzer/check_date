@@ -1,0 +1,10 @@
+#! /bin/bash
+
+# compare EarliestCommitDate to LatestCommitDate in reports.csv. If they
+# are the same, probably not valid dates.
+#
+# usage: ./check_date out/final_report.csv
+
+
+cat $1 | awk -F, '{ a=gsub("EarliestCommitDate:", "", $14); b=gsub("LatestCommitDate:", "", $15); if ($14 == $15) { print $1, $14, $15}}'
+
