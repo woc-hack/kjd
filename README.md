@@ -14,7 +14,7 @@ We also want to examine the causes for different vulnerability durations. We exp
 ## Files and Directories
 
   - `data:` Directory contains data files.
-  - `analysis.ipynb:` Jupyter notebook for analysis of preliminary data.
+  - `Data analysis.ipynb:` Jupyter notebook for analysis of preliminary data.
   - `DataMatching.pdf`: Diagram of WoC data relationships used in project.
   - `Process.md`: Process for data gathering.
   - `kjd_project_summary.md`: Summary of project work during the MSR 2022 WoC hackathon.
