@@ -1,6 +1,6 @@
 #
 # Convert cvs file with name value pairs to just values.
-# usage: cat report.csv | awk -F "," -f ~/fix.awk > report.values.csv
+# usage: cat report.csv | awk -F "," -f ~/kjd/VCAnalyzer/fix.awk > report.values.csv
 #
 {
     # print the column headings first
