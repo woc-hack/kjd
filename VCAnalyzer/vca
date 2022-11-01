@@ -210,7 +210,7 @@ while read line; do
         fi
 
         # Put the line from the input file for this CVE in file named input_line
-        echo "$line" >> $outdir/CVE/$cve/input_line
+        echo "$line" > $outdir/CVE/$cve/input_line
 
         call_phase_1 "$outdir" "$cve" "$commit" "$platform" "$project_name" "$filepath" &
         sleep 0.2 # give it a little time to start before starting the next
@@ -453,8 +453,10 @@ echo "Creating Final Report"
 rm -f $outdir/final_report.csv $outdir/final_failures.csv
 for cve in $(ls -1rt $outdir/CVE/ | grep CVE-); do
     file="$outdir/CVE/$cve/report.csv" 
+    file2="$outdir/CVE/$cve/report.values.csv" 
     if [ -f "$file" ]; then
         cat "$file" | sed -e "s/^/CVE:$cve, /" >> $outdir/final_report.csv
+        tail -n +2 "$file2" | sed -e "s/^/$cve, /" >> $outdir/final_report_values.csv
     else
         echo "$cve" >> $outdir/final_failures.csv
     fi
