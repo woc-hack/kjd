@@ -21,4 +21,4 @@ if [ -e "$outfile" ]; then
     exit 1
 fi
 
-find $dir -name cache.latest_rev -exec cat {} \; > $outfile
+find $dir -name cache.latest_rev -exec cat {} \; | sed -e "s/;.*$//" | sort -u > $outfile
