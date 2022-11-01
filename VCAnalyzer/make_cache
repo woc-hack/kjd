@@ -1,0 +1,24 @@
+#! /bin/bash
+
+# 
+# Create the global latest_rev cache from the local caches for each CVE
+
+# Check the command line args
+if [[ $# -ne 2 ]]; then
+    echo "usage: make_cache <directory> <new cache file>"
+    exit 1
+fi
+dir="$1"
+outfile="$2"
+
+if [ ! -d "$dir" ]; then
+    echo "Error: directory $dir does not exist"
+    exit 1
+fi
+
+if [ -e "$outfile" ]; then
+    echo "Error: file $outfile already exists"
+    exit 1
+fi
+
+find $dir -name cache.latest_rev -exec cat {} \; > $outfile
