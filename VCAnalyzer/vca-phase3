@@ -51,13 +51,16 @@ if [ -f "$phase2_dir/results.csv" ]; then
         project_url=$(./toUrl $project | sed -e "s@https?*://@@")
 
         platform=`echo $project_url | sed -e "s@https?*://@@" -e "s/\.com.*$//" -e "s/\.org.*$//"`
+        # get meta data from platform (github, gitlab, etc)
         pdata=$(./get_metadata $platform $project_slash)
 
+        # get meta data from WoC mongodb
         if [ "$hostname" = "da1.eecs.utk.edu" ]; then
             mdata=$(./get_meta_from_mongo.py "$project")
         else
             mdata=$(ssh da1 $mydir/get_meta_from_mongo.py "$project")
         fi
+
         if [[ $mdata =~ ^Error ]]; then
             echo "get_meta_from_mongo.py: $mdata"
         else
@@ -65,6 +68,9 @@ if [ -f "$phase2_dir/results.csv" ]; then
             echo -n "$line, " >> $dir/report.csv
             echo -n "$mdata, " >> $dir/report.csv
             echo -n "$pdata" >> $dir/report.csv
+            # cache the metadata
+            echo "$project, $pdata" >> $dir/cache.p_metadata
+            echo "$project, $mdata" >> $dir/cache.m_metadata
         fi
         echo "" >> $dir/report.csv
     done
@@ -77,6 +83,15 @@ fi
 # convert csv file to a more readable format
 echo "# $cve" >> $dir/report.md
 sed -e "s/,/\n  -/g" -e "s/ProjectUrl:/\n## /" $dir/report.csv | sed "s/^ *- *$//" >> $dir/report.md
+
+# convert cvs file with names and values to csv file with just values
+cat $dir/report.csv | awk -F "," -f ./fix.awk > $dir/report.values.csv
+if [ $? != 0 ]; then
+    error_msg=`tail -n 1 $dir/report.values.csv`
+    echo "$error_msg" > $dir/report.values.csv
+    echo "$error_msg" | tee -a $error_log
+fi
+
 
 # remove labels from csv file, might make it easier to parse 
 #rm -f $dir/report_values.csv
