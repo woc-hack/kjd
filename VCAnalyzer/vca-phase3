@@ -84,7 +84,7 @@ fi
 echo "# $cve" >> $dir/report.md
 sed -e "s/,/\n  -/g" -e "s/ProjectUrl:/\n## /" $dir/report.csv | sed "s/^ *- *$//" >> $dir/report.md
 
-# convert cvs file with names and values to csv file with just values
+# convert csv file with names and values to csv file with just values
 cat $dir/report.csv | awk -F "," -f ./fix.awk > $dir/report.values.csv
 if [ $? != 0 ]; then
     error_msg=`tail -n 1 $dir/report.values.csv`
