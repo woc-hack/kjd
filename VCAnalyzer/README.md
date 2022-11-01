@@ -115,7 +115,7 @@ The output from phase 1, for each CVE, is:
 
 ### Phase 2
 Phase 2 finds all projects in WoC that have at some time contained
-the vulnerable file. These are the cloned project. It then discovers 
+the vulnerable file. These are the cloned projects. It then discovers 
 if each cloned project has been fixed and, if so, the time of the fix.
 
 The input for phase 2 is:
