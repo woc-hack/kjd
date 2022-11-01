@@ -14,78 +14,56 @@ def write_data(data):
     sys.stdout.write("NumAuthors:")
     if (data.has_key("NumAuthors")):
         sys.stdout.write(str(data["NumAuthors"]))
-    else:
-        sys.stdout.write("-")
     sys.stdout.write(", ")
 
     sys.stdout.write("EarliestCommitDate:")
     if (data.has_key("EarliestCommitDate")):
         sys.stdout.write(str(data["EarliestCommitDate"]))
-    else:
-        sys.stdout.write("-")
     sys.stdout.write(", ")
 
     sys.stdout.write("LatestCommitDate:")
     if (data.has_key("LatestCommitDate")):
         sys.stdout.write(str(data["LatestCommitDate"]))
-    else:
-        sys.stdout.write("-")
     sys.stdout.write(", ")
 
     sys.stdout.write("NumActiveMon:")
     if (data.has_key("NumActiveMon")):
         sys.stdout.write(str(data["NumActiveMon"]))
-    else:
-        sys.stdout.write("-")
     sys.stdout.write(", ")
 
     #sys.stdout.write("RootFork:")
     #if (data.has_key("RootFork")):
     #    sys.stdout.write(data["RootFork"].encode('utf-8').strip())
-    #else:
-    #    sys.stdout.write ("-")
     #sys.stdout.write(", ")
 
     sys.stdout.write("NumStars:")
     if (data.has_key("NumStars")):
         sys.stdout.write(str(data["NumStars"]))
-    else:
-        sys.stdout.write ("-")
     sys.stdout.write(", ")
 
     sys.stdout.write("NumCore:")
     if (data.has_key("NumCore")):
         sys.stdout.write(str(data["NumCore"]))
-    else:
-        sys.stdout.write ("-")
     sys.stdout.write(", ")
 
     sys.stdout.write("CommunitySize:")
     if (data.has_key("CommunitySize")):
         sys.stdout.write(str(data["CommunitySize"]))
-    else:
-        sys.stdout.write("-")
     sys.stdout.write(", ")
 
     sys.stdout.write("NumCommits:")
     if (data.has_key("NumCommits")):
         sys.stdout.write(str(data["NumCommits"]))
-    else:
-        sys.stdout.write("-")
     sys.stdout.write(", ")
 
     sys.stdout.write("NumForks:")
     if (data.has_key("NumForks")):
         sys.stdout.write(str(data["NumForks"]))
-    else:
-        sys.stdout.write("-")
     sys.stdout.write(", ")
 
     sys.stdout.write("NumAuthors:")
     if (data.has_key("NumAuthors")):
         sys.stdout.write(str(data["NumAuthors"]))
-    else:
-        sys.stdout.write("-")
     sys.stdout.write(", ")
 
     sys.stdout.write("FileInfo:")
@@ -97,10 +75,6 @@ def write_data(data):
         if (len(FileInfo) > 0):
             sorted_FileInfo = sorted(FileInfo.items(), key=lambda t: t[1], reverse=True)
             sys.stdout.write(sorted_FileInfo[0][0])
-        else:
-            sys.stdout.write("- ")
-    else:
-        sys.stdout.write("- ")
 
     sys.stdout.write("\n")
 
