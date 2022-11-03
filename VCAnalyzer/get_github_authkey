@@ -1,0 +1,25 @@
+#! /bin/bash
+
+#
+# get the github API auth key(s) from environment variable or ~/github-auth
+#
+
+if [[ ! -z "${GITHUB_AUTH_TOKEN}" ]]; then
+    echo -n "${GITHUB_AUTH_TOKEN}"
+    exit 0
+fi
+
+if [ ! -f ~/github-auth ]; then
+    echo Error: missing ~/github-auth file >&2
+    echo ~/github-auth must exists and contain github API auth key or keys >&2
+    echo 'Create keys at github->Settings->Developer Settings->personal access tokens' >&2
+    exit 1
+fi
+mapfile -t auth_array < ~/github-auth
+len="${#auth_array[@]}"
+i="$(($RANDOM % $len))"
+auth=${auth_array[$i]}
+
+echo -n "$auth"
+
+exit 0
