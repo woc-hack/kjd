@@ -2,23 +2,55 @@
 
 # 
 # Create the global latest_rev cache from the local caches for each CVE
+#
 
 # Check the command line args
 if [[ $# -ne 2 ]]; then
-    echo "usage: make_cache <directory> <new cache file>"
+    echo "usage: make_cache <vca ouput directory> <new cache directory>"
     exit 1
 fi
-dir="$1"
-outfile="$2"
+indir="$1"
+outdir="$2"
 
-if [ ! -d "$dir" ]; then
-    echo "Error: directory $dir does not exist"
-    exit 1
-fi
-
-if [ -e "$outfile" ]; then
-    echo "Error: file $outfile already exists"
+if [ ! -d "$indir" ]; then
+    echo "Error: directory $indir does not exist"
     exit 1
 fi
 
-find $dir -name cache.latest_rev -exec cat {} \; | sed -e "s/;.*$//" | sort -u > $outfile
+if [ -d "$outdir" ]; then
+    echo "Error: directory $outdir already exists"
+    exit 1
+fi
+
+mkdir $outdir
+if [ $? -ne 0 ];then
+    exit
+fi
+
+# get phase 2 cache
+echo "Getting Phase 2 cache"
+find $indir -name cache.latest_rev -exec cat {} \; | sed -e "s/;.*$//" | sort -u > $outdir/latest_rev.global
+
+# merge with existing cache file
+if [ -f ./cache/latest_rev.global ]; then
+    cat $outfile ./cache/latest_rev.global | sort -u > $outdir/latest_rev.merge
+fi
+
+# ?, shouldn't be any of these, but there are
+#sed -e "/, $/d" $outdir/latest_rev.global > x
+
+# Get phase 3 cache
+echo "Getting Phase 3 cache"
+find $indir -name cache.p_metadata -exec cat {} \; | sort -u > $outdir/p_metadata.global
+find $indir -name cache.m_metadata -exec cat {} \; | sort -u > $outdir/m_metadata.global
+
+# merge with existing cache file
+if [ -f ./cache/p_metadata.global ]; then
+    cat $outdir/p_metadata.global ./cache/p_metadata.global | sort -u > $outdir/p.merge
+fi
+if [ -f ./cache/m_metadata.global ]; then
+    cat $outdir/m_metadata.global ./cache/m_metadata.global | sort -u > $outdir/m.merge
+fi
+
+
+
