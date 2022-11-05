@@ -19,6 +19,8 @@
 # in some phases, the tool will skip those phases and use the results that
 # already exist.
 #
+# Currently only looks for projects on gihub, bitbucket, and gitlab.
+#
 #------------------------------------------------------------------------
 
 # Call when user hits control-c. Kill all child processes before exitting.
@@ -221,7 +223,7 @@ while read line; do
     fi
 
 done < $data_file
-echo "Waiting for remaining phase 1 processes to finish (all have started)"
+echo "-------- Waiting for remaining phase 1 processes to finish (all have started)"
 wait
 
 # Create phase 1 log files
@@ -324,7 +326,7 @@ for cve_dir in $(ls -1 $outdir/CVE | grep CVE); do
         done
     fi
 done
-echo "Waiting for remaining phase 2 processes to finish (all have started)"
+echo "-------- Waiting for remaining phase 2 processes to finish (all have started)"
 wait
 
 # Create phase 2 log file
@@ -385,8 +387,11 @@ call_phase_3 ()
 
 echo ""
 echo "======== Phase 3 Beginning"
-# tmp HACK to avoid ssh_exchange_identification errors
-max_threads=4
+if [ ! "$hostname" = "da1.eecs.utk.edu" ]; then
+    # HACK to avoid ssh_exchange_identification errors
+    max_threads=4
+    echo "*** phase3 runs best on da1 ***"
+fi
 
 echo "To get the current status:"
 echo "  for file in \$(ls -1rt $outdir/CVE/*/phase3/log.status); do cat \$file; echo ''; done"
@@ -424,7 +429,7 @@ for cve_dir in $(ls -1 $outdir/CVE | grep CVE); do
     fi
 done
 
-echo "Waiting for remaining phase 3 processes to finish (all have started)"
+echo "-------- Waiting for remaining phase 3 processes to finish (all have started)"
 wait
 
 # Create phase 3 log file
@@ -450,7 +455,9 @@ echo "======== Phase 3 Complete"
 
 # Create final report
 echo "Creating Final Report"
-rm -f $outdir/final_report.csv $outdir/final_failures.csv
+rm -f $outdir/final_report.csv \
+      $outdir/final_report_values.csv \
+      $outdir/final_failures.csv
 for cve in $(ls -1rt $outdir/CVE/ | grep CVE-); do
     file="$outdir/CVE/$cve/report.csv" 
     file2="$outdir/CVE/$cve/report.values.csv" 
