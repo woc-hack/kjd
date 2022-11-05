@@ -52,17 +52,10 @@ urle_filepath=`echo $filepath | sed 's/ /%20/g'`    # url-encoded filepath
 #
 # get the github API auth key(s) from ~/github-auth
 #
-if [ ! -f ~/github-auth ]; then
-    echo Error: missing ~/github-auth file
-    echo Error: missing ~/github-auth file >&2
-    echo ~/github-auth must exists and contain github API auth key or keys >&2
-    echo 'Create keys at github->Settings->Developer Settings->personal access tokens' >&2
+auth=$(./get_github_authkey)
+if [ $? -ne 0 ]; then
     exit 1
 fi
-mapfile -t auth_array < ~/github-auth
-len="${#auth_array[@]}"
-i="$(($RANDOM % $len))"
-auth=${auth_array[$i]}
 
 #
 # Main body of script
