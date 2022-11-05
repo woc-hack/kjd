@@ -26,6 +26,20 @@ def write_data(data):
         sys.stdout.write(str(data["LatestCommitDate"]))
     sys.stdout.write(", ")
 
+    sys.stdout.write("ValidDates:")
+    if ( (data.has_key("LatestCommitDate")) and (data.has_key("EarliestCommitDate")) ):
+        last = data["LatestCommitDate"]
+        first = data["EarliestCommitDate"]
+        if (first == last):
+            sys.stdout.write("1st=Last")
+        elif ((first == 0) or (last == 0)):
+            sys.stdout.write("Zero")
+        elif ((first> 1735707600) or (last > 1735707600)):
+            sys.stdout.write("Future")
+        else: 
+            sys.stdout.write("OK")
+    sys.stdout.write(", ")
+
     sys.stdout.write("NumActiveMon:")
     if (data.has_key("NumActiveMon")):
         sys.stdout.write(str(data["NumActiveMon"]))
