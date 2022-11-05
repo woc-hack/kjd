@@ -27,18 +27,10 @@ filepath=$3
 #
 # get the github API auth key(s) from ~/github-auth
 #
-if [ ! -f ~/github-auth ]; then
-    echo Error: missing ~/github-auth file
-    echo Error: missing ~/github-auth file >&2
-    echo ~/github-auth must exists and contain github API auth key or keys >&2
-    echo 'Create keys at github->Settings->Developer Settings->personal access tokens' >&2
+auth=$(./get_github_authkey)
+if [ $? -ne 0 ]; then
     exit 1
 fi
-mapfile -t auth_array < ~/github-auth
-len="${#auth_array[@]}"
-i="$(($RANDOM % $len))"
-auth=${auth_array[$i]}
-
 
 #
 # Main body of script
@@ -51,17 +43,21 @@ case $host in
         url="https://api.github.com/repos/$proj/commits?path=$filepath&per_page=1"
         #echo URL: $url
         while true; do
-            response=$(curl -s -L -H "Authorization: token $auth" "$url")
+            response=$(curl -f -s -L -H "Authorization: token $auth" "$url")
+            ret=$?
             if [[ $response = *"rate limit exceeded"* ]]; then
                 # wait minute then try again 
                 echo "Rate limit exceeded in rgitlog, sleeping 60" >&2
                 sleep 60
                 continue
+            elif [[ $ret -ne 0 ]]; then
+                echo "No"
+                break
             elif [[ "$response" = "$empty" ]]; then
-                echo "NO"
+                echo "No"
                 break
             else
-                echo YES
+                echo Yes
                 break
             fi
         done
@@ -73,9 +69,9 @@ case $host in
         #echo URL: $url
         response=$(curl -s "$url")
         if [[ "$response" = "[]" ]]; then
-            echo NO
+            echo No
         else
-            echo YES
+            echo Yes
         fi
         ;;
     bitbucket|bb)
@@ -84,9 +80,9 @@ case $host in
         response=$(curl -s "$url")
         end=`echo "$response" | jq-linux64 -r '{commit: .values[].hash}'`
         if [[ "$end" = "" ]]; then
-            echo NO
+            echo No
         else
-            echo YES
+            echo Yes
         fi
         ;;
     *)
