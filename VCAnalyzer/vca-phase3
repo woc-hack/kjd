@@ -17,6 +17,9 @@ error_log=$outdir/log.error
 phase2_dir="$dir/phase2"
 mydir="$(pwd)"
 hostname=`uname -n`
+if [ "$hostname" = "da1.eecs.utk.edu" ]; then
+    echo "Note: $0 runs faster on da1" 
+fi
 
 if [ ! -d "$dir" ]; then
    echo Error: directory $dir does not exists >&2
@@ -42,6 +45,8 @@ rm -f $dir/report.md
 cve=`cut -d\; -f 1 $dir/input_line`
 
 # Create the final results file
+pcache_file="./cache/p_metadata.global"
+mcache_file="./cache/m_metadata.global"
 if [ -f "$phase2_dir/results.csv" ]; then
     OLDIFS=$IFS
     IFS=$'\n'
@@ -51,14 +56,37 @@ if [ -f "$phase2_dir/results.csv" ]; then
         project_url=$(./toUrl $project | sed -e "s@https?*://@@")
 
         platform=`echo $project_url | sed -e "s@https?*://@@" -e "s/\.com.*$//" -e "s/\.org.*$//"`
+
         # get meta data from platform (github, gitlab, etc)
-        pdata=$(./get_metadata $platform $project_slash)
+        cache=""
+        if [ -f $pcache_file ]; then
+            cache=$(grep "^$project," $pcache_file | head -n 1)
+        fi
+
+        if [ "$cache" = "" ]; then
+            #echo "CACHE MISS-p_metadata: $project"  >&2
+            pdata=$(./get_metadata $platform $project_slash)
+        else
+            #echo "CACHE HIT-p_metadata: $project" >&2
+            pdata=$(echo "$cache" | sed -e "s@^$project, *@@")
+        fi
 
         # get meta data from WoC mongodb
-        if [ "$hostname" = "da1.eecs.utk.edu" ]; then
-            mdata=$(./get_meta_from_mongo.py "$project")
+        cache=""
+        if [ -f $mcache_file ]; then
+            cache=$(grep "^$project," $mcache_file | head -n 1)
+        fi
+
+        if [ "$cache" = "" ]; then
+            #echo "CACHE MISS-m_metadata: $project"  >&2
+            if [ "$hostname" = "da1.eecs.utk.edu" ]; then
+                mdata=$(./get_meta_from_mongo.py "$project")
+            else
+                mdata=$(ssh da1 $mydir/get_meta_from_mongo.py "$project")
+            fi
         else
-            mdata=$(ssh da1 $mydir/get_meta_from_mongo.py "$project")
+            #echo "CACHE HIT-m_metadata: $project"  >&2 
+            mdata=$(echo "$cache" | sed -e "s@^$project, *@@")
         fi
 
         if [[ $mdata =~ ^Error ]]; then
@@ -69,6 +97,7 @@ if [ -f "$phase2_dir/results.csv" ]; then
             echo -n "$mdata, " >> $dir/report.csv
             echo -n "$pdata" >> $dir/report.csv
             # cache the metadata
+            #echo "CACHE WRITING: $project"  >&2
             echo "$project, $pdata" >> $dir/cache.p_metadata
             echo "$project, $mdata" >> $dir/cache.m_metadata
         fi
