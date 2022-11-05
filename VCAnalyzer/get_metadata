@@ -49,16 +49,10 @@ fi
 #
 # get the github API auth key(s) from ~/github-auth
 #
-if [ ! -f ~/github-auth ]; then
-    echo Error: missing ~/github-auth file >&2
-    echo ~/github-auth must exists and contain github API auth key or keys >&2
-    echo 'Create keys at github->Settings->Developer Settings->personal access tokens' >&2
-    $(error_exit)
+auth=$(./get_github_authkey)
+if [ $? -ne 0 ]; then
+    exit 1
 fi
-mapfile -t auth_array < ~/github-auth
-len="${#auth_array[@]}"
-i="$(($RANDOM % $len))"
-auth=${auth_array[$i]}
 
 #
 # get the gitlab API auth key(s) from ~/gitlab-auth
@@ -93,7 +87,8 @@ case $host in
            num_stars=$(echo "$response" | $JQ ".stargazers_count")
            # make sure the response is a number (possibly with leading spaces)
            if ! [[ $num_stars =~ ^\ *[0-9]+\ *$ ]]; then 
-               echo "Error: get_metadata: invalid response" >&2
+               echo "Warning: get_metadata: invalid value for num_stars:$numstars" >&2
+               echo "   ./get_metadata $1 $2" >&2
                num_stars=""
                error_status=1
            fi
@@ -107,7 +102,7 @@ case $host in
             http_code=`echo "$response" | head -n 1 | cut -d " " -f 2`
             if [ $http_code -ne 200 ]; then
                 echo "get_metadata: Error: reponse code = $http_code" >&2
-                echo "   ./get_metadata: $1 $2" >&2
+                echo "   ./get_metadata $1 $2" >&2
                 error_status=1
             elif [[ "$response" = *"x-ratelimit-remaining: 0"* ]] || [[ "$response" = *"X-RateLimit-Remaining: 0"* ]]; then
                 echo "Rate limit exceeded in get_metadata, sleep 60" >&2
@@ -115,7 +110,8 @@ case $host in
             else
                 num_commits=`echo "$response" | sed -n '/^[Ll]ink:/ s/.*"next".*page=\([0-9]*\).*"last".*/\1/p'`
                if ! [[ $num_commits =~ ^\ *[0-9]+\ *$ ]]; then 
-                   echo "Error: get_metadata: invalid response" >&2
+                   echo "Warning: get_metadata: invalid response for num_commits:$num_commits" >&2
+                   echo "   ./get_metadata $1 $2" >&2
                    num_commits=""
                    error_status=1
                fi
@@ -153,10 +149,17 @@ esac
 # Check for SECURITY.md
 secmd=$(./file_exists $host $proj SECURITY.md)
 
+# check if in enterprise_projects.txt
+if grep "^https://$host..../$proj " ./enterprise_projects.txt; then
+    enterprise="Yes"
+else
+    enterprise="No"
+fi
+
 #
 # Output final results
 #
-echo "GHStars:$num_stars, GHCommits:$num_commits, SECURITY.md:$secmd"
+echo "GHStars:$num_stars, GHCommits:$num_commits, SECURITY.md:$secmd, Corp:$enterprise"
 
 exit $error_status
 
