@@ -27,19 +27,31 @@ if [ $? -ne 0 ];then
     exit
 fi
 
+#
 # get phase 2 cache
+#
 echo "Getting Phase 2 cache"
-find $indir -name cache.latest_rev -exec cat {} \; | sed -e "s/;.*$//" | sort -u > $outdir/latest_rev.global
+for dir in $(find $indir/CVE -name "CVE-*"); do 
+    cve=$(basename $dir)
+    echo $cve
+    mkdir -p $outdir/CVE/$cve
+    cp $dir/cache.latest_rev $outdir/CVE/$cve
+done
+
+# The old way:
+#find $indir -name cache.latest_rev -exec cat {} \; | sed -e "s/;.*$//" | sort -u > $outdir/latest_rev.global
 
 # merge with existing cache file
-if [ -f ./cache/latest_rev.global ]; then
-    cat $outfile ./cache/latest_rev.global | sort -u > $outdir/latest_rev.merge
-fi
+#if [ -f ./cache/latest_rev.global ]; then
+#    cat $outfile ./cache/latest_rev.global | sort -u > $outdir/latest_rev.merge
+#fi
 
-# ?, shouldn't be any of these, but there are
-#sed -e "/, $/d" $outdir/latest_rev.global > x
 
+
+
+#
 # Get phase 3 cache
+#
 echo "Getting Phase 3 cache"
 find $indir -name cache.p_metadata -exec cat {} \; | sort -u > $outdir/p_metadata.global
 find $indir -name cache.m_metadata -exec cat {} \; | sort -u > $outdir/m_metadata.global
