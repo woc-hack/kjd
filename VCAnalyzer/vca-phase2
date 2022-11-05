@@ -26,6 +26,7 @@ fi
 dir="$1"
 fix_unixtime="$2"
 cvepub_unixtime="$3"
+cve=$(basename $dir)
 outdir="$1/phase2"
 error_log=$outdir/log.error
 warning_log=$outdir/log.warning
@@ -94,7 +95,8 @@ touch $outdir/results.fixed.csv $outdir/results.notfixed.csv $outdir/results.unk
 
 # find out if the most recent version of the blob is vulnerable or
 # unknown (we know it is not fixed, because we are looking at only_bad.txt)
-cache_file="./cache/latest_rev.global"
+#cache_file="./cache/latest_rev.global"
+cache_file="./cache/CVE/$cve/cache.latest_rev"
 local_cache="$dir/cache.latest_rev"
 rm -f "$local_cache"
 for line in $(cat $outdir/only_bad.txt); do
@@ -113,8 +115,7 @@ for line in $(cat $outdir/only_bad.txt); do
     fi
     if [ "$cache" = "" ]; then
         # not in the cache, go get it.
-        #tmp=`echo  $hp, $proj, $pathname | sed -e "s@/@.@g"`
-        #echo "CACHE MISS, $dir: $tmp" >&2
+        #echo "CACHE MISS, $dir: $hp, $proj, $pathname" >&2
         rev=`./get_latest_rev $hp $proj "$pathname"`
         if [ $? -ne 0 ]; then
             if [[ "$rev" == *"Not Found"* ]] || [[ "$rev" == *"Repository access blocked"* ]]; then
@@ -140,8 +141,7 @@ for line in $(cat $outdir/only_bad.txt); do
         echo "$hp, $proj, $pathname, $latest_blob" >> $local_cache
     else
         # cache hit, use info from cache. use xargs to remove leading spaces.
-        #tmp=`echo  $hp, $proj, $pathname | sed -e "s@/@.@g"`
-        #echo "CACHE HIT, $dir: $tmp" >&2
+        #echo "CACHE HIT, $dir: $hp, $proj, $pathname" >&2
         latest_blob=`echo $cache | cut -d ',' -f 4 | xargs`
         if [ "$latest_blob" == "-" ]; then
             #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
