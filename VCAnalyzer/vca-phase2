@@ -67,12 +67,12 @@ echo "Original Project = $orig_project"
 
 # Get all projects with good (fixed) blobs (_cb file also include commit and 
 # blob hashes)
-cat $phase1_dir/good_blobs.txt | ~/lookup/getValues -f b2c | awk -F\; '{ printf ("%s;%s\n", $2, $1) }' | ~/lookup/getValues -f c2P | sort -u > $outdir/good_projs_cb.txt
+cat $phase1_dir/good_blobs.txt | ~/lookup/getValues -f b2c | awk -F\; '{ printf ("%s;%s\n", $2, $1) }' | ~/lookup/getValues -f c2P | egrep -v "gitorious|android.googlesource.com|salsa.debian.org" | sort -u > $outdir/good_projs_cb.txt
 cut -d \; -f 3 $outdir/good_projs_cb.txt | sort -u > $outdir/good_projs.txt
 
 
 # Get all projects with bad (vulnerable) blobs (_c file also include commit)
-cat $phase1_dir/bad_blobs.txt | ~/lookup/getValues -f b2c | awk -F\; '{ printf ("%s;%s\n", $2, $1) }' | ~/lookup/getValues -f c2P | sort -u > $outdir/bad_projs_cb.txt
+cat $phase1_dir/bad_blobs.txt | ~/lookup/getValues -f b2c | awk -F\; '{ printf ("%s;%s\n", $2, $1) }' | ~/lookup/getValues -f c2P | egrep -v "gitorious|android.googlesource.com|salsa.debian.org" | sort -u > $outdir/bad_projs_cb.txt
 cut -d \; -f 3 $outdir/bad_projs_cb.txt | sort -u > $outdir/bad_projs.txt
 
 # comm.txt is all the projects that contain both vulnerable and fixed 
@@ -94,7 +94,7 @@ touch $outdir/results.fixed.csv $outdir/results.notfixed.csv $outdir/results.unk
 
 # find out if the most recent version of the blob is vulnerable or
 # unknown (we know it is not fixed, because we are looking at only_bad.txt)
-cache_file="./cache.latest_rev.global"
+cache_file="./cache/latest_rev.global"
 local_cache="$dir/cache.latest_rev"
 rm -f "$local_cache"
 for line in $(cat $outdir/only_bad.txt); do
@@ -113,24 +113,47 @@ for line in $(cat $outdir/only_bad.txt); do
     fi
     if [ "$cache" = "" ]; then
         # not in the cache, go get it.
-        echo "Not Found in cache: $hp $proj $pathname" | tee -a $warning_log
+        #tmp=`echo  $hp, $proj, $pathname | sed -e "s@/@.@g"`
+        #echo "CACHE MISS, $dir: $tmp" >&2
         rev=`./get_latest_rev $hp $proj "$pathname"`
         if [ $? -ne 0 ]; then
             if [[ "$rev" == *"Not Found"* ]] || [[ "$rev" == *"Repository access blocked"* ]]; then
+                #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
                 echo "$hp, $proj, $pathname, -" >> $local_cache
                 continue
             fi
             echo "Error: get_latest_rev failed:" | tee -a $warning_log
             echo "   ./get_latest_rev \"$hp\" \"$proj\" \"$pathname\"" | tee -a $warning_log
             echo "   $rev" | tee -a $warning_log
+            #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
             echo "$hp, $proj, $pathname, -" >> $local_cache
             continue
         fi
         latest_blob=`echo $rev | cut -d ';' -f 1`
+        if [ `echo $latest_blob | wc -c` -ne 41 ]; then
+            echo "Error, can't find latest_blob ($rev)" | tee -a $error_log
+            #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
+            echo "$hp, $proj, $pathname, $latest_blob" >> $local_cache
+            continue
+        fi
+        #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
         echo "$hp, $proj, $pathname, $latest_blob" >> $local_cache
     else
         # cache hit, use info from cache. use xargs to remove leading spaces.
+        #tmp=`echo  $hp, $proj, $pathname | sed -e "s@/@.@g"`
+        #echo "CACHE HIT, $dir: $tmp" >&2
         latest_blob=`echo $cache | cut -d ',' -f 4 | xargs`
+        if [ "$latest_blob" == "-" ]; then
+            #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
+            echo "$hp, $proj, $pathname, -" >> $local_cache
+            continue
+        fi
+        if [ `echo $latest_blob | wc -c` -ne 41 ]; then
+            echo "Error in cache ($cache)" | tee -a $error_log
+            latest_blob="-"
+            continue
+        fi
+        #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
         echo "$hp, $proj, $pathname, $latest_blob" >> $local_cache
     fi
 
