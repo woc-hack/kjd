@@ -68,7 +68,7 @@ The output records contain the following fields:
   - FileInfo (The most used language in this project)
   - GHStars (number of stars as reported by GitHub, empty if not GitHub)
   - GHCommits (number of commits as reported by GitHub, empty if not GitHub)
-  - SECURITY.md (does project contain file name SECURITY.md)
+  - SECURITY.md (does project contain file named SECURITY.md)
   - Corp (Corporate support based on doi.org/10.1145/3379597.3387495)
 
 Each line in the output file contains contains 1 record with name/value pairs for each field.
