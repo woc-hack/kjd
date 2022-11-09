@@ -77,7 +77,7 @@ case $host in
     github|gh)
         # Get the number of stars
         while true; do
-            response=$(curl -s -H "Authorization: token $auth" "https://api.github.com/repos/$proj")
+            response=$(curl -s -L -H "Authorization: token $auth" "https://api.github.com/repos/$proj")
            if [[ $response = *"rate limit exceeded"* ]]; then
               # wait minute then try again
               echo "Rate limit exceeded in get_metadata, sleeping 60" >&2
@@ -98,8 +98,9 @@ case $host in
         # Get the number of commits
         num_commits=""
         while true; do
-            response=$(curl -s -k -I -H "Authorization: token $auth" "https://api.github.com/repos/$proj/commits?per_page=1")
-            http_code=`echo "$response" | head -n 1 | cut -d " " -f 2`
+            response=$(curl -s -k -I -L -H "Authorization: token $auth" "https://api.github.com/repos/$proj/commits?per_page=1")
+            #http_code=`echo "$response" | head -n 1 | cut -d " " -f 2`
+            http_code=`echo "$response" | grep "^HTTP" | tail -n 1 | cut -d " " -f 2` 
             if [ $http_code -ne 200 ]; then
                 echo "get_metadata: Error: reponse code = $http_code" >&2
                 echo "   ./get_metadata $1 $2" >&2
