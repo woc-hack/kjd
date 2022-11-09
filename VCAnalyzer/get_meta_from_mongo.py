@@ -75,11 +75,6 @@ def write_data(data):
         sys.stdout.write(str(data["NumForks"]))
     sys.stdout.write(", ")
 
-    sys.stdout.write("NumAuthors:")
-    if (data.has_key("NumAuthors")):
-        sys.stdout.write(str(data["NumAuthors"]))
-    sys.stdout.write(", ")
-
     sys.stdout.write("FileInfo:")
     if (data.has_key("FileInfo")):
         FileInfo = data["FileInfo"]
