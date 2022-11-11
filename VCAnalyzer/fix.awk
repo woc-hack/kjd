@@ -15,16 +15,21 @@
         }
         printf("\n");
     }
+    # first, check to see if the record is valid
+    for (i = 1; i <= NF; i++) {
+        split($i,a,":");
+        if (header[i] != a[1]) {
+            printf("phase3 Error from fix.awk: mismatch on line %d: %s != %s, NF=%d\n",NR, header[i], a[1], NF) >> "/dev/stderr";
+            next;
+        }
+    }
+    # then, print the fields
     for (i = 1; i <= NF; i++) {
         split($i,a,":");
         printf("%s", a[2]);
         if (i != NF) {
             printf(", ");
         } 
-        if (header[i] != a[1]) {
-            printf("\nphase3 Error from fix.awk: mismatch on line %d: %s != %s\n",i, header[i], a[1]);
-            exit 1
-        }
     }
     printf("\n")
 }
