@@ -44,15 +44,15 @@ The output records contain the following fields:
   - ProjectUrl
   - Project (Name of the project in the format used by WoC)
   - status (fixed, notfixed, or unknown)
-  - 1stBadBlob (sha1 hash of the first vulnerable blob committed to the project)
-  - 1stBadTime (Time 1stBadBlob was committed in unix time format)
-  - 1stGoodBlob (sha1 hash of the first fixed blob committed to the project)
-  - 1stGoodTime (Time 1stGoodBlob was committed in unix time format)
+  - FirstBadBlob (sha1 hash of the first vulnerable blob committed to the project)
+  - FirstBadTime (Time FirstBadBlob was committed in unix time format)
+  - FirstGoodBlob (sha1 hash of the first fixed blob committed to the project)
+  - FirstGoodTime (Time FirstGoodBlob was committed in unix time format)
   - TimeSinceFix (Time between fix in original project and fix in clone)
   - TimeSinceFixF (TimeSinceFix formatted to be human readable)
   - TimeSincePub (Time between CVE publication and fix in clone)
   - TimeSincePubF (TimeSincePub formatted to be human readable))
-  - TimeVulnRemained (Time between 1stGoodTime and max(1stBadTime, Orig fix))
+  - TimeVulnRemained (Time between FirstGoodTime and max(FirstBadTime, Orig fix))
   - TimeVulnRemainedF (TimeVulnRemained formatted to be human readable)
   - NumAuthors (Number of authors on a project)
   - EarliestCommitDate (Date of earliest commit in unix time format)
@@ -64,7 +64,6 @@ The output records contain the following fields:
   - CommunitySize (the number of other projects that share commits with the deforeked project)
   - NumCommits (Number of Commits as reported by WoC)
   - NumForks (Number of forks)
-  - NumAuthors (Number of Authors)
   - FileInfo (The most used language in this project)
   - GHStars (number of stars as reported by GitHub, empty if not GitHub)
   - GHCommits (number of commits as reported by GitHub, empty if not GitHub)
@@ -74,7 +73,7 @@ The output records contain the following fields:
 Each line in the output file contains contains 1 record with name/value pairs for each field.
 Here is an example line from the final output file:
   
-CVE:CVE-2002-2443, ProjectUrl:github.com/eurolinux-enterprise-linux-sources/krb5, Project:eurolinux-enterprise-linux-sources_krb5, Path:sdk5010/user/samba-4.6.4/krb5/krb5-1.9/src/kadmin/server/schpw.c, status:fixed, 1stBadBlob:f0b9a295b5eee43a73d103f81dabfaa8dfc8da36, 1stBadTime:1578606599, 1stGoodBlob:63c6ddb376f0d04c9bbb8b36413cda390d8b49a1, 1stGoodTime:1578634380, TimeSinceFix:2432, TimeSinceFixF:6 years and 66 days, TimeSincePub:2416, TimeSincePubF: 6 years and 61 days, TimeVulnRemained:0, TimeVulnRemainedF:0 years and 00 days, NumAuthors:1, EarliestCommitDate:1578575615, LatestCommitDate:1578634769, ValidDates:OK, NumActiveMon:1, NumStars:, NumCore:1, CommunitySize:1, NumCommits:11, NumForks:0, NumAuthors:1, FileInfo:C/C++, GHStars:, GHCommits:, SECURITY.md:NO, Corp:No
+CVE:CVE-2002-2443, ProjectUrl:github.com/eurolinux-enterprise-linux-sources/krb5, Project:eurolinux-enterprise-linux-sources_krb5, Path:sdk5010/user/samba-4.6.4/krb5/krb5-1.9/src/kadmin/server/schpw.c, status:fixed, FirstBadBlob:f0b9a295b5eee43a73d103f81dabfaa8dfc8da36, FirstBadTime:1578606599, FirstGoodBlob:63c6ddb376f0d04c9bbb8b36413cda390d8b49a1, FirstGoodTime:1578634380, TimeSinceFix:2432, TimeSinceFixF:6 years and 66 days, TimeSincePub:2416, TimeSincePubF: 6 years and 61 days, TimeVulnRemained:0, TimeVulnRemainedF:0 years and 00 days, NumAuthors:1, EarliestCommitDate:1578575615, LatestCommitDate:1578634769, ValidDates:OK, NumActiveMon:1, NumStars:, NumCore:1, CommunitySize:1, NumCommits:11, NumForks:0, FileInfo:C/C++, GHStars:, GHCommits:, SECURITY.md:NO, Corp:No
 
 ## Architecture
 
