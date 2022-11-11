@@ -9,14 +9,14 @@
 # Check the command line args
 #
 if [ $# -ne 3 ]; then
-   echo "usage: file_exists <host> <project> <file path>"
-   echo "       supported hosts: github, gitlab, bitbucket"
-   echo "           shortcuts: gh, gl, bb"
-   echo "       example: file_exists github openssl/openssl SECURITY.md"
-   echo "       example: file_exists github ory/examples SECURITY.md"
-   echo "       example: file_exists gitlab tortoisegit/tortoisegit SECURITY.md"
-   echo "       example: file_exists gitlab gnutls/gnutls SECURITY.md"
-   echo "       example: file_exists bitbucket swsc/lookup SECURITY.md"
+   echo "usage: file_exists <host> <project> <file path>" >&2
+   echo "       supported hosts: github, gitlab, bitbucket" >&2
+   echo "           shortcuts: gh, gl, bb" >&2
+   echo "       example: file_exists github openssl/openssl SECURITY.md" >&2
+   echo "       example: file_exists github ory/examples SECURITY.md" >&2
+   echo "       example: file_exists gitlab tortoisegit/tortoisegit SECURITY.md" >&2
+   echo "       example: file_exists gitlab gnutls/gnutls SECURITY.md" >&2
+   echo "       example: file_exists bitbucket swsc/lookup SECURITY.md" >&2
    exit 1
 fi
 
@@ -66,7 +66,7 @@ case $host in
         proj=`echo $proj | sed -e "s@/@%2F@"`
         filepath=`echo $filepath | sed -e "s@/@%2F@"`
         url="https://gitlab.com/api/v4/projects/$proj/repository/commits?path=$filepath&per_page=1"
-        #echo URL: $url
+        #echo URL: $url >&2
         response=$(curl -s "$url")
         if [[ "$response" = "[]" ]]; then
             echo No
@@ -76,7 +76,7 @@ case $host in
         ;;
     bitbucket|bb)
         url="https://api.bitbucket.org/2.0/repositories/$proj/commits/?path=$filepath&pagelen=1"
-        #echo "URL: $url"
+        #echo "URL: $url" >&2
         response=$(curl -s "$url")
         end=`echo "$response" | jq-linux64 -r '{commit: .values[].hash}'`
         if [[ "$end" = "" ]]; then
@@ -86,7 +86,7 @@ case $host in
         fi
         ;;
     *)
-        echo "Error: $host not supported, must be one of github, gitlab, or bitbucket"
+        echo "Error: $host not supported, must be one of github, gitlab, or bitbucket" >&2
         exit 1
 esac
 
