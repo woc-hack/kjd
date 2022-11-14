@@ -27,15 +27,26 @@ if [ $? -ne 0 ];then
     exit
 fi
 
+# This runs faster on da2 because home areas are on da2
+hostname=`uname -n`
+if [ ! "$hostname" = "da2.eecs.utk.edu" ]; then
+    echo "Note: $0 runs faster on da2 since that where home areas live"
+fi
+
+
 #
 # get phase 2 cache
 #
 echo "Getting Phase 2 cache"
 for dir in $(find $indir/CVE -name "CVE-*"); do 
     cve=$(basename $dir)
-    echo $cve
-    mkdir -p $outdir/CVE/$cve
-    cp $dir/cache.latest_rev $outdir/CVE/$cve
+    if [ -f $dir/cache.latest_rev ]; then
+        echo $cve
+        mkdir -p $outdir/CVE/$cve
+        cp $dir/cache.latest_rev $outdir/CVE/$cve
+    else
+        echo "$cve (no cache)"
+    fi
 done
 
 # The old way:
