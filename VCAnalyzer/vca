@@ -84,7 +84,7 @@ if [[ -z "${MAX_THREADS}" ]]; then
 else
     max_threads="${MAX_THREADS}"
 fi
-max_threads="32"
+echo "Running $max_threads processes in parallel"
 
 # Initialize the output directory
 if [ -d $outdir ]; then
@@ -288,6 +288,16 @@ call_phase_2 ()
 
 echo ""
 echo "======== Phase 2 Beginning"
+if [ ! "$hostname" = "da5.eecs.utk.edu" ]; then
+    # HACK to avoid ssh_exchange_identification errors
+    max_threads=4
+    echo "*** phase2 runs best on da5 ***"
+elif [[ -z "${MAX_THREADS}" ]]; then
+    max_threads="4"
+else
+    max_threads="${MAX_THREADS}"
+fi
+
 echo "To get the current status:"
 echo "  for file in \$(ls -1rt $outdir/CVE/*/phase2/log.status); do cat \$file; echo ''; done"
 
@@ -391,6 +401,10 @@ if [ ! "$hostname" = "da1.eecs.utk.edu" ]; then
     # HACK to avoid ssh_exchange_identification errors
     max_threads=4
     echo "*** phase3 runs best on da1 ***"
+elif [[ -z "${MAX_THREADS}" ]]; then
+    max_threads="4"
+else
+    max_threads="${MAX_THREADS}"
 fi
 
 echo "To get the current status:"
