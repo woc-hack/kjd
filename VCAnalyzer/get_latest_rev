@@ -141,6 +141,9 @@ case $host in
             #echo "$sha1"
             echo "$sha1;$html_url;$url"
         fi
+        if [ `echo $sha1 | wc -c` -ne 41 ]; then
+            exit 1
+        fi
         ;;
     gitlab|gitlab.com|gitlab.org|gl)
         proj=`echo $proj | sed -e "s@/@%2F@" -e "s@\.@%2E@g" -e "s@-@%2D@g" -e "s@_@%5F@g"`
@@ -158,7 +161,11 @@ case $host in
             exit 1
         fi
         sha1=`echo "$response" | jq-linux64 -r '{sha1: .blob_id}' | sed -e "s/sha1//" -e "s/[^0-9a-zA-Z]*//g" -e "/^$/d"`
+
         echo "$sha1;;$url"
+        if [ `echo $sha1 | wc -c` -ne 41 ]; then
+            exit 1
+        fi
         ;;
     bitbucket|bb)
         url="https://api.bitbucket.org/2.0/repositories/$proj/src/HEAD/$filepath"
@@ -167,6 +174,9 @@ case $host in
         sha1=`git hash-object tmpfile.$$`
         rm tmpfile.$$
         echo "$sha1;;$url"
+        if [ `echo $sha1 | wc -c` -ne 41 ]; then
+            exit 1
+        fi
         ;;
     *)
         echo "Error: host must be one of github, gitlab, or bitbucket;;"
