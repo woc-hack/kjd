@@ -480,7 +480,7 @@ for cve in $(ls -1rt $outdir/CVE/ | grep CVE-); do
         cat "$file" | sed -e "s/^/CVE:$cve, /" >> $outdir/final_report.csv
         if [ $header -eq 0 ]; then
             head -1 "$file2" | sed -e "s/^/CVE, /" >> $outdir/final_report_values.csv
-            header=0
+            header=1
         fi
         # print everthing but line 1 (the header)
         tail -n +2 "$file2" | sed -e "s/^/$cve, /" >> $outdir/final_report_values.csv
