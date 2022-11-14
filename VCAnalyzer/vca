@@ -472,11 +472,17 @@ echo "Creating Final Report"
 rm -f $outdir/final_report.csv \
       $outdir/final_report_values.csv \
       $outdir/final_failures.csv
+header=0
 for cve in $(ls -1rt $outdir/CVE/ | grep CVE-); do
     file="$outdir/CVE/$cve/report.csv" 
     file2="$outdir/CVE/$cve/report.values.csv" 
     if [ -f "$file" ]; then
         cat "$file" | sed -e "s/^/CVE:$cve, /" >> $outdir/final_report.csv
+        if [ $header -eq 0 ]; then
+            head -1 "$file2" | sed -e "s/^/CVE, /" >> $outdir/final_report_values.csv
+            header=0
+        fi
+        # print everthing but line 1 (the header)
         tail -n +2 "$file2" | sed -e "s/^/$cve, /" >> $outdir/final_report_values.csv
     else
         echo "$cve" >> $outdir/final_failures.csv
