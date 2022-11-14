@@ -23,6 +23,10 @@ if [[ $# -ne 3 ]]; then
    exit 1
 fi
 
+# currently only supports github/bitbucket/gitlab, exclude the rest
+excluded_platforms="gitorious|android.googlesource.com|salsa.debian.org|git.code.sf.net|sourceforge.net|git.kernel|bioconductor.org|drupal.org|drupal.com|git.eclipse.org|git.postgresql|git.savannah.gnu|gitlab.gnome.org|kde.org|repo.or.cz|salsa.debian.org"
+
+
 # This runs faster on da5 because it does not have to ssh da5
 hostname=`uname -n`
 if [ ! "$hostname" = "da5.eecs.utk.edu" ]; then
@@ -74,12 +78,12 @@ echo "Original Project = $orig_project"
 
 # Get all projects with good (fixed) blobs (_cb file also include commit and 
 # blob hashes)
-cat $phase1_dir/good_blobs.txt | ~/lookup/getValues -f b2c | awk -F\; '{ printf ("%s;%s\n", $2, $1) }' | ~/lookup/getValues -f c2P | egrep -v "gitorious|android.googlesource.com|salsa.debian.org|git.code.sf.net|git.kernel" | sort -u > $outdir/good_projs_cb.txt
+cat $phase1_dir/good_blobs.txt | ~/lookup/getValues -f b2c | awk -F\; '{ printf ("%s;%s\n", $2, $1) }' | ~/lookup/getValues -f c2P | egrep -v "$excluded_platforms" | sort -u > $outdir/good_projs_cb.txt
 cut -d \; -f 3 $outdir/good_projs_cb.txt | sort -u > $outdir/good_projs.txt
 
 
 # Get all projects with bad (vulnerable) blobs (_c file also include commit)
-cat $phase1_dir/bad_blobs.txt | ~/lookup/getValues -f b2c | awk -F\; '{ printf ("%s;%s\n", $2, $1) }' | ~/lookup/getValues -f c2P | egrep -v "gitorious|android.googlesource.com|salsa.debian.org|git.code.sf.net|git.kernel" | sort -u > $outdir/bad_projs_cb.txt
+cat $phase1_dir/bad_blobs.txt | ~/lookup/getValues -f b2c | awk -F\; '{ printf ("%s;%s\n", $2, $1) }' | ~/lookup/getValues -f c2P | egrep -v "$excluded_platforms" | sort -u > $outdir/bad_projs_cb.txt
 cut -d \; -f 3 $outdir/bad_projs_cb.txt | sort -u > $outdir/bad_projs.txt
 
 # comm.txt is all the projects that contain both vulnerable and fixed 
@@ -118,7 +122,7 @@ for line in $(cat $outdir/only_bad.txt); do
     # get the host platform (hp), like github.com or bitbucket.org
     hp=`echo $url | sed -e "s@https://@@" -e "s@\.com.*@@" -e "s@\.org.*@@"`
 
-    proj=`echo $line | sed -e "s@_@/@"`
+    proj=`echo $line | sed -e "s/bitbucket.org.//" | sed -e "s/gitlab.com.//" | sed -e "s@_@/@"`
     if [ -f $cache_file ]; then
         cache=$(grep "^$hp, $proj, $pathname" $cache_file | head -n 1)
     else
@@ -143,7 +147,8 @@ for line in $(cat $outdir/only_bad.txt); do
         fi
         latest_blob=`echo $rev | cut -d ';' -f 1`
         if [ `echo $latest_blob | wc -c` -ne 41 ]; then
-            echo "Error, can't find latest_blob ($rev)" | tee -a $error_log
+            echo "Error, can't find latest blob ($rev)" | tee -a $error_log
+            echo "    ./get_latest_rev $hp $proj $pathname" | tee -a $error_log
             #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
             echo "$hp, $proj, $pathname, $latest_blob" >> $local_cache
             continue
@@ -160,7 +165,7 @@ for line in $(cat $outdir/only_bad.txt); do
             continue
         fi
         if [ `echo $latest_blob | wc -c` -ne 41 ]; then
-            echo "Error in cache ($cache)" | tee -a $error_log
+            echo "Error in cache file $cache_file ($cache)" | tee -a $error_log
             latest_blob="-"
             continue
         fi
