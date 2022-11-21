@@ -8,6 +8,9 @@
 import sys
 import pymongo
 import bson
+import time
+
+cur_time = time.time()
 
 # output the csv data. if data is null, each value will be blank.
 def write_data(data):
@@ -34,7 +37,7 @@ def write_data(data):
             sys.stdout.write("1st=Last")
         elif ((first == 0) or (last == 0)):
             sys.stdout.write("Zero")
-        elif ((first> 1735707600) or (last > 1735707600)):
+        elif ((first > cur_time) or (last > cur_time)):
             sys.stdout.write("Future")
         else: 
             sys.stdout.write("OK")
