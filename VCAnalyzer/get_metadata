@@ -55,20 +55,6 @@ if [ $? -ne 0 ]; then
 fi
 
 #
-# get the gitlab API auth key(s) from ~/gitlab-auth
-#
-#if [ ! -f ~/gitlab-auth ]; then
-#    echo Error: missing ~/gitlab-auth file >&2
-#    echo ~/gitlab-auth must exists and contain gitlab API auth key or keys >&2
-#    echo 'Create keys at gitlab->User Settings>Access Tokens' >&2
-#    $(error_exit)
-#fi
-#mapfile -t auth_array < ~/gitlab-auth
-#len="${#auth_array[@]}"
-#i="$(($RANDOM % $len))"
-#glauth=${auth_array[$i]}
-
-#
 # Main body of script
 #
 
