@@ -39,6 +39,7 @@ else
 fi
 outdir="$1"
 data_file="$outdir/cvefixes.csv"
+start_time=`date +'%D %T'`
 
 # Make sure the input data file exists and do quick sanity check on the file
 if [ "$orig_data_file" == "" ]; then
@@ -84,7 +85,7 @@ if [[ -z "${MAX_THREADS}" ]]; then
 else
     max_threads="${MAX_THREADS}"
 fi
-echo "Running $max_threads processes in parallel"
+echo "Running up to $max_threads processes in parallel"
 
 # Initialize the output directory
 if [ -d $outdir ]; then
@@ -424,7 +425,7 @@ for cve_dir in $(ls -1 $outdir/CVE | grep CVE); do
 
     echo "-------- Phase 3: starting $cve (`date +"%D %T"`, $count of $num_entries )"
     if [ ! -f $outdir/CVE/$cve_dir/phase2/finished.success ]; then
-        echo "Skipping $cve because it failed in phase 2"
+        echo "Skipping $cve because it failed in phase 1 or 2"
         echo "-------- Phase 3: finished $cve (`date +"%D %T"`)"
         continue
     fi
@@ -505,5 +506,8 @@ echo "Final Summary:"
 echo "  $good Successes"
 echo "  $bad Failures"
 echo "  $total Total"
+echo ""
+echo "Started at  $start_time"
+echo "Finished at `date +'%D %T'`"
 
 exit 0
