@@ -3,8 +3,11 @@
 #
 # get_metadata: get the number of stars and number of commits in a remote repo.
 #    currently only supports github
+#    NOTE: no longer getting commits, can get that from WoC.
 # Also get if a project contains a SECURITY.md file.
 #    currently supports github, gitlab, and bitbucket.
+# Also get if a project is listed in enterprise_projects.txt as an 
+#    corporate supported project 
 #
 # Error output must always go to stderr
 # Output of the form GHStars:<value> must always be output to stdout.
@@ -30,7 +33,7 @@ error_status=0
 
 error_exit ()
 {
-    echo "GHStars:, GHCommits:"
+    echo "GHStars:, GHCommits:, SECURITY.md:, Corp:"
     exit 1
 }
 
@@ -81,6 +84,7 @@ case $host in
 
         # Get the number of commits
         num_commits=""
+if false; then  # don't need GHCommits, can get from WoC
         while true; do
             response=$(curl -s -k -I -L -H "Authorization: token $auth" "https://api.github.com/repos/$proj/commits?per_page=1")
             #http_code=`echo "$response" | head -n 1 | cut -d " " -f 2`
@@ -102,6 +106,7 @@ case $host in
             fi
             break
         done
+fi
 
         ;;
 #    gitlab|gl)
