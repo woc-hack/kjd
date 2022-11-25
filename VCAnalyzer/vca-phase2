@@ -107,8 +107,9 @@ touch $outdir/results.fixed.csv $outdir/results.notfixed.csv $outdir/results.unk
 # unknown (we know it is not fixed, because we are looking at only_bad.txt)
 #cache_file="./cache/latest_rev.global"
 cache_file="./cache/CVE/$cve/cache.latest_rev"
-local_cache="$dir/cache.latest_rev"
-rm -f "$local_cache"
+local_rev_cache="$dir/cache.latest_rev"
+local_cbpt_cache="$dir/cache.cbpt"  # commit, blob, path, time cache
+rm -f "$local_rev_cache" "$local_cbpt_cache"
 for line in $(cat $outdir/only_bad.txt); do
     commit=`grep $line $outdir/bad_projs_cb.txt | head -n 1 | cut -d\; -f 1`
     blob=`grep $line $outdir/bad_projs_cb.txt | head -n 1 | cut -d\; -f 2`
@@ -141,7 +142,7 @@ for line in $(cat $outdir/only_bad.txt); do
         latest_blob=`echo $cache | cut -d ',' -f 4 | xargs`
         if [ "$latest_blob" == "-" ]; then
             #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
-            echo "$hp, $proj, $pathname, -" >> $local_cache
+            echo "$hp, $proj, $pathname, -" >> $local_rev_cache
             echo "$latest_blob = -: $hp, $proj, $pathname" >> $outdir/skip_proj_ph2.txt
             # cache file shows not data available, skip this entry
             continue
@@ -152,7 +153,7 @@ for line in $(cat $outdir/only_bad.txt); do
             cache=""
         else
             #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
-            echo "$hp, $proj, $pathname, $latest_blob" >> $local_cache
+            echo "$hp, $proj, $pathname, $latest_blob" >> $local_rev_cache
         fi
     fi
     if [ "$cache" = "" ]; then
@@ -162,7 +163,7 @@ for line in $(cat $outdir/only_bad.txt); do
         if [ $? -ne 0 ]; then
             if [[ "$rev" == *"Not Found"* ]] || [[ "$rev" == *"Repository access blocked"* ]] || [[ "$rev" == *"This repository is empty"* ]]; then
                 #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
-                echo "$hp, $proj, $pathname, -" >> $local_cache
+                echo "$hp, $proj, $pathname, -" >> $local_rev_cache
                 echo "$rev: $hp, $proj, $pathname" >> $outdir/skip_proj_ph2.txt
                 continue
             fi
@@ -170,7 +171,7 @@ for line in $(cat $outdir/only_bad.txt); do
             echo "   ./get_latest_rev \"$hp\" \"$proj\" \"$pathname\"" | tee -a $warning_log
             echo "   $rev" | tee -a $warning_log
             #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
-            echo "$hp, $proj, $pathname, -" >> $local_cache
+            echo "$hp, $proj, $pathname, -" >> $local_rev_cache
             echo "$rev: $hp, $proj, $pathname" >> $outdir/skip_proj_ph2.txt
             continue
         fi
@@ -179,12 +180,12 @@ for line in $(cat $outdir/only_bad.txt); do
             echo "Error, can't find latest blob ($rev)" | tee -a $error_log
             echo "    ./get_latest_rev $hp $proj $pathname" | tee -a $error_log
             #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
-            echo "$hp, $proj, $pathname, $latest_blob" >> $local_cache
+            echo "$hp, $proj, $pathname, $latest_blob" >> $local_rev_cache
             echo "invalid blob ($latest_blob) $hp, $proj, $pathname" >> $outdir/skip_proj_ph2.txt
             continue
         fi
         #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
-        echo "$hp, $proj, $pathname, $latest_blob" >> $local_cache
+        echo "$hp, $proj, $pathname, $latest_blob" >> $local_rev_cache
     fi
 
     # get the date when the vulnerability was introduced
@@ -193,6 +194,8 @@ for line in $(cat $outdir/only_bad.txt); do
        time=`echo $tmp | ~/lookup/showCnt commit | cut -d \; -f 7 | awk -F\; '{ printf ("%s;%s\n", $1, strftime("%F:%T", $1)) }'`
         echo "$time;$tmp" >> $proj_info_dir/${line}_bad.txt
     done
+    mytime=$(echo $time | sed -e "s/;.*$//")
+    echo "$commit, $blob, $pathname, $mytime" >> $local_cbpt_cache
     sort -n $proj_info_dir/${line}_bad.txt > $proj_info_dir/${line}_bad_sorted.txt
     first_bad_blob_commit=`head -n 1 $proj_info_dir/${line}_bad_sorted.txt | cut -d\; -f3`
     first_bad_blob_commit_time=`head -n 1 $proj_info_dir/${line}_bad_sorted.txt | cut -d\; -f1`
@@ -228,6 +231,8 @@ for line in $(cat $outdir/comm.txt); do
        time=`echo $tmp | ~/lookup/showCnt commit | cut -d \; -f 7 | awk -F\; '{ printf ("%s;%s\n", $1, strftime("%F:%T", $1)) }'`
         echo "$time;$tmp" >> $proj_info_dir/${line}_good.txt
     done
+    mytime=$(echo $time | sed -e "s/;.*$//")
+    echo "$commit, , , $mytime" >> $local_cbpt_cache
     grep $line $outdir/bad_projs_cb.txt > $outdir/tmpfile
     for tmp in $(cat $outdir/tmpfile); do
        time=`echo $tmp | ~/lookup/showCnt commit | cut -d \; -f 7 | awk -F\; '{ printf ("%s;%s\n", $1, strftime("%F:%T", $1)) }'`
