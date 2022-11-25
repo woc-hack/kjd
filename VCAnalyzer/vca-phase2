@@ -118,24 +118,52 @@ for line in $(cat $outdir/only_bad.txt); do
         pathname=`echo $commit | ssh da5 ~/lookup/showCmtTree.perl | grep ";$blob" | head -n 1 | cut -d\; -f 3`
     fi
  
+    if [[ "$pathname" == *","* ]]; then
+        echo "Pathname contains a comma: $pathname" | tee -a $warning_log
+        echo "Pathname contains a comma: $pathname" >> $outdir/skip_proj_ph2.txt
+        continue
+    fi
+
     url=`./toUrl $line`
     # get the host platform (hp), like github.com or bitbucket.org
     hp=`echo $url | sed -e "s@https://@@" -e "s@\.com.*@@" -e "s@\.org.*@@"`
 
     proj=`echo $line | sed -e "s/bitbucket.org.//" | sed -e "s/gitlab.com.//" | sed -e "s@_@/@"`
+    #echo "CACHE: checking cache for $proj" >&2
     if [ -f $cache_file ]; then
-        cache=$(grep "^$hp, $proj, $pathname" $cache_file | head -n 1)
+        cache=$(grep "^$hp, $proj, $pathname" $cache_file | head -n 1 | sed -e "s/;.*$//")
     else
         cache=""
     fi
+    if [ "$cache" != "" ]; then
+        # cache hit, use info from cache. use xargs to remove leading spaces.
+        #echo "CACHE HIT, $dir: $hp, $proj, $pathname" >&2
+        latest_blob=`echo $cache | cut -d ',' -f 4 | xargs`
+        if [ "$latest_blob" == "-" ]; then
+            #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
+            echo "$hp, $proj, $pathname, -" >> $local_cache
+            echo "$latest_blob = -: $hp, $proj, $pathname" >> $outdir/skip_proj_ph2.txt
+            # cache file shows not data available, skip this entry
+            continue
+        elif [ `echo $latest_blob | wc -c` -ne 41 ]; then
+            echo "Error in cache file $cache_file ($cache)" | tee -a $error_log
+            echo "Error in cache file $cache_file ($cache)" >> $outdir/skip_proj_ph2.txt
+            # set cache to "" so that it will act like a cache miss on error
+            cache=""
+        else
+            #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
+            echo "$hp, $proj, $pathname, $latest_blob" >> $local_cache
+        fi
+    fi
     if [ "$cache" = "" ]; then
         # not in the cache, go get it.
-        #echo "CACHE MISS, $dir: $hp, $proj, $pathname" >&2
+        #echo "CACHE MISS (`date +'%D %T'`), $dir: $hp, $proj, $pathname" >&2
         rev=`./get_latest_rev $hp $proj "$pathname"`
         if [ $? -ne 0 ]; then
-            if [[ "$rev" == *"Not Found"* ]] || [[ "$rev" == *"Repository access blocked"* ]]; then
+            if [[ "$rev" == *"Not Found"* ]] || [[ "$rev" == *"Repository access blocked"* ]] || [[ "$rev" == *"This repository is empty"* ]]; then
                 #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
                 echo "$hp, $proj, $pathname, -" >> $local_cache
+                echo "$rev: $hp, $proj, $pathname" >> $outdir/skip_proj_ph2.txt
                 continue
             fi
             echo "Error: get_latest_rev failed:" | tee -a $warning_log
@@ -143,6 +171,7 @@ for line in $(cat $outdir/only_bad.txt); do
             echo "   $rev" | tee -a $warning_log
             #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
             echo "$hp, $proj, $pathname, -" >> $local_cache
+            echo "$rev: $hp, $proj, $pathname" >> $outdir/skip_proj_ph2.txt
             continue
         fi
         latest_blob=`echo $rev | cut -d ';' -f 1`
@@ -151,22 +180,7 @@ for line in $(cat $outdir/only_bad.txt); do
             echo "    ./get_latest_rev $hp $proj $pathname" | tee -a $error_log
             #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
             echo "$hp, $proj, $pathname, $latest_blob" >> $local_cache
-            continue
-        fi
-        #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
-        echo "$hp, $proj, $pathname, $latest_blob" >> $local_cache
-    else
-        # cache hit, use info from cache. use xargs to remove leading spaces.
-        #echo "CACHE HIT, $dir: $hp, $proj, $pathname" >&2
-        latest_blob=`echo $cache | cut -d ',' -f 4 | xargs`
-        if [ "$latest_blob" == "-" ]; then
-            #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
-            echo "$hp, $proj, $pathname, -" >> $local_cache
-            continue
-        fi
-        if [ `echo $latest_blob | wc -c` -ne 41 ]; then
-            echo "Error in cache file $cache_file ($cache)" | tee -a $error_log
-            latest_blob="-"
+            echo "invalid blob ($latest_blob) $hp, $proj, $pathname" >> $outdir/skip_proj_ph2.txt
             continue
         fi
         #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
