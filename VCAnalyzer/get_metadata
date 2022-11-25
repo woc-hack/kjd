@@ -65,9 +65,7 @@ case $host in
         while true; do
             response=$(curl -s -L -H "Authorization: token $auth" "https://api.github.com/repos/$proj")
            if [[ $response = *"rate limit exceeded"* ]]; then
-              # wait minute then try again
-              echo "Rate limit exceeded in get_metadata, sleeping 60" >&2
-              sleep 60
+              ./rate_limit_pause $auth get_metadata >&2
               continue
            fi 
            num_stars=$(echo "$response" | $JQ ".stargazers_count")
@@ -92,8 +90,7 @@ case $host in
                 echo "   ./get_metadata $1 $2" >&2
                 error_status=1
             elif [[ "$response" = *"x-ratelimit-remaining: 0"* ]] || [[ "$response" = *"X-RateLimit-Remaining: 0"* ]]; then
-                echo "Rate limit exceeded in get_metadata, sleep 60" >&2
-                sleep 60
+                ./rate_limit_pause $auth get_metadata >&2
             else
                 num_commits=`echo "$response" | sed -n '/^[Ll]ink:/ s/.*"next".*page=\([0-9]*\).*"last".*/\1/p'`
                if ! [[ $num_commits =~ ^\ *[0-9]+\ *$ ]]; then 
