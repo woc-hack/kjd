@@ -62,23 +62,29 @@ fi
 #
 case $host in
     github|github.com|gh)
-        #First, check the github rate limit and pause if we are over the limit.
-        ./rate_limit_pause $auth $0  >&2
-
         # Get sha1 hash of file
         url="https://api.github.com/repos/$proj/contents/$urle_filepath"
         #url="https://api.github.com/repos/$proj/commits?path=$urle_filepath&page=1&per_page=1"
 
-        response=$(curl -s -L -H "Authorization: token $auth" "$url")
-        # validate the response
-        echo "$response" | jq-linux64 empty
-        if [ $? -ne 0 ]; then
-            echo "Error: jq reports invalid json in response" >&2
-            echo "URL = $url" >&2
-            echo "$response"  >&2
-            echo "Error: jq reports invalid json in response;;"
-            exit 1
-        fi
+        while true; do
+            response=$(curl -s -L -H "Authorization: token $auth" "$url")
+            # validate the response
+            echo "$response" | jq-linux64 empty
+            if [ $? -ne 0 ]; then
+                echo "Error: jq reports invalid json in response" >&2
+                echo "URL = $url" >&2
+                echo "$response"  >&2
+                echo "Error: jq reports invalid json in response;;"
+                exit 1
+            fi
+
+            if [[ $response = *"rate limit exceeded"* ]]; then
+                ./rate_limit_pause $auth $0 >&2
+                continue
+            fi
+            break
+        done
+
         sha1=`echo "$response" | jq-linux64 -r '{sha1: .sha}' | sed -e "s/sha1//" -e "s/[^0-9a-zA-Z]*//g" -e "/^$/d"`
         html_url=`echo "$response" | jq-linux64 -r '{html_url: .html_url}' | sed -e "s/ *\"html_url\": *//" -e 's/[\{\}\"]//g' -e "/^$/d"`
         message=`echo "$response" | jq-linux64 -r '{message: .message}' | sed -e "s/message//" -e "s/[^0-9a-zA-Z \-]*//g" -e "/^$/d" -e "s/^ *//"`
