@@ -55,12 +55,12 @@ if [ -f "$phase2_dir/results.csv" ]; then
         project_slash=$(echo $project | sed -e "s@_@/@")
         project_url=$(./toUrl $project | sed -e "s@https?*://@@")
 
-        # check to see if the project still exists and is publicly accessible 
-        if ! curl --output /dev/null --silent --head --fail "https://$project_url"; then
-            echo "https://$project_url" >> $outdir/not-accessible.txt
-            echo "curl --output /dev/null --silent --head --fail https://$project_url" >> $outdir/not-accessible.txt
-            continue
-        fi
+#        # check to see if the project still exists and is publicly accessible 
+#        if ! curl --output /dev/null --silent --head --fail -L "https://$project_url"; then
+#            echo "https://$project_url" >> $outdir/not-accessible.txt
+#            echo "curl --output /dev/null --silent --head --fail -L https://$project_url" >> $outdir/not-accessible.txt
+#            continue
+#        fi
 
 
         platform=`echo $project_url | sed -e "s@https?*://@@" -e "s/\.com.*$//" -e "s/\.org.*$//"`
