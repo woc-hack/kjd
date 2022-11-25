@@ -6,14 +6,19 @@
 #
 
 # Check the command line args
+prog_name=""
 if [[ $# -eq 1 ]]; then
     auth="$1"
     verbose=""
 elif [[ $# -eq 2 ]]; then
     auth="$1"
-    verbose="$2"
+    prog_name=" ($2)"
+elif [[ $# -eq 2 ]]; then
+    auth="$1"
+    prog_name=" ($2)"
+    verbose="$3"
 else
-    echo "usage: $0 <github auth key>" >&2
+    echo "usage: $0 <github auth key> [<program name>]" >&2
     exit 1
 fi
 
@@ -72,7 +77,7 @@ fi
 # pause if we have reached the rate limit
 if [ "$rate_remain" -lt "10" ]; then  # 10 since running in parallel
     t=`date "+%T"`
-    echo "Rate limit exceeded, sleeping $time_left (from $t)" >&2
+    echo "Rate limit exceeded$prog_name, sleeping $time_left (from $t)" >&2
     sleep $seconds_left
     ran=`echo $((1 + $RANDOM % 10))`
     sleep $ran # so all threads don't start back at the same time
