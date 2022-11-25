@@ -81,9 +81,7 @@ case $host in
             #echo $url
             response=$(curl -s -L -H "Authorization: token $auth" "$url")
             if [[ $response = *"rate limit exceeded"* ]]; then
-                # wait minute then try again 
-                echo "Rate limit exceeded in rgitlog, sleeping 60" >&2
-                sleep 60
+                ./rate_limit_pause $auth rgitlog >&2
                 page=$((page - 1))
                 continue
             elif [[ "$response" = "$empty" ]]; then
