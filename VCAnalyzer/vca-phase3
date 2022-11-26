@@ -14,6 +14,7 @@ fi
 dir="$1"
 outdir="$dir/phase3"
 error_log=$outdir/log.error
+warning_log=$outdir/log.warning
 phase2_dir="$dir/phase2"
 mydir="$(pwd)"
 hostname=`uname -n`
@@ -47,6 +48,7 @@ cve=`cut -d\; -f 1 $dir/input_line`
 # Create the final results file
 pcache_file="./cache/p_metadata.global"
 mcache_file="./cache/m_metadata.global"
+rm -f $dir/cache.p_metadata $dir/cache.m_metadata
 if [ -f "$phase2_dir/results.csv" ]; then
     OLDIFS=$IFS
     IFS=$'\n'
@@ -55,12 +57,17 @@ if [ -f "$phase2_dir/results.csv" ]; then
         project_slash=$(echo $project | sed -e "s@_@/@")
         project_url=$(./toUrl $project | sed -e "s@https?*://@@")
 
-#        # check to see if the project still exists and is publicly accessible 
-#        if ! curl --output /dev/null --silent --head --fail -L "https://$project_url"; then
-#            echo "https://$project_url" >> $outdir/not-accessible.txt
-#            echo "curl --output /dev/null --silent --head --fail -L https://$project_url" >> $outdir/not-accessible.txt
-#            continue
-#        fi
+        # check to see if the project still exists and is publicly accessible 
+        if ! curl --output /dev/null --silent --head --fail -L "https://$project_url"; then
+            echo "not-accessible: https://$project_url" | tee -a $warning_log 
+            echo "https://$project_url" >> $outdir/not-accessible.txt
+            echo "curl --output /dev/null --silent --head --fail -L https://$project_url" >> $outdir/not-accessible.txt
+            # The curl command above sometimes fails, even for projects that
+            # exist. For that reason, the continue line below is commented 
+            # out. Phase 2 should filter out not-available projects, but
+            # sometimes does not.
+            #continue
+        fi
 
 
         platform=`echo $project_url | sed -e "s@https?*://@@" -e "s/\.com.*$//" -e "s/\.org.*$//"`
