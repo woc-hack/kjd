@@ -14,6 +14,15 @@
 #   <value> is a number or else is blank.
 
 #
+# on error, print empty fields
+#
+error_exit ()
+{
+    echo "GHStars:, GHCommits:, SECURITY.md:, Corp:"
+    exit 1
+}
+
+#
 # Check the command line args
 #
 if [ $# -ne 2 ]; then
@@ -24,18 +33,12 @@ if [ $# -ne 2 ]; then
    echo "       example: get_metadata github ory/examples" >&2
    echo "       example: get_metadata gitlab tortoisegit/tortoisegit" >&2
    echo "       example: get_metadata bitbucket swsc/lookup" >&2
-   exit 1
+   $(error_exit)
 fi
 
 host=$1
 proj=$2
 error_status=0
-
-error_exit ()
-{
-    echo "GHStars:, GHCommits:, SECURITY.md:, Corp:"
-    exit 1
-}
 
 #
 # Use jq-linux64 if available, otherwise use jq
@@ -54,7 +57,7 @@ fi
 #
 auth=$(./get_github_authkey)
 if [ $? -ne 0 ]; then
-    exit 1
+    $(error_exit)
 fi
 
 #
