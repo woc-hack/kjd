@@ -144,10 +144,13 @@ for line in $(cat $outdir/only_bad.txt); do
             #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
             echo "$hp, $proj, $pathname, -" >> $local_rev_cache
             echo "$latest_blob = -: $hp, $proj, $pathname" >> $outdir/skip_proj_ph2.txt
-            # cache file shows not data available, skip this entry
-            continue
+            # cache file shows no data available, skip this entry
+            cache=""  
+            # for now, if cache says project not available, try again
+            # uncomment the continue below to accept that it is not available
+            #continue
         elif [ `echo $latest_blob | wc -c` -ne 41 ]; then
-            echo "Error in cache file $cache_file ($cache)" | tee -a $error_log
+            echo "Error in cache file $cache_file ($cache)" | tee -a $warning_log
             echo "Error in cache file $cache_file ($cache)" >> $outdir/skip_proj_ph2.txt
             # set cache to "" so that it will act like a cache miss on error
             cache=""
@@ -177,8 +180,8 @@ for line in $(cat $outdir/only_bad.txt); do
         fi
         latest_blob=`echo $rev | cut -d ';' -f 1`
         if [ `echo $latest_blob | wc -c` -ne 41 ]; then
-            echo "Error, can't find latest blob ($rev)" | tee -a $error_log
-            echo "    ./get_latest_rev $hp $proj $pathname" | tee -a $error_log
+            echo "Error, can't find latest blob ($rev)" | tee -a $warning_log
+            echo "    ./get_latest_rev $hp $proj $pathname" | tee -a $warning_log
             #echo "CACHE WRITING: $hp, $proj, $pathname"  >&2
             echo "$hp, $proj, $pathname, $latest_blob" >> $local_rev_cache
             echo "invalid blob ($latest_blob) $hp, $proj, $pathname" >> $outdir/skip_proj_ph2.txt
