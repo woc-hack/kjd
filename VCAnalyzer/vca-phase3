@@ -59,16 +59,14 @@ if [ -f "$phase2_dir/results.csv" ]; then
 
         # check to see if the project still exists and is publicly accessible 
         if ! curl --output /dev/null --silent --head --fail -L "https://$project_url"; then
-            echo "not-accessible: https://$project_url" | tee -a $warning_log 
-            echo "https://$project_url" >> $outdir/not-accessible.txt
-            echo "curl --output /dev/null --silent --head --fail -L https://$project_url" >> $outdir/not-accessible.txt
-            # The curl command above sometimes fails, even for projects that
-            # exist. For that reason, the continue line below is commented 
-            # out. Phase 2 should filter out not-available projects, but
-            # sometimes does not.
-            #continue
+            # retry if the first one failed
+            if ! curl --output /dev/null --silent --head --fail -L "https://$project_url"; then
+                echo "not-accessible: https://$project_url" | tee -a $warning_log 
+                echo "https://$project_url" >> $outdir/not-accessible.txt
+                echo "    curl --output /dev/null --silent --head --fail -L https://$project_url" >> $outdir/not-accessible.txt
+                continue
+            fi
         fi
-
 
         platform=`echo $project_url | sed -e "s@https?*://@@" -e "s/\.com.*$//" -e "s/\.org.*$//"`
 
