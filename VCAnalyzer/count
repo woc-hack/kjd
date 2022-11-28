@@ -19,11 +19,15 @@ find . -path "*/phase2/finished.failure" | wc -l
 echo -n "  Number of projects in bad_projs.txt files:"
 find . -name bad_projs.txt -exec wc -l {} \; | sort -n > x3.tmp
 cat x3.tmp | awk '{ sum += $1 } END { print sum }'
+echo "    results in x3.tmp"
 echo -n "  Number of projects in comm.txt files:"
 find . -name comm.txt -exec wc -l {} \; | sort -n > x4.tmp
+cat x4.tmp | awk '{ sum += $1 } END { print sum }'
 echo "    results in x4.tmp"
-echo -n "  Number of lines in results.csv files:"
-find . -name results.csv -exec wc -l {} \; | awk '{ sum += $1 } END { print sum }'
+echo -n "  Number of lines (projects) in results.csv files:"
+find . -name results.csv -exec wc -l {} \; | sort -n > x5.tmp
+cat x5.tmp | awk '{ sum += $1 } END { print sum }'
+echo "    results in x5.tmp"
 
 echo Phase 3:
 echo -n "  Success = "
@@ -39,15 +43,19 @@ echo "    results in x1.tmp"
 
 echo Final:
 echo -n "    Total (number of projects in xfinal_report.csv files):"
-wc -l xfinal_report.csv
+cat xfinal_report.csv | wc -l 
 
-echo -n "    Total (in final_filter0.csv)"
+echo -n "    Number that have 0 cloned projects:"
+find . -name report.csv -exec wc -l {} \; | grep ^0 | wc -l
+
+
+echo -n "    Total (in final_filter0.csv): "
 tail -n +2 final_filter0.csv | cut -d , -f 1 | sort | uniq -c |sort -n > x2.tmp
 cat x2.tmp | awk '{ sum += $1 } END { print sum }'
 echo "    results in x2.tmp"
 
-echo -n "    Total numCommits >= 10 (in final_filter1.csv)"
-tail -n +2 final_filter1.csv | cut -d , -f 1 | sort | uniq -c |sort -n | awk '{ sum += $1 } END { print sum }'
+echo -n "    Total numCommits >= 10 (in final_filter_commits10.csv): "
+tail -n +2 final_filter_commits10.csv | cut -d , -f 1 | sort | uniq -c |sort -n | awk '{ sum += $1 } END { print sum }'
 
 
 exit
