@@ -1,0 +1,73 @@
+#! /bin/bash
+
+if [ ! -d CVE ]; then
+    echo Error: must run in a vca output directory like out.11.14
+    exit;
+fi
+
+echo Phase 1:
+echo -n "  Success = "
+find . -path "*/phase1/finished.success" | wc -l
+echo -n "  Failure = "
+find . -path "*/phase1/finished.failure" | wc -l
+
+echo Phase 2:
+echo -n "  Success = "
+find . -path "*/phase2/finished.success" | wc -l
+echo -n "  Failure = "
+find . -path "*/phase2/finished.failure" | wc -l
+echo -n "  Number of projects in bad_projs.txt files:"
+find . -name bad_projs.txt -exec wc -l {} \; | sort -n > x3.tmp
+cat x3.tmp | awk '{ sum += $1 } END { print sum }'
+echo -n "  Number of projects in comm.txt files:"
+find . -name comm.txt -exec wc -l {} \; | sort -n > x4.tmp
+echo "    results in x4.tmp"
+echo -n "  Number of lines in results.csv files:"
+find . -name results.csv -exec wc -l {} \; | awk '{ sum += $1 } END { print sum }'
+
+echo Phase 3:
+echo -n "  Success = "
+find . -path "*/phase3/finished.success" | wc -l
+echo -n "  Failure = "
+find . -path "*/phase3/finished.failure" | wc -l
+echo -n "  Number of report.csv files:"
+find . -name report.csv | wc -l
+echo -n "  Number of projects in report.csv files:"
+find . -name report.csv -exec wc -l {} \; | sort -n > x1.tmp
+cat x1.tmp | awk '{ sum += $1 } END { print sum }'
+echo "    results in x1.tmp"
+
+echo Final:
+echo -n "    Total (number of projects in xfinal_report.csv files):"
+wc -l xfinal_report.csv
+
+echo -n "    Total (in final_filter0.csv)"
+tail -n +2 final_filter0.csv | cut -d , -f 1 | sort | uniq -c |sort -n > x2.tmp
+cat x2.tmp | awk '{ sum += $1 } END { print sum }'
+echo "    results in x2.tmp"
+
+echo -n "    Total numCommits >= 10 (in final_filter1.csv)"
+tail -n +2 final_filter1.csv | cut -d , -f 1 | sort | uniq -c |sort -n | awk '{ sum += $1 } END { print sum }'
+
+
+exit
+
+find . -name bad_projs.txt -exec wc -l {} \; > x
+sort -u x > y
+sort -n y > z
+cat y | awk '{ sum += $1 } END { print sum }'
+
+#find . -name good_projs.txt -exec wc -l {} \; -or -name bad_projs.txt -exec wc -l {} \; | awk '{ sum += $1 } END { print sum }'
+
+
+
+exit
+
+find . -name bad_projs.txt -exec wc -l {} \; > x
+sort -u x > y
+sort -n y > z
+cat y | awk '{ sum += $1 } END { print sum }'
+
+#find . -name good_projs.txt -exec wc -l {} \; -or -name bad_projs.txt -exec wc -l {} \; | awk '{ sum += $1 } END { print sum }'
+
+
