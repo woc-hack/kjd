@@ -307,7 +307,7 @@ count=0
 num_entries=`ls -1 $outdir/CVE | grep CVE | wc -l`
 
 # Walk through each of the CVEs that passed phase 1
-for cve_dir in $(ls -1 $outdir/CVE | grep CVE); do
+for cve_dir in $(ls -1 $outdir/CVE | grep CVE | sort -r); do
     count=$((count+1))
     working_dir="$outdir/CVE/$cve_dir"
 
@@ -416,7 +416,7 @@ count=0
 num_entries=`ls -1 $outdir/CVE | grep CVE | wc -l`
 
 # Walk through each of the CVEs that passed phase 2
-for cve_dir in $(ls -1 $outdir/CVE | grep CVE); do
+for cve_dir in $(ls -1 $outdir/CVE | grep CVE | sort -r); do
     count=$((count+1))
     working_dir="$outdir/CVE/$cve_dir"
 
