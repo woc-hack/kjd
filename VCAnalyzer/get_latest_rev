@@ -36,18 +36,10 @@ filepath=$3
 urle_filepath=`echo $filepath | sed 's/ /%20/g'`    # url-encoded filepath
 
 # validate filepath
-#echo PATH = $filepath
-#LC_CTYPE=C
-#case $filepath in
-#  *[![:cntrl:][:print:]]*) echo "Contain Non-ASCII";;
-#esac
-#if [[ $filepath = *[![:ascii:]]* ]]; then
-#    echo Error: pathname contains non-ascii characters, which get_latest_rev can't handle:
-#    echo "    $pathname"
-#    exit 1
-#fi
-
-
+if [[ $filepath = *[![:ascii:]]* ]]; then
+    echo "non-ascii characters;;"
+    exit 1
+fi
 
 #
 # get the github API auth key(s) from ~/github-auth
