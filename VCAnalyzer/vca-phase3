@@ -18,7 +18,7 @@ warning_log=$outdir/log.warning
 phase2_dir="$dir/phase2"
 mydir="$(pwd)"
 hostname=`uname -n`
-if [ "$hostname" = "da1.eecs.utk.edu" ]; then
+if [ ! "$hostname" = "da1.eecs.utk.edu" ]; then
     echo "Note: $0 runs faster on da1" 
 fi
 
@@ -92,7 +92,8 @@ if [ -f "$phase2_dir/results.csv" ]; then
 
         if [ "$cache" = "" ]; then
             #echo "CACHE MISS-m_metadata: $project"  >&2
-            if [ "$hostname" = "da1.eecs.utk.edu" ]; then
+            # pymongo is only on da1 and da0. mongo db lives on da1
+            if [ "$hostname" = "da1.eecs.utk.edu" ] || [ "$hostname" = "da0.eecs.utk.edu" ]; then
                 mdata=$(./get_meta_from_mongo.py "$project")
             else
                 mdata=$(ssh da1 $mydir/get_meta_from_mongo.py "$project")
