@@ -1,0 +1,12 @@
+# see how many phase 3 processes are still running
+
+count=0
+for cve in $(ps -ef | grep vca-phase3 | grep -v grep | sed -e "s/  */ /g" | cut -d " " -f 10 | sort -u); do
+    echo "**** $cve"
+    wc -l $cve/report.csv
+    wc -l $cve/phase2/results.csv
+    count=$((count + 1))
+done
+
+echo ""
+echo "$count phase 3 processes running"

@@ -1,0 +1,133 @@
+# see how many phase 2 processes are still running
+
+count=0
+for cve in $(ps -ef | grep vca-phase2 | grep -v grep | sed -e "s/  */ /g" | cut -d " " -f 10 | sort -u); do
+    echo "**** $cve"
+    result=$(wc -l $cve/phase2/*.csv | grep total | sed -e "s/ total//" -e "s/^ *//")
+    skip=`cat $cve/phase2/skip_proj_ph2.txt | wc -l`
+    total=$((result + skip))
+    echo "$total in progress (result = $result, skip = $skip)"
+    wc -l $cve/phase2/only_bad.txt
+    wc -l $cve/phase2/comm.txt
+    count=$((count + 1))
+done
+echo ""
+echo $count phase2 processes still running
+
+exit
+
+
+# wc -l out.11.14/CVE/CVE-2022-24785/phase2/*.csv
+# wc -l out.11.14/CVE/CVE-2022-31129/phase2/*.csv
+wc -l out.11.14/CVE/CVE-2021-3807/phase2/*.csv
+  wc -l out.11.14/CVE/CVE-2021-3807/phase2/only_bad.txt
+  wc -l out.11.14/CVE/CVE-2021-3807/phase2/comm.txt
+  echo ""
+# 114237  wc -l out.11.14/CVE/CVE-2021-32640/phase2/*.csv
+
+wc -l out.11.14//CVE/CVE-2019-13173/phase2/*.csv
+  wc -l out.11.14//CVE/CVE-2019-13173/phase2/only_bad.txt
+  wc -l out.11.14//CVE/CVE-2019-13173/phase2/comm.txt
+  echo ""
+# wc -l out.11.14//CVE/CVE-2019-17426/phase2/*.csv
+wc -l out.11.14//CVE/CVE-2020-36048/phase2/*.csv
+wc -l out.11.14//CVE/CVE-2020-36049/phase2/*.csv
+wc -l out.11.14//CVE/CVE-2020-7733/phase2/*.csv
+#wc -l out.11.14//CVE/CVE-2020-7760/phase2/*.csv
+wc -l out.11.14//CVE/CVE-2020-7793/phase2/*.csv
+wc -l out.11.14//CVE/CVE-2021-23362/phase2/*.csv
+wc -l out.11.14//CVE/CVE-2021-23386/phase2/*.csv
+wc -l out.11.14//CVE/CVE-2021-27292/phase2/*.csv
+wc -l out.11.14//CVE/CVE-2021-23438/phase2/*.csv
+#wc -l out.11.14//CVE/CVE-2021-29060/phase2/*.csv
+
+# killed (cache problem) wc -l out.11.14//CVE/CVE-2013-7223/phase2/*.csv
+
+exit
+
+**** out.11.14/CVE/CVE-2020-36049
+179848 out.11.14/CVE/CVE-2020-36049/phase2/only_bad.txt
+11436 out.11.14/CVE/CVE-2020-36049/phase2/comm.txt
+**** out.11.14/CVE/CVE-2021-23362
+310369 out.11.14/CVE/CVE-2021-23362/phase2/only_bad.txt
+33 out.11.14/CVE/CVE-2021-23362/phase2/comm.txt
+**** out.11.14/CVE/CVE-2021-23386
+163049 out.11.14/CVE/CVE-2021-23386/phase2/only_bad.txt
+0 out.11.14/CVE/CVE-2021-23386/phase2/comm.txt
+**** out.11.14/CVE/CVE-2021-23438
+256500 out.11.14/CVE/CVE-2021-23438/phase2/only_bad.txt
+0 out.11.14/CVE/CVE-2021-23438/phase2/comm.txt
+**** out.11.14/CVE/CVE-2021-3807
+847123 out.11.14/CVE/CVE-2021-3807/phase2/only_bad.txt
+0 out.11.14/CVE/CVE-2021-3807/phase2/comm.txt
+**** out.veryshort1/CVE/CVE-2013-7223
+248489 out.veryshort1/CVE/CVE-2013-7223/phase2/only_bad.txt
+3 out.veryshort1/CVE/CVE-2013-7223/phase2/comm.txt
+**** out.veryshort1/CVE/CVE-2013-7223
+248489 out.veryshort1/CVE/CVE-2013-7223/phase2/only_bad.txt
+3 out.veryshort1/CVE/CVE-2013-7223/phase2/comm.txt
+
+**** out.11.14/CVE/CVE-2019-10913
+42681 out.11.14/CVE/CVE-2019-10913/phase2/results.csv
+**** out.11.14/CVE/CVE-2021-32640
+114237 out.11.14/CVE/CVE-2021-32640/phase2/results.csv
+**** out.11.14/CVE/CVE-2021-3749
+85002 out.11.14/CVE/CVE-2021-3749/phase2/results.csv
+**** out.11.14/CVE/CVE-2021-3777
+59918 out.11.14/CVE/CVE-2021-3777/phase2/results.csv
+
+check.2:  143258 out.11.14/CVE/CVE-2022-24785/phase2/results.csv
+check.2:  143334 out.11.14/CVE/CVE-2022-31129/phase2/results.csv
+check.2:   99346 out.11.14//CVE/CVE-2019-17426/phase2/results.csv
+check.2:   71057 out.11.14//CVE/CVE-2020-7760/phase2/results.csv
+check.2:   56857 out.11.14//CVE/CVE-2021-29060/phase2/results.csv
+
+
+Top 6:
+**** out.11.14/CVE/CVE-2019-13173
+217239 out.11.14/CVE/CVE-2019-13173/phase2/only_bad.txt
+1743 out.11.14/CVE/CVE-2019-13173/phase2/comm.txt
+**** out.11.14/CVE/CVE-2020-36049
+179848 out.11.14/CVE/CVE-2020-36049/phase2/only_bad.txt
+11436 out.11.14/CVE/CVE-2020-36049/phase2/comm.txt
+**** out.11.14/CVE/CVE-2021-23362
+310369 out.11.14/CVE/CVE-2021-23362/phase2/only_bad.txt
+33 out.11.14/CVE/CVE-2021-23362/phase2/comm.txt
+**** out.11.14/CVE/CVE-2021-23386
+163049 out.11.14/CVE/CVE-2021-23386/phase2/only_bad.txt
+0 out.11.14/CVE/CVE-2021-23386/phase2/comm.txt
+**** out.11.14/CVE/CVE-2021-23438
+256500 out.11.14/CVE/CVE-2021-23438/phase2/only_bad.txt
+0 out.11.14/CVE/CVE-2021-23438/phase2/comm.txt
+**** out.11.14/CVE/CVE-2021-3807
+847123 out.11.14/CVE/CVE-2021-3807/phase2/only_bad.txt
+0 out.11.14/CVE/CVE-2021-3807/phase2/comm.txt
+
+
+Top 3
+33 out.11.14/CVE/CVE-2021-23362/phase2/comm.txt
+**** out.11.14/CVE/CVE-2021-23438
+249661 in progress (result = 161531, skip = 88130)
+256500 out.11.14/CVE/CVE-2021-23438/phase2/only_bad.txt
+0 out.11.14/CVE/CVE-2021-23438/phase2/comm.txt
+**** out.11.14/CVE/CVE-2021-3807
+265516 in progress (result = 142753, skip = 122763)
+847123 out.11.14/CVE/CVE-2021-3807/phase2/only_bad.txt
+0 out.11.14/CVE/CVE-2021-3807/phase2/comm.txt
+
+Maybe #4?
+**** out.veryshort1/CVE/CVE-2013-7223
+123574 in progress (result = 73457, skip = 50117)
+248489 out.veryshort1/CVE/CVE-2013-7223/phase2/only_bad.txt
+3 out.veryshort1/CVE/CVE-2013-7223/phase2/comm.txt
+
+Top 3 pahse 3:
+114237 out.11.14/CVE/CVE-2021-32640/phase2/results.csv
+58451 out.11.14/CVE/CVE-2021-32640/report.csv
+**** out.11.14/CVE/CVE-2021-3749
+85002 out.11.14/CVE/CVE-2021-3749/phase2/results.csv
+58604 out.11.14/CVE/CVE-2021-3749/report.csv
+**** out.11.14/CVE/CVE-2021-3777
+59918 out.11.14/CVE/CVE-2021-3777/phase2/results.csv
+59678 out.11.14/CVE/CVE-2021-3777/report.csv
+
