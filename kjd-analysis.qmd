@@ -1,4 +1,4 @@
----
+--
 title: "KJD Analysis"
 author: "James Walden"
 editor: visual
@@ -311,18 +311,22 @@ ggplot(scatter_sample, aes(x=NumAuthors, y=CommunitySize)) +
 
 __GitHub Stars__
 
-Eliminate rows without GitHub stars before analyzing the star data. There are 17,194 projects with missing GH star data out of over 720,000 projects total.
+_Note:_ See paper titled _What's in a GitHub Star?_ for relevance here, though it focuses on only 5000 projects with the highest number of GitHub stars.
+
+Eliminate rows without GitHub stars before analyzing the star data. There are 17,194 projects with missing GH star data out of over 720,000 projects total. Over 10,000 of those projects are Gitlab projects, which obviously can't have GitHub stars.
 ```{r}
 wocghstars <- projects |> drop_na(GHStars)
 nrow(projects) - nrow(wocghstars)
 ```
 
-The median number of stars is 0, while the mean is much higher (26.1), indicating that many projects have no or few stars.
+The median number of stars is 0, while the mean is much higher (26.1), 
+indicating that many projects have no or few stars.
 ```{r}
 wocghstars |> select(GHStars) |> summary()
 ```
 
-The large majority (83.3%) of projects have zero stars, while 10.4% have a single star, making up over 90% of all projects for which we have star data.
+The large majority (83.3%) of projects have zero stars, while 10.4% have a 
+single star, together making up >90% of all projects for which we have star data.
 ```{r}
 freq_ghstars <- wocghstars |> 
     group_by(GHStars) |> 
@@ -351,9 +355,14 @@ extensions
 
 ### Correlations
 
-Create a subset containing the numeric non-datetime columns that do not have NAs.
+Create subset containing the numeric non-datetime columns that do not have NAs.
+We drop rows containing an NA in the GHStars column, so we can keep that column
+in our correlation matrix. We drop columns that contain >50% NAs like GHCommits
+and NumStars (stars as measured by WoC), along with the time columns that have
+more than 90% NAs.
 ```{r}
 wocnona_numeric <- wocnona |>
+  drop_na(GHStars) |>
   select(where(is.numeric)) |>
   select(where(~ !any(is.na(.)))) |>
   select(!starts_with("Time"))
@@ -361,10 +370,11 @@ wocnona_numeric <- wocnona |>
 
 Print a correlation matrix of these columns.
 ```{r}
-cor(wocnona_numeric)
+round(cor(wocnona_numeric), 2)
 ```
+We see extremely strong (>0.90) correlations between NumAuthors, NumCommits, 
+NumForks, and CommunitySize.
 
-We see extremely strong (>0.9) correlations between NumAuthors, NumCommits, NumForks, and CommunitySize.
 
 ## RQ3: What percentage of cloned vulnerabilities are fixed
 
@@ -372,10 +382,10 @@ Let us create a data frame containing only the fixed vulnerabilities. There are
 101,064 fixed vulnerabilities in the WoC dataset. These files make up only 3.3%
 of cloned vulnerabilities in our dataset. 
 
-There are about 69,000 or 2.3% of cloned vulnerabilities with status unknown. Such
-files have changed since the vulnerability was introduced, but are not identical
-to the fixed file from the original project. David's more detailed explanation of
-how files are classified as fixed, notfixed, or unknown is:
+There are about 69,000 or 2.3% of cloned vulnerabilities with status unknown. 
+Such files have changed since the vulnerability was introduced, but are not 
+identical to the fixed file from the original project. David's more detailed 
+explanation of how files are classified as fixed, notfixed, or unknown is:
 
     I get the history of the vulnerable file in the original project that is
     listed in cve fixes. All blobs before the fixing commit are considered
@@ -510,7 +520,8 @@ woctimes <- wocnona |>
 woctimes
 ```
 
-While there are projects that have many more than one or two of each time, 94% of projects only have one of each time.
+While there are projects that have many more than one or two of each time, 94% 
+of projects only have one of each time.
 ```{r}
 woctimes |> 
   filter(nbadtimes==1 & ngoodtimes == 1) |>
@@ -518,8 +529,8 @@ woctimes |>
             percent=100*nprojects/nrow(woctimes))
 ```
 
-36% of projects have more than one vulnerability but still only have one vulnerability
-introduction time and one vulnerability fix time.
+36% of projects have more than one vulnerability but still only have one 
+vulnerability introduction time and one vulnerability fix time.
 ```{r}
 woctimes |> 
   filter(nbadtimes==1 & ngoodtimes == 1 & nvulns > 1) |>
@@ -561,20 +572,38 @@ tidy(fit_fixed_model)
 
 ### Relationship between fixed vulnerabilities and number of commits
 
-There are 3917 fixed files in projects with only a single commit. Projects with a single commit fix <1% of their vulnerable files.
-_FIXME:_ How can there be a fix with only one commit?
+There are 3785 fixed files in projects with only a single commit. Projects with
+a single commit fix <1% of their vulnerable files, but how can this be?
+
 ```{r}
-files_1commit <- woc |> filter(NumCommits == 1)
+files_1commit <- wocnona |> filter(NumCommits == 1)
 tibble(onecommit=files_1commit |> count() |> pull(),
-       fixed=files_1commit |> filter(!is.na(TimeVulnRemained)) |> count() |> pull(),
+       fixed=files_1commit |> filter(status=="fixed") |> count() |> pull(),
        percent_all=100*fixed/onecommit,
        percent_fixed=100*fixed/nrow(fixedvulns))
 ```
 
-The majority of fixed files (81,111 or 78.6%) are in projects with 10 or more commits.
-Projects with 10 or more commits fix 6.17% of their vulnerable cloned files.
+Let's examine these single commit fixed projects in more detail. If we add a
+filter for ValidDates, we find that zero projects remain, so all of the single
+commit fixed projects result from invalid dates. This reinforces that we need
+to be sure to exclude rows that do not have valid dates.
 ```{r}
-files_10commits <- woc |> filter(NumCommits >= 10)
+files_1fix <- files_1commit |>
+  filter(status == "fixed") |>
+  filter(ValidDates == "OK")
+files_1fix
+```
+
+Let us create a valid dates versions of woc.
+```{r}
+woc_valid <- wocnona |> filter(ValidDates == "OK")
+nrow(woc_valid)
+```
+
+The majority of fixed files (81.9%) are in projects with 10 or more commits.
+Projects with 10 or more commits fix 6.0% of their vulnerable cloned files.
+```{r}
+files_10commits <- woc_valid |> filter(NumCommits >= 10)
 tibble(tencommits=files_10commits |> count() |> pull(),
        fixed=files_10commits |> filter(!is.na(TimeVulnRemained)) |> count() |> pull(),
        percent_all=100*fixed/tencommits,
@@ -583,20 +612,21 @@ tibble(tencommits=files_10commits |> count() |> pull(),
 
 ### Relationship between fixed vulnerabilities and number of authors
 
-Projects with a single author fix less than 2% of their vulnerable clone files.
-About 37.8% of all fixed vulnerable clones are in single author projects.
+Projects with a single author fix only 2.3% of their vulnerable clone files.
+About 36.3% of all fixed vulnerable clones are in single author projects.
 ```{r}
-files_1author <- woc |> filter(NumAuthors == 1)
+files_1author <- woc_valid |> filter(NumAuthors == 1)
 tibble(oneauthor=files_1author |> count() |> pull(),
        fixed=files_1author |> filter(!is.na(TimeVulnRemained)) |> count() |> pull(),
        percent_all=100*fixed/oneauthor,
        percent_fixed=100*fixed/nrow(fixedvulns))
 ```
 
-Substantially more vulnerable clones are fixed (10.9%) in projects with 10 or more authors.
-About 21.8% of all fixed vulnerable clones are in projects with 10 or more authors.
+Substantially more vulnerable clones are fixed (10.3%) in projects with 10 or
+more authors. About 21.8% of all fixed vulnerable clones are in projects with
+10 or more authors.
 ```{r}
-files_10authors <- woc |> filter(NumAuthors >= 10)
+files_10authors <- woc_valid |> filter(NumAuthors >= 10)
 tibble(tenauthors=files_10authors |> count() |> pull(),
        fixed=files_10authors |> filter(!is.na(TimeVulnRemained)) |> count() |> pull(),
        percent_all=100*fixed/tenauthors,
@@ -627,7 +657,8 @@ unfixed <- woctime |> filter(is.na(TimeVulnRemained)) |> count() |> pull()
 tibble(unfixed=unfixed, percent=100*unfixed/nrow(woctime))
 ```
 
-Let us create a data frame containing only the fixed vulnerabilities. There are 103,196 fixed vulnerabilities in the woctime dataset.
+Let us create a data frame containing only the fixed vulnerabilities. There are
+103,196 fixed vulnerabilities in the woctime dataset.
 ```{r}
 fixedvulns <- woctime |> filter(!is.na(TimeVulnRemained))
 fixedvulns |> select(TimeVulnRemained) |> summary()
@@ -663,14 +694,13 @@ ggplot(data=daystofix_nooutliers, aes(x=TimeVulnRemained, y=nvulns)) +
   ggtitle("Number of Vulnerabilities by Time to Fix")
 ```
 
-There are somewhat more positive fix times than negative fix times.
+There are about twice as many positive fix times than negative fix times.
 
 ```{r}
 daystofix_positive <- daystofix |> filter(TimeVulnRemained > 0) |> count() |> pull()
 daystofix_negative <- daystofix |> filter(TimeVulnRemained < 0) |> count() |> pull()
 tibble(negative = daystofix_negative, positive = daystofix_positive)
 ```
-
 
 Let's compare the distribution of the negative and positive fix times. We see that the negative days have a much greater range (-18631 days compared to 3530 days) and mean (-6717 days compared to 904 days).
 ```{r}
@@ -681,6 +711,32 @@ daystofix |> select(TimeVulnRemained) |> filter(TimeVulnRemained < 0) |> summary
 daystofix |> select(TimeVulnRemained) |> filter(TimeVulnRemained > 0) |> summary()
 ```
 
-__TODO__
-  1. Analyze project characteristics of projects that fix vulnerabilities?
-  2. Analyze characteristics of projects that fix vulnerabilities very fast (in 0 days)?
+## Selecting a Subset of Active Projects
+
+We could select such projects by GHStars (which will lose the 1.5% of projects that are from GitLab), NumCommits, or NumActiveMon. Since NumCommits has >90% correlation with NumAuthors, NumForks, and CommunitySize, and those metrics have 70-80% correlations with NumCore, we focus on using only one of the highly correlated metrics.
+
+Let's examine the high number of stars datasets.
+```{r}
+gh10 <- projects |> filter(GHStars > 10) |> count() |> pull()
+gh100 <- projects |> filter(GHStars > 100) |> count() |> pull()
+gh1000 <- projects |> filter(GHStars > 1000) |> count() |> pull()
+tibble(stars10=gh10, stars100=gh100, stars1000=gh1000)
+```
+
+Let's examine the sizes of the large number of commits datasets.
+```{r}
+nc10 <- projects |> filter(NumCommits > 10) |> count() |> pull()
+nc100 <- projects |> filter(NumCommits > 100) |> count() |> pull()
+nc1000 <- projects |> filter(NumCommits > 1000) |> count() |> pull()
+tibble(commits10=nc10, commits100=nc100, commits1000=nc1000)
+```
+
+If we filter on the same number of stars and commits, we get the same results
+that we obtained just focusing on stars.
+```{r}
+both10 <- projects |> filter(GHStars > 10 & NumCommits > 10) |> count() |> pull()
+both100 <- projects |> filter(GHStars > 100 & NumCommits > 100) |> count() |> pull()
+both1000 <- projects |> filter(GHStars > 1000 & NumCommits > 1000) |> count() |> pull()
+tibble(both10=gh10, both100=gh100, both1000=gh1000)
+```
+
