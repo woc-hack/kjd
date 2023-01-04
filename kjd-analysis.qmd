@@ -559,14 +559,38 @@ fixed_model <- linear_reg() |>
   set_mode("regression")
 ```
 
+Let's use the projects dataset with valid dates and GHStars data. There are
+over 600,000 such projects.
 ```{r}
-fit_fixed_model <- fixed_model |>
-  fit(NumFixed ~ NumStars + NumCore + CommunitySize + NumCommits + NumForks, data=projects)
+valid_projects <- projects |> 
+  filter(ValidDates == "OK") |>
+  drop_na(GHStars)
 ```
 
-Let us examine the coefficients.
+We'll use the non-highly correlated numerical columns as predictors.
 ```{r}
-tidy(fit_fixed_model)
+fit_fixed_model <- fixed_model |>
+  fit(NumFixed ~ GHStars + NumCommits + NumActiveMon,  data=valid_projects)
+```
+
+While each predictor has a low-enough p-value to be significant, the fit is
+poor with an adjusted R^2 of 0.01.
+```{r}
+fit_fixed_model |> extract_fit_engine() |> summary()
+```
+
+Since our predictors are non-normal power law data, it is recommended to log
+transform them before using them in a regression model. Since GHStars contains
+zeros, we need to use a Box-Cox transformation on it. See the web page at
+https://robjhyndman.com/hyndsight/transformations/ for more details.
+
+All predictors are still significant, but the fit is somewhat worse,
+with an adjusted R^2 of 0.005.
+```{r}
+log_fixed_model <- fixed_model |>
+  fit(NumFixed ~ log1p(GHStars) + log(NumCommits) + log(NumActiveMon), 
+      data=valid_projects)
+log_fixed_model |> extract_fit_engine() |> summary()
 ```
 
 
