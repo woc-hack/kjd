@@ -6,11 +6,14 @@ do i need more implementation details (for replication)
 
 # VCAnalyzer (Vulnerable Clones Analyzer)
 
-VCAnalyzer is a tool to analyze vulnerabilities that are propagated
-through copy-based code reuse. The tool reads a list containing information
-about known vulnerabilities in open source projects, it finds 
-other projects which have cloned the vulnerable file, and then it
-produces statistics about those projects that have cloned the vulnerable file.
+VCAnalyzer is a tool to analyze vulnerabilities that are propagated through
+copy-based code reuse. The tool reads a list containing information about known
+vulnerabilities in open source projects, finds other projects which have cloned
+the vulnerable file, and then produces statistics about those projects that
+have cloned the vulnerable file. We take the input data file from data that
+we generate using the code from the CVE Fixes dataset GitHub repository at
+https://github.com/secureIT-project/CVEfixes. Project information is found
+in the most recent World of Code dataset.
 
 Run VCAnalyzer from the command line with the following usage:
 - usage: vca \<output directory\> \<input data file\>
@@ -25,7 +28,7 @@ The input to the tool is a .csv (common separated values) file containing
 information about a vulnerability as defined in the CVE list at cve.org. 
 The input file contains one line per vulnerability with the following fields:
   - CVE ID (example: CVE-2007-6761)
-  - Commit that fixed the vulnerability (sha1 hash of the commit)
+  - Commit that fixed the vulnerability (SHA1 hash of the commit)
   - Project (URL for the project listed in the CVE Record)
   - File (The full pathname of the affected file within the project) 
   - Date the vulnerability was fixed
@@ -40,19 +43,19 @@ The output of the tool is a .csv file with one line for each project that
 copied a vulnerable file for a particular CVE ID. 
 
 The output records contain the following fields:
-  - CVE (CVE ID)
-  - ProjectUrl
+  - CVE identifier for the vulnerability
+  - ProjectUrl is the URL of the project's git repository
   - Project (Name of the project in the format used by WoC)
   - status (fixed, notfixed, or unknown)
-  - FirstBadBlob (sha1 hash of the first vulnerable blob committed to the project)
+  - FirstBadBlob (SHA1 hash of the first vulnerable blob committed to the project)
   - FirstBadTime (Time FirstBadBlob was committed in unix time format)
-  - FirstGoodBlob (sha1 hash of the first fixed blob committed to the project)
+  - FirstGoodBlob (SHA1 hash of the first fixed blob committed to the project)
   - FirstGoodTime (Time FirstGoodBlob was committed in unix time format)
   - TimeSinceFix (Time between fix in original project and fix in clone)
   - TimeSinceFixF (TimeSinceFix formatted to be human readable)
   - TimeSincePub (Time between CVE publication and fix in clone)
   - TimeSincePubF (TimeSincePub formatted to be human readable))
-  - TimeVulnRemained (Time between FirstGoodTime and max(FirstBadTime, Orig fix))
+  - TimeVulnRemained (Time between FirstGoodTime and max(FirstBadTime, fix_time), where fix_time is taken from CVE fixes dataset)
   - TimeVulnRemainedF (TimeVulnRemained formatted to be human readable)
   - NumAuthors (Number of authors on a project)
   - EarliestCommitDate (Date of earliest commit in unix time format)
@@ -93,7 +96,7 @@ The input for phase 1, for each CVE, is:
     - The CVE ID
     - The project name
     - The file path of the vulnerable file 
-    - The sha1 hash of the fixing commit
+    - The SHA1 hash of the fixing commit
 
 For each CVE ID from the input file, the tool:
     - Finds the blobs that were committed before the fixing commit. These are
