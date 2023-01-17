@@ -1,0 +1,62 @@
+#! /bin/bash
+
+while read auth; do
+    # Get rate limit information
+    url="https://api.github.com/rate_limit"
+    rate_response=`curl -s -H "Authorization: token $auth" "$url"`
+    retVal=$?
+    if [ $retVal -ne 0 ]; then
+        echo "Warning: curl failed with error code $retVal, retrying" >&2
+        rate_response=`curl -s -H "Authorization: token $auth" "$url"`
+        retVal=$?
+        if [ $retVal -ne 0 ]; then
+            echo "Error: curl failed with error code $retVal, giving up" >&2
+            echo "Error: curl failed with error code $retVal;;"
+            continue
+        fi
+    fi
+    # validate the response
+    echo "$rate_response" | jq-linux64 empty
+    if [ $? -ne 0 ]; then
+        echo "Error: jq reports invalid json in response" >&2
+        echo "URL = $url" >&2
+        echo "$rate_response" >&2
+        echo "Error: jq reports invalid json in response;;"
+        continue
+    fi
+    # number of requests remaining in the time period
+    rate_remain=`echo "$rate_response" | jq-linux64 -r '{limit: .resources.core.remaining}' | sed -e "s/[^0-9]*//g" -e "/^$/d"`
+    # time left until the limits reset (in seconds)
+    rate_reset=`echo "$rate_response" | jq-linux64 -r '{limit: .resources.core.reset}' | sed -e "s/[^0-9]*//g" -e "/^$/d"`
+    cur_time=`date "+%s"`
+
+    let "seconds_left=rate_reset - cur_time"
+    minutes_left=$(echo "scale=2; $seconds_left / 60" | bc)
+    if [ $seconds_left -le 60 ]; then 
+        time_left="$seconds_left seconds"
+    else
+        time_left="$minutes_left minutes"
+    fi
+    echo "$auth"
+    echo "rate_remain = $rate_remain"
+    echo "time_left = $time_left"
+    echo ""
+
+    # verify that rate_limit is a number
+    re='^[0-9]+$'
+    if ! [[ $rate_remain =~ $re ]] ; then
+        echo "ERROR-------> Not a number: $rate_remain" >&2
+        echo "'$rate_response'" >&2
+        echo "Error: could not get github rate limit;;"
+        continue
+    fi
+#        # pause if we have reached the rate limit
+#        if [ "$rate_remain" -lt "10" ]; then  # 10 since running in parallel
+#            t=`date "+%T"`
+#            echo "Rate limit exceeded, sleeping $time_left seconds (from $t)" >&2
+#            sleep $time_left
+#            ran=`echo $((1 + $RANDOM % 10))`
+#            sleep $ran # so all threads don't start back at the same time
+#            echo "Rate limit reset, continuing" >&2
+#        fi
+done < ~/github-auth
