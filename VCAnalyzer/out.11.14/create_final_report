@@ -1,0 +1,30 @@
+#! /bin/bash
+
+# This script is a copy of the last part of vca, which creates the final 
+# report. This is used to create a partial report before vca has finished, 
+# just for testing. This script is normally not used at all.
+
+rm -f xfinal_report.csv xfinal_report_values.csv
+
+header=0
+for cve in $(ls -1rt CVE/ | grep CVE-); do
+    file="CVE/$cve/report.csv"
+    file2="CVE/$cve/report.values.csv"
+    if [ -f "$file" ]; then
+        cat "$file" | sed -e "s/^/CVE:$cve, /" >> xfinal_report.csv
+        if [ $header -eq 0 ]; then
+            head -1 "$file2" | sed -e "s/^/CVE, /" >> xfinal_report_values.csv
+            header=1
+        fi
+        # print everthing but line 1 (the header)
+        tail -n +2 "$file2" | sed -e "s/^/$cve, /" >> xfinal_report_values.csv
+    else
+        echo "$cve" >> xfinal_failures.csv
+    fi
+done
+
+
+
+
+cat xfinal_report.csv | awk -F "," -f ~/kjd/VCAnalyzer/fix.awk > final_filter0.csv
+#cat xfinal_report.csv | awk -F "," -f ~/kjd/VCAnalyzer/fix.filter.awk > final_filter_commits10.csv
