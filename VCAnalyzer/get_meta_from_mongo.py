@@ -34,7 +34,8 @@ def write_data(data):
         last = data["LatestCommitDate"]
         first = data["EarliestCommitDate"]
         if (first == last):
-            sys.stdout.write("1st=Last")
+            #sys.stdout.write("1st=Last")
+            sys.stdout.write("OK")
         elif ((first == 0) or (last == 0)):
             sys.stdout.write("Zero")
         elif ((first > cur_time) or (last > cur_time)):
@@ -101,7 +102,8 @@ if (len(sys.argv) != 2):
 
 project=sys.argv[1]
 
-client = pymongo.MongoClient("mongodb://da1.eecs.utk.edu/")
+#client = pymongo.MongoClient("mongodb://da1.eecs.utk.edu/")
+client = pymongo.MongoClient("mongodb://da5.eecs.utk.edu/")
 db = client ['WoC']
 coll = db['P_metadata.U']
 
