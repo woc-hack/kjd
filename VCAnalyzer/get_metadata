@@ -77,7 +77,10 @@ case $host in
            num_stars=$(echo "$response" | $JQ ".stargazers_count")
            # make sure the response is a number (possibly with leading spaces)
            if ! [[ $num_stars =~ ^\ *[0-9]+\ *$ ]]; then 
-               echo "Warning: get_metadata: invalid value for num_stars:$numstars" >&2
+               echo "Warning: get_metadata: invalid value for num_stars:$numstars, curl -s -L https://api.github.com/repos/$proj" >&2
+               echo -n "   >>>" >&2
+               echo $response  >&2
+               echo auth=$auth  >&2
                echo "   ./get_metadata $1 $2" >&2
                num_stars=""
                error_status=1
