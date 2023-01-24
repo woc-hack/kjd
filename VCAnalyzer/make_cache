@@ -58,22 +58,22 @@ done
 #fi
 
 
-
-
 #
 # Get phase 3 cache
 #
 echo "Getting Phase 3 cache"
-find $indir -name cache.p_metadata -exec cat {} \; | sort -u > $outdir/p_metadata.global
-find $indir -name cache.m_metadata -exec cat {} \; | sort -u > $outdir/m_metadata.global
+find $indir -name cache.p_metadata -exec cat {} \; > $outdir/p.global
+sort -u $outdir/p.global > $outdir/p_metadata.global
+find $indir -name cache.m_metadata -exec cat {} \; > $outdir/m.global
+sort -u $outdir/m.global > $outdir/m_metadata.global
 
 # merge with existing cache file
-if [ -f ./cache/p_metadata.global ]; then
-    cat $outdir/p_metadata.global ./cache/p_metadata.global | sort -u > $outdir/p.merge
-fi
-if [ -f ./cache/m_metadata.global ]; then
-    cat $outdir/m_metadata.global ./cache/m_metadata.global | sort -u > $outdir/m.merge
-fi
+#if [ -f ./cache/p_metadata.global ]; then
+#    cat $outdir/p_metadata.global ./cache/p_metadata.global | sort -u > $outdir/p.merge
+#fi
+#if [ -f ./cache/m_metadata.global ]; then
+#    cat $outdir/m_metadata.global ./cache/m_metadata.global | sort -u > $outdir/m.merge
+#fi
 
 
 
