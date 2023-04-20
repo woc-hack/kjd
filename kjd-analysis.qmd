@@ -91,17 +91,18 @@ If we remove all rows with missing values in the columns below, we remove about
 NumStars) and GitHub commits (GHCommits), along with the 8 time columns
 beginning with First or Time in which over 96% of rows have missing data. 
 
-We also remove files with filename CHANGES, KConfig, and the file suffix
-.svn-base, as these files are not code or are probably not in use (in the
-case of the svn-base files.) While CHANGES and KConfig only appear once
-in the CVEfixes dataset, they are copied many times. The .svn-base suffix
-does not appear in CVEfixes, but the content of the files appears in WoC
+We also remove files with filename CHANGES, KConfig, README, and README.md, as
+well as the file suffix .svn-base, as these files are not code or are probably
+not in use (in the case of the svn-base files.) While CHANGES and KConfig only
+appear once in the CVEfixes dataset, they are copied many times. The .svn-base
+suffix does not appear in CVEfixes, but the content of the files appears in WoC
 in files that have the .svn-base suffix added.
 ```{r}
 wocnona <- woc |> 
     drop_na(all_of(c('FirstBadBlob','FirstBadTime','CommunitySize','NumForks',
     'Path','FileInfo','NumCommits','NumCore','NumCommits','NumAuthors'))) |>
-    filter(!str_detect(Path, 'CHANGES|Kconfig|svn-base'))
+    filter(!str_detect(Path, 'CHANGES|Kconfig|svn-base')) |>
+    filter(!str_detect(Path, 'README(.md)?$'))
 nrow(woc) - nrow(wocnona)
 ```
 
@@ -109,6 +110,11 @@ __NOTE:__ Use woc for the whole data set, wocnona for data without most missing 
 
 
 ## RQ1: How prevalent are cloned files with vulnerabilities?
+
+The total number of orphan vulnerabilities (copies of CVEfixes vulnerabilities):
+```{r}
+nrow(wocnona)
+```
 
 ### Statistics of Original Vulnerabilities (CVEfixes)
 
@@ -187,7 +193,7 @@ cloned_cve <- inner_join(distinct(wocnona, CVE),
                          by="CVE")
 ```
 
-There are 3015 cloned vulnerabilities out of 3615 total (83.4%) in the CVE fixes dataset.
+There are 3014 cloned vulnerabilities out of 3615 total (83.3%) in the CVE fixes dataset.
 ```{r}
 cloned_cve |> summarize(n=n(), pct=n()/nrow(cve))
 ```
@@ -302,16 +308,30 @@ cve_extensions |>
 ### Analyze which CVEs are cloned
 
 Let us examine which CVEs are most often cloned.
+
 ```{r}
-cve_clone_count <- 
-  wocnona |>
-  group_by(CVE) |>
-  summarize(nvulns = n(),
-            percent = 100*nvulns/nrow(wocnona))
-cve_clone_count |> arrange(desc(nvulns))
+cve_rename_cols <- c('url', 'pathname')
+cve_renamed <- cve |>
+  select(CVE, all_of(cve_rename_cols)) |>
+  rename_with(~ paste0("original_", .), all_of(cve_rename_cols))
 ```
 
 
+```{r}
+cve_clone_count <- 
+  wocnona |>
+  left_join(cve_renamed, by="CVE") |>
+  group_by(CVE,original_url,original_pathname) |>
+  summarize(nvulns = n(),
+            percent = 100*nvulns/nrow(wocnona))
+```
+
+```{r}
+cve_clone_count |> ungroup() |> select(CVE,nvulns,percent) |> arrange(desc(nvulns))
+```
+
+On average, there are over 1000 orphan vulnerabilities (copies) for each
+of the 3014 original vulnerabilities that were copied from CVEfixes.
 ```{r}
 cve_clone_count |> select(nvulns) |> summary()
 ```
@@ -325,7 +345,7 @@ cve_clone_count |> pull(nvulns) |> sd()
 cve_clone_count |> 
   filter(nvulns==1) |>
   summarize(nvulns = n(),
-            percent = 100*nvulns/nrow(cve_clones))
+            percent = 100*nvulns/nrow(cve_clone_count))
 ```
 
 380 (12.6)% of vulnerabilities are cloned more than one thousand times.
@@ -333,7 +353,7 @@ cve_clone_count |>
 cve_clone_count |> 
   filter(nvulns >= 1000) |>
   summarize(nvulns = n(),
-            percent = 100*nvulns/nrow(cve_clones))
+            percent = 100*nvulns/nrow(cve_clone_count))
 ```
 
 Visualize the number of clones for the top 20 cloned CVEs.
@@ -365,7 +385,6 @@ There are over 3 million cloned vulnerable files.
 ```{r}
 wocnona |> count()
 ```
-
 
 The median project has only a single cloned vulnerability and the third quartile starts at two vulnerabilities. However, the mean is 4.237 and the maximum is 807 cloned vulnerabilities in a single project.
 ```{r}
@@ -460,6 +479,29 @@ woc_extensions |>
   ungroup() |>
   mutate(percent = as.numeric(percent)) |>
   summarise(across(where(is.numeric), ~ sum(., is.na(.), 0)))
+```
+
+Let's create a dataset of vulnerabilities in JavaScript clone files.
+```{r}
+js_vulns <- 
+  wocnona |>
+  filter(str_detect(Path, '.(js|json|node)$'))
+nrow(js_vulns)
+```
+
+We find the subset of the JavaScript vulnerabiltiies that have a path that
+indicates that they were installed using npm.
+```{r}
+npm_path_vulns <-
+  js_vulns |>
+  filter(str_detect(Path, 'node_modules'))
+nrow(npm_path_vulns)
+```
+
+Compute the percentage of JavaScript files in paths that look like they were
+installed by npm.
+```{r}
+100 * nrow(npm_path_vulns) / nrow(js_vulns)
 ```
 
 194,991 (6.4%) of cloned vulnerable files are written in PHP.
