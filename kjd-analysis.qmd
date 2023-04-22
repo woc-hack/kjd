@@ -145,46 +145,10 @@ There are 1,114 projects with vulnerabilities in the CVEfixes dataset.
 cve |> distinct(url) |> count()
 ```
 
-Over 22% (802) of vulnerabilities came from the Linux kernel, while another 5.7%
-were from Tensorflow and 3.5% from ImageMagick.
-```{r}
-cve |> 
-  group_by(url) |> 
-  summarize(nvulns = n(),
-            percent = 100*nvulns/nrow(cve)) |>
-  arrange(desc(nvulns))
-```
-
-The majority (52.1%) of original vulnerable files are C source code files.
-```{r}
-cve_extensions <- cve |>
-       mutate(Extension = ifelse(path_ext(pathname) == "",basename(pathname),path_ext(pathname))) |>
-       group_by(Extension) |>
-       count() |>
-       mutate(percent = format(100 * n / nrow(cve), scientific=FALSE)) |>
-       arrange(desc(n))
-cve_extensions
-```
-
-If we combine all C source and header files, we find 53.5% of original
-vulnerable files are written in C.
-```{r}
-cve_extensions |> 
-  filter(Extension %in% c('c','h')) |>
-  ungroup() |>
-  mutate(percent = as.numeric(percent)) |>
-  summarise(across(where(is.numeric), ~ sum(., is.na(.), 0)))
-```
-
-If we combine all C++ suffixes, we find 9.9% of files are written in C++.
-```{r}
-cve_extensions |> 
-  filter(Extension %in% c('cc','cpp','cxx','hh','hpp')) |>
-  ungroup() |>
-  mutate(percent = as.numeric(percent)) |>
-  summarise(across(where(is.numeric), ~ sum(., is.na(.), 0)))
-```
 ### Statistics of Cloned Vulnerabilities (WoC)
+
+Percentages here are relative to the 3014 cloned vulnerabilities, not the total
+number of vulnerabilities in the CVEfixes dataset.
 
 Construct a dataset of CVEs from CVEfixes that were cloned by WoC projects.
 ```{r}
@@ -223,7 +187,7 @@ There are 1,114 projects with vulnerabilities in the CVEfixes dataset.
 cve |> distinct(url) |> count()
 ```
 
-There are 800 projects whose vulnerabilities were cloned.
+Only projects have vulnerabilities that were cloned.
 ```{r}
 cloned_cve |> distinct(url) |> count()
 ```
@@ -316,22 +280,33 @@ cve_renamed <- cve |>
   rename_with(~ paste0("original_", .), all_of(cve_rename_cols))
 ```
 
-
 ```{r}
-cve_clone_count <- 
-  wocnona |>
-  left_join(cve_renamed, by="CVE") |>
-  group_by(CVE,original_url,original_pathname) |>
-  summarize(nvulns = n(),
-            percent = 100*nvulns/nrow(wocnona))
+cve_clones <- wocnona |> left_join(cve_renamed, by="CVE")
+nonjs_clones <- cve_clones |> filter(!str_detect(Path, '\\.(js|ts|json)$')) 
 ```
 
 ```{r}
-cve_clone_count |> ungroup() |> select(CVE,nvulns,percent) |> arrange(desc(nvulns))
+
+```
+
+
+```{r}
+cve_clone_count <-
+  cve_clones |>
+  group_by(CVE,original_url,original_pathname) |>
+  summarize(nvulns = n(),
+            percent = 100*nvulns/nrow(wocnona)) |>
+  ungroup()
+```
+
+```{r}
+cve_clone_count |> select(CVE,nvulns,percent) |> arrange(desc(nvulns))
 ```
 
 On average, there are over 1000 orphan vulnerabilities (copies) for each
-of the 3014 original vulnerabilities that were copied from CVEfixes.
+of the 3014 original vulnerabilities that were copied from CVEfixes. The
+range is tremendous from 1 to 112,297, with a standard deviation (4581)
+larger than the mean (1010).
 ```{r}
 cve_clone_count |> select(nvulns) |> summary()
 ```
@@ -471,6 +446,12 @@ woc_extensions |>
   mutate(percent = as.numeric(percent)) |>
   summarise(across(where(is.numeric), ~ sum(., is.na(.), 0)))
 ```
+```{r}
+cve |> 
+  filter(pathname %in% c('cc','cpp','cxx','hh','hpp')) |>
+  count()
+```
+
 
 741,433 (24.3%) cloned vulnerable files are written in JavaScript.
 ```{r}
